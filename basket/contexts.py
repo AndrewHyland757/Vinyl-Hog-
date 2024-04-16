@@ -13,7 +13,8 @@ def basket_contents(request):
 
     for product_id, quantity in basket.items():
         product = get_object_or_404(Album, id=product_id)  #pk=item_id
-        #total += quantity * product.price
+        
+        total += quantity
         product_count += quantity
         basket_items.append({
             'product_id': product_id,
@@ -24,7 +25,8 @@ def basket_contents(request):
     
     context = {
         'basket_items': basket_items,
-        #'total': total,
+        'total': total,
+        "quantity" : quantity,
         'product_count': product_count,
         
     }

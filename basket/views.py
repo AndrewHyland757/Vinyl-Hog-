@@ -20,6 +20,8 @@ def add_basket(request, product_id):
     else:
         basket[product_id] = quantity
 
+    
+
     request.session['basket'] = basket
     return redirect(redirect_url)
 
