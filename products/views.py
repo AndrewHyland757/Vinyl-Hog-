@@ -1,9 +1,4 @@
-from django.shortcuts import render
-
-# Create your views here.
-
-
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Album
 #from .models import Album
@@ -19,11 +14,15 @@ def products(request):
     return render(request, 'products/products.html', context)
 
 
-def product(request, pk):
+def product(request, product_id):
 
-    product = Album.objects.get(id=pk)
+    product = get_object_or_404(Album, id=product_id)
     context = {
         "album": product
     }
 
     return render(request, 'products/product.html', context)
+
+
+
+    
