@@ -6,6 +6,14 @@
 
 <h1>products</h1>
 
+<ul>
+    {% for album in albums %}
+    <li>
+        <a href=" {% url 'product' album.id %}"> {{ album.title}} </a>
+    </li>
+    {% endfor %}
+</ul>
+
 
 {% endblock %}
 

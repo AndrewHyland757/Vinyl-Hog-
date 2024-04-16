@@ -5,14 +5,15 @@ from django.shortcuts import render
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Album
 #from .models import Album
 
 
 def products(request):
 
-    #products = Album.objects.all()
+    products = Album.objects.all()
     context = {
-        #"albums": products
+        "albums": products
     }
 
     return render(request, 'products/products.html', context)
@@ -20,9 +21,9 @@ def products(request):
 
 def product(request, pk):
 
-    #product = Album.objects.get(id=pk)
+    product = Album.objects.get(id=pk)
     context = {
-        #"album": product
+        "album": product
     }
 
     return render(request, 'products/product.html', context)
