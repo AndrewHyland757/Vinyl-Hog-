@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.shortcuts import get_object_or_404
 from products.models import Album
 from django.contrib import messages
@@ -10,26 +10,6 @@ def basket(request):
 
     return render(request, 'basket/basket.html')
 
-"""
-def add_basket(request, product_id): # ID passed in form action URL
-   
-    quantity = int(request.POST.get('quantity')) # From form
-    redirect_url = request.POST.get('redirect_url')  # From form
-    basket = request.session.get('basket', {}) # Get session or new
-    product = get_object_or_404(Album, id=product_id)  #pk=item_id
-
-    if product_id in list(basket.keys()):
-        basket[product_id] += quantity # Add more of these objects to the list in basket
-        
-    else:
-        basket[product_id] = quantity
-
-    
-
-    request.session['basket'] = basket # Make the updated or newly created basket the basket
-    print(basket)
-    return redirect(redirect_url)
-"""
 
 def add_basket(request, product_id): # ID passed in form action URL
     """ Add a quantity of the specified product to the shopping basket """
@@ -57,4 +37,44 @@ def add_basket(request, product_id): # ID passed in form action URL
         messages.error(request, 'Not enough stock to fulfil this order.')
     request.session['basket'] = basket
     return redirect(redirect_url)
+
+
+def update_basket(request, product_id):
+    
+    basket = request.session.get('basket', {})
+    product = get_object_or_404(Album, id=product_id)  
+    quantity = int(request.POST.get('quantity')) # From form
+    redirect_url = request.POST.get('redirect_url')
+
+    if product_id in list(basket.keys()):
+        if quantity <= product.stock:
+            basket[product_id] = quantity
+            messages.success(
+                request, f'{product.title} quantity updated successfully.')
+        else:
+            messages.error(request, 'Not enough stock to fulfil this order')
+    
+    request.session['basket'] = basket
+
+    return redirect(redirect_url)
+
+
+
+
+def delete_basket_item(request, product_id):
+    
+    basket = request.session.get('basket', {})
+    product = get_object_or_404(Album, id=product_id) 
+    redirect_url = request.POST.get('redirect_url')
+    
+
+    if product_id in list(basket.keys()):
+        basket.pop(product_id)
+        messages.success(request, f'{product.title} removed from basket.')
+
+    request.session['basket'] = basket
+
+    return redirect(redirect_url)
+
+
 
