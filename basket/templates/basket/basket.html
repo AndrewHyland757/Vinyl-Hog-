@@ -10,10 +10,22 @@
 {% for item in basket_items %}
                                 
 <p>{{ item.product.title }}</p>
+<p>{{ item.quantity }}</p>
+<p>{{ item.price_sub_total }}</p>
+
+
+
+
+
 
 
 
 
 {% endfor %}
+
+
+<p>{{ price_total }}</p>
+
+
 
 {% endblock %}
