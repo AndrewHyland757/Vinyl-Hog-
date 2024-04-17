@@ -7,11 +7,12 @@ from products.models import Album
 def basket_contents(request):
 
     delivery_threshold = settings.DELIVERY_THRESHOLD
-    delivery_fee = settings.DELIVERY_FEE
+
     basket_items = []
     products_to_delete = []
     price_total = 0
     product_count = 0
+    quantity = 0
     basket = request.session.get('basket', {})
     
 
@@ -47,15 +48,22 @@ def basket_contents(request):
 
 
     if price_total > delivery_threshold or price_total == 0:
-        delivery_fee = 0
+        delivery_fee = "Free"
         free_delivery_delta = 0
+        grand_total = price_total
+
     else:
         free_delivery_delta = delivery_threshold - price_total
+        delivery_fee = settings.DELIVERY_FEE
+        grand_total = price_total + int(delivery_fee)
 
-    grand_total = price_total + delivery_fee
+    
+    
+
     
     context = {
-        
+        'grand_total': grand_total,
+        'delivery_fee': delivery_fee,
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': delivery_threshold,
         'basket_items': basket_items,

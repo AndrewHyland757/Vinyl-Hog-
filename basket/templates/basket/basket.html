@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 
@@ -16,7 +16,6 @@
         <th scope="col">Price</th>
         <th scope="col">Quantity</th>
         <th scope="col">Subtotal</th>
-        <th scope="col">Update</th>
         <th scope="col">Delete</th>
         </tr>
     </thead>
@@ -53,6 +52,14 @@
 </table>
 
 
+<p>Total products = {{ product_count }}</p>
+<p>Total cost: €{{ price_total }}</p>
+<p>Delivery = {{ delivery_fee }}</p>
+{% if free_delivery_delta > 0 %}
+    <p>Spend €{{ free_delivery_delta }} to avail of free delivery.</p>
+{% endif %}
+<p>Grand Total = {{ grand_total }}</p>
+
 
 
 
@@ -70,7 +77,14 @@
 </a>
 {% endif %}
 
-<p>Total products = {{ product_count }}</p>
-<p>Total cost: €{{ price_total }}</p>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
 
 {% endblock %}
