@@ -8,7 +8,20 @@
 
 <h1>product single</h1>
 
-<p> {{ album.title }}</p>
+<img style="max-width:300px;" src="{{ album.featured_image.url }}">
+
+<h1> {{ album.title }}</h1>
+<p> {{ album.artist }}</p>
+
+<p> {{ album.genres.name }}</p>
+
+{% for genre in album.genres.all %}
+<span class="tag tag--pill tag--main">
+    <small>{{genre}}</small>
+</span>
+{% endfor %}
+<p> {{ album.description }}</p>
+<p> €{{ album.price }}</p>
 
 
 
