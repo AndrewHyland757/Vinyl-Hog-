@@ -35,6 +35,7 @@ def add_basket(request, product_id): # ID passed in form action URL
                 request, f'{product.title} was successfully added to your basket')
     else:
         messages.error(request, 'Not enough stock to fulfil this order.')
+
     request.session['basket'] = basket
     return redirect(redirect_url)
 
@@ -55,10 +56,7 @@ def update_basket(request, product_id):
             messages.error(request, 'Not enough stock to fulfil this order')
     
     request.session['basket'] = basket
-
     return redirect(redirect_url)
-
-
 
 
 def delete_basket_item(request, product_id):
@@ -73,7 +71,6 @@ def delete_basket_item(request, product_id):
         messages.success(request, f'{product.title} removed from basket.')
 
     request.session['basket'] = basket
-
     return redirect(redirect_url)
 
 

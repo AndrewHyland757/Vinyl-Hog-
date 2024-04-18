@@ -6,11 +6,21 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 class Genre(models.Model):
     name = models.CharField(max_length=200)
-    id = models.UUIDField(default=uuid.uuid4, unique=True,
-                          primary_key=True, editable=False)
+    
 
     def __str__(self):
         return self.name
+
+
+class Condition(models.Model):
+    name = models.CharField(max_length=200)
+    
+
+    class Meta:
+        verbose_name_plural = 'Condition'
+
+    def __str__(self):
+        return str(self.name)
 
 
 class Album(models.Model):
@@ -18,10 +28,10 @@ class Album(models.Model):
     title = models.CharField(max_length=200)
     genres = models.ManyToManyField(Genre, blank=True)
     description = models.TextField(null=True, blank=True)
+    condition = models.ForeignKey(Condition, on_delete=models.CASCADE)
     featured_image = models.ImageField(
         null=True, blank=True, default="default.jpg")
-    id = models.UUIDField(default=uuid.uuid4, unique=True,
-                          primary_key=True, editable=False)
+    
     stock = models.IntegerField(
         default=1, validators=[MinValueValidator(0)])
     on_sale = models.BooleanField(default=False)
@@ -37,8 +47,7 @@ class Album(models.Model):
 
 class Artist(models.Model):
     name = models.CharField(max_length=200)
-    id = models.UUIDField(default=uuid.uuid4, unique=True,
-                          primary_key=True, editable=False)
+    
 
     def __str__(self):
         return str(self.name)
