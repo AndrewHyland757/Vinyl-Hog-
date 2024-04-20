@@ -1,33 +1,27 @@
 
-
-
 .section-checkout {
     position: relative;
-    max-width: 100vw;
+    max-width: 1;
 }
-
 
 .checkout-background {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 1.16fr 1fr;
-    
     position: absolute;
     left:0;
     z-index: -1;
 }
 
 .background-left {
-    
-}
-.background-right {
-    background-color: lightblue;
+    border-top: .1rem solid #acacac;
 }
 
-.checkout-basket-container p {
-    font-family: ;
+.background-right {
+    background-color: orange;
 }
+
 
 .checkout-container {
     max-width:1140px;
@@ -37,41 +31,54 @@
     grid-template-columns: 1.25fr 1fr;
 }
 
-.checkout-shipping-container {
-    background-color: pink;
+
+.checkout-col-left,
+.checkout-col-right {
+    padding-top: 4.8rem;
+    
 }
 
-.checkout-basket-container {
-    background-color: lightblue;
-    /*
-    border: .25rem solid black;
-    */
+.checkout-col-left {
+    padding-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
 }
 
-
-/*
-****************************
-CHECKOUT CLASSES
-****************************
-*/
+.checkout-col-right {
+    padding-left: 4.2rem;  
+}
 
 .checkout-heading {
     text-transform: uppercase;
     padding-bottom: 2.4rem
 }
 
-.checkout-basket-container {
-    padding-top: 2.4rem;
-    padding-left: 2.4rem;
+/* LEFT COLUMN */
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
 }
 
-/*
-.checkout-basket-container .checkout-heading {
-    border-bottom: .1rem solid black;
+legend {
 }
-*/
 
+.checkout-input {
+    font-size: 1.4rem;
+    color: #333;
+    padding:1.2rem 1.2rem;
+    border-radius: 0;
+    border: .1rem solid #333; 
+}
 
+.checkout-input:focus {
+    outline: none;
+    border-color: orange;
+}
+
+/* RIGHT COLUMN */
 
 .checkout-item {
     width: 40rem;
@@ -83,75 +90,57 @@ CHECKOUT CLASSES
 
 }
 
-.checkout-item:first-child {
+.checkout-item:first-of-type {
     border-top: .1rem solid black;
-}
-
-
-.checkout-img-contatiner {
-    
-
 }
 
 .checkout-img {
     width: 6rem;
-
 }
 
-.checkout-details-contatiner {
+.item-details-contatiner {
     width: 40rem;
-    background-color: ;
     display: flex;
     flex-direction: column;
-    
-
 }
 
-.checkout-title-box {
+.item-title-box {
 display: flex;
 justify-content: space-between;
-background-color: ;
 padding-bottom: 1rem;
 
 }
 
-.checkout-title {
-   margin-bottom: 0;
+.item-title,
+.item-price {
+    margin-bottom: 0;
     font-size: 1.6rem;
     font-weight: 500;
 }
 
-.checkout-price {
-    margin-bottom: 0;
-    font-size: 1.6rem;
-    font-weight: 500;
-    }
+.item-price {
+    font-size: 1.4rem;
+}
 
-.checkout-artist {
+
+.item-detail {
     letter-spacing: .01rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 0;
     padding-bottom: .4rem;
   }
 
-
-.checkout-quantity {
-    letter-spacing: .01rem;
-    font-size: 1.2rem;
-    margin-bottom: 0;
-
+.item-detail:last-child {
+    padding-bottom: 0;
 }
 
-
-.checkout-costs-container {
+.costs-container {
     width: 40rem;
     padding-top: 2.4rem;
 }
 
-
-
 .costs-item {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     letter-spacing: .01rem;
     display: flex;
     justify-content: space-between;
@@ -170,6 +159,7 @@ padding-bottom: 1rem;
     padding-top: 2.4rem;
     border-top: .1rem solid black;
 }
+
 .total p {
     text-transform: uppercase;
     font-weight: 500;

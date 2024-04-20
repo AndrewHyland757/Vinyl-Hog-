@@ -1,9 +1,77 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'styles/basket.css' %}">
+{% endblock %}
+
+
 {% block content %}
 
 
-<h1>basket</h1>
+<div class="basket-container">
+
+    <div class="basket-col-left">
+        {% if basket_items %}
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Album</th>
+        <th scope="col">Artist</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Subtotal</th>
+        <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in basket_items %}
+        <tr>
+        <td>{{ item.product.title }}</td>
+        <td>{{ item.product.artist }}</td>
+        <td>€{{ item.product.price }}</td>
+        <td>
+            <form action="{% url 'update-basket' item.product_id %}" method="POST">
+                {% csrf_token %}
+                <class="mt-3"><strong>Quantity:</strong></p>
+                <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" >
+                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Update">
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            </form>
+        </td>
+
+
+        <td><p>€{{ item.price_sub_total }}</td>
+        
+        <td>
+            <form action="{% url 'delete-basket-item' item.product_id %}" method="POST">
+                {% csrf_token %}
+                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Delete">
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            </form>
+        </td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+    </div>
+
+    <div class="basket-col-right">
+
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
+
+
+
 
 
 
@@ -87,4 +155,3 @@
 {% endif %}
 
 
-{% endblock %}

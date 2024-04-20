@@ -14,24 +14,26 @@
 
     <div class="checkout-background">
         <div class="background-left">
-            
         </div>
         <div class="background-right">
-            
         </div>
-    
     </div>
 
     <div class="checkout-container">
-        <div class="checkout-shipping-container">
-            <h3 class="checkout-heading">Delivery</h3>
-            <fieldset class="rounded px-3 mb-5">
-                <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+
+        <div class="checkout-col-left">
+
+           
+
+            <fieldset class="">
+                <legend><h3 class="checkout-heading">Your Details</h3></legend>
                 {{ order_form.full_name  }}
                 {{ order_form.email  }}
             </fieldset>
-            <fieldset class=>
-                <legend >Delivery</legend>
+
+            
+            <fieldset class="">
+                <legend><h3 class="checkout-heading">Delivery</h3></legend>
                 {{ order_form.phone_number  }}
                 {{ order_form.country  }}
                 {{ order_form.postcode  }}
@@ -55,11 +57,7 @@
         </div>
 
 
-
-
-
-
-        <div class="checkout-basket-container">
+        <div class="checkout-col-right">
             <h3 class="checkout-heading">Order Summary</h3>
             {% for item in basket_items %}
 
@@ -70,19 +68,19 @@
                     </a>
                 </div>
 
-                <div class="checkout-details-contatiner">
-                    <div class="checkout-title-box">
-                        <p class="checkout-title">{{ item.product.title }}</p>
-                        <p class="checkout-price">€{{ item.price_sub_total }}</p>
+                <div class="item-details-contatiner">
+                    <div class="item-title-box">
+                        <p class="item-title">{{ item.product.title }}</p>
+                        <p class="item-price">€{{ item.price_sub_total }}</p>
                     </div>
-                    <p class="checkout-artist">Artist: {{ item.product.artist }}</p>
-                    <p class="checkout-artist">Condition: {{ item.product.condition }}</p>
-                    <p class="checkout-quantity">Quantity: {{ item.quantity }}</p>
+                    <p class="item-detail">Artist: {{ item.product.artist }}</p>
+                    <p class="item-detail">Condition: {{ item.product.condition }}</p>
+                    <p class="item-detail">Quantity: {{ item.quantity }}</p>
                 </div>
             </div>            
             {% endfor %}
 
-            <div class="checkout-costs-container">
+            <div class="costs-container">
                 <div class="costs-item">
                     <p>Total products:</p> 
                     <p>{{ product_count }}</p>
