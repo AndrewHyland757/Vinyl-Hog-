@@ -25,6 +25,9 @@
     background-color: lightblue;
 }
 
+.checkout-basket-container p {
+    font-family: ;
+}
 
 .checkout-container {
     max-width:1140px;
@@ -34,18 +37,142 @@
     grid-template-columns: 1.25fr 1fr;
 }
 
-
-
 .checkout-shipping-container {
     background-color: pink;
-    
-
 }
 
 .checkout-basket-container {
     background-color: lightblue;
+    /*
     border: .25rem solid black;
+    */
+}
 
+
+/*
+****************************
+CHECKOUT CLASSES
+****************************
+*/
+
+.checkout-heading {
+    text-transform: uppercase;
+    padding-bottom: 2.4rem
+}
+
+.checkout-basket-container {
+    padding-top: 2.4rem;
+    padding-left: 2.4rem;
+}
+
+/*
+.checkout-basket-container .checkout-heading {
+    border-bottom: .1rem solid black;
+}
+*/
+
+
+
+.checkout-item {
+    width: 40rem;
+    padding: 2rem 0 ;
+    display: flex;
+    gap: 1.8rem;
+    border-bottom: .1rem solid black;
+    background-color: ;
 
 }
 
+.checkout-item:first-child {
+    border-top: .1rem solid black;
+}
+
+
+.checkout-img-contatiner {
+    
+
+}
+
+.checkout-img {
+    width: 6rem;
+
+}
+
+.checkout-details-contatiner {
+    width: 40rem;
+    background-color: ;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.checkout-title-box {
+display: flex;
+justify-content: space-between;
+background-color: ;
+padding-bottom: 1rem;
+
+}
+
+.checkout-title {
+   margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.checkout-price {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    }
+
+.checkout-artist {
+    letter-spacing: .01rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    padding-bottom: .4rem;
+  }
+
+
+.checkout-quantity {
+    letter-spacing: .01rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+
+}
+
+
+.checkout-costs-container {
+    width: 40rem;
+    padding-top: 2.4rem;
+}
+
+
+
+.costs-item {
+    font-size: 1.2rem;
+    letter-spacing: .01rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.2rem;
+}
+
+.costs-item:nth-child(3) {
+    padding-bottom: 2.4rem;
+    }
+
+.costs-item p {
+    margin-bottom: 0;
+}
+
+.total {
+    padding-top: 2.4rem;
+    border-top: .1rem solid black;
+}
+.total p {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size:2rem;
+    
+}

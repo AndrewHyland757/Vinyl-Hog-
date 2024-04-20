@@ -54,7 +54,8 @@ def basket_contents(request):
 
     else:
         free_delivery_delta = delivery_threshold - price_total
-        delivery_fee = settings.DELIVERY_FEE
+        delivery_fee = f"€{settings.DELIVERY_FEE}"
+        
         grand_total = price_total + int(delivery_fee)
 
     
@@ -62,6 +63,7 @@ def basket_contents(request):
 
     
     context = {
+        "price_sub_total": price_sub_total,
         "basket_items": basket_items,
         "product": product,
         'grand_total': grand_total,
