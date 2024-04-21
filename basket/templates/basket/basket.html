@@ -11,56 +11,117 @@
 
 <div class="basket-container">
 
+   
     <div class="basket-col-left">
+        <h3 class="checkout-heading">Basket</h3>
         {% if basket_items %}
-<table class="table">
-    <thead>
-        <tr>
-        <th scope="col">Album</th>
-        <th scope="col">Artist</th>
-        <th scope="col">Price</th>
-        <th scope="col">Quantity</th>
-        <th scope="col">Subtotal</th>
-        <th scope="col">Delete</th>
-        </tr>
-    </thead>
-    <tbody>
+
         {% for item in basket_items %}
-        <tr>
-        <td>{{ item.product.title }}</td>
-        <td>{{ item.product.artist }}</td>
-        <td>€{{ item.product.price }}</td>
-        <td>
-            <form action="{% url 'update-basket' item.product_id %}" method="POST">
-                {% csrf_token %}
-                <class="mt-3"><strong>Quantity:</strong></p>
-                <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" >
-                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Update">
-                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-            </form>
-        </td>
 
+            <div class="checkout-item">
+                <div class="checkout-img-contatiner">
+                    <a href="{% url 'product' item.product.id %}">
+                        <img class=" checkout-img" src="{{ item.product.featured_image.url }}" alt="">            
+                    </a>
+                </div>
 
-        <td><p>€{{ item.price_sub_total }}</td>
-        
-        <td>
-            <form action="{% url 'delete-basket-item' item.product_id %}" method="POST">
-                {% csrf_token %}
-                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Delete">
-                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-            </form>
-        </td>
+                <div class="item-details-contatiner">
+                    <div class="item-title-box">
+                        <p class="item-title">{{ item.product.title }}</p>
+                        <p class="item-price">€{{ item.price_sub_total }}</p>
+                    </div>
+                    <p class="item-detail">Artist: {{ item.product.artist }}</p>
+                    <p class="item-detail">Condition: {{ item.product.condition }}</p>
+                    <p class="item-detail">Price: €{{ item.product.price }}</p>
 
-        </tr>
+                    <div class="btn-container">
+                          
+                            <form class="qty-form" action="{% url 'update-basket' item.product_id %}" method="POST">
+                                {% csrf_token %}
+                                <!--
+                                <p class="item-detail">Quantity:</p>
+                                -->
+                                <input class="qty-input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" >
+                                <input type="submit" class=" btn-basket" value="Update">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </form>
+                        
+                        
+                            <form class="delete-form" action="{% url 'delete-basket-item' item.product_id %}" method="POST">
+                                {% csrf_token %}
+                                <input  type="submit" class="btn-basket" value="Delete">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </form>
+
+                        
+                    </div>
+
+                </div>
+            </div>            
+            
         {% endfor %}
-    </tbody>
-</table>
-{% endif %}
+    
+        {% else %}
+        <p class="lead mb-5">Your bag is empty.</p>
+        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+            <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">Keep Shopping</span>
+        </a>
+        {% endif %}
     </div>
+
+
+
+
+
 
     <div class="basket-col-right">
+        
+        <div class="cost-container">
+            <h3 class="checkout-heading">Basket</h3>
+
+
+            <div class="cost-item">
+                <p class="item-detail">Total products:</p>
+                <p class="item-detail">{{ product_count }}</p>
+            </div>
+
+            <div class="cost-item">
+                <p class="item-detail">Total cost:</p>
+                <p class="item-detail">€{{ price_total }}</p>
+            </div>
+
+            <div class="cost-item">
+                <p class="item-detail">Delivery:</p>
+                <p class="item-detail">{{ delivery_fee }}</p>
+            </div>
+
+            {% if free_delivery_delta > 0 %}
+            <p class="item-detail">Spend €{{ free_delivery_delta }} to avail of free delivery.</p>
+            {% endif %}
+
+           
+
+            <div class="cost-item">
+                <p class="item-detail">Total:</p>
+                <p class="item-detail">{{ grand_total }}</p>
+            </div>
+
+
+
+            <div>
+                <btn class="btn-checkout">Checkout</btn>
+                </div>
+        </div>
+      
 
     </div>
+
+
+
+
 </div>
 
 

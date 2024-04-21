@@ -1,4 +1,177 @@
 .basket-container {
     max-width: 1400px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    min-height: 100vh;
 }
+
+.basket-col-left {
+    padding-top: 4.8rem;
+    height: 100%;
+    background-color: ;
+
+}
+
+.basket-col-right {
+    padding-top: 4.8rem;
+    background-color: lightblue;
+
+}
+
+
+
+.checkout-heading {
+    text-transform: uppercase;
+    padding-bottom: 2.4rem
+}
+
+
+
+/**** COL LEFT ****/
+
+.checkout-item {
+    width: 80rem;
+    padding: 3.2rem 0 ;
+    display: grid;
+    grid-template-columns: 1.25fr 3fr;
+    gap: 4.8rem;
+    border-bottom: .1rem solid #333;
+    background-color: ;
+
+}
+
+.checkout-item:first-of-type {
+    border-top: .1rem solid #333;
+}
+
+.checkout-img {
+    width: 100%
+    
+}
+
+.item-details-contatiner {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-title-box {
+display: flex;
+justify-content: space-between;
+padding-bottom: 1.8rem;
+
+}
+
+.item-title,
+.item-price {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.item-price {
+    font-size: 1.6rem;
+}
+
+
+.item-detail {
+    letter-spacing: .01rem;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    padding-bottom: .4rem;
+  }
+
+.item-detail:last-child {
+    color: red;
+    
+}
+
+.btn-container {
+    width: 20rem;
+    margin-top: 2.4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: ;
+    gap: 1.2rem;
+    
+}
+
+.qty-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.4rem;
+    background-color:;
+}
+
+.delete-form {
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    background-color: ;
+}
+
+
+.qty-input {
+    width:fit-content;
+    font-size: 1.2rem;
+    padding: .8rem .2rem  .8rem 1.6rem;
+    border-radius: 0;
+    border: .1rem solid #333;
+}
+
+
+.qty-input:focus {
+    outline: none;
+    border-color: orange;
+}
+
+
+.btn-basket {
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    border: .1rem solid #333;
+}
+
+
+.basket-col-right {
+    
+}
+
+
+.cost-container {
+    width: 375px;
+    margin: 0 auto;
+    
+    background-color: bisque;
+}
+
+.cost-item {
+    display: flex;
+    justify-content: space-between;
+    border-top: .1rem solid #333;
+    padding: 2.4rem 0;
+   
+}
+
+.basket-col-right .item-detail {
+    letter-spacing: .01rem;
+    font-size: 1.6rem;
+   
+    
+}
+
+.btn-checkout {
+
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    border: .1rem solid #333;
+
+}
+
