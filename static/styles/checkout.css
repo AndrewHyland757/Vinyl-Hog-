@@ -65,18 +65,8 @@ fieldset {
 legend {
 }
 
-.checkout-input {
-    font-size: 1.4rem;
-    color: #333;
-    padding:1.2rem 1.2rem;
-    border-radius: 0;
-    border: .1rem solid #333; 
-}
 
-.checkout-input:focus {
-    outline: none;
-    border-color: orange;
-}
+
 
 /* RIGHT COLUMN */
 
@@ -166,3 +156,68 @@ padding-bottom: 1rem;
     font-size:2rem;
     
 }
+
+/* ------------------------- */
+
+.checkout-input {
+    font-size: 1.4rem;
+    color: #333;
+    padding:1.2rem 1.2rem;
+    border-radius: 0;
+    border: .1rem solid #333; 
+}
+
+.checkout-input:focus {
+    outline: none;
+    border-color: orange;
+}
+
+
+
+/* ------------------------- */
+
+
+.StripeElement
+{
+
+    font-size: 1.4rem;
+    color: #333;
+  box-sizing: border-box;
+  height: 40px;
+  padding:1.2rem 1.2rem;
+  border: .1rem solid #333; 
+  border-radius: 0px;
+
+  background-color: greenyellow;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus,
+.checkout-input:focus,
+.checkout-input:active {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.checkout-input::placeholder {
+    color: #aab7c4;
+}
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+#payment-form .form-control,
+#card-element {
+ 
+
+    color: #000;
+    border: 1px solid #000;
+}
+
