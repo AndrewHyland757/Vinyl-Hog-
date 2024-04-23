@@ -169,9 +169,7 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# Delivery fees
-DELIVERY_THRESHOLD = 50
-DELIVERY_FEE = 12.00
+
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
@@ -181,3 +179,12 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+
+# Delivery fees
+DELIVERY_THRESHOLD = 50
+DELIVERY_FEE = 12.00
+
+# Stripe
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = 'pk_test_51P8JG3ECqW0pS3vWbIGOgoOz6xN9ZHbRdDhk0QYEJP2qm2ye4a0MQ6TWR0DrQiEiHarteXCKRcqi1GOq1C3qEUwM00g1d7Xhos' # os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = 'sk_test_51P8JG3ECqW0pS3vWmS485ezvQkPJCTvBBUIBhqkBfpQvdz9fmFd1DCH2GnDtEspqycjwnsr0OAw1XwiNbxuiHpM000wKg27Yq8' #os.getenv('STRIPE_SECRET_KEY', '')

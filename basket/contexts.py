@@ -11,6 +11,7 @@ def basket_contents(request):
     basket_items = []
     products_to_delete = []
     price_total = 0
+    price_sub_total = 0
     product_count = 0
     quantity = 0
     basket = request.session.get('basket', {})
@@ -65,7 +66,7 @@ def basket_contents(request):
     context = {
         "price_sub_total": price_sub_total,
         "basket_items": basket_items,
-        "product": product,
+        #"product": product,
         'grand_total': grand_total,
         'delivery_fee': delivery_fee,
         'free_delivery_delta': free_delivery_delta,
