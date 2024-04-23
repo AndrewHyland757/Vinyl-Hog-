@@ -2,7 +2,54 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'styles/product.css' %}">
+{% endblock %}
+
 {% block content %}
+
+
+
+
+
+<div class="product-container">
+    <div class="img-container">
+        <img  src="{{ product.featured_image.url }}">
+    </div>
+
+    <div class="details-container">
+        <h1> {{ product.title }}</h1>
+        <p> {{ product.artist }}</p>
+        {% for genre in product.genres.all %}
+            <span class="tag tag--pill tag--main">
+                <small>{{genre}}</small>
+            </span>
+        {% endfor %}
+        <p> {{ product.description }}</p>
+        <p> Condition:{{ product.condition }}</p>
+        <p> Stock:{{ product.stock }}</p>
+        <p> Price:€{{ product.price }}</p>
+
+        <form class="form" action="{% url 'add-basket' product.id %}" method="POST">
+            {% csrf_token %}
+            <p class="mt-3"><strong>Quantity:</strong></p>
+                    
+            <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" >
+            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+{% endblock %}
 
 
 
@@ -72,4 +119,3 @@
     {% endfor %}
 </ul>
 {% endif %}
-{% endblock %}
