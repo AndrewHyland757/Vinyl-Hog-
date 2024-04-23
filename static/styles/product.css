@@ -1,14 +1,134 @@
 .product-container {
-    display:grid:
-    grid-
+    max-width: 1400px;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4.8rem;
+    margin-top: 6.4rem;
+    
 
 
 }
 
+
 .img-container {
+    background-color: pink;
+}
+
+.img-container img {
+    width: 100%;
 
 }
 
 .details-container {
+    background-color: ;
 
+}
+
+.product-title {
+    margin-bottom: .5rem;
+
+}
+
+.product-artist {
+    font-size: 1.6rem;
+    letter-spacing: .02rem;
+    margin-bottom: 2rem;
+
+}
+
+.genre-tag {
+    display: inline-block;
+    width:fit-content;
+    font-size: 1.2rem;
+    letter-spacing: .02rem;
+    text-transform: lowercase;
+    font-family: 'Times New Roman', Times, serif;
+    /*
+    border: .1rem solid #333;
+    
+    padding: .25rem .5rem;
+    */
+    margin-right: .8rem;
+    margin-bottom: 2rem;
+
+}
+
+.product-description {
+    font-size: 1.4rem;
+    line-height: 1.25;
+    letter-spacing: .03rem;
+    margin-bottom: 2.4rem;
+
+}
+
+.info-box {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1.8rem;
+}
+.product-condition {
+    
+    width:fit-content;
+    font-size: 1.4rem;
+    letter-spacing: .02rem;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    border: .1rem solid #333;
+
+}
+
+.product-stock {
+    
+    width: fit-content;
+    font-size: 1.4rem;
+    letter-spacing: .02rem;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    border: .1rem solid #333;
+
+}
+
+.product-price {
+    width:;
+    
+    font-size: 1.4rem;
+    letter-spacing: .02rem;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    border: .1rem solid #333;
+
+}
+
+.quantity {
+    font-size: 1.4rem;
+    letter-spacing: .02rem;
+
+}
+
+.qty-input {
+    width:fit-content;
+    font-size: 1.4rem;
+    padding: .8rem .2rem  .8rem 1.6rem;
+    border-radius: 0;
+    border: .1rem solid #333;
+    margin-bottom: 2rem;
+}
+
+
+.qty-input:focus {
+    outline: none;
+    border-color: orange;
+}
+
+
+.btn-add {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    border: .1rem solid #333;
 }
