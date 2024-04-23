@@ -5,6 +5,9 @@
     grid-template-columns: 1fr 1.5fr;
     gap: 4.8rem;
     margin-top: 6.4rem;
+    background-color: lightgray;
+    padding: 3.2rem;
+    align-items: center
     
 
 
@@ -12,7 +15,7 @@
 
 
 .img-container {
-    background-color: pink;
+    background-color: ;
 }
 
 .img-container img {
