@@ -1,6 +1,6 @@
 .navigation {
     max-width: 100vw;
-    background-color: pink;
+    background-color: ;
     height:12rem;
     display: grid;
     grid-template-columns:max-content 1fr;
@@ -12,7 +12,7 @@
     width: ;
     height:100%;
     display: flex;
-    border: .2rem solid #333;
+    border: .1rem solid #333;
     align-items: center;
     padding: 0 4.8rem;
    
@@ -21,15 +21,16 @@
 
 .logo {
     font-size: 2.4rem;
-    font-weight: 600;
-    line-height: 1.3;
+    font-weight: 800;
+    letter-spacing: ;
+    line-height: 1;
     text-transform:uppercase;
     
     
 }
 
 .links-container {
-    border: .2rem solid #333;
+    border: .1rem solid #333;
     border-left: none;
     display: flex;
     justify-content: end;
@@ -56,42 +57,88 @@
 
 }
 
-.section-home {
-    
-    height: calc(100vh - 12rem) !important;
-    background-color: aqua;
+
+
+
+.footer {
+    height:350px;
+    width: 100vw;
+    background-color: ;
+
+}
+
+.footer-container {
+    height:100%;
+    width: 100%;
     display: grid;
-    grid-template-columns: 1.25fr 1fr;
-
-}
-
-.grid-col-left {
-    height: 100%;
-    background-color: yellow;
+    grid-template-columns: .75fr 1fr 1.25fr;
+    align-items: center;
    
-   
+
 }
 
-.grid-col-right {
-    display: grid;
-    grid-template-rows: 1.3fr 1fr;
+.footer-left {
     height: 100%;
-  background-color: orange;
-}
-
-.right-1 {
+    border: .1rem solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
-    background-color: green;
-   
+
+}
+
+.logo--footer {
+    width: fit-content;
+    font-size: 3.2rem;
+    
     
 }
 
-.delivery-banner {
-    font-size: 1.4rem;
+.footer-center {
+    height: 100%;
+    border-top: .1rem solid #333;
+    border-bottom: .1rem solid #333;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 5rem;
+    align-items: center;
+    
+
+}
+
+.social-box {
+    padding-top: 6rem;
+    display: flex;
+    
+    gap: 1.8rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-center i {
+    font-size: 2.8rem;
+}
+
+.contact-box {
+    text-align: center;
+}
+
+.contact-box h2 {
     font-weight: 600;
-    text-transform: uppercase;
+    padding-bottom: 1rem;
+
+}
+
+.contact-box p {
+    font-size: 1.4rem;
+    padding-bottom: .8rem;
     
-    padding: .8rem;
-    background-color: aliceblue;
-    
+}
+.footer-right {
+    height: 100%;
+    border: .1rem solid #333;
+   
+
 }

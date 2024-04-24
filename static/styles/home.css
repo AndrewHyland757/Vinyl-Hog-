@@ -1,0 +1,39 @@
+.section-home {
+    
+    height: calc(100vh - 12rem) !important;
+    
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+
+}
+
+.grid-col-left {
+    height: 100%;
+    background-color: ;
+   
+   
+}
+
+.grid-col-right {
+    display: grid;
+    grid-template-rows: 1.3fr 1fr;
+    height: 100%;
+  background-color: orange;
+}
+
+.right-1 {
+    
+    background-color: green;
+   
+    
+}
+
+.delivery-banner {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    padding: .8rem;
+    background-color: aliceblue;
+    
+}
