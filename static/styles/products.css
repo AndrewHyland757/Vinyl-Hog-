@@ -16,7 +16,7 @@
 
 
 .product-card {
-    padding: 1.4rem 1.4rem 4.8rem 1.4rem;
+    padding: 1.6rem 1.6rem 4.8rem 1.6rem;
     background-color: ;
     border: .5px solid #333;
 
@@ -37,7 +37,7 @@
 .product-title {
     line-height: 1;
     font-size: 2.8rem;
-    letter-spacing: .02rem;
+    letter-spacing: 0.05rem;
     margin-bottom: .5rem;
 
 
@@ -46,6 +46,7 @@
 .product-artist {
     font-size: 1.6rem;
     margin-bottom: .75rem;
+    letter-spacing: 0.05rem;
     
 
 }

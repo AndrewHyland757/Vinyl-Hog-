@@ -50,15 +50,52 @@
 
 <nav class="navigation">
   <div class="logo-container">
+    <a href="{% url 'home' %}">
     <p class="logo">Vinyl<br> Hog</p>
+    </a>
     
 
   </div>
 
   <div class="links-container">
-    <a class="nav-link">Products</a>
-    <a class="nav-link">Account </a>
-    <a class="nav-link">Basket</a>
+
+
+    <div class="dropdown show">
+      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Records
+      </a>
+    
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="{% url 'products' %}">All</a>
+        <a class="dropdown-item" href="#">New</a>
+        <a class="dropdown-item" href="#">Used</a>
+        
+      </div>
+    </div> 
+
+    <div class="dropdown show">
+      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Account
+      </a>
+    
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        {% if request.user.is_authenticated %}
+                          {% if request.user.is_superuser %}
+                          <a href="" class="dropdown-item">Product Management</a>
+                          {% endif %}
+                          <a href="" class="dropdown-item">My Profile</a>
+                          <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                          {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                          {% endif %}   
+      </div>
+    </div> 
+
+      
+    
+   
+    <a class="nav-link" href="{% url 'basket' %}">Basket {{product_count}}</a>
     
 
   </div>
@@ -66,19 +103,25 @@
 </nav>
 
 <section class="section-home">
-  <div class="grid-container">
+  
 
-    <div class="grid-col-1">
-    
-    </div>
-    <div class="grid-col-2">
-    
-    </div>
-    <div class="grid-col-3">
-    
+    <div class="grid-col-left">
     </div>
 
-  </div>
+    <div class="grid-col-right">
+
+      <div class="right-1">
+        <p class="delivery-banner">Free delivery on orders over €{{ free_delivery_threshold }}!</p>
+       
+          
+      </div>
+
+      <div class="right-2">
+      </div>
+
+    </div>
+    
+
 </section>
 
 
@@ -170,7 +213,7 @@
 
       
 
-      <p class="logo-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</p>  
+      
      
 
      {% block content %}
