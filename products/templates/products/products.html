@@ -2,7 +2,58 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'styles/products.css' %}">
+{% endblock %}
+
+
+
+
+
+
 {% block content %}
+
+
+
+<div class="products-container">
+
+    {% for album in albums %}
+    <a class="product-link" href=" {% url 'product' album.id %}"> 
+        <div class="product-card">
+            <div class="img-container">
+                <img  src="{{ album.featured_image.url }}">
+            </div>
+
+            <div class="details-container">
+                <h1 class="product-title"> {{ album.title }}</h1>
+                <p class="product-artist"> {{ album.artist }}</p>
+                {% for genre in album.genres.all %}
+                    <span>
+                        <p class="genre-tag">{{genre}}</p>
+                    </span>
+                    {% endfor %}
+                
+                
+        
+                <div class="info-box">
+                <p class="product-condition"> Condition: {{ album.condition }}</p>
+                <p class="product-stock"> Stock: {{ album.stock }}</p>
+                <p class="product-price"> Price: €{{ album.price }}</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+
+</div>
+    
+
+
+
+{% endblock %}
+
+
+
 
 
 
@@ -10,6 +61,7 @@
 
 <ul>
     {% for album in albums %}
+    
     <li>
         <a href=" {% url 'product' album.id %}"> {{ album.title}} </a>
     </li>
@@ -17,5 +69,5 @@
 </ul>
 
 
-{% endblock %}
+
 

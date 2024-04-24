@@ -15,7 +15,7 @@
 
 .basket-col-right {
     padding-top: 4.8rem;
-    background-color: lightblue;
+    background-color: ;
 
 }
 
@@ -75,7 +75,7 @@ padding-bottom: 1.8rem;
 
 
 .item-detail {
-    letter-spacing: .01rem;
+    letter-spacing: .03rem;
     font-size: 1.4rem;
     margin-bottom: 0;
     padding-bottom: .4rem;
@@ -136,6 +136,13 @@ padding-bottom: 1.8rem;
     border: .1rem solid #333;
 }
 
+.btn-custom--basket {
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+
 
 .basket-col-right {
     
@@ -145,8 +152,7 @@ padding-bottom: 1.8rem;
 .cost-container {
     width: 375px;
     margin: 0 auto;
-    
-    background-color: bisque;
+    background-color:;
 }
 
 .cost-item {
@@ -164,14 +170,5 @@ padding-bottom: 1.8rem;
     
 }
 
-.btn-checkout {
 
-    width: 100%;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    border-radius: 0;
-    border: .1rem solid #333;
-
-}
 

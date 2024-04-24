@@ -32,7 +32,7 @@
                     </div>
                     <p class="item-detail">Artist: {{ item.product.artist }}</p>
                     <p class="item-detail">Condition: {{ item.product.condition }}</p>
-                    <p class="item-detail">Price: €{{ item.product.price }}</p>
+                    <p class="item-detail">€{{ item.product.price }}</p>
 
                     <div class="btn-container">
                           
@@ -42,14 +42,14 @@
                                 <p class="item-detail">Quantity:</p>
                                 -->
                                 <input class="qty-input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" >
-                                <input type="submit" class=" btn-basket" value="Update">
+                                <input type="submit" class="btn-custom btn-custom--basket" value="Update">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </form>
                         
                         
                             <form class="delete-form" action="{% url 'delete-basket-item' item.product_id %}" method="POST">
                                 {% csrf_token %}
-                                <input  type="submit" class="btn-basket" value="Delete">
+                                <input  type="submit" class="btn-custom btn-custom--basket" value="Delete">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </form>
 
@@ -106,14 +106,14 @@
 
             <div class="cost-item">
                 <p class="item-detail">Total:</p>
-                <p class="item-detail">{{ grand_total }}</p>
+                <p class="item-detail">€{{ grand_total }}</p>
             </div>
 
 
 
-            <div>
-                <btn class="btn-checkout">Checkout</btn>
-                </div>
+            
+                <a class="btn-custom" href="{% url 'checkout' %}">Checkout</a>
+                
         </div>
       
 

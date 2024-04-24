@@ -14,6 +14,7 @@ GENERAL SETTINGS
  * {
   
     margin: 0;
+    
     padding: 0;
     box-sizing: border-box;
   }
@@ -23,8 +24,53 @@ GENERAL SETTINGS
   }
   
   body {
-    font-family: "Roboto", sans-serif;
+    font-family: Helvetica;
     line-height: 1;
     position: relative;
   }
   
+  p {
+    letter-spacing: .03rem;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+
+/*
+****************************
+BUTTON CLASSES
+****************************
+*/
+
+.btn-custom,
+.btn-custom:link,
+.btn-custom:visited {
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    border:  #333 .1rem solid;
+    transition: all 0.3s;
+    outline: transparent;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.btn-custom:hover,
+.btn-custom:active {
+  background-color: #332f54;
+  color: #fff;
+  border: #332f54 .1rem solid;
+}
