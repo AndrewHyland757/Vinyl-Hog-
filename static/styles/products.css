@@ -1,3 +1,7 @@
+
+
+
+
 .products-container {
     width: 100vw;
     
@@ -5,14 +9,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:2.4rem;
+    
 
 }
 
 
 
 .product-card {
-    padding: 1.2rem 1.2rem 4.8rem 1.2rem;
-    background-color: pink;
+    padding: 1.4rem 1.4rem 4.8rem 1.4rem;
+    background-color: ;
+    border: .5px solid #333;
 
 }
 
@@ -29,16 +35,17 @@
 }
 
 .product-title {
+    line-height: 1;
     font-size: 2.8rem;
     letter-spacing: .02rem;
-    margin-bottom: .1rem;
+    margin-bottom: .5rem;
 
 
 }
 
 .product-artist {
-    font-size: 1.5rem;
-    margin-bottom: .2rem;
+    font-size: 1.6rem;
+    margin-bottom: .75rem;
     
 
 }
@@ -47,16 +54,18 @@
     display: inline-block;
     width:fit-content;
     font-size: 1.2rem;
-    letter-spacing: .02rem;
+    color: blueviolet;
+ 
+    letter-spacing: .08rem;
     text-transform: lowercase;
-    font-family: 'Times New Roman', Times, serif;
-    /*
-    border: .1rem solid #333;
     
-    padding: .25rem .5rem;
-    */
-    margin-right: .8rem;
-    margin-bottom: 1.4rem;
+    background-color: lightgray;
+    
+    padding: .5rem 1rem;
+
+
+    margin-right: .4rem;
+    margin-bottom: 2rem;
 
 }
 

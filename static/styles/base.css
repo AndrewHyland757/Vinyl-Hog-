@@ -1,0 +1,44 @@
+.navigation {
+    width: 100vw;
+    background-color: pink;
+    height:12rem;
+    display: grid;
+    grid-template-columns:max-content 1fr;
+    
+
+}
+
+.logo-container {
+    width: ;
+    height:100%;
+    display: flex;
+    border: .2rem solid #333;
+    align-items: center;
+    padding: 0 4.8rem;
+   
+
+}
+
+.logo {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform:capitalize;
+    
+    
+}
+
+.links-container {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform:capitalize;
+    border: .2rem solid #333;
+    border-left: none;
+    display: flex;
+    justify-content: end;
+    
+   
+    align-items: center;
+    text-align: right;
+    padding-right: 4.8rem;
+}

@@ -28,9 +28,9 @@
                 <h1 class="product-title"> {{ album.title }}</h1>
                 <p class="product-artist"> {{ album.artist }}</p>
                 {% for genre in album.genres.all %}
-                    <span>
+                    
                         <p class="genre-tag">{{genre}}</p>
-                    </span>
+                    
                     {% endfor %}
                 
                 
