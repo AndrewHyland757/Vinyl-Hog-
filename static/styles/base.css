@@ -62,17 +62,19 @@
 
 .footer {
     height:350px;
-    width: 100vw;
-    background-color: ;
+    max-width: 100vw;
+    
 
 }
 
 .footer-container {
     height:100%;
-    width: 100%;
+    max-width: 100vw;
     display: grid;
-    grid-template-columns: .75fr 1fr 1.25fr;
+    grid-template-columns: .75fr 1fr 1.17fr;
+    grid-template-rows: 1fr;
     align-items: center;
+    
    
 
 }
@@ -138,7 +140,9 @@
 }
 .footer-right {
     height: 100%;
+    max-width: 100%;
     border: .1rem solid #333;
+     ;
    
 
 }

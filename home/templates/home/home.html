@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="{% static 'styles/home.css' %}">
 {% endblock %}
 
+
+
 {% block content %}
 
 <section class="section-home">
@@ -17,11 +19,37 @@
 
       <div class="right-1">
         <p class="delivery-banner">Free delivery on orders over €{{ free_delivery_threshold }}!</p>
-       
-          
       </div>
 
       <div class="right-2">
+        <div class="cover-img-container">
+        <img class="cover-img" src="{{ random_album_1.featured_image.url }}">
+        </div>
+        <div class="cover-img-container">
+          <img class="cover-img" src="{{ random_album_2.featured_image.url }}">
+          </div>
+          <div class="cover-img-container">
+            <img class="cover-img" src="{{ random_album_3.featured_image.url }}">
+            </div>
+            <div class="cover-img-container">
+              <img class="cover-img" src="{{ random_album_4.featured_image.url }}">
+              </div>
+              <div class="cover-img-container">
+                <img class="cover-img" src="{{ random_album_4.featured_image.url }}">
+                </div>
+                <div class="cover-img-container">
+                  <img class="cover-img" src="{{ random_album_4.featured_image.url }}">
+                  </div>
+                  <div class="cover-img-container">
+                    <img class="cover-img" src="{{ random_album_4.featured_image.url }}">
+                    </div>
+                    <div class="cover-img-container">
+                      <img class="cover-img" src="{{ random_album_4.featured_image.url }}">
+                      </div>
+              
+
+              
+        
       </div>
 
     </div>
@@ -30,7 +58,9 @@
 </section>
 
 
-
+{% block postloadjs %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
 
 
 {% endblock %}
