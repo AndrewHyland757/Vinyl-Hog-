@@ -27,6 +27,7 @@ class Album(models.Model):
     artist = models.ForeignKey('Artist', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     genres = models.ManyToManyField(Genre, blank=True)
+    date_added = models.DateTimeField(auto_now_add=True)
     description = models.TextField(null=True, blank=True)
     condition = models.ForeignKey(Condition, on_delete=models.CASCADE)
     featured_image = models.ImageField(

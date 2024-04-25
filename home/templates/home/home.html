@@ -3,6 +3,7 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+<link rel="stylesheet" href="{% static 'styles/products.css' %}">
 {% endblock %}
 
 
@@ -47,6 +48,42 @@
 
     </div>
     
+
+</section>
+
+
+<section class="section-just-in">
+  <div class="products-container">
+
+    {% for album in recent_added_albums %}
+    <a class="product-link" href=" {% url 'product' album.id %}"> 
+        <div class="product-card">
+            <div class="img-container">
+                <img  src="{{ album.featured_image.url }}">
+            </div>
+
+            <div class="details-container">
+                <h1 class="product-title"> {{ album.title }}</h1>
+                <p class="product-artist"> {{ album.artist }}</p>
+                {% for genre in album.genres.all %}
+                    
+                        <p class="genre-tag">{{genre}}</p>
+                    
+                    {% endfor %}
+                
+                
+        
+                <div class="info-box">
+                <p class="product-condition"> Condition: {{ album.condition }}</p>
+                <p class="product-stock"> Stock: {{ album.stock }}</p>
+                <p class="product-price"> Price: €{{ album.price }}</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+
+</div>
 
 </section>
 
