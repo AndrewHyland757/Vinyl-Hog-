@@ -44,6 +44,11 @@ NAVIGATION
   
     color: white;
   }
+
+  .logo:hover {
+    color: white;
+
+  }
   
   .logo--2 {
     padding-left: 2rem;
@@ -89,8 +94,35 @@ NAVIGATION
   
   .dropdown-menu--user {
   }
+.nav-basket-container{
 
+  position: relative;
+  display: flex;
+}
 
+.basket-count-container {
+height: 1.5rem;
+width: 1.5rem;
+position: absolute;
+background-color: #333;
+top:-1.1rem;
+right: 50%;
+transform: translate(58%, 0);
+z-index: -1;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+}
+
+.product-count {
+  color: white;
+  
+  font-size: 1.2rem;
+  
+  
+  
+}
 
 /*
 ****************************

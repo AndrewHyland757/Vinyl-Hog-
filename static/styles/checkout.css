@@ -19,13 +19,14 @@
 }
 
 .background-right {
-    background-color: orange;
+    
+    background-color: black;
 }
 
 
 .checkout-container {
     max-width:1140px;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1.25fr 1fr;
@@ -46,7 +47,8 @@
 }
 
 .checkout-col-right {
-    padding-left: 4.2rem;  
+    padding-left: 4.2rem;
+    color: #fefde5;
 }
 
 .checkout-heading {
@@ -55,6 +57,11 @@
 }
 
 /* LEFT COLUMN */
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+}
 
 fieldset {
     display: flex;
@@ -65,8 +72,25 @@ fieldset {
 legend {
 }
 
+.form-check-label {
 
+}
 
+fieldset:last-child {
+    background-color: #333;
+    color:green;
+
+}
+
+.btn-custom--basket {
+    margin-bottom: 3.2rem;
+}
+
+.card-warning {
+    text-align: center;
+    color: red;
+    margin-bottom: 9.6rem;
+}
 
 /* RIGHT COLUMN */
 
@@ -75,7 +99,7 @@ legend {
     padding: 2rem 0 ;
     display: flex;
     gap: 1.8rem;
-    border-bottom: .1rem solid black;
+    border-bottom: .1rem solid #fefde5;
     background-color: ;
 
 }
@@ -157,7 +181,7 @@ padding-bottom: 1rem;
     
 }
 
-/* ------------------------- */
+/* ------------
 
 .checkout-input {
     font-size: 1.4rem;
@@ -171,33 +195,40 @@ padding-bottom: 1rem;
     outline: none;
     border-color: orange;
 }
+------------- */
 
 
+/*
+****************************
+STRIPE
+****************************
+*/
 
-/* ------------------------- */
-
-
+.checkout-input,
 .StripeElement
 {
 
-    font-size: 1.4rem;
-    color: #333;
-  box-sizing: border-box;
-  height: 40px;
-  padding:1.2rem 1.2rem;
-  border: .1rem solid #333; 
-  border-radius: 0px;
+font-size: 1.4rem;
+color: #333;
+box-sizing: border-box;
+height: 40px;
+padding:1.2rem 1.2rem;
+border: .1rem solid #333; 
+border-radius: 0px;
 
-  background-color: greenyellow;
-  box-shadow: 0 1px 3px 0 #e6ebf1;
-  -webkit-transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease;
+
+box-shadow: 0 1px 3px 0 #e6ebf1;
+-webkit-transition: box-shadow 150ms ease;
+transition: box-shadow 150ms ease;
 }
 
 .StripeElement--focus,
 .checkout-input:focus,
 .checkout-input:active {
+    outline: none;
+    border-color: orange;
   box-shadow: 0 1px 3px 0 #cfd7df;
+  border-radius: 0px;
 }
 
 .StripeElement--webkit-autofill {

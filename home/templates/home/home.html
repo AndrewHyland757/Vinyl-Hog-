@@ -1,7 +1,12 @@
-{% extends "base.html" %} {% load static %} {% block extra_css %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
 <link rel="stylesheet" href="{% static 'styles/home.css' %}" />
 <link rel="stylesheet" href="{% static 'styles/products.css' %}" />
-{% endblock %} {% block content %}
+{% endblock %}
+
+{% block content %}
 
 
 <!--
@@ -58,8 +63,8 @@
           <p class="genre-tag">{{genre}}</p>
           {% endfor %}
           <div class="card-details">
-            <p class="card-text">{{ album.condition }}</p>
-            <p class="card-text">€{{ album.stock }}</p>
+            <p class="card-text">Condition: {{ album.condition }}</p>
+            <p class="card-text">Stock: {{ album.stock }}</p>
             <p class="card-text">€{{ album.price }}</p>
           </div>
         </div>
