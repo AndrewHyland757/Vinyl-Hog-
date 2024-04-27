@@ -8,7 +8,7 @@ def products(request):
 
     products = Album.objects.all()
     context = {
-        "albums": products
+        "albums": products,
     }
 
     return render(request, 'products/products.html', context)
@@ -31,16 +31,6 @@ def product(request, product_id):
     alternative_condition = Album.objects.filter(artist__exact = artist, title__exact = title).exclude(condition__exact = condition).exists()
     
     
-   
-    
-
-    
-
-     
-        
-
-   
-
 
     context = {
         "condition": condition,

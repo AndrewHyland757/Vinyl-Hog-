@@ -1,73 +1,46 @@
+{% extends "base.html" %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'styles/products.css' %}" />
+{% endblock %} {% block content %}
 
-{% extends "base.html" %}
-{% load static %}
+<!--
+    ****************************
+    SECTION PRODUCTS 
+    ****************************
+-->
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/products.css' %}">
-{% endblock %}
-
-
-
-
-
-
-{% block content %}
-
-
-
-<div class="products-container">
-
+<section class="section-new-releases">
+  <div class="section-head-container">
+    <h1 class="section-heading">All Vinyl</h1>
+    <p class="section-text">
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium,
+    </p>
+  </div>
+  <div class="products-grid">
     {% for album in albums %}
-    <a class="product-link" href=" {% url 'product' album.id %}"> 
-        <div class="product-card">
-            <div class="img-container">
-                <img  src="{{ album.featured_image.url }}">
-            </div>
-
-            <div class="details-container">
-                <h1 class="product-title"> {{ album.title }}</h1>
-                <p class="product-artist"> {{ album.artist }}</p>
-                {% for genre in album.genres.all %}
-                    
-                        <p class="genre-tag">{{genre}}</p>
-                    
-                    {% endfor %}
-                
-                
-        
-                <div class="info-box">
-                <p class="product-condition"> Condition: {{ album.condition }}</p>
-                <p class="product-stock"> Stock: {{ album.stock }}</p>
-                <p class="product-price"> Price: €{{ album.price }}</p>
-                </div>
-            </div>
+    <a class="product-link" href=" {% url 'product' album.id %}">
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="{{ album.featured_image.url }}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ album.title }}</h5>
+          <p class="artist">{{ album.artist }}</p>
+          {% for genre in album.genres.all %}
+          <p class="genre-tag">{{genre}}</p>
+          {% endfor %}
+          <div class="card-details">
+            <p class="card-text">{{ album.condition }}</p>
+            <p class="card-text">€{{ album.stock }}</p>
+            <p class="card-text">€{{ album.price }}</p>
+          </div>
         </div>
+      </div>
     </a>
     {% endfor %}
-
-</div>
-    
-
-
+  </div>
+</section>
 
 {% endblock %}
-
-
-
-
-
-
-<h1>products</h1>
-
-<ul>
-    {% for album in albums %}
-    
-    <li>
-        <a href=" {% url 'product' album.id %}"> {{ album.title}} </a>
-    </li>
-    {% endfor %}
-</ul>
-
-
-
-

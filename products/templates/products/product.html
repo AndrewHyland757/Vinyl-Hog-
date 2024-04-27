@@ -49,72 +49,6 @@
 
 </div>
 
-
-
-
-{% endblock %}
-
-
-
-<h1>product single</h1>
-
-<img style="max-width:300px;" src="{{ product.featured_image.url }}">
-
-<h1> {{ product.title }}</h1>
-<p> {{ product.artist }}</p>
-
-
-
-{% for genre in product.genres.all %}
-<span class="tag tag--pill tag--main">
-    <small>{{genre}}</small>
-</span>
-{% endfor %}
-<p> {{ product.description }}</p>
-<p> Condition:{{ product.condition }}</p>
-<p> Stock:{{ product.stock }}</p>
-
-{% if more_by_this_artist %}
-<p>More by this artist:</p>
-{% for album in more_by_this_artist %}
-
-{{ album.title}}
-{% endfor %}
-{% endif %}
-
-
-{% if alternative_condition %}
-<p>Alternative condition available</p>
-<p>Available {{ alternative_condition }}</p>
-
-
-{% endif %}
-
-
-
-
-
-
-<p> Price:€{{ product.price }}</p>
-
-
-
-
-
-
-
-
-<form class="form" action="{% url 'add-basket' product.id %}" method="POST">
-    {% csrf_token %}
-    <p class="mt-3"><strong>Quantity:</strong></p>
-            
-    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" >
-    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
-    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-    
-</form>
-
-
 {% if messages %}
 <ul class="messages">
     {% for message in messages %}
@@ -122,3 +56,12 @@
     {% endfor %}
 </ul>
 {% endif %}
+
+
+{% endblock %}
+
+
+
+
+
+

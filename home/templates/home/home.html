@@ -1,57 +1,84 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'styles/home.css' %}" />
+<link rel="stylesheet" href="{% static 'styles/products.css' %}" />
+{% endblock %} {% block content %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/home.css' %}">
-<link rel="stylesheet" href="{% static 'styles/products.css' %}">
+
+<!--
+    ****************************
+    SECTION LANDING
+    ****************************
+-->
+<section class="section-home">
+  <div class="home-container">
+    <div class="home-col-left">
+      <div class="text-container">
+        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo
+        </p>
+      </div>
+    </div>
+    <div class="home-col-right">
+      <img src="{% static 'images/home-img.jpg' %}" />
+    </div>
+  </div>
+</section>
+
+<!--
+    ****************************
+    SECTION NEW RELEASES
+    ****************************
+-->
+
+<section class="section-new-releases">
+  <div class="section-head-container">
+    <h1 class="section-heading">New Releases</h1>
+    <p class="section-text">
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium,
+    </p>
+  </div>
+  <div class="products-grid">
+    {% for album in recent_added_albums %}
+    <a class="product-link" href=" {% url 'product' album.id %}">
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="{{ album.featured_image.url }}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ album.title }}</h5>
+          <p class="artist">{{ album.artist }}</p>
+          {% for genre in album.genres.all %}
+          <p class="genre-tag">{{genre}}</p>
+          {% endfor %}
+          <div class="card-details">
+            <p class="card-text">{{ album.condition }}</p>
+            <p class="card-text">€{{ album.stock }}</p>
+            <p class="card-text">€{{ album.price }}</p>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% block postloadjs %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %} 
 {% endblock %}
 
 
 
-{% block content %}
-
-<section class="section-home">
-  
-
-    <div class="grid-col-left">
-      <div class="col-left-top">
-        <h1 class="heading heading--top">Long live</h1>
-        <h1 class="heading heading--bottom">Vinyl!</h1>
-      </div>
-
-      <div class="col-left-bottom">
-        <div class="red-box">
-          <p>Albums</p>
-        </div>
-        <div class="text-container">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-col-right">
-
-      <div class="right-1">
-        <p class="delivery-banner">Free delivery on orders over €{{ free_delivery_threshold }}!</p>
-      </div>
-
-      <div class="right-2">
-        <div class="cover-img-container">
-        <img class="cover-img" src="{{ random_album_1.featured_image.url }}">
-        </div>
-        <div class="cover-img-container">
-          <img class="cover-img" src="{{ random_album_2.featured_image.url }}">
-          </div>
-          
-      </div>
-
-    </div>
-    
-
-</section>
 
 
+<!--
 <section class="section-just-in">
   <div class="products-container">
 
@@ -86,11 +113,4 @@
 </div>
 
 </section>
-
-
-{% block postloadjs %}
-<script src="{% static 'js/home.js' %}"></script>
-{% endblock %}
-
-
-{% endblock %}
+-->
