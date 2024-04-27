@@ -7,6 +7,7 @@
 
 {% block content %}
 
+
 <div class="basket-container">
   <div class="basket-col-left">
     <h3 class="checkout-heading">Basket</h3>
@@ -115,7 +116,13 @@
 
       <div class="cost-item">
         <p class="item-detail">Delivery:</p>
-        <p class="item-detail">{{ delivery_fee }}</p>
+        {% if delivery_fee != "Free" %}
+            <p class="item-detail">€{{ delivery_fee }}0</p>
+            {% else %}
+            <p class="item-detail">{{ delivery_fee }}</p>
+            {% endif %}
+          
+        
       </div>
 
       {% if free_delivery_delta > 0 %}
@@ -131,8 +138,11 @@
 
       <a class="btn-custom btn-custom--basket" href="{% url 'checkout' %}">Checkout</a>
     </div>
+    
   </div>
 </div>
+
+
 
 {% endblock %}
 

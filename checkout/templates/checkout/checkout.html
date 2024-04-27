@@ -147,17 +147,26 @@
   
           <div class="costs-item">
             <p>Delivery:</p>
+
+            {% if delivery_fee != "Free" %}
+            <p>€{{ delivery_fee }}0</p>
+            {% else %}
             <p>{{ delivery_fee }}</p>
+            {% endif %}
           </div>
+
+          {% if free_delivery_delta > 0 %}
+            <p class="costs-item costs-item--delta">
+              Spend €{{ free_delivery_delta }} to avail of free delivery
+            </p>
+            {% endif %}
   
           <div class="costs-item total">
             <p class="">Total:</p>
             <p class="">€{{ grand_total }}</p>
           </div>
   
-          {% if free_delivery_delta > 0 %}
-          <p>Spend €{{ free_delivery_delta }} to avail of free delivery.</p>
-          {% endif %}
+          
         </div>
       </div>
     </div>
