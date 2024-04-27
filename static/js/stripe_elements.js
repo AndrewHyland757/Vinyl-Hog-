@@ -12,7 +12,6 @@ var stripe = Stripe(stripePublicKey);
 var elements = stripe.elements();
 var style = {
     base: {
-        backgroundcolor: 'green',
         color: '#333',
         fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
         fontSmoothing: 'antialiased',
@@ -26,7 +25,7 @@ var style = {
         iconColor: '#dc3545'
     }
 };
-var card = elements.create('card', {style: style}); // 
+var card = elements.create('card', {style: style}); 
 card.mount('#card-element'); // Mount on to this <div>
 
 

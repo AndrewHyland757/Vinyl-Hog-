@@ -1,110 +1,53 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Vinyl Hog Ecommerce Website
 
-Welcome AndrewHyland757,
+![Image of user landing page on different size screens]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Live application can be found here]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## About
+Vinyl Hog operates as a fully functional e-commerce platform built using Django, Python, Javascript, HTML, and CSS. Visitors can browse the records on offer, create an account and make purchaces. 
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Business Goals
 
-`python3 -m http.server`
+- Showcase the businesses products in a clear and organised way.
+- Encourage purchaces through seamless site navigation, ability to search for products and provide a easy checkout      experience. 
+- A design that appeals to the target demographic and provide them with the necessary information about the products and store. 
+- Ability for users to create and azccount to encourage further purchaces and engagement. 
 
-A blue button should appear to click: _Make Public_,
+ 
+## User Experience
 
-Another blue button should appear to click: _Open Browser_.
+### Target Audience
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- 18-60 year olds.
+- People interested in vinyl records and music in general. 
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### User Requirements and Expectations
+- A user-friendly website that balances information with an aesthetic that communicates the stores's values and appeals to the target customers.
+- A mobile-friendly website as purchaces are often made on the go. 
+- Information about the store.
+- A way to book a make a purchace.
+- Contact information and address.
+- A way to easily access social media accounts from the website.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## User Stories
 
-To log into the Heroku toolbelt CLI:
+Agile  was used to keep development in line with the core requirements of the project. In Github a kanban board was created where the user stories 
+were located. This made it easy to keep track of getting the essential aspects of the project covered as well as being able to see progress happening as 
+the project progressed.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+1. As a user I can intuitively navigate through the website so that I can easily access key information and view desired content. 
+2. As a user I can easily see if I'm logged in or not so that I can choose to log in or log out depending on what I'm doing.
+3. As a non-registered user I can make a purchace so that I don't need to spend time setting up an account.
+4. As a non-registered user I can set up an account.
+5. As a logged-in user I can make a purchace without filling in account information like name and email so that bookings can be made easily without causing annoyance.
+6. As a logged-in user I can easily view all my bookings so that I can see any upcoming reservations.  
+7. As a logged-in user I can edit an existing booking so that I can change the time, date or number of guests in a booking.
+8. As a logged in user I can delete an existing booking so that I can remove any unwanted reservations.
+9. As an admin user I can view all the customer bookings. 
+10. As an admin user I can add and delete tables in the Table model.
+11. As an admin user I can add, edit and delete bookings. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+![Image of user stories](static/images/readme-images/user-stories.jpg)
