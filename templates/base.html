@@ -140,16 +140,18 @@
           >
             <i class="fa-solid fa-user"></i>
           </a>
-          <div
-            class="dropdown-menu dropdown-menu--user"
-            aria-labelledby="navbarDropdown"
-          >
-            <a class="dropdown-item" href="#">All</a>
-
-            <a class="dropdown-item" href="#">New</a>
-
-            <a class="dropdown-item" href="#">Used</a>
-          </div>
+          <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                    <a href="" class="dropdown-item">Product Management</a>
+                {% endif %}
+                <a href="" class="dropdown-item">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            {% endif %}
+        </div>
         </div>
 
         <div class="nav-basket-container">
@@ -195,7 +197,7 @@
             <p class="footer-heading">Get Help</p>
             <ul class="footer-list">
               <li class="footer-list-item">+00 576 9766432</li>
-              <li class="footer-list-item">info@curology.com</li>
+              <li class="footer-list-item">info@vinylhog.com</li>
             </ul>
           </div>
 
@@ -215,7 +217,7 @@
             <ul class="footer-list">
               <li class="footer-list-item">Our Story</li>
               <li class="footer-list-item">Our Team and Culture</li>
-              <li class="footer-list-item">Planet Curology</li>
+              <li class="footer-list-item">Planet Vinyl Hog</li>
             </ul>
           </div>
         </div>

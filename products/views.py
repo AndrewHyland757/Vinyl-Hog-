@@ -50,14 +50,9 @@ def products(request):
                 
             conditions = Genre.objects.filter(name__in=requested_genre)
 
-            section_heading = requested_genre[0]
+            section_heading = requested_genre[0].capitalize()
 
-            
-
-
-        
-        
-
+           
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:

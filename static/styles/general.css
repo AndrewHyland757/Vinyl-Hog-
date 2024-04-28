@@ -227,3 +227,77 @@ BUTTON CLASSES
   color: #fff;
   border: #332f54 .1rem solid;
 }
+
+.checkout-input {
+font-size: 1.4rem;
+color: #333;
+box-sizing: border-box;
+height: 40px;
+padding:1.2rem 1.2rem;
+border: .1rem solid #333; 
+border-radius: 0px;
+box-shadow: 0 1px 3px 0 #e6ebf1;
+-webkit-transition: box-shadow 150ms ease;
+transition: box-shadow 150ms ease;
+}
+
+
+.checkout-input:focus,
+.checkout-input:active {
+    outline: none;
+    border-color: orange;
+    box-shadow: 0 1px 3px 0 #cfd7df;
+    border-radius: 0px;
+}
+
+/*
+****************************
+AXCCOUNT PAGES
+****************************
+*/
+
+.account-form-container {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  padding: 6.4rem;
+  margin-bottom: 12rem;
+}
+
+
+.account-form-container .section-head-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6.4rem 0;
+  
+}
+ 
+.submit {
+  margin-top: 1.8rem;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+ 
+  gap: 3.2rem;
+  align-items: center;
+  padding-bottom: 1.2rem;
+}
+
+.form-label {
+  font-size: 1.4rem;
+}
+
+.form-field-container {
+  width:300px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
