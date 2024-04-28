@@ -5,6 +5,7 @@ from django.db.models import Sum
 from django.conf import settings
 
 from products.models import Album
+from decimal import Decimal
 
 
 class Order(models.Model):
@@ -38,8 +39,9 @@ class Order(models.Model):
         """
         Account for delivery costs
         """
-        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = settings.DELIVERY_FEE
+        if self.order_total < settings.DELIVERY_THRESHOLD:
+            # self.delivery_cost = settings.DELIVERY_FEE
+            self.delivery_cost = Decimal(settings.DELIVERY_FEE)
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost

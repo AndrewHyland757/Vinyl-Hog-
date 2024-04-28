@@ -22,7 +22,7 @@
         <p class="product-artist"> {{ product.artist }}</p>
         {% for genre in product.genres.all %}
             <span>
-                <p class="genre-tag">{{genre}}</p>
+                <a href="{% url 'products' %}?genre={{genre.name}}"><p class="genre-tag">{{genre}}</p></a>
             </span>
         {% endfor %}
         <p class="product-description"> {{ product.description }}</p>

@@ -158,9 +158,11 @@
           <a href="{% url 'basket' %}">
             <i class="fa-solid fa-cart-shopping"></i>
           </a>
+          {% if product_count > 0 %}
             <div class="basket-count-container">
               <p class="product-count">{{product_count}}</p>
             </div>
+          {% endif %}
           
         </div>
 

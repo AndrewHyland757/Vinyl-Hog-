@@ -16,11 +16,6 @@
 
 
 
-
-
-
-
-
 <form class="signup mt-3" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
   {% for field in form.visible_fields %}

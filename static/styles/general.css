@@ -301,3 +301,9 @@ AXCCOUNT PAGES
   display: flex;
   justify-content: center;
 }
+
+.forget-password-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
