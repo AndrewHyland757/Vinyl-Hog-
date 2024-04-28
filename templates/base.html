@@ -51,38 +51,17 @@
         </div>
 
         <div class="nav-item dropdown nav-item--records">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Records
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"   aria-expanded="false">Records</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{% url 'products' %}">All</a>
+            <a class="dropdown-item" href="{% url 'products' %}?condition=fresh">Latest Releases</a>
 
-            <a href="" class="dropdown-item">New</a>
+            <a class="dropdown-item" href="{% url 'products' %}">All Vinyl</a>
 
-            <a class="dropdown-item" href="#">Used</a>
+            <a class="dropdown-item" href="{% url 'products' %}?condition=New">New Vinyl</a>
+
+            <a class="dropdown-item" href="{% url 'products' %}?condition=Used">Used Vinyl</a>
           </div>
         </div>
-
-
-        <a class="nav-item" href="{% url 'home' %}#new-releases">new releases</a>
-
-        <a class="nav-item" href="{% url 'products' %}?condition=fresh">Fresh In</a>
-        <a class="nav-item" href="{% url 'products' %}?condition=New">New</a>
-        <a class="nav-item" href="{% url 'products' %}?condition=Used">Used</a>
-        
-
-
-
-
-
 
 
       </div>
@@ -140,7 +119,7 @@
           >
             <i class="fa-solid fa-user"></i>
           </a>
-          <div class="dropdown-menu border-0" aria-labelledby="user-options">
+          <div class="dropdown-menu dropdown-menu--account" aria-labelledby="user-options">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                     <a href="" class="dropdown-item">Product Management</a>

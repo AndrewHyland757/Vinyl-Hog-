@@ -63,18 +63,22 @@ NAVIGATION
   .nav-item--records {
     padding-left: 16rem;
   }
-  /*
+  
   
   .dropdown-menu {
     font-size: 1.4rem;
-    padding: 1rem 0;
+    padding: 2rem 1rem;
     margin-top: 1rem;
+  }
+
+  .dropdown-menu--account {
+    margin-right: 10rem;
   }
   
   .dropdown-item {
     padding-bottom: 1rem;
   }
-  */
+  
 
   .nav-right-container {
     display: flex;
