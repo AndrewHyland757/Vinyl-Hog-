@@ -15,21 +15,28 @@
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
       doloremque laudantium,
     </p>
+    
   </div>
   <div class="products-grid">
     {% for album in albums %}
-    <a class="product-link" href=" {% url 'product' album.id %}">
+   
       <div class="card">
+        <a class="product-link" href=" {% url 'product' album.id %}">
         <img
           class="card-img-top"
           src="{{ album.featured_image.url }}"
           alt="Card image cap"
         />
+      </a>
         <div class="card-body">
+          <a class="product-link" href=" {% url 'product' album.id %}">
           <h5 class="card-title">{{ album.title }}</h5>
+          </a>
           <p class="artist">{{ album.artist }}</p>
           {% for genre in album.genres.all %}
+          <a class="product-link" href="{% url 'products' %}?genre={{genre.name}}">
           <p class="genre-tag">{{genre}}</p>
+        </a>
           {% endfor %}
           <div class="card-details">
             <p class="card-text">Condition: {{ album.condition }}</p>
@@ -38,9 +45,16 @@
           </div>
         </div>
       </div>
-    </a>
+    
     {% endfor %}
   </div>
 </section>
+{{genres2}}
+{{genre_names}}
 
 {% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<script src="{% static 'js/products.js' %}"></script>
+{% endblock%}

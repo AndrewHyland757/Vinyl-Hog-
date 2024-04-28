@@ -1,31 +1,60 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.http import HttpResponse
 from django.db.models import Q
-from .models import Album, Condition
+from .models import Album, Condition, Genre
 #from .models import Album
 
 
 def products(request):
 
     products = Album.objects.all()
+    
+    
     query= None
     conditions = None
     section_heading = "All Vinyl"
-
+    recent_added_products = None
+    sort = None
+    direction = None
     
 
 
     if request.GET:
-
+        
+        
         if 'condition' in request.GET:
             requested_condition = request.GET['condition'].split(',')
-            products = products.filter(condition__name__in=requested_condition)
-            conditions = Condition.objects.filter(name__in=requested_condition)
             
-            if requested_condition == ["New"]:
-                section_heading = "New Vinyl"
+            if requested_condition == ["fresh"]:
+
+                products_by_date = products.order_by('-date_added')
+                products =  products_by_date[0:12]
+                section_heading = "New Releases"
+
             else:
-                section_heading = "Used Vinyl"
+                
+
+                products = products.filter(condition__name__in=requested_condition) 
+                
+                conditions = Condition.objects.filter(name__in=requested_condition)
+               
+                if requested_condition == ["New"]:
+                    section_heading = "New Vinyl"
+                else:
+                    section_heading = "Used Vinyl"
+            
+       
+        if 'genre' in request.GET:
+            requested_genre = request.GET['genre'].split(',')
+            products = products.filter(genres__name__in=requested_genre) 
+                
+            conditions = Genre.objects.filter(name__in=requested_genre)
+
+            print(requested_genre)
+
+
+        
+        
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -34,7 +63,7 @@ def products(request):
                 return redirect(reverse('products'))
             
             # Searches the album title, artist name and genre for matches
-            queries = Q(title__icontains=query) | Q(artist__name__icontains=query) | Q(genres__name__icontains=query)
+            queries = Q(title__icontains=query) | Q(artist__name__icontains=query)
             products = products.filter(queries)
 
     
@@ -44,8 +73,11 @@ def products(request):
         'search_term': query,
         "section_heading": section_heading,
         
+       
+        
+        
     }
-
+   
     return render(request, 'products/products.html', context)
 
 
