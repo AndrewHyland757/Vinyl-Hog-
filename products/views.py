@@ -50,7 +50,9 @@ def products(request):
                 
             conditions = Genre.objects.filter(name__in=requested_genre)
 
-            print(requested_genre)
+            section_heading = requested_genre[0]
+
+            
 
 
         
