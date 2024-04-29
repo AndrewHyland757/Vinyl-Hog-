@@ -15,7 +15,6 @@ class Genre(models.Model):
 class Condition(models.Model):
     name = models.CharField(max_length=200)
     
-
     class Meta:
         verbose_name_plural = 'Condition'
 
@@ -41,7 +40,6 @@ class Album(models.Model):
     sale_price = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)
    
-
     def __str__(self):
         return self.title
 
@@ -49,6 +47,5 @@ class Album(models.Model):
 class Artist(models.Model):
     name = models.CharField(max_length=200)
     
-
     def __str__(self):
         return str(self.name)

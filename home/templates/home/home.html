@@ -10,9 +10,9 @@
 
 
 <!--
-    ****************************
-    SECTION LANDING
-    ****************************
+****************************
+SECTION LANDING
+****************************
 -->
 <section class="section-home">
   <div class="home-container">
@@ -31,28 +31,24 @@
 </section>
 
 <!--
-    ****************************
-    SECTION NEW RELEASES
-    ****************************
+****************************
+SECTION NEW RELEASES
+****************************
 -->
 
 <section id="new-releases" class="section-new-releases">
   <div class="section-head-container">
     <h1 class="section-heading">New Releases</h1>
     <p class="section-text">
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-      doloremque laudantium,
+      View our latest additions to our extensive stock.
     </p>
   </div>
   <div class="products-grid">
+
     {% for album in recent_added_albums %}
     <a class="product-link" href=" {% url 'product' album.id %}">
       <div class="card">
-        <img
-          class="card-img-top"
-          src="{{ album.featured_image.url }}"
-          alt="Card image cap"
-        />
+        <img class="card-img-top" src="{{ album.featured_image.url }}" alt="Card image cap"/>
         <div class="card-body">
           <h5 class="card-title">{{ album.title }}</h5>
           <p class="artist">{{ album.artist }}</p>
@@ -70,6 +66,5 @@
     {% endfor %}
   </div>
 </section>
-
 
 {% endblock %}

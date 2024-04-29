@@ -2,85 +2,185 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
   <head>
-    {% block meta %}
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    {% endblock %} 
+      {% block meta %}
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+      {% endblock %}
 
-    {% block extra_meta %} 
-    {% endblock %} 
+      {% block extra_meta %}
+      {% endblock %}
+      
+      {% block corecss %}
+      <!-- Font-awesome -->
+      <script src="https://kit.fontawesome.com/1002ac1991.js" crossorigin="anonymous"></script>
 
-    {% block corecss %}
-    <!-- Font-awesome -->
-    <script src="https://kit.fontawesome.com/1002ac1991.js" crossorigin="anonymous"></script>
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="{% static 'styles/general.css' %}"/>
+      <link rel="stylesheet" href="{% static 'styles/base.css' %}"/>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="{% static 'styles/general.css' %}" />
-    <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
-    {% endblock %}
+      <!-- Favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+      <link rel="manifest" href="/site.webmanifest">
+      {% endblock %}
 
-    {% block extra_css %}
-    
-    {% endblock %}
+      {% block extra_css %}
+      {% endblock %}
 
-    {% block corejs %}
-    <!-- STRIPE -->
-    <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %} 
+      {% block corejs %}
+      <!-- STRIPE -->
+      <script src="https://js.stripe.com/v3/"></script>
+      {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
-
-    <title>Vinyl Hog {% block extra_title %}{% endblock %}</title>
+      <title>Vinyl Hog {% block extra_title %}{% endblock %}</title>
 
   </head>
 
-  <body>
+<body>
     <nav class="navigation">
-      <div class="nav-left-container">
-        <div class="logo-container">
-          <a class="logo" href="{% url 'home' %}">Vinyl</a>
-          <a class="logo logo--2" href="{% url 'home' %}">Hog</a>
+        <div class="nav-left-container">
+            <div class="logo-container">
+                <a class="logo" href="{% url 'home' %}">Vinyl</a>
+                <a class="logo logo--2" href="{% url 'home' %}">Hog</a>
+            </div>
+
+            <div class="nav-item dropdown nav-item--records">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Records</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'products' %}?condition=fresh">Latest Releases</a>
+                    <a class="dropdown-item" href="{% url 'products' %}">All Vinyl</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?condition=New">New Vinyl</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?condition=Used">Used Vinyl</a>
+                </div>
+            </div>
         </div>
 
-        <div class="nav-item dropdown nav-item--records">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"   aria-expanded="false">Records</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{% url 'products' %}?condition=fresh">Latest Releases</a>
-
-            <a class="dropdown-item" href="{% url 'products' %}">All Vinyl</a>
-
-            <a class="dropdown-item" href="{% url 'products' %}?condition=New">New Vinyl</a>
-
-            <a class="dropdown-item" href="{% url 'products' %}?condition=Used">Used Vinyl</a>
-          </div>
-        </div>
-
-
-      </div>
-
-      <div class="nav-right-container">
-
-<form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
+        <div class="nav-right-container">
+            <form method="GET" action="{% url 'products' %}">
+                <div class="input-group w-100">
+                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
-                            </button>
-                        </div>
+                        </button>
                     </div>
-                </form>
+                </div>
+            </form>
 
+            <div class="nav-item dropdown nav-items">
+                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu--account" aria-labelledby="user-options">
+                    {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
+                    <a href="" class="dropdown-item">Product Management</a> {% endif %}
+                    <a href="" class="dropdown-item">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a> {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a> {% endif %}
+                </div>
+            </div>
+
+            <div class="nav-basket-container">
+                <a href="{% url 'basket' %}">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                {% if product_count > 0 %}
+                <div class="basket-count-container">
+                    <p class="product-count">{{product_count}}</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    {% block content %} {% endblock %}
+
+    <!--
+    ****************************
+    FOOTER
+    ****************************
+    -->
+
+    <footer class="footer">
+        <div class="subscribe-container">
+            <h2 class="subscribe-heading">
+          For updates on new products join our newsletter
+        </h2>
+            <div class="suscribe">
+                <form class="subscribe-form">
+                    <input class="email-input" />
+                    <button class="btn-footer margin-right-sm">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <div class="footer-grid">
+            <div class="footer-left">
+                <div class="footer-column">
+                    <p class="footer-heading">Get Help</p>
+                    <ul class="footer-list">
+                        <li class="footer-list-item">+00 576 9766432</li>
+                        <li class="footer-list-item">info@vinylhog.com</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <p class="footer-heading">Information</p>
+                    <ul class="footer-list">
+                        <li class="footer-list-item">FAQ</li>
+                        <li class="footer-list-item">Shipping Information</li>
+                        <li class="footer-list-item">Returns & Exchanges</li>
+                        <li class="footer-list-item">Terms & Conditions</li>
+                        <li class="footer-list-item">Store Locator</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <p class="footer-heading">About</p>
+                    <ul class="footer-list">
+                        <li class="footer-list-item">Our Story</li>
+                        <li class="footer-list-item">Our Team and Culture</li>
+                        <li class="footer-list-item">Planet Vinyl Hog</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="social-colmn-box">
+                    <p class="footer-heading">Social</p>
+                    <ul class="footer-list">
+                        <li class="footer-list-item">
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                        <li class="footer-list-item">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {% block postloadjs %}
+    <script src="https://kit.fontawesome.com/1002ac1991.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    {% endblock %}
+  </body>
+
+</html>
 
 
 <!--
@@ -107,186 +207,3 @@
         </div>
 -->
 
-        <div class="nav-item dropdown nav-items">
-          <a
-            class="nav-link"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <i class="fa-solid fa-user"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu--account" aria-labelledby="user-options">
-            {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
-                    <a href="" class="dropdown-item">Product Management</a>
-                {% endif %}
-                <a href="" class="dropdown-item">My Profile</a>
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-            {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-            {% endif %}
-        </div>
-        </div>
-
-        <div class="nav-basket-container">
-          <a href="{% url 'basket' %}">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </a>
-          {% if product_count > 0 %}
-            <div class="basket-count-container">
-              <p class="product-count">{{product_count}}</p>
-            </div>
-          {% endif %}
-          
-        </div>
-
-      </div>
-    </nav>
-
-    {% block content %}
-    {% endblock %}
-
-    <!--
-    ****************************
-    FOOTER
-    ****************************
-    -->
-
-    <footer class="footer">
-      <div class="subscribe-container">
-        <h2 class="subscribe-heading">
-          For updates on new products join our newsletter
-        </h2>
-        <div class="suscribe">
-          <form class="subscribe-form">
-            <input class="email-input" />
-            <button class="btn-footer margin-right-sm">Subscribe</button>
-          </form>
-        </div>
-      </div>
-
-      <div class="footer-divider"></div>
-
-      <div class="footer-grid">
-        <div class="footer-left">
-          <div class="footer-column">
-            <p class="footer-heading">Get Help</p>
-            <ul class="footer-list">
-              <li class="footer-list-item">+00 576 9766432</li>
-              <li class="footer-list-item">info@vinylhog.com</li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <p class="footer-heading">Information</p>
-            <ul class="footer-list">
-              <li class="footer-list-item">FAQ</li>
-              <li class="footer-list-item">Shipping Information</li>
-              <li class="footer-list-item">Returns & Exchanges</li>
-              <li class="footer-list-item">Terms & Conditions</li>
-              <li class="footer-list-item">Store Locator</li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <p class="footer-heading">About</p>
-            <ul class="footer-list">
-              <li class="footer-list-item">Our Story</li>
-              <li class="footer-list-item">Our Team and Culture</li>
-              <li class="footer-list-item">Planet Vinyl Hog</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-right">
-          <div class="social-colmn-box">
-            <p class="footer-heading">Social</p>
-            <ul class="footer-list">
-              <li class="footer-list-item">
-                <i class="fa-brands fa-instagram"></i>
-              </li>
-              <li class="footer-list-item">
-                <i class="fa-brands fa-square-facebook"></i>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    {% block postloadjs %}
-    <script src="https://kit.fontawesome.com/1002ac1991.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-
-
-    
-    {% endblock %}
-  </body>
-</html>
-
-
-
-<!--
-<nav class="navigation">
-  <div class="logo-container">
-    <a href="{% url 'home' %}">
-    <p class="logo">Vinyl<br> Hog</p>
-    </a>
-    
-
-  </div>
-
-  <div class="links-container">
-
-
-    <div class="dropdown show">
-      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Records
-      </a>
-    
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="{% url 'products' %}">All</a>
-        <a class="dropdown-item" href="#">New</a>
-        <a class="dropdown-item" href="#">Used</a>
-        
-      </div>
-    </div> 
-
-    <div class="dropdown show">
-      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Account
-      </a>
-    
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        {% if request.user.is_authenticated %}
-                          {% if request.user.is_superuser %}
-                          <a href="" class="dropdown-item">Product Management</a>
-                          {% endif %}
-                          <a href="" class="dropdown-item">My Profile</a>
-                          <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                          {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                          {% endif %}   
-      </div>
-    </div> 
-
-      
-    
-   
-    <a class="nav-link" href="{% url 'basket' %}">Basket {{product_count}}</a>
-    
-
-  </div>
-
-</nav>
-
--->
