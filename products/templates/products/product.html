@@ -35,7 +35,7 @@
 
         <form class="form" action="{% url 'add-basket' product.id %}" method="POST">
             {% csrf_token %}
-            <p class="quantity"><strong>Quantity:</strong></p>
+            
                     
             <input class=" qty-input" type="number" name="quantity" value="1" min="1" max="99" >
             <input type="submit" class="btn-custom" value="Add to Bag">

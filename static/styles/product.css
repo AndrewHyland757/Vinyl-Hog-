@@ -10,6 +10,7 @@
     align-items:start;
     margin-bottom: 12rem;
     margin-top: 12rem;
+    background-color: #eff2f3;
     
 
 
@@ -49,7 +50,7 @@
     display: inline-block;
     width:fit-content;
     font-size: 1.2rem;
-    color:#332f54;
+    color: blueviolet;
  
     letter-spacing: .08rem;
     text-transform: lowercase;

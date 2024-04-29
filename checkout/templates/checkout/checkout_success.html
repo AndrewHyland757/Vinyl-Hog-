@@ -3,6 +3,7 @@
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'styles/checkout_success.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/checkout.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -101,14 +102,44 @@
                             <p class="success-value">€{{ order.grand_total }}</p>
                         </div>
 
+                        <p class="text-muted sub-heading mb-0">Order Items:</p>
 
+                        
+                            
+                        {% for item in order.lineitems.all %}
+                        
+
+                        <div class="checkout-item checkout-item--success">
+                          <div class="checkout-img-contatiner">
+                            <a href="{% url 'product' item.product.id %}">
+                              <img
+                                class="checkout-img"
+                                src="{{ item.product.featured_image.url }}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                    
+                          <div class="item-details-contatiner">
+                            <div class="item-title-box">
+                              <p class="item-title">{{ item.product.title }}</p>
+                            </div>
+                            <p class="item-detail">Artist: {{ item.product.artist }}</p>
+                            <p class="item-detail">Condition: {{ item.product.condition }}</p>
+                            <p class="item-detail">Quantity: {{ item.quantity }}</p>
+                          </div>
+                        </div>
+                       
+                        {% endfor %}
+                       
 
                 </div>
 
     </div>
 
                     
-
+    
+   
 
     <!--
 

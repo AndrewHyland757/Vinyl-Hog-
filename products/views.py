@@ -13,6 +13,7 @@ def products(request):
     query= None
     conditions = None
     section_heading = "All Vinyl"
+    section_text = "Our full selection of vinyl."
     recent_added_products = None
     sort = None
     direction = None
@@ -30,6 +31,7 @@ def products(request):
                 products_by_date = products.order_by('-date_added')
                 products =  products_by_date[0:12]
                 section_heading = "New Releases"
+                section_text = "Check out our latest releases."
 
             else:
                 
@@ -40,8 +42,10 @@ def products(request):
                
                 if requested_condition == ["New"]:
                     section_heading = "New Vinyl"
+                    section_text = "Our full library of brand new vinyl just for you."
                 else:
                     section_heading = "Used Vinyl"
+                    section_text = "Our full library of high quality used vinyl."
             
        
         if 'genre' in request.GET:
@@ -65,6 +69,7 @@ def products(request):
 
     
     context = {
+        "section_text": section_text,
         "albums": products,
         'current_conditions': conditions,
         'search_term': query,

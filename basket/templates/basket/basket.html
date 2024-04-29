@@ -7,11 +7,13 @@
 
 {% block content %}
 
-
+{% if basket_items %} 
 <div class="basket-container">
+  
+
   <div class="basket-col-left">
     <h3 class="checkout-heading">Basket</h3>
-    {% if basket_items %} 
+    
     {% for item in basket_items %}
 
     <div class="checkout-item">
@@ -41,9 +43,7 @@
             method="POST"
           >
             {% csrf_token %}
-            <!--
-                                <p class="item-detail">Quantity:</p>
-                                -->
+            
             <input
               class="qty-input"
               type="number"
@@ -86,18 +86,10 @@
     </div>
 
     {% endfor %}
-    {% else %}
-    <p class="lead mb-5">Your bag is empty.</p>
-    <a
-      href="{% url 'products' %}"
-      class="btn btn-outline-black rounded-0 btn-lg"
-    >
-      <span class="icon">
-        <i class="fas fa-chevron-left"></i>
-      </span>
-      <span class="text-uppercase">Keep Shopping</span>
-    </a>
-    {% endif %}
+
+    
+    
+   
   </div>
 
   <div class="basket-col-right">
@@ -126,10 +118,10 @@
       </div>
 
       {% if free_delivery_delta > 0 %}
-      <p class="item-detail">
-        Spend €{{ free_delivery_delta }} to avail of free delivery.
-      </p>
-      {% endif %}
+            <p class="costs-item costs-item--delta">
+              Spend €{{ free_delivery_delta }} to avail of free delivery
+            </p>
+            {% endif %}
 
       <div class="cost-item">
         <p class="item-detail">Total:</p>
@@ -141,6 +133,27 @@
     
   </div>
 </div>
+
+  {% else %}
+  
+
+    <div class="section-head-container section-head-container--basket">
+      <h1 class="section-heading">Your bag is empty.</h1>
+    
+      <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+      
+        <span class="btn-custom btn-custom--basket"><i class="fas fa-chevron-left mr-3"></i>Keep Shopping</span>
+      </a>
+    
+    </div>
+  
+
+  
+  {% endif %}
+
+    
+  
+
 
 
 
