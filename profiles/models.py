@@ -7,6 +7,7 @@ from django_countries.fields import CountryField
 from products.models import Album
 
 
+
 class UserProfile(models.Model):
     """
     A user profile model for maintaining default
