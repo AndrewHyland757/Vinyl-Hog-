@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.db.models import Q
 from .models import Album, Condition, Genre, Artist
-from .forms import ProductForm
+from .forms import ProductForm, ArtistForm, GenreForm
 from django.contrib.auth.decorators import login_required
 
 
@@ -184,7 +184,90 @@ def delete_product(request, product_id):
     product = get_object_or_404(Album, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
-    return redirect(reverse('products'))
+    return redirect(reverse('product-management'))
 
 
-    
+
+
+@login_required
+def add_artist(request):
+    """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ArtistForm(request.POST, request.FILES)
+        if form.is_valid():
+            artist = form.save()
+            messages.success(request, 'Successfully added artist!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add artist. Please ensure the form is valid.')
+    else:
+        form = ArtistForm()
+        
+    template = 'products/add_artist.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def add_genre(request):
+    """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ArtistForm(request.POST, request.FILES)
+        if form.is_valid():
+            artist = form.save()
+            messages.success(request, 'Successfully added genre!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add genre. Please ensure the form is valid.')
+    else:
+        form = GenreForm()
+        
+    template = 'products/add_genre.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+
+@login_required
+def product_management(request):
+
+    products = Album.objects.all().order_by('title')
+    sub_title = "All Products"
+
+    if request.GET:
+        if 'stock' in request.GET:
+            requested_stock = request.GET['stock'].split(',')
+            
+            if requested_stock == ["in_stock"]:
+                products = Album.objects.filter(stock__gte=1)
+                sub_title  = "Products in stock"
+
+            elif requested_stock == ["out_stock"]:
+                products = Album.objects.filter(stock=0) 
+                sub_title  = "Products out of stock"
+
+
+    template = 'products/product_management.html'
+    context = {
+        'sub_title': sub_title,
+        'products': products,
+        
+        
+    }
+
+
+    return render(request, template, context)

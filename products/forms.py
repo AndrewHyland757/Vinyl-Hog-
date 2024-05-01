@@ -29,4 +29,31 @@ class ProductForm(forms.ModelForm):
         '''
         
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'
+            field.widget.attrs['class'] = 'checkout-input'
+
+
+    
+class ArtistForm(forms.ModelForm):
+
+    class Meta:
+        model = Artist
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+       
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'checkout-input'
+
+
+class GenreForm(forms.ModelForm):
+
+    class Meta:
+        model = Genre
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+       
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'checkout-input'
