@@ -81,12 +81,16 @@
                     <i class="fa-solid fa-user"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu--account" aria-labelledby="user-options">
-                    {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
-                    <a href="" class="dropdown-item">Product Management</a> {% endif %}
+                    {% if request.user.is_authenticated %} 
+                    {% if request.user.is_superuser %}
+                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                    {% endif %}
                     <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a> {% else %}
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    {% else %}
                     <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a> {% endif %}
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    {% endif %}
                 </div>
             </div>
 
