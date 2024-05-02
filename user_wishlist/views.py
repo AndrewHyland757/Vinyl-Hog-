@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
 from django.contrib import messages
@@ -34,3 +34,28 @@ def user_wishlist(request):
     return render(request, template, context)
 
 
+
+def wishlist_delete(request, pk):
+
+    instance = None
+    user = request.user
+    wishlist = WishlistItem.objects.filter(user=user)
+    
+    #wishlist = list(wishlist_set)
+    product = get_object_or_404(Album, id=pk)  # Identify product from model
+    
+    
+   
+    for item in wishlist:
+        if item.product == product:
+            instance = item
+            instance.delete()
+            wishlist = WishlistItem.objects.filter(user=user)
+    
+    redirect_url = 'user-wishlist'
+
+    return redirect(redirect_url)
+
+
+
+   

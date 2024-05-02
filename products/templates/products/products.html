@@ -41,9 +41,7 @@ SECTION PRODUCTS
                   <p class="card-text">Condition: {{ album.condition }}</p>
                   <p class="card-text">Stock: {{ album.stock }}</p>
                   <p class="card-text">€{{ album.price }}</p>
-                  <!--
-                  <a href ="{% url 'wishlist-add' album.id %}"><p>add to wishlist</p></a>
-                  -->
+                 
               </div>
           </div>
       </div>
@@ -59,3 +57,7 @@ SECTION PRODUCTS
 {{ block.super }}
 <script src="{% static 'js/products.js' %}"></script>
 {% endblock%}
+
+ <!--
+                  <a href ="{% url 'wishlist-add' album.id %}"><p>add to wishlist</p></a>
+                  -->
