@@ -1,10 +1,13 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
+
 from django.contrib import messages
 
-from .models import UserProfile
+from .models import UserProfile, Wishlist
 from .forms import UserProfileForm
 
 from checkout.models import Order
+
 
 def profile(request):
     """ Display the user's profile. """
@@ -45,6 +48,28 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def wishlist(request):
+    ''' Renders wishlist page '''
+
+    user = request.user
+    profile = get_object_or_404(UserProfile, user=request.user)
+
+    wishlist = Wishlist.objects.filter(user=user).order_by('-created')
+    
+
+    context = {
+        'wishlist': wishlist,
+    }
+
+
+    template = 'profiles/wishlist.html'
+
+    return render(request, template, context)
+
+
 
 
 
