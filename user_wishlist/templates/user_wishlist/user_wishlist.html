@@ -22,6 +22,10 @@ SECTION PRODUCTS
 
   </div>
   <div class="products-grid">
+    {% if wishlist == None %}
+    <p>Your wishlist is empty</p>
+    {% endif %}
+    
     {% for product in wishlist %}
 
       <div class="card">
@@ -39,6 +43,7 @@ SECTION PRODUCTS
                   <p class="genre-tag">{{genre}}</p>
               </a>
               {% endfor %}
+              
 
               <div class="card-details">
                   <p class="card-text">Condition: {{ product.product.condition }}</p>

@@ -13,21 +13,23 @@ from .models import UserWishlist, WishlistItem
 
 @login_required
 def user_wishlist(request):
-    ''' Renders wishlist page '''
+    '''
+    Renders wishlist page
+    '''
 
     wishlist_items = None
     user = request.user
-    #profile = get_object_or_404(UserProfile, user=request.user)
-
-    #wishlist = UserWishlist.objects.filter(user=user).order_by('-created')
-
 
     if WishlistItem.objects.filter(user=user):
-
         wishlist_items = WishlistItem.objects.filter(user=user)
+    else:
+        empty = "You wistlist is empty at the moment. Please return to the products page to view items and add to your woishlist."
+    
+
     
     context = {
         'wishlist': wishlist_items,
+        'empty': empty,
     }
     template = 'user_wishlist/user_wishlist.html'
 
@@ -36,16 +38,15 @@ def user_wishlist(request):
 
 
 def wishlist_delete(request, pk):
+    '''
+    Function to delete an item from the users wishlist
+    '''
 
     instance = None
     user = request.user
-    wishlist = WishlistItem.objects.filter(user=user)
+    wishlist = WishlistItem.objects.filter(user=user)   
+    product = get_object_or_404(Album, id=pk)
     
-    #wishlist = list(wishlist_set)
-    product = get_object_or_404(Album, id=pk)  # Identify product from model
-    
-    
-   
     for item in wishlist:
         if item.product == product:
             instance = item

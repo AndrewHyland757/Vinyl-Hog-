@@ -6,65 +6,62 @@
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
+
+
 {% block content %}
 <div class="account-form-container">
 
-  <div class="section-head-container">
-    <h1 class="section-heading">{% trans "Sign In" %}</h1>
+    <div class="section-head-container">
+        <h1 class="section-heading">{% trans "Sign In" %}</h1>
 
-    {% get_providers as socialaccount_providers %}
+        {% get_providers as socialaccount_providers %}
 
-    {% if socialaccount_providers %}
-    <p class="section-text">{% blocktrans with site.name as site_name %}Please sign in with one
-    of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-    for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+        {% if socialaccount_providers %}
+            <p class="section-text">{% blocktrans with site.name as site_name %}Please sign in with one
+            of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+            for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
-    <div class="socialaccount_ballot">
+            <div class="socialaccount_ballot">
+                <ul class="socialaccount_providers">
+                  {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                </ul>
 
-      <ul class="socialaccount_providers">
-        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-      </ul>
+                <div class="login-or">{% trans 'or' %}</div>
+            </div>
 
-      <div class="login-or">{% trans 'or' %}</div>
+            {% include "socialaccount/snippets/login_extra.html" %}
 
+        {% else %}
+            <p class="section-text">{% blocktrans %}If you have not created an account yet, then please
+                <a href="{{ signup_url }}"><strong>sign up</strong></a> first.{% endblocktrans %}</p>
+        {% endif %}
     </div>
-
-    {% include "socialaccount/snippets/login_extra.html" %}
-
-    {% else %}
-    <p class="section-text">{% blocktrans %}If you have not created an account yet, then please
-    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-    {% endif %}
-  </div>
 
 
     <form class="signup mt-3" method="POST" action="{% url 'account_login' %}">
-      {% csrf_token %}
-      {% for field in form.visible_fields|slice:'2' %}
-        <div class="form-container">
-          <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
-          <div class="form-field-container">
-            {{ field|add_class:'form-control checkout-input'|attr:'placeholder:'|attr:'required:' }}
-          </div>
-        
-          {% for error in field.errors %}
-          <span class="text-danger">{{ error }}</span>
-          {% endfor %}
-        </div>
-      
+        {% csrf_token %}
+        {% for field in form.visible_fields|slice:'2' %}
+
+            <!-- Fields in log in form  -->
+            <div class="field-container">
+                  <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                  <div class="form-field-container">
+                      {{ field|add_class:'form-control custom-input'|attr:'placeholder:'|attr:'required:' }}
+                  </div>
+                  {% for error in field.errors %}
+                      <span class="text-danger">{{ error }}</span>
+                  {% endfor %}
+            </div>
         {% endfor %}
-        <div class="forget-password-container">
-          <a  href="{% url 'account_reset_password' %}"><p class='section-text '>{% trans "Forgot Password?" %}</p></a>
+
+        <!-- Submit button -->
+        <div class="btn-container mt-3">
+            <button class="btn-custom" type="submit">{% trans "Sign In" %}</button>
         </div>
-        <div class="btn-container">
-          <button class="btn-basket submit" type="submit">{% trans "Sign In" %}</button>
+
+        <div class="forget-password-container mt-4">
+          <a href="{% url 'account_reset_password' %}"><p class='section-text '>{% trans "Forgot Password?" %}</p></a>
         </div>
-    
     </form>
-
 </div>
-
-
 {% endblock %}
-
-

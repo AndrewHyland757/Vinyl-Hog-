@@ -9,23 +9,16 @@
 .basket-col-left {
     padding-top: 4.8rem;
     height: 100%;
-    background-color: ;
-
 }
 
 .basket-col-right {
     padding-top: 4.8rem;
-    background-color: ;
-
 }
-
-
 
 .checkout-heading {
     text-transform: uppercase;
     padding-bottom: 2.4rem
 }
-
 
 .section-head-container--basket {
     margin:0;
@@ -37,7 +30,11 @@
 }
 
 
-/**** COL LEFT ****/
+/*
+****************************
+LEFT COLUMN
+****************************
+*/
 
 .checkout-item {
     width: 80rem;
@@ -46,8 +43,6 @@
     grid-template-columns: 1.25fr 3fr;
     gap: 4.8rem;
     border-bottom: .1rem solid #333;
-    background-color: ;
-
 }
 
 .checkout-item:first-of-type {
@@ -55,8 +50,7 @@
 }
 
 .checkout-img {
-    width: 100%
-    
+    width: 100% 
 }
 
 .item-details-contatiner {
@@ -65,10 +59,9 @@
 }
 
 .item-title-box {
-display: flex;
-justify-content: space-between;
-padding-bottom: 1.8rem;
-
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.8rem;
 }
 
 .item-title,
@@ -82,17 +75,11 @@ padding-bottom: 1.8rem;
     font-size: 1.6rem;
 }
 
-
 .item-detail {
     letter-spacing: .03rem;
     font-size: 1.4rem;
     margin-bottom: 0;
     padding-bottom: .4rem;
-  }
-
-.item-detail:last-child {
-   
-    
 }
 
 .btn-container {
@@ -100,26 +87,21 @@ padding-bottom: 1.8rem;
     margin-top: 2.4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: ;
     gap: 1.2rem;
-    
-  }
+}
 
 .qty-form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 2.4rem;
-    background-color:;
 }
 
 .delete-form {
     display: flex;
     flex-direction: column;
     justify-content:end;
-    background-color: ;
 }
-
 
 .qty-input {
     width:fit-content;
@@ -135,33 +117,15 @@ padding-bottom: 1.8rem;
     border-color: lightgoldenrodyellow;
 }
 
-
-.btn-basket {
-    width: fit-content;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    border-radius: 0;
-    border: .1rem solid #333;
-}
-
-.btn-custom--basket {
-    width: fit-content;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-}
-
-
-
-.basket-col-right {
-    
-}
-
+/*
+****************************
+RIGHT COLUMN
+****************************
+*/
 
 .cost-container {
     width: 375px;
     margin: 0 auto;
-    background-color:;
 }
 
 .cost-item {
@@ -169,17 +133,12 @@ padding-bottom: 1.8rem;
     justify-content: space-between;
     border-top: .1rem solid #333;
     padding: 2.4rem 0;
-   
 }
 
 .basket-col-right .item-detail {
     letter-spacing: .01rem;
-    font-size: 1.6rem;
-   
-    
+    font-size: 1.6rem; 
 }
-
-
 
 .costs-item {
     font-size: 1.4rem;
@@ -188,6 +147,7 @@ padding-bottom: 1.8rem;
     justify-content: space-between;
     padding-bottom: 1.2rem;
 }
+
 .costs-item--delta {
     font-size: 1.2rem;
 }

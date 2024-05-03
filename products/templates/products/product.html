@@ -8,7 +8,6 @@
 
 {% block content %}
 
-
 <div class="product-container">
     <div class="img-container">
         <img src="{{ product.featured_image.url }}">
@@ -18,9 +17,10 @@
         <h1 class="product-title"> {{ product.title }}</h1>
         <p class="product-artist"> {{ product.artist }}</p>
         {% for genre in product.genres.all %}
-        <span>
-            <a href="{% url 'products' %}?genre={{genre.name}}"><p class="genre-tag">{{genre}}</p></a>
-        </span> {% endfor %}
+            <span>
+                <a href="{% url 'products' %}?genre={{genre.name}}"><p class="genre-tag">{{genre}}</p></a>
+            </span>
+        {% endfor %}
         <p class="product-description"> {{ product.description }}</p>
 
         <div class="info-box">
@@ -32,19 +32,22 @@
         <form class="form" action="{% url 'add-basket' product.id %}" method="POST">
             {% csrf_token %}
             <input class=" qty-input" type="number" name="quantity" value="1" min="1" max="99">
-            <input type="submit" class="btn-custom" value="Add to Bag">
+            <input type="submit" class="btn-custom btn-add" value="Add to Bag">
+            <input type="submit" class="btn-custom" value="Add to Wishlist">
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
         </form>
     </div>
 </div>
 
 {% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li>{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+    <ul class="messages">
+        {% for message in messages %}
+            <li>{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
         {% endfor %}
-</ul>
-{% endif %} {% endblock %}
+    </ul>
+{% endif %}
+
+{% endblock %}
 
 
 

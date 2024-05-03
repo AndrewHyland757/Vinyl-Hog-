@@ -1,3 +1,9 @@
+/*
+****************************
+SINGLE PRODUCT DISPLAY CLASSES
+****************************
+*/
+
 .product-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -11,11 +17,7 @@
     margin-bottom: 12rem;
     margin-top: 12rem;
     background-color: #eff2f3;
-    
-
-
 }
-
 
 .img-container {
     background-color: ;
@@ -23,57 +25,24 @@
 
 .img-container img {
     width: 100%;
-
-}
-
-.details-container {
-    background-color: ;
-   
-
 }
 
 .product-title {
     margin-bottom: .5rem;
     letter-spacing: 0.05rem;
-
 }
 
 .product-artist {
     font-size: 1.6rem;
     letter-spacing: 0.05rem;
-    
     margin-bottom: .8rem;
-
 }
-
-.genre-tag {
-    display: inline-block;
-    width:fit-content;
-    font-size: 1.2rem;
-    color: blueviolet;
- 
-    letter-spacing: .08rem;
-    text-transform: lowercase;
-    
-    background-color: lightgray;
-    
-    padding: .5rem 1rem;
-
-
-    margin-right: .4rem;
-    margin-bottom: 2rem;
-
-}
-
-
-
 
 .product-description {
     font-size: 1.4rem;
     line-height: 1.25;
     letter-spacing: 0.05rem;
     margin-bottom: 2.4rem;
-
 }
 
 .info-box {
@@ -83,36 +52,29 @@
 }
 
 .product-condition {
-    
     width:fit-content;
     font-size: 1.4rem;
     letter-spacing: 0.05rem;
     padding: 1rem 2rem;
     border-radius: 0;
     border: .1rem solid #333;
-
 }
 
 .product-stock {
-    
     width: fit-content;
     font-size: 1.4rem;
     letter-spacing: .02rem;
     padding: 1rem 2rem;
     border-radius: 0;
     border: .1rem solid #333;
-
 }
 
 .product-price {
-    width:;
-    
     font-size: 1.4rem;
     letter-spacing: .02rem;
     padding: 1rem 2rem;
     border-radius: 0;
     border: .1rem solid #333;
-
 }
 
 .quantity {
@@ -130,20 +92,11 @@
     margin-bottom: 2rem;
 }
 
-
 .qty-input:focus {
     outline: none;
     border-color: orange;
 }
 
-
-.btn-custom {
-    display: block;
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: .05rem;
-    font-size: 1.4rem;
-    padding: 1rem 2rem;
-    border-radius: 0;
-    border: .1rem solid #333;
+.btn-add {
+    margin-bottom: 1.4rem;
 }

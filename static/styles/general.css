@@ -7,56 +7,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 /*
 ****************************
 GENERAL SETTINGS
 ****************************
 */
 
- * {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Helvetica";
+  line-height: 1;
+  position: relative;
+}
+
+.form-control {
+  font-size: 1.6rem;
+  letter-spacing: 0.03rem;
+}
   
-    margin: 0;
-    
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    font-size: 62.5%;
-  }
-  
-  body {
-    font-family: Helvetica;
-    line-height: 1;
-    position: relative;
-  }
+p {
+  letter-spacing: .03rem;
+  margin-bottom: 0;
+}
 
-  .form-control {
-    font-size: 1.6rem;
-    letter-spacing: 0.03rem;
-  }
-  
-  p {
-    letter-spacing: .03rem;
-    margin-bottom: 0;
-  }
+a {
+  color: #333;
+  text-decoration: none;
+}
 
-  a {
-    color: #333;
-    text-decoration: none;
-  }
+a:hover {
+  color: #333;
+  text-decoration: none;
+}
 
-  a:hover {
-    
-    color: #333;
-    
-    text-decoration: none;
-  }
-
-
-  /*
+/*
 ****************************
-SECTION CLASSES
+SECTION-HEADING CLASSES
 ****************************
 */
 
@@ -73,28 +73,25 @@ SECTION CLASSES
 .section-text {
   font-size: 1.6rem;
 }
+
 /*
 ****************************
-PRODUCT DISPLAY CLASSES
+PRODUCT-GRID DISPLAY CLASSES
 ****************************
 */
 
 .products-grid {
-  background-color: ;
   width: 100%;
   height: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 6.4rem;
-
   padding: 0 9.6rem 0 9.6rem;
-
   margin-bottom: 9.6rem;
 }
 
 .card {
-  background-color: ;
   width: 100%;
   padding: 1.6rem 1.6rem 2.4rem 1.6rem;
   border: none;
@@ -108,41 +105,6 @@ PRODUCT DISPLAY CLASSES
 .card-body {
   padding: 0;
 }
-
-/*
-.card-title {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-  margin-bottom: 0.2rem;
-}
-
-.artist {
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
-}
-
-.genre-tag {
-  font-size: 1.4rem;
-  text-transform: lowercase;
-  width: fit-content;
-  padding: 0.3rem 1rem;
-  border: 0.1rem solid #333;
-  border-radius: 100px;
-  margin-bottom: 1.2rem;
-}
-
-.card-details {
-  display: flex;
-
-  gap: 1rem;
-}
-.card-text {
-  font-size: 1.4rem;
-}
-
-*/
 
 .card-title {
   font-size: 2.4rem;
@@ -159,24 +121,36 @@ PRODUCT DISPLAY CLASSES
 }
 
 .genre-tag {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  letter-spacing: .08rem;
   text-transform: lowercase;
-  width: fit-content;
-  display: inline-block;
-  padding: 0.3rem 1rem;
-  border: 0.1rem solid #333;
 
+  display: inline-block;
+  width:fit-content;
+  padding: .5rem 1rem;
+  margin-right: .4rem;
   margin-bottom: 2rem;
-  margin-right: 0.4rem;
-  color: blueviolet;
-  background-color: lightgray;
+
+  border: 0.1rem solid #333;
+  transition: all 0.3s;
 }
+
+.genre-tag:hover,
+.genre-tag:focus,
+.genre-tag:active {
+    background-color: #333;
+    color: #fff;
+    border: #333 .1rem solid;
+    outline: transparent;
+}
+
 
 .card-details {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
+
 .card-text {
   font-size: 1.2rem;
 }
@@ -187,124 +161,61 @@ BUTTON CLASSES
 ****************************
 */
 
-
-.btn-basket {
-  width: fit-content;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  border-radius: 0;
-  border: .1rem solid #333;
-}
-
-.btn-custom--basket {
-  width: fit-content;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-}
-
 .btn-custom,
 .btn-custom:link,
 .btn-custom:visited {
-    display: inline-block;
-    width: 100%;
+    font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: .05rem;
-    font-size: 1.4rem;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
     padding: 1rem 2rem;
     border-radius: 0;
     border:  #333 .1rem solid;
     transition: all 0.3s;
     outline: transparent;
-    text-decoration: none;
-    text-align: center;
     background-color: rgb(230, 230, 230);
 }
 
-
 .btn-custom:hover,
+.btn-custom:focus,
 .btn-custom:active {
-  background-color: #332f54;
-  color: #fff;
-  border: #332f54 .1rem solid;
+    background-color: #333;
+    color: #fff;
+    border: #333 .1rem solid;
+    outline: transparent;
 }
 
-.checkout-input {
-font-size: 1.4rem;
-color: #333;
-box-sizing: border-box;
-height: 40px;
-padding:1.2rem 1.2rem;
-border: .1rem solid #333; 
-border-radius: 0px;
-box-shadow: 0 1px 3px 0 #e6ebf1;
--webkit-transition: box-shadow 150ms ease;
-transition: box-shadow 150ms ease;
-}
-
-
-.checkout-input:focus,
-.checkout-input:active {
-    outline: none;
-    border-color: orange;
-    box-shadow: 0 1px 3px 0 #cfd7df;
-    border-radius: 0px;
+.btn-custom--basket {
+    width: fit-content;
+    font-size: 1.2rem;
 }
 
 /*
 ****************************
-AXCCOUNT PAGES
+FIELD INPUT CLASSES
 ****************************
 */
 
-.account-form-container {
-  width: fit-content;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- 
-  padding: 6.4rem;
-  margin-bottom: 12rem;
+.custom-input {
+    font-size: 1.4rem;
+    color: #333;
+    box-sizing: border-box;
+    height: 40px;
+    padding:1.2rem 1.2rem;
+    border: .1rem solid #333; 
+    border-radius: 0px;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
 }
 
-
-.account-form-container .section-head-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 6.4rem 0;
-  
-}
- 
-.submit {
-  margin-top: 1.8rem;
-}
-
-.form-container {
-  display: grid;
-  grid-template-columns: 1fr auto;
- 
-  gap: 3.2rem;
-  align-items: center;
-  padding-bottom: 1.2rem;
-}
-
-.form-label {
-  font-size: 1.4rem;
-}
-
-.form-field-container {
-  width:300px;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: center;
-}
-
-.forget-password-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0;
+.custom-input:focus,
+.custom-input:active {
+    outline: none;
+    border-color: orange;
+    box-shadow: 0 1px 3px 0 #cfd7df;
+    border-radius: 0px;
 }

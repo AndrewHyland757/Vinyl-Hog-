@@ -1,0 +1,64 @@
+/*
+****************************
+ACCOUNT PAGES - GENERAL
+****************************
+*/
+
+.account-form-container {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6.4rem;
+    margin-bottom: 12rem;
+}
+
+
+.account-form-container .section-head-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6.4rem 0;
+}
+
+.submit {
+    margin-top: 1.8rem;
+}
+
+.field-container {
+    display: grid;
+    grid-template-columns: 1fr auto;    
+    gap: 3.2rem;
+    align-items: center;
+    padding-bottom: 1.2rem;
+}
+
+.form-label {
+    font-size: 1.4rem;
+}
+
+.form-field-container {
+    width:300px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+/*
+****************************
+LOGIN PAGE
+****************************
+*/
+
+.forget-password-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.forget-password-container .section-text {
+    font-size: 1.2rem;
+}

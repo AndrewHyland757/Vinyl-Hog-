@@ -3,52 +3,50 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Signup" %}{% endblock %}
+{% block head_title %}
+{% trans "Signup" %}
+{% endblock %}
 
 {% block content %}
 <div class="account-form-container">
 
-  <div class="section-head-container">
-    <h1 class="section-heading">{% trans "Sign Up" %}</h1>
-    <p class="section-text">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-  </div>
-
-
-
-
-<form class="signup mt-3" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {% for field in form.visible_fields %}
-    <div class="form-container">
-      <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
-    <div class="form-field-container">
-    {{ field|add_class:'form-control checkout-input'|attr:'placeholder:'|attr:'required:' }}
+    <div class="section-head-container">
+        <h1 class="section-heading">{% trans "Sign Up" %}</h1>
+        <p class="section-text">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}"><strong>sign in</strong></a>.{% endblocktrans %}</p>
     </div>
-    
-    {% for error in field.errors %}
-    <span class="text-danger">{{ error }}</span>
-    {% endfor %}
-  </div>
-  
-  {% endfor %}
-  <!-- Catching general form errors  -->
-  {% if form.non_field_errors %}
-  <div class="alert alert-block alert-danger">
-    <span class="text-danger form-error"> {{ form.non_field_errors  }}</span>
-  </div>
-  {% endif %}
 
-  
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <!-- Submit button -->
-  <div class="btn-container">
-   <button class="btn-basket submit" type="submit">{% trans "Sign Up" %} &raquo;</button>
-  </div>
-</form>
+    <form class="signup mt-3" id="signup_form" method="post" action="{% url 'account_signup' %}">
+        {% csrf_token %}
 
+        <!-- Fields in sign up form  -->
+        {% for field in form.visible_fields %}
+            <div class="field-container">
+                <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                <div class="form-field-container">
+                    {{ field|add_class:'form-control custom-input'|attr:'placeholder:'|attr:'required:' }}
+                </div>
+            
+                {% for error in field.errors %}
+                    <span class="text-danger">{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+        <!-- Catching general form errors  -->
+        {% if form.non_field_errors %}
+            <div class="alert alert-block alert-danger">
+                <span class="text-danger form-error"> {{ form.non_field_errors  }}</span>
+            </div>
+        {% endif %}
+
+        {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+
+        <!-- Submit button -->
+        <div class="btn-container">
+            <button class="btn-custom mt-3" type="submit">{% trans "Sign Up" %} &raquo;</button>
+        </div>
+    </form>
 </div>
-
-
 {% endblock %}

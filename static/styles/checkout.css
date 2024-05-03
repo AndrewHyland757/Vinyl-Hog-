@@ -1,3 +1,8 @@
+/*
+****************************
+CHECKOUT.HTML CSS
+****************************
+*/
 
 .section-checkout {
     position: relative;
@@ -20,10 +25,8 @@
 }
 
 .background-right {
-    
     background-color: #333;
 }
-
 
 .checkout-container {
     max-width:1140px;
@@ -57,7 +60,12 @@
     padding-bottom: 2.4rem
 }
 
-/* LEFT COLUMN */
+/*
+****************************
+LEFT COLUMN
+****************************
+*/
+
 .checkout-form {
     display: flex;
     flex-direction: column;
@@ -70,19 +78,6 @@ fieldset {
     gap: 3.2rem;
 }
 
-legend {
-}
-
-.form-check-label {
-
-}
-
-fieldset:last-child {
-    background-color: #333;
-    color:green;
-
-}
-
 .btn-custom--basket {
     margin-bottom: 3.2rem;
 }
@@ -93,7 +88,11 @@ fieldset:last-child {
     margin-bottom: 9.6rem;
 }
 
-/* RIGHT COLUMN */
+/*
+****************************
+RIGHT COLUMN
+****************************
+*/
 
 .checkout-item {
     width: 40rem;
@@ -101,8 +100,6 @@ fieldset:last-child {
     display: flex;
     gap: 1.8rem;
     border-bottom: .1rem solid #fefde5;
-    background-color: ;
-
 }
 
 .checkout-item:first-of-type {
@@ -120,10 +117,9 @@ fieldset:last-child {
 }
 
 .item-title-box {
-display: flex;
-justify-content: space-between;
-padding-bottom: 1rem;
-
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
 }
 
 .item-title,
@@ -136,7 +132,6 @@ padding-bottom: 1rem;
 .item-price {
     font-size: 1.4rem;
 }
-
 
 .item-detail {
     letter-spacing: .01rem;
@@ -164,7 +159,7 @@ padding-bottom: 1rem;
 
 .costs-item:nth-child(4) {
     padding-bottom: 2.4rem;
-    }
+}
 
 .costs-item p {
     margin-bottom: 0;
@@ -174,7 +169,6 @@ padding-bottom: 1rem;
     font-size: 1.2rem;
 }
 
-
 .total {
     padding-top: 2.4rem;
     border-top: .1rem solid #fefde5;
@@ -183,8 +177,7 @@ padding-bottom: 1rem;
 .total p {
     text-transform: uppercase;
     font-weight: 500;
-    font-size:2rem;
-    
+    font-size:2rem;  
 }
 
 /* ------------
@@ -228,7 +221,7 @@ transition: box-shadow 150ms ease;
 .checkout-input:focus,
 .checkout-input:active {
     outline: none;
-    border-color: orange;
+    
     box-shadow: 0 1px 3px 0 #cfd7df;
     border-radius: 0px;
 }
@@ -251,9 +244,6 @@ transition: box-shadow 150ms ease;
     color: #000;
     border: 1px solid #000;
 }
-
-
-
 
 select,
 select option {
