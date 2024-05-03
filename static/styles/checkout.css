@@ -6,8 +6,7 @@ CHECKOUT.HTML CSS
 
 .section-checkout {
     position: relative;
-    max-width: 1;
-    margin-bottom: 18rem;
+   margin-bottom: 9rem;
 }
 
 .checkout-background {
@@ -16,16 +15,13 @@ CHECKOUT.HTML CSS
     display: grid;
     grid-template-columns: 1.16fr 1fr;
     position: absolute;
-    left:0;
+    left: 0;
     z-index: -1;
 }
 
-.background-left {
-    border-top: .1rem solid #acacac;
-}
-
 .background-right {
-    background-color: #333;
+    background-color: #1E1C1C;
+    ;
 }
 
 .checkout-container {
@@ -40,7 +36,6 @@ CHECKOUT.HTML CSS
 .checkout-col-left,
 .checkout-col-right {
     padding-top: 4.8rem;
-    
 }
 
 .checkout-col-left {
@@ -52,7 +47,7 @@ CHECKOUT.HTML CSS
 
 .checkout-col-right {
     padding-left: 4.2rem;
-    color: #fefde5;
+    color: white;
 }
 
 .checkout-heading {
@@ -99,11 +94,11 @@ RIGHT COLUMN
     padding: 2rem 0 ;
     display: flex;
     gap: 1.8rem;
-    border-bottom: .1rem solid #fefde5;
+    border-bottom: .1rem solid white;
 }
 
 .checkout-item:first-of-type {
-    border-top: .1rem solid #fefde5;
+    border-top: .1rem solid white;
 }
 
 .checkout-img {
@@ -171,7 +166,7 @@ RIGHT COLUMN
 
 .total {
     padding-top: 2.4rem;
-    border-top: .1rem solid #fefde5;
+    border-top: .1rem solid white;
 }
 
 .total p {
@@ -180,48 +175,29 @@ RIGHT COLUMN
     font-size:2rem;  
 }
 
-/* ------------
-
-.checkout-input {
-    font-size: 1.4rem;
-    color: #333;
-    padding:1.2rem 1.2rem;
-    border-radius: 0;
-    border: .1rem solid #333; 
-}
-
-.checkout-input:focus {
-    outline: none;
-    border-color: orange;
-}
-------------- */
-
-
 /*
 ****************************
 STRIPE
 ****************************
 */
 
-.checkout-input,
+
 .StripeElement {
-font-size: 1.4rem;
-color: #333;
-box-sizing: border-box;
-height: 40px;
-padding:1.2rem 1.2rem;
-border: .1rem solid #333; 
-border-radius: 0px;
-box-shadow: 0 1px 3px 0 #e6ebf1;
--webkit-transition: box-shadow 150ms ease;
-transition: box-shadow 150ms ease;
+    font-size: 1.4rem;
+    color: #1E1C1C;
+    box-sizing: border-box;
+    height: 40px;
+    padding:1.2rem 1.2rem;
+    border: .1rem solid #1E1C1C;; 
+    border-radius: 0px;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
 }
 
-.StripeElement--focus,
-.checkout-input:focus,
-.checkout-input:active {
+.StripeElement--focus {
     outline: none;
-    
+    border-color: rgb(216, 142, 3);
     box-shadow: 0 1px 3px 0 #cfd7df;
     border-radius: 0px;
 }

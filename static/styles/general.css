@@ -32,6 +32,7 @@ body {
   font-family: "Helvetica";
   line-height: 1;
   position: relative;
+  color: #1E1C1C;
 }
 
 .form-control {
@@ -45,12 +46,12 @@ p {
 }
 
 a {
-  color: #333;
+  color: #1E1C1C;
   text-decoration: none;
 }
 
 a:hover {
-  color: #333;
+  color: #323232;
   text-decoration: none;
 }
 
@@ -93,7 +94,7 @@ PRODUCT-GRID DISPLAY CLASSES
 
 .card {
   width: 100%;
-  padding: 1.6rem 1.6rem 2.4rem 1.6rem;
+  padding: 1.8rem 1.8rem 2.4rem 1.8rem;
   border: none;
   background-color: #eff2f3;
 }
@@ -124,14 +125,12 @@ PRODUCT-GRID DISPLAY CLASSES
   font-size: 1.2rem;
   letter-spacing: .08rem;
   text-transform: lowercase;
-
   display: inline-block;
   width:fit-content;
-  padding: .5rem 1rem;
+  padding: .5rem 1.5rem;
   margin-right: .4rem;
   margin-bottom: 2rem;
-
-  border: 0.1rem solid #333;
+  border: 0.1rem solid #1E1C1C;
   transition: all 0.3s;
 }
 
@@ -173,7 +172,7 @@ BUTTON CLASSES
     display: inline-block;
     padding: 1rem 2rem;
     border-radius: 0;
-    border:  #333 .1rem solid;
+    border:  #1E1C1C .1rem solid;
     transition: all 0.3s;
     outline: transparent;
     background-color: rgb(230, 230, 230);
@@ -182,9 +181,9 @@ BUTTON CLASSES
 .btn-custom:hover,
 .btn-custom:focus,
 .btn-custom:active {
-    background-color: #333;
+    background-color: #1E1C1C;;
     color: #fff;
-    border: #333 .1rem solid;
+    border: #1E1C1C .1rem solid;
     outline: transparent;
 }
 
@@ -201,11 +200,11 @@ FIELD INPUT CLASSES
 
 .custom-input {
     font-size: 1.4rem;
-    color: #333;
+    color: #1E1C1C;;
     box-sizing: border-box;
     height: 40px;
-    padding:1.2rem 1.2rem;
-    border: .1rem solid #333; 
+    padding: 1.2rem 1.2rem;
+    border: .1rem solid #1E1C1C; 
     border-radius: 0px;
     box-shadow: 0 1px 3px 0 #e6ebf1;
     -webkit-transition: box-shadow 150ms ease;
@@ -215,7 +214,7 @@ FIELD INPUT CLASSES
 .custom-input:focus,
 .custom-input:active {
     outline: none;
-    border-color: orange;
+    border-color: rgb(216, 142, 3);
     box-shadow: 0 1px 3px 0 #cfd7df;
     border-radius: 0px;
 }

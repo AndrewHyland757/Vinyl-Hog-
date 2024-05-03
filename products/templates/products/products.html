@@ -21,11 +21,13 @@
                     <h5 class="card-title">{{ album.title }}</h5>
                 </a>
                 <p class="artist">{{ album.artist }}</p>
+                <!--
                 {% for genre in album.genres.all %}
                 <a class="product-link" href="{% url 'products' %}?genre={{genre.name}}">
                     <p class="genre-tag">{{genre}}</p>
                 </a>
                 {% endfor %}
+                -->
                 <div class="card-details">
                     <p class="card-text">Condition: {{ album.condition }}</p>
                     <p class="card-text">Stock: {{ album.stock }}</p>

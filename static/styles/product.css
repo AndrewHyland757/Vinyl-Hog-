@@ -11,7 +11,7 @@ SINGLE PRODUCT DISPLAY CLASSES
     grid-template-columns: 1fr 1.5fr;
     gap: 4.8rem;
     margin-top: 6.4rem;
-    border: .5px solid #333;
+    border: .5px solid #1E1C1C;
     padding: 3.2rem;
     align-items:start;
     margin-bottom: 12rem;
@@ -57,7 +57,7 @@ SINGLE PRODUCT DISPLAY CLASSES
     letter-spacing: 0.05rem;
     padding: 1rem 2rem;
     border-radius: 0;
-    border: .1rem solid #333;
+    border: .1rem solid #1E1C1C;
 }
 
 .product-stock {
@@ -66,7 +66,7 @@ SINGLE PRODUCT DISPLAY CLASSES
     letter-spacing: .02rem;
     padding: 1rem 2rem;
     border-radius: 0;
-    border: .1rem solid #333;
+    border: .1rem solid #1E1C1C;
 }
 
 .product-price {
@@ -74,7 +74,7 @@ SINGLE PRODUCT DISPLAY CLASSES
     letter-spacing: .02rem;
     padding: 1rem 2rem;
     border-radius: 0;
-    border: .1rem solid #333;
+    border: .1rem solid #1E1C1C;
 }
 
 .quantity {
@@ -88,7 +88,7 @@ SINGLE PRODUCT DISPLAY CLASSES
     font-size: 1.4rem;
     padding: .8rem .2rem  .8rem 1.6rem;
     border-radius: 0;
-    border: .1rem solid #333;
+    border: .1rem solid #1E1C1C;
     margin-bottom: 2rem;
 }
 
