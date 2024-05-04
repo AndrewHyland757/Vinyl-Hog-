@@ -67,4 +67,31 @@ SECTION NEW RELEASES
   </div>
 </section>
 
+
+
+
+<section id="new-releases" class="section-new-releases">
+  <div class="section-head-container">
+    <h1 class="section-heading">Staff Reviews</h1>
+    <p class="section-text">
+      Our latest staff written reviews.
+    </p>
+  </div>
+  <div class="products-grid">
+
+    {% for post in recent_added_posts %}
+    <a class="product-link" href="">
+      <div class="card">
+        <img class="card-img-top" src="{{ post.article_image.url }}" alt="Card image cap"/>
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          
+         </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
 {% endblock %}
