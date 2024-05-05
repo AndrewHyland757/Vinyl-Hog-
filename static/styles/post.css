@@ -1,0 +1,53 @@
+.container {
+    background-color: #eff2f3;
+    width:900px;
+    padding: 2.4rem;
+    margin-top: 6.4rem;
+    margin-bottom: 12rem;
+}
+
+.img-container {
+   
+}
+
+.article-img {
+    max-width: 750px;
+}
+
+.heading-container {
+    margin-top: 2rem;
+}
+
+.article-heading {
+    font-size: 3.2rem;
+}
+
+.sub-title {
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+
+
+.author {
+    font-size: 1.4rem;
+    font-style: italic;
+    padding-bottom: 2rem;
+    
+}
+
+.article {
+    
+    font-size: 1.6rem;
+    line-height: 1.2;
+    padding-bottom: 3.6rem;
+}
+
+.album-container img {
+    width:10rem;
+    padding-bottom: 1.2rem;
+}
+
+.album-container p {
+    font-size: 1.2rem;
+
+}

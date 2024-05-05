@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from . import views
 from products.models import Album
 from .models import RecommendationPost
@@ -73,3 +73,18 @@ def home(request):
     print()
     
     return render(request, 'home/home.html', context)
+
+
+def post(request, post_id):
+    '''
+    View to render an individual article.
+    '''
+
+    post = get_object_or_404(RecommendationPost, id=post_id)
+    
+    context = {
+    "post": post,
+    }
+
+    return render(request, 'home/post.html', context)
+

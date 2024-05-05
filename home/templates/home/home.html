@@ -80,7 +80,7 @@ SECTION NEW RELEASES
   <div class="products-grid">
 
     {% for post in recent_added_posts %}
-    <a class="product-link" href="">
+    <a class="product-link" href=" {% url 'post' post.id %}">>
       <div class="card">
         <img class="card-img-top" src="{{ post.article_image.url }}" alt="Card image cap"/>
         <div class="card-body">
