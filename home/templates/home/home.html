@@ -70,7 +70,7 @@ SECTION NEW RELEASES
 
 
 
-<section id="new-releases" class="section-new-releases">
+<section id="new-releases" class="section-new-releases mb-5" style="background-color: black; color: aliceblue;">
   <div class="section-head-container">
     <h1 class="section-heading">Staff Reviews</h1>
     <p class="section-text">
@@ -85,7 +85,9 @@ SECTION NEW RELEASES
         <img class="card-img-top" src="{{ post.article_image.url }}" alt="Card image cap"/>
         <div class="card-body">
           <h5 class="card-title">{{ post.title }}</h5>
-          
+          <p class="artist">{{ post.sub_title }}</p>
+          <p class="artist">By: {{ post.author }}</p>
+         
          </div>
         </div>
       </div>

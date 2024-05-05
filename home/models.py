@@ -5,15 +5,30 @@ from products.models import Album, Artist
 # Create your models here.
 
 
+class Author(models.Model):
+    """
+    An Author profile model from the Allauth User model.
+    """
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    author_name = models.CharField(max_length=200, unique=True)
+
+    def __str__(self):
+        return self.author_name
+
+
+
 
 class RecommendationPost(models.Model):
     """
     Stores a single recommendation post entry.
     """
     title = models.CharField(max_length=200, unique=True)
+    sub_title = models.CharField(max_length=200, unique=True)
     
-    author = models.ForeignKey(
+    user = models.ForeignKey(
         User, on_delete=models.CASCADE)
+    author = models.ForeignKey(
+        Author, on_delete=models.CASCADE)
     product = models.ForeignKey(Album, null=False, blank=False, on_delete=models.CASCADE)
     
     article_image = models.ImageField(
