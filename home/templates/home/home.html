@@ -48,13 +48,10 @@ SECTION NEW RELEASES
     {% for album in recent_added_albums %}
     <a class="product-link" href=" {% url 'product' album.id %}">
       <div class="card">
-        <img class="card-img-top" src="{{ album.featured_image.url }}" alt="Card image cap"/>
+        <img class="card-img" src="{{ album.featured_image.url }}" alt="Card image cap"/>
         <div class="card-body">
           <h5 class="card-title">{{ album.title }}</h5>
-          <p class="artist">{{ album.artist }}</p>
-          {% for genre in album.genres.all %}
-          <p class="genre-tag">{{genre}}</p>
-          {% endfor %}
+          <p class="card-sub-title">{{ album.artist }}</p>
           <div class="card-details">
             <p class="card-text">Condition: {{ album.condition }}</p>
             <p class="card-text">Stock: {{ album.stock }}</p>
@@ -67,28 +64,31 @@ SECTION NEW RELEASES
   </div>
 </section>
 
+<!--
+****************************
+SECTION RECOMMENDATION POSTS
+****************************
+-->
 
 
-
-<section id="new-releases" class="section-new-releases mb-5" style="background-color: black; color: aliceblue;">
+<section class="section-recommendations">
   <div class="section-head-container">
     <h1 class="section-heading">Staff Reviews</h1>
     <p class="section-text">
       Our latest staff written reviews.
     </p>
   </div>
+
   <div class="products-grid">
 
     {% for post in recent_added_posts %}
     <a class="product-link" href=" {% url 'post' post.id %}">>
       <div class="card">
-        <img class="card-img-top" src="{{ post.article_image.url }}" alt="Card image cap"/>
+        <img class="card-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
         <div class="card-body">
           <h5 class="card-title">{{ post.title }}</h5>
-          <p class="artist">{{ post.sub_title }}</p>
-          <p class="artist">By: {{ post.author }}</p>
-         
-         </div>
+          <p class="card-sub-title">{{ post.sub_title }}</p>
+          <p class="card-text">by {{ post.author }}</p>
         </div>
       </div>
     </a>

@@ -17,6 +17,11 @@
             <h3 class="article-heading">{{ post.title }}</h3>
             <p class="sub-title">{{ post.sub_title }}</p>
             <p class="author">by {{ post.author }}</p>
+            <!--
+            <p class="author"> {{ post.created_on }}</p>
+            -->
+
+            
         </div>
         <div class="article-container">
             <p class="article"> {{ post.content }}</p>
@@ -24,7 +29,10 @@
         <a href=" {% url 'product' post.product.id %}">
             <div class="album-container">
                 <img src="{{ post.product.featured_image.url }}">
+                <div class="album-container-text">
                 <p>{{ post.product }}</p>
+                <p>{{ post.product.artist }}</p>
+                </div>
             </div>
         </a>
     </div>

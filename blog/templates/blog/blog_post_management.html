@@ -1,0 +1,74 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'styles/product-management-form.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+<div class="overlay mt-5"></div>
+<div class="container container--product-management">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <hr>
+            <h2 class="logo-font mb-4">Blog Post Management</h2>
+            <h5 class="text-muted">{{sub_title}}</h5>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row mb-3 mt-5 actions-container">
+      
+
+      <div>
+        <a class="btn btn-secondary" href="{% url 'add-post' %}">Add a new post</a>
+        <a class="btn btn-secondary ml-2" href="{% url 'add-author' %}">Add a new author</a>
+      </div>
+           
+    </div>
+    <div class="row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Admin User</th>
+
+            <th scope="col">Album</th>
+            <th scope="col">Date</th>
+        
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+    
+        <tbody>
+            {% for post in posts %}
+          <tr>
+            <td>{{ post.title }}</td>
+            <td>{{ post.author }}</td>
+            <td>{{ post.user }}</td>
+            <td>{{ post.product }}</td>
+            <td>{{ post.created_on }}</td>
+            
+            <td><a class="btn btn-outline-warning" href=""> Edit</a>
+            </td>
+            <td><a class="btn btn-outline-danger" href="">Delete</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+
+      </table>
+    </div>
+
+
+
+
+
+</div>
+
+{% endblock %}

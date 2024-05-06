@@ -20,34 +20,54 @@
 
 .article-heading {
     font-size: 3.2rem;
+    margin-bottom: 0;
 }
 
 .sub-title {
     font-size: 2rem;
-    padding-bottom: .5rem;
+    padding-bottom: 1.5rem;
 }
 
 
 .author {
     font-size: 1.4rem;
     font-style: italic;
-    padding-bottom: 2rem;
+    padding-bottom: 4.8rem;
     
 }
 
 .article {
     
     font-size: 1.6rem;
-    line-height: 1.2;
-    padding-bottom: 3.6rem;
+    line-height: 1.25;
+    letter-spacing: .04rem;
+    padding-bottom: 4.8rem;
+    
+}
+
+.album-container {
+    width: fit-content;
+    display: flex;
+    gap: 1.6rem;
+    border: .5px solid #1E1C1C;
+    padding: 1.2rem;
+
 }
 
 .album-container img {
     width:10rem;
-    padding-bottom: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.album-container-text {
+    padding-top: 2rem;
 }
 
 .album-container p {
     font-size: 1.2rem;
+    padding-bottom: .25rem;
+}
 
+.album-container p:nth-child(1) {
+    font-size: 1.4rem;
 }

@@ -62,7 +62,8 @@ the project progressed.
 ### Admin User Needs
 
 12. As an admin user I can access the product management page.
-13. As an admin user I can add new products to the store and edit or delete required products. 
+13. As an admin user I can add new products to the store and edit or delete required products.
+14. As an admin user I can add new recommendation posts and edit or delete if required.
 
 
 ![Image of user stories]()
@@ -70,18 +71,19 @@ the project progressed.
 ## Scope
 The website has to achieve the essential user & business goals. The following features will be included in this version:
 
-- A responsive navbar that will have links to all the sections and pages on the website.
-- A visually strong landing page that entices the user to further exploration of the business.
 - Visual language and styling that reflects the brands values and appeals to the target audience.
+- A responsive navbar that will have links to all the products, account features, a product search function, access to registered users wishlist and access to the users basket. 
+- A visually strong landing page that entices the user to further exploration of the business; this includes a new releases section and recommendation articles section.
+- A footer section with contact information, social media links, site links and contact details. 
 
 - About section with a brief suitable description of the restaurant with three images. ****************
 
-- Products page where users can view the albums available'
+- Products page where users can view the albums available.
 - Product page where the customers can view the product in further detail and have the option to add it to their basket, or if logged in their wishlist.
 - A basket page where the customer can view the products in their basket and remove and change quantity in necessary. 
 - A checkout page where the customer can make a purchace.
  
-- A footer section with contact information, social media links, site links and contact details. 
+
 - Register and login pages using Django Allauth.
 - A user profile page to view orders made.
 - A logout page for logged in users.  
@@ -97,6 +99,7 @@ The website has to achieve the essential user & business goals. The following fe
 ### Images
 
 - Each product card includes the cover of each album, or if not avvailable a default image.
+- Recommendation articles also have a suitable image of the band or relevant album.
 
 ### Landing Page
 - A visually enticing landing page urging a potential customer to explore the website further and find out more.
@@ -146,19 +149,110 @@ Book This is a custom product model. It is connected to Genre as a ManyToManyFie
 - This model contains the product field which is connected to the Album model as a ForeignField. 
 - It also contains a user which will assign the logged-in user from the Allauth User model and assign them to the created instance.
 
+### RecommendationPost Model
 
-### Flowchat
+- This model holds the recommendation articles. This are submitted by admin users.
+- It contains three foreign fields: author, product and user. 
 
-- When making a booking on the reservation section, the form fields displayed will depend on the user being logged in or not.
-- It was import that logged in users were not entering account information like username and email as this would be fustrating. 
-- Equally, it was important that non-registered users could make a booking without having to go through the sign-up process. Therefore, a guest user field was included in the Booking model to  handle this. The guest will haver to enter thier email when making a booking. Any  past bookings accociated  with this email will be retrivied if the user decides to create an account later. 
-- Once the booking form is validated the code checks if there are any available tables.
-- If so, it was important that tables were assigned according to the number of guests, not just the first table from the Table Model.
-- The code then finds the best matched table to exclude or lower the number of empty seats. 
-- If more that three empty seats is the only availability the booking will not proceed as there will be too many empty seats.
+### Author Model
 
-
-![Image of locic-flow chart](static/images/readme-images/logic-flow.png)
+- This model contains a user as a foreign field and takes from the Allauth User Model.
+- The author_name will be the displayed name.
 
 
+## Features
 
+### Navigation Bar & Landing Page
+
+![Screenshot of navigation, logo and main image]()
+
+- The logo is displayed on the top left of the page. Encircled in a black circle, it is positioned as an absolute element and extends below the navigation section.
+
+- The "Records" dropdown menu provides quick access to the products on offer in categories of "new", "used" and "all".
+
+- The search box allows users to search for products.
+
+- The wishlist heart icon allows access to the users wishlist.
+
+- The user icon allows access to the areas depending if the user is logged in or not.
+
+- The basket naturally leads to the basket page. It also displays how many items are in the basket.
+
+- The landing page is quite minimal and utilizes negative space to lend a feeling of sophistaction and elegance.
+
+### New Releases Section
+
+- This section displays the latest eight albums added to store.
+
+### Recommendation Section
+
+- This section displays the latest four recommendation posts added. These are written by staff of the company and act as high quality content to serve the customer and further engagement.
+
+### Footer Section
+
+- The footer displays some of the stores key information and social media links. It also has an subscription form.
+
+### Products Page
+### Product Page
+### Basket
+### Checkout
+### Account Pages
+### Wishlist
+
+
+
+## Technologies Used
+
+
+- [Django](https://www.djangoproject.com/)
+    - Django is the framework that has been used to build the over project and its apps.
+- [Python](https://www.python.org/)
+    - Python is the core programming language used to write all of the code in this application to make it fully functional.
+- [Bootstrap](https://getbootstrap.com/)
+    - Used for creating responsive design.
+- [Google Fonts](https://fonts.google.com/)
+    - Used to obtain the fonts linked in the header, fonts used were Raleway and Lobster
+- [Font Awesome](https://fontawesome.com/)
+    - Used to obtain the icons used on the high scores and rules pages.
+- [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+    - Used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project.
+- [GitHub](https://github.com/)
+    - Used to store code for the project after being pushed.
+- [Git](https://git-scm.com/)
+    - Used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
+- [Gitpod](https://www.gitpod.io/)
+    - Used as the development environment.
+- [Heroku](https://dashboard.heroku.com/apps)
+    - Used to deploy my application.
+- [Lucid](https://lucid.app/documents#/dashboard)
+    - Used to create the ERD for the project.
+- [Grammarly](https://www.grammarly.com/)
+    - Used to fix the thousands of grammar errors across the project.
+- [ImageResizer](https://imageresizer.com/)
+    - Used to resize images to reduce loading time.
+- [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+    - Used to test my code for any issues or errors.
+- [Grammarly](https://www.grammarly.com/)
+    - Used to fix the grammar errors across the project.
+- [Coloors](https://coolors.co/)
+    - Used to create a colour palette for the design.
+- [Cloudinary](https://cloudinary.com/)
+    - Used to store all of my static files and images.
+    - [Favicon.io](https://favicon.io/)
+    - Used to create favicon's for my website
+- [W3C Markup Validation Service](https://validator.w3.org/) 
+    - Used to validate all HTML code written and used in this webpage.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - Used to validate all CSS code written and used in this webpage.
+- [JSHint](https://jshint.com/)
+    - Used to validate JS code
+- [Freeformatter CSS Beautify](https://www.freeformatter.com/css-beautifier.html)
+    - Used to accurately format my CSS code.
+- [Freeformatter HTML Formatter](https://www.freeformatter.com/html-formatter.html)
+    - Used to accurately format my HTML code.
+- [AmIResponsive](http://ami.responsivedesign.is/)
+    - Used to generate responsive image used in README file.
+- [SQLite](https://www.sqlite.org/index.html)
+    - I have SQLite to run my database tests locally.
+- [PostgreSQL](https://www.postgresql.org/)
+    - I have used Heroku's PostgreSQL relational database in deployment to store the data for my models.

@@ -53,7 +53,15 @@ SECTION HOME
   ****************************
   */
   
-  .section-new-releases {
-    height: ;
+
+  .section-new-releases,
+  .section-recommendations {
     max-width: 100vw;
+    padding-bottom: 9.6rem;
+  }
+
+  .section-recommendations {
+    color: aliceblue;
+    background-color: #1E1C1C;
+   
   }
