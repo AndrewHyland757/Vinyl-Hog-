@@ -26,7 +26,7 @@
 
       <div>
         <a class="btn btn-secondary" href="{% url 'add-post' %}">Add a new post</a>
-        <a class="btn btn-secondary ml-2" href="{% url 'add-author' %}">Add a new author</a>
+        
       </div>
            
     </div>
@@ -55,9 +55,9 @@
             <td>{{ post.product }}</td>
             <td>{{ post.created_on }}</td>
             
-            <td><a class="btn btn-outline-warning" href=""> Edit</a>
+            <td><a class="btn btn-outline-warning" href="{% url 'edit-post' post.id %}"> Edit</a>
             </td>
-            <td><a class="btn btn-outline-danger" href="">Delete</a></td>
+            <td><a class="btn btn-outline-danger" href="{% url 'delete-post' post.id %}">Delete</a></td>
           </tr>
           {% endfor %}
         </tbody>

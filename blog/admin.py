@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import RecommendationPost, Author
+from .models import RecommendationPost
 
 # Register your models here.
 admin.site.register(RecommendationPost)
-admin.site.register(Author)

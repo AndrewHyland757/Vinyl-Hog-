@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
 from . import views
 from products.models import Album
-from .models import RecommendationPost, Author
+from .models import RecommendationPost
 from .forms import RecommendationPostForm
 from django.contrib.auth.decorators import login_required
 
@@ -71,16 +72,19 @@ def add_post(request):
         return redirect(reverse('home'))
 
     user = request.user
-    author = get_object_or_404(Author, user=user)
+    
+    
 
     if request.method == 'POST':
+
+        
         form = RecommendationPostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
 
             # Populate the booking instance customer_name field
             post.user = user
-            post.author = author
+           
 
             post = form.save()
             messages.success(request, 'Successfully added post!')
@@ -95,23 +99,53 @@ def add_post(request):
     template = 'blog/add_post.html'
     context = {
         'form': form,
-        "author": author,
     }
 
     return render(request, template, context)
-
 
 
 @login_required
-def add_author(request):
-    """ 
-    View to add an author name.
-    """
+def edit_post(request, post_id):
     
-        
-    template = 'blog/add_author.html'
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    post = get_object_or_404(RecommendationPost, pk=post_id)
+
+    if request.method == 'POST':
+        form = RecommendationPostForm(request.POST, request.FILES, instance=post)
+       
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated post!')
+            return redirect(reverse('post', args=[post.id]))
+        else:
+            messages.error(request, 'Failed to update post. Please ensure the form is valid.')
+    else:
+        form = RecommendationPostForm(instance=post)
+        messages.info(request, f'You are editing {post.title}')
+
+    template = 'blog/edit_post.html'
     context = {
         'form': form,
+        'post': post,
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_post(request, post_id):
+    """ Delete a post """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    post = get_object_or_404(RecommendationPost, pk=post_id)
+    post.delete()
+    messages.success(request, 'Post deleted!')
+    return redirect(reverse('blog-post-management'))
+
+
+

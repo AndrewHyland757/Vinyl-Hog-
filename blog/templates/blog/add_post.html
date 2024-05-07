@@ -24,17 +24,17 @@
 
         <div class="row">
             <div class="col-12 col-md-6 mt-4">
-                <h5 class="text-muted">Your author name: {{ author }} </h5>
-                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                
+                <form method="POST" action="{% url 'add-post' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Article</button>
+                        <a class="btn-custom" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn-custom" type="submit">Add Article</button>
                     </div>
                 </form>
                 
-                <a class="btn btn-outline-black rounded-0" href="{% url 'add-author' %}">Add author</a>
+                
             </div>            
         </div>
     </div>
