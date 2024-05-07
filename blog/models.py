@@ -6,10 +6,6 @@ from products.models import Album, Artist
 
 
 
-
-
-
-
 class RecommendationPost(models.Model):
     """
     Stores a single recommendation post entry.

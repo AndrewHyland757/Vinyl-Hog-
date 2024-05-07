@@ -2,14 +2,13 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/product-management-form.css' %}">
+<link rel="stylesheet" href="{% static 'styles/management.css' %}">
 {% endblock %}
-
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container">
-    <div class="row">
+<div class="container mt-5">
+    <div class="row mb-4">
         <div class="col-12 col-md-6">
             <hr>
             <h2 class="logo-font mb-4">Product Management</h2>
@@ -44,8 +43,8 @@
                     {% endif %}
                 {% endfor %}
                 <div class="text-right">
-                    <a class="btn btn-outline-black rounded-0" href="{% url 'blog-post-management' %}">Cancel</a>
-                    <button class="btn btn-black rounded-0" type="submit">Update Post</button>
+                    <a class="btn-custom mt-3 mb-3" href="{% url 'blog-post-management' %}">Cancel</a>
+                    <button class="btn-custom mb-5" type="submit">Update Post</button>
                 </div>
             </form>
         </div>            

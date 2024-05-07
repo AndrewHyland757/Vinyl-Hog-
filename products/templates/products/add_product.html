@@ -1,18 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
+<div class="overlay"></div>
+    <div class="container mt-5">
+        <div class="row mb-4">
             <div class="col-12 col-md-6">
                 <hr>
                 <h2 class="logo-font mb-4">Product Management</h2>
@@ -27,13 +19,12 @@
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Product</button>
+                        <a class="btn-custom mt-3 mb-4" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn-custom  mb-5" type="submit">Add Product</button>
                     </div>
                 </form>
-                <a class="btn btn-outline-black rounded-0" href="{% url 'add_genre' %}">Add a new genre</a>
-                <a class="btn btn-outline-black rounded-0" href="{% url 'add_artist' %}">Add a new artist</a>
+                
             </div>            
-        </div>
     </div>
+</div>
 {% endblock %}

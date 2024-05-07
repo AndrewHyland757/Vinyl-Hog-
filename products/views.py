@@ -9,8 +9,11 @@ from django.contrib.auth.decorators import login_required
 
 def products(request):
 
-    products = Album.objects.all()
-    
+    if Album.objects.all().exists:
+        products = Album.objects.all()
+    else:
+        products = None
+
     
     query= None
     conditions = None
@@ -20,28 +23,18 @@ def products(request):
     sort = None
     direction = None
     
-
-
     if request.GET:
-        
-        
         if 'condition' in request.GET:
             requested_condition = request.GET['condition'].split(',')
-            
             if requested_condition == ["fresh"]:
-
                 products_by_date = products.order_by('-date_added')
                 products =  products_by_date[0:12]
                 section_heading = "New Releases"
                 section_text = "Check out our latest releases."
-
             else:
-                
-
                 products = products.filter(condition__name__in=requested_condition) 
-                
                 conditions = Condition.objects.filter(name__in=requested_condition)
-               
+            
                 if requested_condition == ["New"]:
                     section_heading = "New Vinyl"
                     section_text = "Our full library of brand new vinyl just for you."
@@ -49,16 +42,12 @@ def products(request):
                     section_heading = "Used Vinyl"
                     section_text = "Our full library of high quality used vinyl."
             
-       
         if 'genre' in request.GET:
             requested_genre = request.GET['genre'].split(',')
             products = products.filter(genres__name__in=requested_genre) 
-                
             conditions = Genre.objects.filter(name__in=requested_genre)
-
             section_heading = requested_genre[0].capitalize()
 
-           
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -69,17 +58,12 @@ def products(request):
             queries = Q(title__icontains=query) | Q(artist__name__icontains=query)
             products = products.filter(queries)
 
-    
     context = {
         "section_text": section_text,
         "albums": products,
         'current_conditions': conditions,
         'search_term': query,
         "section_heading": section_heading,
-        
-       
-        
-        
     }
    
     return render(request, 'products/products.html', context)
@@ -101,8 +85,6 @@ def product(request, product_id):
     more_by_this_artist = Album.objects.filter(artist__exact = artist).exclude(title__exact = title)
     alternative_condition = Album.objects.filter(artist__exact = artist, title__exact = title).exclude(condition__exact = condition).exists()
     
-    
-
     context = {
         "condition": condition,
         "product": product,
@@ -114,9 +96,31 @@ def product(request, product_id):
     return render(request, 'products/product.html', context)
 
 
+@login_required
+def product_management(request):
 
+    products = Album.objects.all().order_by('title')
+    sub_title = "All Products"
 
+    if request.GET:
+        if 'stock' in request.GET:
+            requested_stock = request.GET['stock'].split(',')
+            
+            if requested_stock == ["in_stock"]:
+                products = Album.objects.filter(stock__gte=1)
+                sub_title  = "Products in stock"
 
+            elif requested_stock == ["out_stock"]:
+                products = Album.objects.filter(stock=0) 
+                sub_title  = "Products out of stock"
+
+    template = 'products/product_management.html'
+    context = {
+        'sub_title': sub_title,
+        'products': products,  
+    }
+
+    return render(request, template, context)
 
 
 @login_required
@@ -131,7 +135,7 @@ def add_product(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('product', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
@@ -187,8 +191,6 @@ def delete_product(request, product_id):
     return redirect(reverse('product-management'))
 
 
-
-
 @login_required
 def add_artist(request):
     """ Add a product to the store """
@@ -201,7 +203,7 @@ def add_artist(request):
         if form.is_valid():
             artist = form.save()
             messages.success(request, 'Successfully added artist!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('product-management'))
         else:
             messages.error(request, 'Failed to add artist. Please ensure the form is valid.')
     else:
@@ -227,7 +229,7 @@ def add_genre(request):
         if form.is_valid():
             artist = form.save()
             messages.success(request, 'Successfully added genre!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('product-management'))
         else:
             messages.error(request, 'Failed to add genre. Please ensure the form is valid.')
     else:
@@ -242,32 +244,3 @@ def add_genre(request):
 
 
 
-@login_required
-def product_management(request):
-
-    products = Album.objects.all().order_by('title')
-    sub_title = "All Products"
-
-    if request.GET:
-        if 'stock' in request.GET:
-            requested_stock = request.GET['stock'].split(',')
-            
-            if requested_stock == ["in_stock"]:
-                products = Album.objects.filter(stock__gte=1)
-                sub_title  = "Products in stock"
-
-            elif requested_stock == ["out_stock"]:
-                products = Album.objects.filter(stock=0) 
-                sub_title  = "Products out of stock"
-
-
-    template = 'products/product_management.html'
-    context = {
-        'sub_title': sub_title,
-        'products': products,
-        
-        
-    }
-
-
-    return render(request, template, context)
