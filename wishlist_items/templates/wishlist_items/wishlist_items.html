@@ -1,0 +1,57 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block content %}
+
+<!--
+****************************
+SECTION WISHLIST
+****************************
+-->
+
+{% if wishlist_items == None %}
+    <div class="section-head-container section-head-empty">
+        <h1 class="section-heading">Your wishlist is empty.</h1>
+        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+            <span class="btn-custom btn-custom--basket"><i class="fas fa-chevron-left mr-3"></i>View records</span>
+        </a>
+    </div>
+
+{% else %}
+
+    <section class="section-new-releases">
+        <div class="section-head-container">
+            <h1 class="section-heading">Your Wishlist</h1>
+            <p class="section-text">Check out the vinyl you have saved for later.</p>
+        </div>
+
+        <div class="products-grid">
+            {% for wishlist_item in wishlist_items %}
+                <div class="card">
+                    <a class="product-link" href=" {% url 'product' wishlist_item.product.id %}">
+                        <img class="card-img" src="{{ wishlist_item.product.featured_image.url }}" alt="Card image cap" />
+                    </a>
+                    <div class="card-body">
+                        <a class="product-link" href=" {% url 'product' wishlist_item.product.id %}">
+                            <h5 class="card-title">{{ wishlist_item.product.title }}</h5>
+                        </a>
+                        <p class="card-artist">{{ wishlist_item.product.artist }}</p>
+                        <div class="card-details">
+                            <p class="card-text">Condition: {{ wishlist_item.product.condition }}</p>
+                            <p class="card-text">Stock: {{ wishlist_item.product.stock }}</p>
+                            <p class="card-text">€{{ wishlist_item.product.price }}</p>
+                        </div>
+                        <a class="btn-custom mt-5" href ="{% url 'delete-wishlist' wishlist_item.product.id %}"><p>Remove</p></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}
+
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<script src="{% static 'js/products.js' %}"></script>
+{% endblock%}

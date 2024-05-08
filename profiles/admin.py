@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Wishlist, UserProfile
+from .models import UserProfile
 # Register your models here.
 
 
-admin.site.register(Wishlist)
+
 admin.site.register(UserProfile)

@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'profiles',
     'blog',
     
-    'user_wishlist',
+    'wishlist_items',
 
     'crispy_forms',
     'widget_tweaks',

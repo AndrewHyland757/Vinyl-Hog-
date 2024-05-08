@@ -38,6 +38,28 @@ SINGLE PRODUCT DISPLAY CLASSES
     margin-bottom: .8rem;
 }
 
+.genre-tag {
+    font-size: 1.2rem;
+    letter-spacing: .08rem;
+    text-transform: lowercase;
+    display: inline-block;
+    width:fit-content;
+    padding: .5rem 1.5rem;
+    margin-right: .4rem;
+    margin-bottom: 2rem;
+    border: 0.1rem solid #1E1C1C;
+    transition: all 0.3s;
+  }
+  
+  .genre-tag:hover,
+  .genre-tag:focus,
+  .genre-tag:active {
+      background-color: #333;
+      color: #fff;
+      border: #333 .1rem solid;
+      outline: transparent;
+  }
+
 .product-description {
     font-size: 1.4rem;
     line-height: 1.25;

@@ -1,60 +1,67 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponse
 from django.db.models import Q
 from .models import Album, Condition, Genre, Artist
 from .forms import ProductForm, ArtistForm, GenreForm
-from django.contrib.auth.decorators import login_required
+
 
 
 def products(request):
+    '''
+    Displayes the products.
+    '''
+    products = Album.objects.all()
 
-    if Album.objects.all().exists:
-        products = Album.objects.all()
-    else:
-        products = None
-
-    
-    query= None
+    query = None
     conditions = None
     section_heading = "All Vinyl"
     section_text = "Our full selection of vinyl."
     recent_added_products = None
     sort = None
     direction = None
-    
+
     if request.GET:
         if 'condition' in request.GET:
+            '''
+            Displays items depending on the condition.
+            '''
             requested_condition = request.GET['condition'].split(',')
             if requested_condition == ["fresh"]:
                 products_by_date = products.order_by('-date_added')
-                products =  products_by_date[0:12]
+                products = products_by_date[0:12]
                 section_heading = "New Releases"
                 section_text = "Check out our latest releases."
             else:
-                products = products.filter(condition__name__in=requested_condition) 
+                products = products.filter(condition__name__in=requested_condition)
                 conditions = Condition.objects.filter(name__in=requested_condition)
-            
+
                 if requested_condition == ["New"]:
                     section_heading = "New Vinyl"
                     section_text = "Our full library of brand new vinyl just for you."
                 else:
                     section_heading = "Used Vinyl"
                     section_text = "Our full library of high quality used vinyl."
-            
+
         if 'genre' in request.GET:
+            '''
+            Displays items depending on genre.
+            '''
             requested_genre = request.GET['genre'].split(',')
-            products = products.filter(genres__name__in=requested_genre) 
+            products = products.filter(genres__name__in=requested_genre)
             conditions = Genre.objects.filter(name__in=requested_genre)
             section_heading = requested_genre[0].capitalize()
 
         if 'q' in request.GET:
+            '''
+            Displays items depending on search request.
+            '''
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
-            # Searches the album title, artist name and genre for matches
+
             queries = Q(title__icontains=query) | Q(artist__name__icontains=query)
             products = products.filter(queries)
 
@@ -65,62 +72,27 @@ def products(request):
         'search_term': query,
         "section_heading": section_heading,
     }
-   
+
     return render(request, 'products/products.html', context)
 
 
-
 def product(request, product_id):
-
+    '''
+    Displays a single product.
+    '''
     product = get_object_or_404(Album, id=product_id)
-    
+
     if product.stock <= 0:
         product_stock = "Out of stock"
     else:
         product_stock = product.stock
 
-    condition = product.condition
-    artist = product.artist
-    title = product.title
-    more_by_this_artist = Album.objects.filter(artist__exact = artist).exclude(title__exact = title)
-    alternative_condition = Album.objects.filter(artist__exact = artist, title__exact = title).exclude(condition__exact = condition).exists()
-    
     context = {
-        "condition": condition,
         "product": product,
-        "product_stock": product_stock,
-        "more_by_this_artist": more_by_this_artist,
-        "alternative_condition": alternative_condition    }
-
-    print(condition)
-    return render(request, 'products/product.html', context)
-
-
-@login_required
-def product_management(request):
-
-    products = Album.objects.all().order_by('title')
-    sub_title = "All Products"
-
-    if request.GET:
-        if 'stock' in request.GET:
-            requested_stock = request.GET['stock'].split(',')
-            
-            if requested_stock == ["in_stock"]:
-                products = Album.objects.filter(stock__gte=1)
-                sub_title  = "Products in stock"
-
-            elif requested_stock == ["out_stock"]:
-                products = Album.objects.filter(stock=0) 
-                sub_title  = "Products out of stock"
-
-    template = 'products/product_management.html'
-    context = {
-        'sub_title': sub_title,
-        'products': products,  
+        'product_stock': product_stock,
     }
 
-    return render(request, template, context)
+    return render(request, 'products/product.html', context)
 
 
 @login_required
@@ -134,16 +106,42 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, 'Successfully added product!')
+            messages.success(request, f'Successfully added album "{product.title}"!')
             return redirect(reverse('product', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
-    template = 'products/add_product.html'
+        template = 'products/add_product.html'
+        context = {
+            'form': form,
+        }
+
+    return render(request, template, context)
+
+
+@login_required
+def product_management(request):
+
+    products = Album.objects.all().order_by('title')
+    sub_title = "All Products"
+
+    if request.GET:
+        if 'stock' in request.GET:
+            requested_stock = request.GET['stock'].split(',')
+
+            if requested_stock == ["in_stock"]:
+                products = Album.objects.filter(stock__gte=1)
+                sub_title = "Products in stock"
+
+            elif requested_stock == ["out_stock"]:
+                products = Album.objects.filter(stock=0)
+                sub_title = "Products out of stock"
+
+    template = 'products/product_management.html'
     context = {
-        'form': form,
+        'sub_title': sub_title,
+        'products': products,
     }
 
     return render(request, template, context)
@@ -202,7 +200,7 @@ def add_artist(request):
         form = ArtistForm(request.POST, request.FILES)
         if form.is_valid():
             artist = form.save()
-            messages.success(request, 'Successfully added artist!')
+            messages.success(request, f'Successfully added artist "{artist.name}"!')
             return redirect(reverse('product-management'))
         else:
             messages.error(request, 'Failed to add artist. Please ensure the form is valid.')
@@ -225,22 +223,19 @@ def add_genre(request):
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = ArtistForm(request.POST, request.FILES)
+        form = GenreForm(request.POST, request.FILES)
         if form.is_valid():
-            artist = form.save()
-            messages.success(request, 'Successfully added genre!')
+            genre = form.save()
+            messages.success(request, f'Successfully added genre "{genre.name}"!')
             return redirect(reverse('product-management'))
         else:
             messages.error(request, 'Failed to add genre. Please ensure the form is valid.')
     else:
         form = GenreForm()
-        
+
     template = 'products/add_genre.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
-
-
-

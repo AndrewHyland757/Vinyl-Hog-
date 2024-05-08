@@ -5,23 +5,27 @@ from django.contrib import messages
 
 # Create your views here.
 
+
 def basket(request):
-    """ A view that renders the basket contents page """
+    '''
+    A view that renders the basket contents page.
+    '''
 
     return render(request, 'basket/basket.html')
 
 
-def add_basket(request, product_id): # ID passed in form action URL
-    """ Add a quantity of the specified product to the shopping basket """
-
-    quantity = int(request.POST.get('quantity')) # From form
-    redirect_url = request.POST.get('redirect_url')  # From form
-    basket = request.session.get('basket', {}) # Get session or create new
-    product = get_object_or_404(Album, id=product_id)  # Identify product from model
+def add_basket(request, product_id):
+    '''
+    Add a quantity of the specified product to the shopping basket.
+    '''
+    quantity = int(request.POST.get('quantity'))
+    redirect_url = request.POST.get('redirect_url')
+    basket = request.session.get('basket', {})
+    product = get_object_or_404(Album, id=product_id)
 
     if quantity <= product.stock:
         if product_id in list(basket.keys()):
-            total_quantity = int(basket[product_id]) + quantity # Add quantity in form to existing quantity(amount of product on basket list)
+            total_quantity = int(basket[product_id]) + quantity
             if total_quantity <= product.stock:
                 basket[product_id] = int(basket[product_id]) + quantity
                 messages.success(
@@ -41,10 +45,12 @@ def add_basket(request, product_id): # ID passed in form action URL
 
 
 def update_basket(request, product_id):
-    
+    '''
+    Updates the basket quantity of a product.
+    '''
     basket = request.session.get('basket', {})
-    product = get_object_or_404(Album, id=product_id)  
-    quantity = int(request.POST.get('quantity')) # From form
+    product = get_object_or_404(Album, id=product_id)
+    quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
 
     if product_id in list(basket.keys()):
@@ -54,17 +60,18 @@ def update_basket(request, product_id):
                 request, f'{product.title} quantity updated successfully.')
         else:
             messages.error(request, 'Not enough stock to fulfil this order')
-    
+
     request.session['basket'] = basket
     return redirect(redirect_url)
 
 
 def delete_basket_item(request, product_id):
-    
+    '''
+    Deletes a basket item.
+    '''
     basket = request.session.get('basket', {})
-    product = get_object_or_404(Album, id=product_id) 
+    product = get_object_or_404(Album, id=product_id)
     redirect_url = request.POST.get('redirect_url')
-    
 
     if product_id in list(basket.keys()):
         basket.pop(product_id)
@@ -72,6 +79,3 @@ def delete_basket_item(request, product_id):
 
     request.session['basket'] = basket
     return redirect(redirect_url)
-
-
-

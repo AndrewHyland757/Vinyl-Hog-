@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class UserWishlistConfig(AppConfig):
+class WishlistItemsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'user_wishlist'
+    name = 'wishlist_items'

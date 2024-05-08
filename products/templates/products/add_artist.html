@@ -15,19 +15,19 @@
         <div class="row mb-4">
             <div class="col-12 col-md-6">
                 <hr>
-                <h2 class="logo-font mb-4">Genre Management</h2>
-                <h5 class="text-muted">Add an Genre</h5>
+                <h2 class="logo-font mb-4">Artist Management</h2>
+                <h5 class="text-muted">Add an Artist</h5>
                 <hr>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'add_genre' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'add_artist' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <a class="btn-custom mt-3 mb-4" href="{% url 'products' %}">Cancel</a>
+                        <a class="btn-custom mt-3 mb-4" href="{% url 'product-management' %}">Cancel</a>
                         <button class="btn-custom mb-5" type="submit">Add Artist</button>
                     </div>
                 </form>

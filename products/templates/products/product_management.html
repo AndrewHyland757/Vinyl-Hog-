@@ -7,68 +7,68 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay mt-5"></div>
-<div class="container container--product-management">
-    <div class="row">
-        <div class="col-12 col-md-6">
-            <hr>
-            <h2 class="logo-font mb-4">Product Management</h2>
-            <h5 class="text-muted">{{sub_title}}</h5>
-            <hr>
+    <div class="overlay mt-5"></div>
+    <div class="container container--product-management">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <hr>
+                <h2 class="logo-font mb-4">Product Management</h2>
+                <h5 class="text-muted">{{sub_title}}</h5>
+                <hr>
+            </div>
         </div>
-    </div>
 
-    <div class="row mb-3 mt-5 actions-container">
-        <div>
-            <a class="btn btn-secondary mr-2" href="{% url 'product-management' %}">All</a>  
-            <a class="btn btn-secondary mr-2" href="{% url 'product-management' %}?stock=in_stock">In Stock</a>
-            <a class="btn btn-secondary" href="{% url 'product-management' %}?stock=out_stock">Out of  Stock</a>
+        <div class="row mb-3 mt-5 actions-container">
+            <div>
+                <a class="btn btn-secondary mr-2" href="{% url 'product-management' %}">All</a>  
+                <a class="btn btn-secondary mr-2" href="{% url 'product-management' %}?stock=in_stock">In Stock</a>
+                <a class="btn btn-secondary" href="{% url 'product-management' %}?stock=out_stock">Out of  Stock</a>
+            </div>
+            <div>
+                <a class="btn btn-secondary" href="{% url 'add_genre' %}">Add a new genre</a>
+                <a class="btn btn-secondary ml-2" href="{% url 'add_artist' %}">Add a new artist</a>
+                <a class="btn btn-secondary ml-2" href="{% url 'add_product' %}">Add a new album</a> 
+            </div>
         </div>
-        <div>
-            <a class="btn btn-secondary" href="{% url 'add_genre' %}">Add a new genre</a>
-            <a class="btn btn-secondary ml-2" href="{% url 'add_artist' %}">Add a new artist</a>
-            <a class="btn btn-secondary ml-2" href="{% url 'add_product' %}">Add a new album</a> 
-        </div>
-    </div>
-    <div class="row">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Artist</th>
-                    <th scope="col">Stock</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for product in products %}
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
                     <tr>
-                      <td>{{ product.title }}</td>
-                      <td>{{ product.artist }}</td>
-                      <td>{{ product.stock }}</td>
-                      <td>€{{ product.price }}</td>
-                      <td><a class="btn btn-outline-warning" href="{% url 'edit_product' product.id %}"> Edit</a></td>
-                      <td><a class="btn btn-outline-danger" href="{% url 'delete_product' product.id %}">Delete</a></td>
+                        <th scope="col">Title</th>
+                        <th scope="col">Artist</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                        <tr>
+                        <td>{{ product.title }}</td>
+                        <td>{{ product.artist }}</td>
+                        <td>{{ product.stock }}</td>
+                        <td>€{{ product.price }}</td>
+                        <td><a class="btn btn-outline-warning" href="{% url 'edit_product' product.id %}"> Edit</a></td>
+                        <td><a class="btn btn-outline-danger" href="{% url 'delete_product' product.id %}">Delete</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
 
-{% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-            <li>
-                {% if message.tags %}
-                    class="{{ message.tags }}"
-                {% endif %}>
-                {{ message }}
-            </li>
-        {% endfor %}
-    </ul>
-{% endif %}
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li>
+                    {% if message.tags %}
+                        class="{{ message.tags }}"
+                    {% endif %}>
+                    {{ message }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 
 {% endblock %}

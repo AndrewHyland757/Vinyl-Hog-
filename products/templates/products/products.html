@@ -1,43 +1,37 @@
 {% extends "base.html" %} 
 {% load static %}
+
+
 {% block content %} 
+    <section class="products">
+        <div class="section-head-container">
+            <h1 class="section-heading">{{section_heading}}</h1>
+            <p class="section-text">
+                {{ section_text }}
+            </p>
+        </div>
 
-<section class="products">
-    <div class="section-head-container">
-        <h1 class="section-heading">{{section_heading}}</h1>
-        <p class="section-text">
-            {{ section_text }}
-        </p>
-    </div>
-
-    <div class="products-grid">
-        {% for album in albums %}
-        <div class="card">
-            <a class="product-link" href=" {% url 'product' album.id %}">
-                <img class="card-img-top" src="{{ album.featured_image.url }}" alt="Card image cap" />
-            </a>
-            <div class="card-body">
+        <div class="products-grid">
+            {% for album in albums %}
+            <div class="card">
                 <a class="product-link" href=" {% url 'product' album.id %}">
-                    <h5 class="card-title">{{ album.title }}</h5>
+                    <img class="card-img" src="{{ album.featured_image.url }}" alt="Card image cap" />
                 </a>
-                <p class="artist">{{ album.artist }}</p>
-                <!--
-                {% for genre in album.genres.all %}
-                <a class="product-link" href="{% url 'products' %}?genre={{genre.name}}">
-                    <p class="genre-tag">{{genre}}</p>
-                </a>
-                {% endfor %}
-                -->
-                <div class="card-details">
-                    <p class="card-text">Condition: {{ album.condition }}</p>
-                    <p class="card-text">Stock: {{ album.stock }}</p>
-                    <p class="card-text">€{{ album.price }}</p>
+                <div class="card-body">
+                    <a class="product-link" href=" {% url 'product' album.id %}">
+                        <h5 class="card-title">{{ album.title }}</h5>
+                    </a>
+                    <p class="card-artist">{{ album.artist }}</p>
+                    <div class="card-details">
+                        <p class="card-text">Condition: {{ album.condition }}</p>
+                        <p class="card-text">Stock: {{ album.stock }}</p>
+                        <p class="card-text">€{{ album.price }}</p>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-</section>
+    </section>
 {% endblock %}
 
 {% block extra_js %}

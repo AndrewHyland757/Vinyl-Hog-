@@ -65,6 +65,15 @@ SECTION-HEADING CLASSES
   padding: 9.6rem 0 6.4rem 9.6rem;
 }
 
+.section-head-empty {
+  margin:0;
+  
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap:3.2rem;
+}
+
 .section-heading {
   font-size: 4.8rem;
   font-weight: 600;
@@ -89,7 +98,7 @@ PRODUCT-GRID DISPLAY CLASSES
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 6.4rem;
   padding: 0 9.6rem 0 9.6rem;
-  margin-bottom: 0;
+  margin-bottom: 9.6rem;
 }
 
 .card {
@@ -117,33 +126,16 @@ PRODUCT-GRID DISPLAY CLASSES
   margin-bottom: 0.25rem;
 }
 
-.card-sub-title {
+.card-artist {
   font-size: 1.6rem;
   letter-spacing: 0.05rem;
   margin-bottom: 1.5rem;
+
 }
 
-.genre-tag {
-  font-size: 1.2rem;
-  letter-spacing: .08rem;
-  text-transform: lowercase;
-  display: inline-block;
-  width:fit-content;
-  padding: .5rem 1.5rem;
-  margin-right: .4rem;
-  margin-bottom: 2rem;
-  border: 0.1rem solid #1E1C1C;
-  transition: all 0.3s;
-}
 
-.genre-tag:hover,
-.genre-tag:focus,
-.genre-tag:active {
-    background-color: #333;
-    color: #fff;
-    border: #333 .1rem solid;
-    outline: transparent;
-}
+
+
 
 
 .card-details {
@@ -153,7 +145,7 @@ PRODUCT-GRID DISPLAY CLASSES
 }
 
 .card-text {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 /*
