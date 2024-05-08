@@ -17,10 +17,11 @@ SINGLE PRODUCT DISPLAY CLASSES
     margin-bottom: 12rem;
     margin-top: 12rem;
     background-color: #eff2f3;
+    
 }
 
 .img-container {
-    background-color: ;
+    position: relative;
 }
 
 .img-container img {

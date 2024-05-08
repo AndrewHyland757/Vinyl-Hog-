@@ -44,6 +44,11 @@ SECTION NEW RELEASES
     <div class="products-grid">
         {% for album in albums %}
             <div class="card">
+                {% if album.on_sale == True %}
+                      <div class="on-sale-container">
+                            <p>On Sale</p>
+                      </div>
+                {% endif %}
                 <a class="product-link" href=" {% url 'product' album.id %}">
                     <img class="card-img" src="{{ album.featured_image.url }}" alt="Card image cap" />
                 </a>

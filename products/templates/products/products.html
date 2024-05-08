@@ -13,7 +13,14 @@
 
         <div class="products-grid">
             {% for album in albums %}
-            <div class="card">
+            
+                <div class="card">
+                    {% if album.on_sale == True %}
+                        <div class="on-sale-container">
+                            <p>On Sale</p>
+                        </div>
+                    {% endif %}
+
                 <a class="product-link" href=" {% url 'product' album.id %}">
                     <img class="card-img" src="{{ album.featured_image.url }}" alt="Card image cap" />
                 </a>
@@ -21,11 +28,18 @@
                     <a class="product-link" href=" {% url 'product' album.id %}">
                         <h5 class="card-title">{{ album.title }}</h5>
                     </a>
+                    
+                    
                     <p class="card-artist">{{ album.artist }}</p>
                     <div class="card-details">
                         <p class="card-text">Condition: {{ album.condition }}</p>
                         <p class="card-text">Stock: {{ album.stock }}</p>
+                        {% if album.on_sale == True %}
+                        <p class="card-text" style="text-decoration: line-through;">€{{ album.price }}</p>
+                        <p class="card-text">€{{ album.sale_price }}</p>
+                        {% else %}
                         <p class="card-text">€{{ album.price }}</p>
+                        {% endif %}
                     </div>
                 </div>
             </div>

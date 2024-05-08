@@ -27,7 +27,12 @@
                             </div>
                             <p class="item-detail">Artist: {{ item.product.artist }}</p>
                             <p class="item-detail">Condition: {{ item.product.condition }}</p>
+                            {% if item.product.on_sale == True %}
+                                <p class="item-detail"><s> €{{ item.product.price }}</s> €{{ item.product.sale_price }}</p>
+                            {% else %}
                             <p class="item-detail">€{{ item.product.price }}</p>
+                            {% endif %}
+                                    
                     
                             <div class="btn-container">
                                 <form class="qty-form" action="{% url 'update-basket' item.product_id %}" method="POST">

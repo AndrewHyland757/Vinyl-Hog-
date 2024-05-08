@@ -8,7 +8,13 @@
 
 {% block content %}
     <div class="product-container">
+        
         <div class="img-container">
+            {% if product.on_sale == True %}
+                      <div class="on-sale-container">
+                            <p>On Sale</p>
+                      </div>
+                {% endif %}
             <img src="{{ product.featured_image.url }}">
         </div>
 
@@ -25,7 +31,11 @@
             <div class="info-box">
                 <p class="product-condition"> Condition: {{ product.condition }}</p>
                 <p class="product-stock"> Stock: {{ product_stock }}</p>
-                <p class="product-price"> Price: €{{ product.price }}</p>
+                {% if product.on_sale == True %}
+                    <p class="product-price"><s> €{{ product.price }}</s> €{{ product.sale_price }}</p>
+                {% else %}
+                    <p class="product-price"> Price: €{{ product.price }}</p>
+                {% endif %}
             </div>
 
             <form class="form" action="{% url 'add-basket' product.id %}" method="POST">

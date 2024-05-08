@@ -103,10 +103,30 @@ PRODUCT-GRID DISPLAY CLASSES
 
 .card {
   width: 100%;
+  position: relative;
   padding: 1.8rem 1.8rem 2.4rem 1.8rem;
   border: none;
   border-radius: 0;
   background-color: #eff2f3;
+}
+
+.on-sale-container {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2.5rem;
+  padding: .5rem 1rem;
+  position: absolute;
+  color: #e6ebf1;
+  background-color: #1E1C1C;
+}
+
+.on-sale-container p {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .25rem;
+  
 }
 
 .card-img {

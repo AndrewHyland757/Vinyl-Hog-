@@ -21,8 +21,17 @@ def products(request):
     recent_added_products = None
     sort = None
     direction = None
+    requested_artist_products = None
 
     if request.GET:
+
+        if 'artist' in request.GET:
+            '''
+            Displays items depending on the artist.
+            '''
+            requested_artist = request.GET['artist'].split(',')
+            products = products.filter(artist__name__in=requested_artist)
+
         if 'condition' in request.GET:
             '''
             Displays items depending on the condition.
@@ -50,8 +59,11 @@ def products(request):
             '''
             requested_genre = request.GET['genre'].split(',')
             products = products.filter(genres__name__in=requested_genre)
-            conditions = Genre.objects.filter(name__in=requested_genre)
+            #conditions = Genre.objects.filter(name__in=requested_genre)
             section_heading = requested_genre[0].capitalize()
+            
+            
+            
 
         if 'q' in request.GET:
             '''
@@ -66,6 +78,7 @@ def products(request):
             products = products.filter(queries)
 
     context = {
+        
         "section_text": section_text,
         "albums": products,
         'current_conditions': conditions,
@@ -94,6 +107,11 @@ def product(request, product_id):
 
     return render(request, 'products/product.html', context)
 
+'''
+****************************
+PRODUCT MANAGEMNET
+****************************
+'''
 
 @login_required
 def add_product(request):
@@ -120,6 +138,8 @@ def add_product(request):
     return render(request, template, context)
 
 
+
+
 @login_required
 def product_management(request):
 
@@ -127,6 +147,26 @@ def product_management(request):
     sub_title = "All Products"
 
     if request.GET:
+        
+        if 'artist' in request.GET:
+            '''
+            Displays items depending on the artist.
+            '''
+            
+            requested_artist = request.GET['artist'].split(',')
+            products = products.filter(artist__name__in=requested_artist)
+            artist_name = requested_artist[0]
+            sub_title  = f'Albums by: {artist_name}'
+        
+        if 'genre' in request.GET:
+            '''
+            Displays items depending on genre.
+            '''
+            requested_genre = request.GET['genre'].split(',')
+            products = products.filter(genres__name__in=requested_genre)
+            sub_title  = f'Albums in {requested_genre[0].capitalize()} genre.'
+            
+
         if 'stock' in request.GET:
             requested_stock = request.GET['stock'].split(',')
 
@@ -188,6 +228,21 @@ def delete_product(request, product_id):
     messages.success(request, 'Product deleted!')
     return redirect(reverse('product-management'))
 
+'''
+****************************
+ARTIST MANAGEMNET
+****************************
+'''
+
+@login_required
+def artist_management(request):
+
+    artists = Artist.objects.all().order_by('name')
+    template = 'products/artist_management.html'
+    context = {
+        'artists': artists,
+    }
+    return render(request, template, context)
 
 @login_required
 def add_artist(request):
@@ -213,6 +268,92 @@ def add_artist(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def edit_artist(request, artist_id):
+    """ Edit an artist """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    artist = get_object_or_404(Artist, pk=artist_id)
+
+    if request.method == 'POST':
+        form = ArtistForm(request.POST, request.FILES, instance=artist)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated artist!')
+            return redirect('artist-management')
+        else:
+            messages.error(request, 'Failed to update artist. Please ensure the form is valid.')
+    else:
+        form = ArtistForm(instance=artist)
+        messages.info(request, f'You are editing {artist.name}')
+
+    template = 'products/edit_artist.html'
+    context = {
+        'form': form,
+        'artist': artist,
+    }
+
+    return render(request, template, context)
+
+'''
+****************************
+GENRE MANAGEMNET
+****************************
+'''
+
+
+@login_required
+def genre_management(request):
+
+    genres = Genre.objects.all().order_by('name')
+    template = 'products/genre_management.html'
+    context = {
+        'genres': genres,
+    }
+    return render(request, template, context)
+
+
+@login_required
+def edit_genre(request, genre_id):
+    """ Edit an genre """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    genre = get_object_or_404(Genre, pk=genre_id)
+
+    if request.method == 'POST':
+        form = GenreForm(request.POST, request.FILES, instance=genre)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated genre name!')
+            return redirect('genre-management')
+        else:
+            messages.error(request, 'Failed to update genre. Please ensure the form is valid.')
+    else:
+        form = GenreForm(instance=genre)
+        messages.info(request, f'You are editing {genre.name}')
+
+    template = 'products/edit_genre.html'
+    context = {
+        'form': form,
+        'genre': genre,
+    }
+
+    return render(request, template, context)
+
+
+
+
+
+
+
+
+
 
 
 @login_required

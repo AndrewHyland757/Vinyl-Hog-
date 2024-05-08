@@ -8,7 +8,6 @@ from django.contrib.auth.models import User
 def basket_contents(request):
 
     delivery_threshold = settings.DELIVERY_THRESHOLD
-
     basket_items = []
     products_to_delete = []
     price_total = 0
@@ -26,8 +25,20 @@ def basket_contents(request):
         if product.stock <= 0:
             products_to_delete.append(product_id)
 
-        price_sub_total = product.price * int(quantity)
-        price_total += product.price * int(quantity)
+        
+
+
+        
+
+        
+        # Checks if item is on sale and multiplies the item price by quantity
+        if product.on_sale == True:
+            price_total += product.sale_price * int(quantity)
+            price_sub_total = product.sale_price * int(quantity)
+        else:
+            price_total += product.price * int(quantity)
+            price_sub_total = product.price * int(quantity)
+
         product_count += int(quantity)
 
         # Add these keys and values to the basket object
