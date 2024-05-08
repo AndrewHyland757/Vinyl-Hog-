@@ -142,18 +142,38 @@ BOOTSTRAP TOASTS
 
 .message-container {
   position: fixed;
-  top: 72px;
-  right: 15px;
+  top: 7.6rem;
+  right: 20px;
   z-index: 99999999999;
- 
 }
 
 .custom-toast {
   overflow: visible;
+  border-color: #1E1C1C;
 }
 
 .toast-capper {
-  height: 2px;
+  height: .4rem;
+}
+
+.toast-header {
+  
+
+}
+.toast{
+  font-size: 1.4rem;
+  letter-spacing: .03rem;
+  box-shadow: none;
+  
+
+ 
+}
+
+.toast-header,
+.toast-body {
+  border-color: #1E1C1C;
+  padding: 1rem 2rem;
+  
 }
 
 
