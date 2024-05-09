@@ -50,17 +50,21 @@ SECTION NEW RELEASES
                       </div>
                 {% endif %}
                 <a class="product-link" href=" {% url 'product' album.id %}">
-                    <img class="card-img" src="{{ album.featured_image.url }}" alt="Card image cap" />
+                    <img class="card-img" src="{{ album.featured_image.url }}" alt="Cover image of {{ album.title }} by {{ album.artist }}"/>
                 </a>
                 <div class="card-body">
                     <a class="product-link" href=" {% url 'product' album.id %}">
-                        <h5 class="card-title">{{ album.title }}</h5>
+                        <h5 class="card-title"><strong>{{ album.title }}</strong></h5>
                     </a>
                     <p class="card-artist">{{ album.artist }}</p>
                     <div class="card-details">
                         <p class="card-text">Condition: {{ album.condition }}</p>
                         <p class="card-text">Stock: {{ album.stock }}</p>
+                        {% if album.on_sale == True %}
+                        <p class="card-text"><s>€{{ album.price }}</s> €{{ album.sale_price }}</p>
+                        {% else %}
                         <p class="card-text">€{{ album.price }}</p>
+                        {% endif %}
                     </div>
                 </div>
             </div>

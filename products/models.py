@@ -39,6 +39,7 @@ class Album(models.Model):
     discount = models.IntegerField(null=True, blank=True)
     sale_price = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)
+        
 
     def __str__(self):
         return self.title

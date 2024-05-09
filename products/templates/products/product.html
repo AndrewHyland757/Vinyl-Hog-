@@ -6,6 +6,15 @@
 <link rel="stylesheet" href="{% static 'styles/product.css' %}">
 {% endblock %}
 
+
+     
+
+{% block extra_meta %}
+<meta name="description" content="Product page for {{ product.title }} by {{ product.artist }} ">
+<meta name="keywords" content="{{ product.title }} vinyl, {{ product.title }} record, {{ product.artist }}">
+{% endblock %}
+
+
 {% block content %}
     <div class="product-container">
         
@@ -15,7 +24,7 @@
                             <p>On Sale</p>
                       </div>
                 {% endif %}
-            <img src="{{ product.featured_image.url }}">
+            <img src="{{ product.featured_image.url }}" alt="Cover image of {{ product.title }} by {{ product.artist }}">
         </div>
 
         <div class="details-container">

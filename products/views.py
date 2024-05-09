@@ -61,10 +61,7 @@ def products(request):
             products = products.filter(genres__name__in=requested_genre)
             #conditions = Genre.objects.filter(name__in=requested_genre)
             section_heading = requested_genre[0].capitalize()
-            
-            
-            
-
+     
         if 'q' in request.GET:
             '''
             Displays items depending on search request.
@@ -76,6 +73,7 @@ def products(request):
 
             queries = Q(title__icontains=query) | Q(artist__name__icontains=query)
             products = products.filter(queries)
+            
 
     context = {
         
