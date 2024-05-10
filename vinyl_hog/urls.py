@@ -29,6 +29,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('blog/', include('blog.urls')),
+    path('product_management/', include('product_management.urls')),
     path('wishlist/', include('wishlist_items.urls')),
     path('404_test/', views.test, name="404_test"),  # test 404 page
 

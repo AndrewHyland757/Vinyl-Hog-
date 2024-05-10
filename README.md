@@ -199,6 +199,23 @@ Book This is a custom product model. It is connected to Genre as a ManyToManyFie
 ### Account Pages
 ### Wishlist
 
+## Search Engine Optimization SEO and Marketing
+
+### Business Model
+
+### SEO
+- A keyword list for long and short-tail keywords was made and the refined using [wordtracker](https://www.wordtracker.com/).
+- Descriptive meta tags were added to the base.html template, including title, description and keywords.
+- Semantic HTLM elements were implemented.
+- The use of keywords in section headings when suitable.
+- Further meta tags were added to the product pages  and article posts depending on the shown product or article. These included the product name and releated artist in the description and keywords.
+- For the product and article post images the relevant product name and artist is contained in the image alternative dwscription.
+- A sitemap was generated using [xml-sitemaps](https://www.xml-sitemaps.com/) This was generated using the deployed website. The file is included in the root level of the project.
+- Robots.txt file was created at the root level of the project. This file tells the search engine crawlers which URLs they can access on the website.
+
+
+### Marketing
+- Newsletter is included in the home page. This section facilitates user engagement and promotes the e-commerce store through effective email marketing and social media presence.
 
 
 ## Technologies Used

@@ -34,7 +34,7 @@
                         <td>{{ artist.name }}</td>
                         <td><a class="btn btn-outline" href="{% url 'product-management' %}?artist={{ artist.name }}">View Albums</a></td>
                         <td><a class="btn btn-outline-warning" href="{% url 'edit-artist' artist.id %}">Edit</a></td>
-                        <td><a class="btn btn-outline-danger" href="">Delete</a></td>
+                        <td><a class="btn btn-outline-danger" href="{% url 'delete-artist' artist.id %}">Delete</a></td>
                         </tr>
                     {% endfor %}
                 </tbody>
