@@ -35,8 +35,9 @@ SECTION IMAGE
 -->
 
 <section class="about-section">
-    <div class="section-head-container">
-        <h1 class="section-heading section-heading--center">Your basket is empty.</h1>
+    
+    <div class="head-container">
+        <h1 class="head-heading section-heading--center">About</h1>
     </div>
         
             <img class="about-img" src="{% static 'images/cover4.png' %}">
@@ -52,9 +53,9 @@ SECTION NEW RELEASES
 -->
 
 <section id="new-releases" class="section-new-releases">
-    <div class="section-head-container">
-        <h1 class="section-heading">New Releases</h1>
-        <p class="section-text">
+    <div class="head-container">
+        <h1 class="head-heading">New Releases</h1>
+        <p class="head-text">
           View our latest additions to our extensive stock.
         </p>
     </div>
@@ -96,20 +97,20 @@ SECTION RECOMMENDATION POSTS
 -->
 
 <section class="section-recommendations">
-    <div class="section-head-container">
-        <h1 class="section-heading">Staff Reviews</h1>
-        <p class="section-text">
+    <div class="head-container">
+        <h1 class="head-heading">Staff Reviews</h1>
+        <p class="head-text">
           Dive into our staff's top vinyl album picks, a reflection of a hundred years of shared musical love.
         </p>
     </div>
 
-    <div class="products-grid">
+    <div class="article-grid">
         {% for post in recent_added_posts %}
             <a class="product-link" href=" {% url 'post' post.id %}">>
-                <div class="card">
-                    <img class="card-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
+                <div class="article-card">
+                    <img class="article-card-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
                     <div class="card-body">
-                        <h5 class="card-title">{{ post.title }}</h5>
+                        <h5 class="card-title"><strong>{{ post.title }}</strong></h5>
                         <p class="card-sub-title">{{ post.sub_title }}</p>
                         <p class="card-text">by {{ post.author }}</p>
                     </div>
