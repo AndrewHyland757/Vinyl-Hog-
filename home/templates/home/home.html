@@ -17,9 +17,16 @@ SECTION LANDING
         <div class="home-col-left">
             <div class="text-container">
                 <h1>Don't just listen – <br>experience.</h1>
+                <!--
                 <p>
-                  Immerse yourself in a symphony of choices as you peruse our curated selection of vinyl gems. From timeless classics to cutting-edge releases, indulge in sonic bliss with confidence and ease. The melody never fades. Start your auditory adventure today.
+                  Immerse yourself in a symphony of choices as you peruse our curated selection of vinyl gems.
+                   From timeless classics to cutting-edge releases, indulge in sonic bliss with confidence and ease. The melody never fades. Start your auditory adventure today.
                 </p>
+                -->
+                <p>
+                    Immerse yourself in a symphony of choices as you peruse our curated selection of vinyl gems.
+                     From timeless classics to cutting-edge releases,start your auditory adventure today.
+                  </p>
             </div>
         </div>
         <div class="home-col-right">
@@ -40,7 +47,7 @@ SECTION IMAGE
         <h1 class="head-heading section-heading--center">About</h1>
     </div>
         
-            <img class="about-img" src="{% static 'images/cover4.png' %}">
+    <img class="about-img" src="{% static 'images/cover4.png' %}">
         
  
     
@@ -67,11 +74,11 @@ SECTION NEW RELEASES
                             <p>On Sale</p>
                       </div>
                 {% endif %}
-                <a class="product-link" href=" {% url 'product' album.id %}">
+                <a class="" href=" {% url 'product' album.id %}">
                     <img class="card-img" src="{{ album.featured_image.url }}" alt="Cover image of {{ album.title }} by {{ album.artist }}"/>
                 </a>
                 <div class="card-body">
-                    <a class="product-link" href=" {% url 'product' album.id %}">
+                    <a class="" href=" {% url 'product' album.id %}">
                         <h5 class="card-title"><strong>{{ album.title }}</strong></h5>
                     </a>
                     <p class="card-artist">{{ album.artist }}</p>
@@ -89,6 +96,7 @@ SECTION NEW RELEASES
         {% endfor %}
     </div>
 </section>
+
 
 <!--
 ****************************
@@ -119,5 +127,9 @@ SECTION RECOMMENDATION POSTS
         {% endfor %}
     </div>
 </section>
+
+
+
+
 
 {% endblock %}
