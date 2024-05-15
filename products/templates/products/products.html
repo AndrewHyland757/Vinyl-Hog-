@@ -1,12 +1,15 @@
 {% extends "base.html" %} 
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'styles/products.css' %}">
+{% endblock %}
 
 {% block content %} 
     <section class="products">
-        <div class="section-head-container">
-            <h1 class="section-heading">{{section_heading}}</h1>
-            <p class="section-text">
+        <div class="head-container">
+            <h1 class="head-heading">{{section_heading}}</h1>
+            <p class="head-text">
                 {{ section_text }}
             </p>
         </div>
@@ -26,7 +29,7 @@
                 </a>
                 <div class="card-body">
                     <a class="product-link" href=" {% url 'product' album.id %}">
-                        <h5 class="card-title">{{ album.title }}</h5>
+                        <h5 class="card-title"><strong>{{ album.title }}</strong></h5>
                     </a>
                     
                     

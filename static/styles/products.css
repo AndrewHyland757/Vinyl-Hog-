@@ -1,0 +1,17 @@
+@media (max-width:768px) {
+
+    .products {
+        margin-top: 6.4rem;
+    }
+
+    .head-container {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .head-text {
+        width: fit-content;
+    }
+}
+
