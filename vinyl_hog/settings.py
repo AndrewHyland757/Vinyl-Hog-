@@ -27,7 +27,9 @@ SECRET_KEY = 'django-insecure-3_qtk$6-0etc_q%ba*!lhe+7_-w=_73p$zn^6$q6q0l8b!9%co
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-andrewhyland75-vinylhog-uira2ys4es5.ws-eu111.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-andrewhyland75-vinylhog-mvohvk88dm0.ws-eu111.gitpod.io']
+
+ALLOWED_HOSTS = ['8000-andrewhyland75-vinylhog-mvohvk88dm0.ws-eu111.gitpod.io']
 
 # Application definition
 
@@ -69,6 +71,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware', ######
 ]
 
 ROOT_URLCONF = 'vinyl_hog.urls'

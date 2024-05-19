@@ -32,7 +32,7 @@ def add_product(request):
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        template = 'products/add_product.html'
+        template = 'product_management/add_product.html'
         context = {
             'form': form,
         }
@@ -80,7 +80,7 @@ def product_management(request):
                 products = Album.objects.filter(stock=0)
                 sub_title = "Products out of stock"
 
-    template = 'products/product_management.html'
+    template = 'product_management/product_management.html'
     context = {
         'sub_title': sub_title,
         'products': products,
@@ -109,7 +109,7 @@ def edit_product(request, product_id):
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.title}')
 
-    template = 'products/edit_product.html'
+    template = 'product_management/edit_product.html'
     context = {
         'form': form,
         'product': product,
@@ -164,7 +164,7 @@ def add_artist(request):
     else:
         form = ArtistForm()
         
-    template = 'products/add_artist.html'
+    template = 'product_management/add_artist.html'
     context = {
         'form': form,
     }
@@ -193,7 +193,7 @@ def edit_artist(request, artist_id):
         form = ArtistForm(instance=artist)
         messages.info(request, f'You are editing {artist.name}')
 
-    template = 'products/edit_artist.html'
+    template = 'product_management/edit_artist.html'
     context = {
         'form': form,
         'artist': artist,
@@ -240,7 +240,7 @@ def edit_genre(request, genre_id):
         form = GenreForm(instance=genre)
         messages.info(request, f'You are editing {genre.name}')
 
-    template = 'products/edit_genre.html'
+    template = 'product_management/edit_genre.html'
     context = {
         'form': form,
         'genre': genre,
@@ -269,7 +269,7 @@ def add_genre(request):
     else:
         form = GenreForm()
 
-    template = 'products/add_genre.html'
+    template = 'product_management/add_genre.html'
     context = {
         'form': form,
     }

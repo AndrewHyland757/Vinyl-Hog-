@@ -286,7 +286,19 @@ FIELD INPUT CLASSES
     border-radius: 0px;
 }
 
+/*
+****************************
+TOASTS
+****************************
+*/
 
+.toast-body {
+  letter-spacing: .04rem;
+  line-height: 1.25;
+  color: white;
+  background-color: rgb(3, 124, 3, .6);
+ 
+}
 
 
 
