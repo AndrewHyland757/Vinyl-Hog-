@@ -80,6 +80,11 @@ def product_management(request):
                 products = Album.objects.filter(stock=0)
                 sub_title = "Products out of stock"
 
+        if 'sale' in request.GET:
+            products = Album.objects.filter(on_sale=True)
+            sub_title = "Products on sale"
+                       
+
     template = 'product_management/product_management.html'
     context = {
         'sub_title': sub_title,
@@ -140,7 +145,7 @@ ARTIST MANAGEMNET
 def artist_management(request):
 
     artists = Artist.objects.all().order_by('name')
-    template = 'products/artist_management.html'
+    template = 'product_management/artist_management.html'
     context = {
         'artists': artists,
     }
@@ -212,7 +217,7 @@ GENRE MANAGEMNET
 def genre_management(request):
 
     genres = Genre.objects.all().order_by('name')
-    template = 'products/genre_management.html'
+    template = 'product_management/genre_management.html'
     context = {
         'genres': genres,
     }
@@ -279,35 +284,59 @@ def add_genre(request):
 
 
 
+
+
+
 @login_required
 def delete_artist(request, artist_id):
-    """ Delete an artist from the database """
+    """
+    Delete an genre from the database
+    """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only store owners can do that')
         return redirect(reverse('home'))
 
-
+    artist = get_object_or_404(Artist, pk=artist_id)
+    
     if request.method == 'POST':
-        artist = get_object_or_404(Artist, pk=artist_id)
+        
         artist.delete()
         messages.success(request, 'Artist deleted!')
         return redirect(reverse('artist-management'))
     
+    context = {
+        'artist': artist,
+    }
     
-    
-   
     #return redirect(reverse('artist-management'))
-    return render(request, 'product_management/delete_artist.html')
+    return render(request, 'product_management/delete_artist.html', context)
+
 
 
 @login_required
 def delete_genre(request, genre_id):
-    """ Delete a genre from the database """
+    """
+    Delete an genre from the database
+    """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only store owners can do that')
         return redirect(reverse('home'))
 
-    genre = get_object_or_404(Genre, pk=product_id)
-    genre.delete()
-    messages.success(request, 'Genre deleted!')
-    return redirect(reverse('genre-management'))
+    genre = get_object_or_404(Genre, pk=genre_id)
+    
+    if request.method == 'POST':
+        
+        genre.delete()
+        messages.success(request, 'Genre deleted!')
+        return redirect(reverse('genre-management'))
+    
+    context = {
+        'genre': genre,
+    }
+    
+    #return redirect(reverse('artist-management'))
+    return render(request, 'product_management/delete_genre.html', context)
+
+
+
+

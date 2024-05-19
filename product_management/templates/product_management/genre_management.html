@@ -2,43 +2,55 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/management.css' %}">
+<link rel="stylesheet" href="{% static 'styles/product-management.css' %}">
 {% endblock %}
 
 {% block content %}
-    <div class="overlay mt-5"></div>
-    <div class="container container--product-management">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="logo-font mb-4">Genre Management</h2>
-                <h5 class="text-muted">Add, edit and delete genre names.</h5>
-                <hr>
+    <main class="management-page">
+        <div class="overlay mt-5"></div>
+        <div class="container container--product-management">
+            <div class="tabs-container">
+                <a class="btn btn-secondary mr-2" href="{% url 'product-management' %}">Product Management</a>  
+                <a class="btn btn-secondary mr-2" href="{% url 'artist-management' %}">Artist Management</a>
+                <a class="btn btn-secondary mr-2" href="{% url 'genre-management' %}">Genre Management</a>
+        
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <hr>
+                    <h2 class="logo-font mb-4">Genre Management</h2>
+                    <h5 class="text-muted">Add, edit and delete genre names</h5>
+                    <hr>
+                </div>
+            </div>
+            <div class="row mb-3 mt-5 actions-container">
+                <div class="tabs-container">
+                    <a class="btn btn-outline-success" href="{% url 'add-genre' %}">Add a new genre</a> 
+                </div>
+            </div>
+            <div class="row">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Products</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for genre in genres %}
+                            <tr>
+                            <td>{{ genre.name }}</td>
+                            
+                            <td><a class="btn btn-outline" href="{% url 'product-management' %}?genre={{ genre.name }}">View Albums</a></td>
+                            <td><a class="btn btn-outline-warning" href="{% url 'edit-genre' genre.id %}">Edit</a></td>
+                            <td><a class="btn btn-outline-danger" href="{% url 'delete-genre' genre.id %}">Delete</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
-
-        <div class="row">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Products</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for genre in genres %}
-                        <tr>
-                        <td>{{ genre.name }}</td>
-                        
-                        <td><a class="btn btn-outline" href="{% url 'product-management' %}?genre={{ genre.name }}">View Albums</a></td>
-                        <td><a class="btn btn-outline-warning" href="{% url 'edit-genre' genre.id %}">Edit</a></td>
-                        <td><a class="btn btn-outline-danger" href="">Delete</a></td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
+    </main>
 {% endblock %}

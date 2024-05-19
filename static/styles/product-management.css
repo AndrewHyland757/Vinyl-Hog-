@@ -1,0 +1,127 @@
+/*
+****************************
+GENERAL
+****************************
+*/
+
+.management-page {
+       margin-bottom: 12rem;
+    margin-top: 12rem;
+    
+}
+
+
+.container--product-management {
+ 
+}
+
+
+.actions-container{
+    justify-content: space-between;
+}
+
+.tabs-container {
+    display: flex;
+    gap: 1rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+}
+
+td,
+th,
+.btn {
+    font-size:1.3rem;
+}
+
+th:nth-child(3),
+th:nth-child(4),
+th:nth-child(5),
+th:nth-child(6),
+td:nth-child(3),
+td:nth-child(4),
+td:nth-child(5),
+td:nth-child(6) {
+    text-align: center;
+}
+
+
+td {
+    align-content: center;
+}
+
+
+.btn {
+    
+    padding: .25rem 1rem;
+    border-radius:0;
+}
+
+.btn-outline-warning:hover {
+    color: white;
+}
+
+.btn:active,
+.btn-secondary:active {
+    background-color: aliceblue;
+}
+
+
+.container--fields {
+    position: relative;
+}
+.img-field {
+    position: absolute;
+    background-color: rgb(245, 220, 220);
+}
+
+
+
+/*
+****************************
+ADD PRODUCT
+****************************
+*/
+
+.product-input {
+    font-size: 1.4rem;
+    letter-spacing: .03rem;
+}
+.on_sale_box {
+    display: flex;
+    align-items: center;
+    gap:1.2rem;
+   
+}
+
+/*
+****************************
+MEDIA QUERIES
+****************************
+*/
+
+
+
+@media (max-width:768px) {
+
+    .management-page {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+    .btn-secondary,
+    .btn-outline-success {
+        font-size: 1rem;  
+    }
+
+    td,
+    th,
+    .btn {
+        font-size:1.2rem;
+    }
+
+    .tabs-container {
+        display: flex;
+        gap: .5rem;
+    }
+}
