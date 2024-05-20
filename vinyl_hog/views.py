@@ -7,5 +7,18 @@ def handler404(request, exception):
 
 
 def test(request):
-
     return render(request, "errors/404_test.html")
+
+
+def footer_shipping(request):
+    return render(request, 'footer_templates/shipping.html')
+
+def footer_returns(request):
+    return render(request, 'footer_templates/returns.html')
+
+def footer_our_story(request):
+    return render(request, 'footer_templates/our_story.html')
+
+def footer_planet_vinylhog(request):
+    return render(request, 'footer_templates/planet_vinylhog.html')
+

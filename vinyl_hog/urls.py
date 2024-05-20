@@ -33,6 +33,11 @@ urlpatterns = [
     path('wishlist/', include('wishlist_items.urls')),
     path('404_test/', views.test, name="404_test"),  # test 404 page
 
+    path('shipping/', views.footer_shipping, name='footer-shipping'),
+    path('returns/', views.footer_returns, name='footer-returns'),
+    path('our_story/', views.footer_our_story, name='footer-our-story'),
+    path('planet_vinylhog/', views.footer_planet_vinylhog, name='footer-planet-vinylhog'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

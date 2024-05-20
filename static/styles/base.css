@@ -149,7 +149,18 @@ FOOTER
     background-color: ;
     margin-left: 0;
   }
+
+  .footer-list-item a {
+    color: #fff;
+  }
   
+
+  .footer-list-item a:hover,
+  .footer-list-item a:active {
+    color: #ffffffbd;
+  }
+
+
   .social-colmn-box {
     display: flex;
     flex-direction: column;
