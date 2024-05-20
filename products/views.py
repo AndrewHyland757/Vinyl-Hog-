@@ -13,6 +13,8 @@ def products(request):
     Displayes the products.
     '''
     products = Album.objects.all()
+    artists = Artist.objects.all()
+    genres = Genre.objects.all()
 
     query = None
     conditions = None
@@ -25,12 +27,19 @@ def products(request):
 
     if request.GET:
 
+        if 'sale' in request.GET:
+            products = Album.objects.filter(on_sale=True)
+            section_heading = "On Sale Vinyl"
+            section_text = "Our full library of on sale vinyl."
+
         if 'artist' in request.GET:
             '''
             Displays items depending on the artist.
             '''
             requested_artist = request.GET['artist'].split(',')
             products = products.filter(artist__name__in=requested_artist)
+            section_heading = requested_artist[0].capitalize()
+            section_text = "Our full library of vinyl."
 
         if 'condition' in request.GET:
             '''
@@ -48,7 +57,7 @@ def products(request):
 
                 if requested_condition == ["New"]:
                     section_heading = "New Vinyl"
-                    section_text = "Our full library of brand new vinyl just for you."
+                    section_text = "Our full library of brand new vinyl."
                 else:
                     section_heading = "Used Vinyl"
                     section_text = "Our full library of high quality used vinyl."
@@ -82,6 +91,8 @@ def products(request):
         'current_conditions': conditions,
         'search_term': query,
         "section_heading": section_heading,
+        "artists": artists,
+        "genres": genres,
     }
 
     return render(request, 'products/products.html', context)

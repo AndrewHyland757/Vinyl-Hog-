@@ -6,17 +6,66 @@
 {% endblock %}
 
 {% block content %} 
-    <section class="products">
-        <div class="head-container">
+    
+        <div class="head-container-center">
             <h1 class="head-heading">{{section_heading}}</h1>
             <p class="head-text">
                 {{ section_text }}
             </p>
         </div>
+   
+            <div class="dropdown-links-container">
+
+                <div class="nav-item dropdown">
+                    <a class="btn-custom--products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artist</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for artist in artists %}
+                    <a  class="dropdown-item" href="{% url 'products' %}?artist={{ artist }}"><p>{{ artist.name }}</p></a>
+                    {% endfor %}
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a class="btn-custom--products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Caregories</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'products' %}?condition=fresh">Latest Releases</a>
+                        <a class="dropdown-item" href="{% url 'products' %}">All</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?condition=New">New</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?condition=Used">Used</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?sale=on_sale">On Sale</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a class="btn-custom--products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort</a>
+                    <div class="dropdown-menu dropdown-menu--sort" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'products' %}?condition=fresh">Price acending</a>
+                        <a class="dropdown-item" href="{% url 'products' %}">Price decending</a>
+                    </div>
+                </div>
+        
+            </div>
+
+        <main class="products products-container">
+            <aside>
+                <div class="aside-container mb-5">
+                    <h3 class="aside-heading">categories</h3>
+                    <a href="{% url 'products' %}"><p>All</p></a>
+                    <a href="{% url 'products' %}?condition=New"><p>New</p></a>
+                    <a href="{% url 'products' %}?condition=Used"><p>Used</p></a>
+                    <a href="{% url 'products' %}?sale=on_sale"><p>On Sale</p></a>
+                </div>
+
+                <div class="aside-container">
+                    <h3 class="aside-heading">artists</h3>
+                    {% for artist in artists %}
+                    <a href="{% url 'products' %}?artist={{ artist }}"><p>{{ artist.name }}</p></a>
+                    {% endfor %}
+                </div>
+            </aside>
 
         <div class="products-grid">
             {% for album in albums %}
-            
                 <div class="card">
                     {% if album.on_sale == True %}
                         <div class="on-sale-container">
@@ -24,30 +73,44 @@
                         </div>
                     {% endif %}
 
-                <a class="product-link" href=" {% url 'product' album.id %}">
-                    <img class="card-img" src="{{ album.featured_image.url }}" alt="Cover image of {{ album.title }} by {{ album.artist }}"/>
-                </a>
-                <div class="card-body">
                     <a class="product-link" href=" {% url 'product' album.id %}">
-                        <h5 class="card-title"><strong>{{ album.title }}</strong></h5>
+                        <img class="card-img" src="{{ album.featured_image.url }}" alt="Cover image of {{ album.title }} by {{ album.artist }}"/>
                     </a>
-                    
-                    
-                    <p class="card-artist">{{ album.artist }}</p>
-                    <div class="card-details">
-                        <p class="card-text">Condition: {{ album.condition }}</p>
-                        <p class="card-text">Stock: {{ album.stock }}</p>
-                        {% if album.on_sale == True %}
-                        <p class="card-text"><s>€{{ album.price }}</s> €{{ album.sale_price }}</p>
-                        {% else %}
-                        <p class="card-text">€{{ album.price }}</p>
-                        {% endif %}
+                    <div class="card-body">
+                        <a class="product-link" href=" {% url 'product' album.id %}">
+                            <h5 class="card-title"><strong>{{ album.title }}</strong></h5>
+                        </a>
+                        <p class="card-artist">{{ album.artist }}</p>
+                        <div class="card-details">
+                            <p class="card-text">Condition: {{ album.condition }}</p>
+                            <p class="card-text">Stock: {{ album.stock }}</p>
+                            {% if album.on_sale == True %}
+                            <p class="card-text"><s>€{{ album.price }}</s> €{{ album.sale_price }}</p>
+                            {% else %}
+                            <p class="card-text">€{{ album.price }}</p>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
-    </section>
+
+        <aside>
+            <div class="aside-container mb-5">
+                <h3 class="aside-heading">sort</h3>
+                <a href=""><p>Price acending</p></a>
+                <a href=""><p>Price decending</p></a>
+            </div>
+            <div class="aside-container">
+                <h3 class="aside-heading">genres</h3>
+                {% for genre in genres %}
+
+                <a href="{% url 'products' %}?genre={{genre}}"><p>{{ genre.name }}</p></a>
+                {% endfor %}
+            </div>
+        </aside>
+    </main>
+    
 {% endblock %}
 
 {% block extra_js %}
