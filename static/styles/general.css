@@ -110,7 +110,7 @@ PRODUCT-GRID DISPLAY CLASSES
 }
 
 .card {
-  width: 100%;
+  
   position: relative;
   padding: 1.8rem 1.8rem 2.4rem 1.8rem;
   border: none;
@@ -311,6 +311,27 @@ TOASTS
 
 
 
+
+@media (max-width:1250px) {
+
+  .products-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.4rem;
+    padding: 0 6rem;
+  }
+}
+
+@media (max-width:1025px) {
+
+  .products-grid {
+    
+  }
+}
+
+
+
+
+
 @media (max-width:768px) {
 
 
@@ -348,7 +369,7 @@ TOASTS
 
   /* PRODUCT GRID */
 
-  /*
+  
   .products-grid {
     grid-template-columns:  1fr 1fr;
     gap: 1.8rem;
@@ -393,7 +414,7 @@ TOASTS
   .card-text {
     font-size: 1.2rem;
   }
-*/
+
   /* RECOMMENDATION POSTS GRID */
 
   .section-recommendations {
