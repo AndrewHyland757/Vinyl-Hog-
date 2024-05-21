@@ -1,0 +1,202 @@
+/*
+****************************
+CHECKOUT.HTML CSS
+****************************
+*/
+
+
+.section-checkout {
+    position: relative;
+    margin-bottom: 12rem;
+  
+}
+/*
+.checkout-background {
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1.16fr 1fr;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.background-right {
+    background-color: #1E1C1C;
+    
+}
+*/
+.checkout-container {
+
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 6.2rem;
+    padding: 9.6rem 3.2rem 3.2rem 3.2rem;
+    
+  
+}
+
+.checkout-heading {
+    text-transform: uppercase;
+    padding-bottom: 2.4rem
+}
+
+/*
+****************************
+LEFT COLUMN
+****************************
+*/
+
+
+.col-container {
+    display: flex;
+    width:100%;
+    justify-content: end;
+    background-color: lightgoldenrodyellow;
+}
+.checkout-col-left {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    gap: 8rem;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.btn-custom--basket {
+    margin-bottom: 3.2rem;
+}
+
+.card-warning {
+    text-align: center;
+    color: red;
+    margin-bottom: 9.6rem;
+}
+
+/*
+****************************
+RIGHT COLUMN
+****************************
+*/
+
+.checkout-col-right {
+     color: white;
+     padding-left: 3.2rem;
+     background-color: lightblue;
+ }
+
+.checkout-col-right-container {
+    width: 100%;
+    background-color: pink;
+}
+
+
+.table {
+    font-size: 1.4rem;
+}
+
+
+
+
+
+
+
+
+.checkout-input::placeholder {
+    color: #aab7c4;
+}
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+#payment-form .form-control,
+#card-element {
+    color: #000;
+    border: 1px solid #000;
+}
+
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value="Country"] {
+    color: #aab7c4 !important;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
+
+
+/*
+****************************
+MEDIA QUERIES
+****************************
+*/
+
+
+
+@media (max-width:1200px) {
+.checkout-col-right {
+
+    padding-left: 0;
+}
+}
+
+
+@media (max-width:768px) {
+
+    .checkout-background {
+        display: none;
+    }
+
+    .checkout-container {
+        width:100vw;
+        min-height: 0;
+        display: flex;
+        flex-direction: column-reverse;
+   
+        gap: 6.2rem;
+        padding: 9.6rem 0rem;
+    
+    }
+
+    .checkout-col-right { /* Now top */
+        padding-left: 0;
+    background-color: #1E1C1C;
+  
+    padding: 2.4rem 2.4rem 6rem 2.4rem;
+      
+    }
+
+    .checkout-col-left { /* Now bottom */
+        padding: 0 2.4rem;
+    }
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+   
+}
