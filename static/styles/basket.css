@@ -3,17 +3,19 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
+    gap: 6.4rem;
     min-height: 100vh;
+    margin-top: 9.6rem;
+    padding: 0 3.6rem;
 }
 
+.basket-col-right,
 .basket-col-left {
-    padding-top: 4.8rem;
     height: 100%;
 }
 
-.basket-col-right {
-    padding-top: 4.8rem;
-}
+
+
 
 .checkout-heading {
     text-transform: uppercase;
@@ -30,7 +32,7 @@ LEFT COLUMN
 */
 
 .checkout-item {
-    width: 80rem;
+ 
     padding: 3.2rem 0 ;
     display: grid;
     grid-template-columns: 1.25fr 3fr;
@@ -116,9 +118,13 @@ RIGHT COLUMN
 ****************************
 */
 
+.basket-col-right {
+    display: flex;
+    justify-content: end;
+}
+
 .cost-container {
-    width: 375px;
-    margin: 0 auto;
+    width: 90%;
 }
 
 .cost-item {
@@ -143,4 +149,35 @@ RIGHT COLUMN
 
 .costs-item--delta {
     font-size: 1.2rem;
+}
+
+
+/*
+****************************
+MEDIA QUERIES
+****************************
+*/
+
+@media (max-width:768px) {
+
+    .basket-container {
+        width: 100vw;
+        padding: 0 2.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4.8rem;
+        min-height: 0;
+        margin-bottom: 6.2rem;
+        
+    }
+
+    .checkout-item {
+        width: 100%;
+    }
+
+    .cost-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
 }

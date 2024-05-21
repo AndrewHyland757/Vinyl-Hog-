@@ -6,7 +6,7 @@ CHECKOUT.HTML CSS
 
 .section-checkout {
     position: relative;
-   margin-bottom: 9rem;
+  
 }
 
 .checkout-background {
@@ -21,7 +21,7 @@ CHECKOUT.HTML CSS
 
 .background-right {
     background-color: #1E1C1C;
-    ;
+    
 }
 
 .checkout-container {
@@ -30,24 +30,9 @@ CHECKOUT.HTML CSS
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1.25fr 1fr;
-}
-
-
-.checkout-col-left,
-.checkout-col-right {
-    padding-top: 4.8rem;
-}
-
-.checkout-col-left {
-    padding-right: 4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
-}
-
-.checkout-col-right {
-    padding-left: 4.2rem;
-    color: white;
+    gap: 6.2rem;
+    padding: 9.6rem 3.2rem;
+  
 }
 
 .checkout-heading {
@@ -60,6 +45,12 @@ CHECKOUT.HTML CSS
 LEFT COLUMN
 ****************************
 */
+
+.checkout-col-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
 
 .checkout-form {
     display: flex;
@@ -89,12 +80,23 @@ RIGHT COLUMN
 ****************************
 */
 
+.checkout-col-right {
+     color: white;
+     display: flex;
+     justify-content: end;
+   
+ }
+.checkout-col-right-container {
+    width: 100%;
+}
 .checkout-item {
-    width: 40rem;
+    width: 100%;
     padding: 2rem 0 ;
-    display: flex;
+    display: grid;
+    grid-template-columns: .25fr 1fr;
     gap: 1.8rem;
     border-bottom: .1rem solid white;
+    
 }
 
 .checkout-item:first-of-type {
@@ -107,6 +109,7 @@ RIGHT COLUMN
 
 .item-details-contatiner {
     width: 40rem;
+    width:100%;
     display: flex;
     flex-direction: column;
 }
@@ -140,7 +143,7 @@ RIGHT COLUMN
 }
 
 .costs-container {
-    width: 40rem;
+    width: 100%;
     padding-top: 2.4rem;
 }
 
@@ -234,4 +237,49 @@ select option[value="Country"] {
 select:invalid,
 select option[value=""] {
     color: #aab7c4 !important;
+}
+
+
+
+/*
+****************************
+MEDIA QUERIES
+****************************
+*/
+
+@media (max-width:768px) {
+
+    .checkout-background {
+        display: none;
+    }
+
+    .checkout-container {
+        width:100vw;
+        min-height: 0;
+        display: flex;
+        flex-direction: column-reverse;
+   
+        gap: 6.2rem;
+        padding: 9.6rem 0rem;
+    
+    }
+
+    .checkout-col-right { /* Now top */
+    background-color: #1E1C1C;
+  
+    padding: 2.4rem;
+      
+    }
+
+    .checkout-col-left { /* Now bottom */
+        padding: 0 2.4rem;
+    }
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+   
 }
