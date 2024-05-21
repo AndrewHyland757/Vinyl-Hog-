@@ -83,10 +83,9 @@ RIGHT COLUMN
 
 .checkout-col-right {
      color: white;
-     display: flex;
-     justify-content: end;
-   
+     padding-left: 3.2rem;
  }
+
 .checkout-col-right-container {
     width: 100%;
 }
@@ -248,6 +247,16 @@ MEDIA QUERIES
 ****************************
 */
 
+
+
+@media (max-width:1200px) {
+.checkout-col-right {
+
+    padding-left: 0;
+}
+}
+
+
 @media (max-width:768px) {
 
     .checkout-background {
@@ -266,6 +275,7 @@ MEDIA QUERIES
     }
 
     .checkout-col-right { /* Now top */
+        padding-left: 0;
     background-color: #1E1C1C;
   
     padding: 2.4rem 2.4rem 6rem 2.4rem;

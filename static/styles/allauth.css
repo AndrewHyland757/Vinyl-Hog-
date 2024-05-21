@@ -4,22 +4,24 @@ ACCOUNT PAGES - GENERAL
 ****************************
 */
 
+.account-main {
+    padding: 0 3.2rem;
+}
+
+.head-container--account {
+    margin-top: 12rem;
+    margin-bottom: 6.2rem;
+  }
+
+
 .account-form-container {
     width: fit-content;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 6.4rem;
+    padding: 0rem;
     margin-bottom: 12rem;
-}
-
-
-.account-form-container .section-head-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 6.4rem 0;
 }
 
 .submit {
@@ -32,13 +34,14 @@ ACCOUNT PAGES - GENERAL
     gap: 3.2rem;
     align-items: center;
     padding-bottom: 1.2rem;
+
 }
 
 .form-label {
     font-size: 1.4rem;
 }
 
-.form-field-container {
+.form-input-container {
     width:300px;
 }
 
@@ -62,3 +65,30 @@ LOGIN PAGE
 .forget-password-container .section-text {
     font-size: 1.2rem;
 }
+
+
+@media (max-width:500px) {
+
+    .account-main {
+        padding: 0 2.4rem;
+    }
+
+    .account-form-container,
+    .account-form,
+    .field-container,
+    .form-input-container {
+        width: 100%;
+    }
+
+
+    .field-container {
+        display: flex;
+        flex-direction: column;    
+        gap: .5rem;
+        align-items: start;
+        padding-bottom: 2.4rem;
+        width: 100%;
+    }
+  }
+
+  
