@@ -32,7 +32,8 @@ body {
   font-family: "Helvetica";
   line-height: 1;
   position: relative;
-  color: #1E1C1C;
+  color: 
+  ;
 }
 
 .form-control {
@@ -88,7 +89,6 @@ gap:3.2rem;
 
 .head-text {
   font-size: 1.6rem;
-  background-color: pink;
 }
 
 /*

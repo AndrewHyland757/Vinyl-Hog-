@@ -60,6 +60,8 @@ NAVIGATION
 	align-items: center;
 	width: 100%;
 	justify-content: space-between;
+	padding-left: 6.2rem;  /* ************** */
+	
 }
 
 .icons-container {

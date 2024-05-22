@@ -67,7 +67,7 @@ SECTION NEW RELEASES
         </p>
     </div>
     <div class="products-grid">
-        {% for album in albums %}
+        {% for album in recent_added_albums %}
             <div class="card">
                 {% if album.on_sale == True %}
                       <div class="on-sale-container">

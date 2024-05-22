@@ -29,7 +29,7 @@
         </div>
 
         <div class="details-container">
-            <h1 class="product-title"> {{ product.title }}</h1>
+            <h1 class="product-title"> <strong>{{ product.title }}</strong></h1>
             <p class="product-artist"> {{ product.artist }}</p>
             <div class="tag-container">
                 {% for genre in product.genres.all %}

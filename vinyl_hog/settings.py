@@ -208,3 +208,8 @@ STRIPE_SECRET_KEY = 'sk_test_51P8JG3ECqW0pS3vWmS485ezvQkPJCTvBBUIBhqkBfpQvdz9fmF
 STRIPE_WH_SECRET = 'whsec_fwwzuEKwfDAOwWtLvvgKYfFVyodcQmyC'
 
 DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
+
+
+
+
+
