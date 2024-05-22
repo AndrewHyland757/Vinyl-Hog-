@@ -1,46 +1,25 @@
 /*
 ****************************
-CHECKOUT.HTML CSS
+PROFILE.HTML CSS
 ****************************
 */
 
-
-.section-checkout {
+.main-profile {
     position: relative;
     margin-bottom: 12rem;
-  
-}
-/*
-.checkout-background {
-    width: 100%;
-    min-height: 100%;
-    display: grid;
-    grid-template-columns: 1.16fr 1fr;
-    position: absolute;
-    left: 0;
-    z-index: -1;
 }
 
-.background-right {
-    background-color: #1E1C1C;
+p {
+    font-size: 1.4rem;
+}
+
+.profile-container {
     
-}
-*/
-.checkout-container {
-
-    min-height: 100vh;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.25fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 6.2rem;
-    padding: 9.6rem 3.2rem 3.2rem 3.2rem;
-    
-  
-}
-
-.checkout-heading {
-    text-transform: uppercase;
-    padding-bottom: 2.4rem
+    padding: 9.6rem 3.2rem 0 3.2rem; 
 }
 
 /*
@@ -49,41 +28,42 @@ LEFT COLUMN
 ****************************
 */
 
-
-.col-container {
+.profile-col-left {
+    width: 100%;
     display: flex;
-    width:100%;
     justify-content: end;
-    background-color: lightgoldenrodyellow;
-}
-.checkout-col-left {
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    background-color: green;
-    gap: 8rem;
+    padding-top: 1.2rem;
 }
 
-.checkout-form {
-    display: flex;
-    flex-direction: column;
-    gap: 4.8rem;
+.form-container {
+    width: 450px;
 }
 
-fieldset {
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap:4rem;
+}
+
+.heading {
+    text-transform: uppercase;
+    padding-bottom: 0rem;
+    color: #1E1C1C;
+}
+
+.fieldset {
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
 }
 
-.btn-custom--basket {
-    margin-bottom: 3.2rem;
+.fieldset--delivery legend {
+    margin-bottom: 1.4rem;
 }
 
-.card-warning {
-    text-align: center;
-    color: red;
-    margin-bottom: 9.6rem;
+.btn-custom {
+    margin-bottom: 3.2rem;
+    font-weight: 600;
 }
 
 /*
@@ -92,60 +72,36 @@ RIGHT COLUMN
 ****************************
 */
 
-.checkout-col-right {
+.profile-col-right {
      color: white;
-     padding-left: 3.2rem;
-     background-color: lightblue;
+     padding: 1.2rem 3.2rem;
+     background-color: #1E1C1C;
  }
 
-.checkout-col-right-container {
+.table-container {
     width: 100%;
-    background-color: pink;
 }
 
+.table-container .heading {
+    color: white;
+    margin-bottom: 6.4rem;
+}
 
 .table {
     font-size: 1.4rem;
+    color: white;
 }
 
-
-
-
-
-
-
-
-.checkout-input::placeholder {
-    color: #aab7c4;
+th a {
+    color: white;
 }
 
-.fieldset-label {
-    position: relative;
-    right: .5rem;
+th a:hover {
+    color: rgb(208, 208, 208);
 }
-
-#payment-form .form-control,
-#card-element {
-    color: #000;
-    border: 1px solid #000;
+.tb-row-center {
+    text-align: center;
 }
-
-select,
-select option {
-    color: #000000;
-}
-
-select:invalid,
-select option[value="Country"] {
-    color: #aab7c4 !important;
-}
-
-select:invalid,
-select option[value=""] {
-    color: #aab7c4 !important;
-}
-
-
 
 /*
 ****************************
@@ -154,49 +110,71 @@ MEDIA QUERIES
 */
 
 
-
 @media (max-width:1200px) {
-.checkout-col-right {
 
-    padding-left: 0;
-}
-}
+    .profile-container {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3.2rem;
+        padding: 9.6rem 3.2rem 0rem 3.2rem; 
+    }
 
+    .profile-col-left {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+}
 
 @media (max-width:768px) {
 
-    .checkout-background {
-        display: none;
-    }
-
-    .checkout-container {
-        width:100vw;
-        min-height: 0;
+    .profile-container {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction:column;
+        gap: 4rem;
+        width: 100vw;
+        padding: 0;
+        padding-top: 9.6rem; 
+    }
+
+    .profile-col-left { /* Now top */
+        width: 100%;
+        display: block;
+        padding: 0 1.2rem;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .profile-col-right { /* Now bottom */
+        color: white;
+        padding: 0;
+        padding: 1.2rem;
+    }
    
-        gap: 6.2rem;
-        padding: 9.6rem 0rem;
-    
-    }
-
-    .checkout-col-right { /* Now top */
-        padding-left: 0;
-    background-color: #1E1C1C;
-  
-    padding: 2.4rem 2.4rem 6rem 2.4rem;
-      
-    }
-
-    .checkout-col-left { /* Now bottom */
-        padding: 0 2.4rem;
-    }
-
-    fieldset {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
+   .table-container {
+       width: 100%;
+   }
    
+   .table-container .heading {
+       margin-bottom: 2.4rem;
+   }
+   
+   .table tr {
+       font-size: 1.4rem;
+   }
+     
+}
+
+@media (max-width:481px) {
+
+    .table tr {
+        font-size: 1.2rem;
+    }
 }

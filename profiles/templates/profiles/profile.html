@@ -8,25 +8,33 @@
 
 
 {% block content %}
-<div class="section-checkout">
-    <div class="checkout-background">
-        <div class="background-left"></div>
-        <div class="background-right"></div>
-    </div>
+
+<main class="main-profile">
   
-    <div class="checkout-container">
+    <div class="profile-container">
 
         <!------- LEFT COLUMN ------->
-        <div class="col-container">
-            <div class="checkout-col-left">
-                <form class="checkout-form" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+     
+            <div class="profile-col-left">
+                <div class="form-container">
+                <form class="profile-form" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
-                    <fieldset class="delivery-details">
+
+                    <fieldset class="fieldset">
                         <legend>
-                            <h3 class="checkout-heading"><strong>Default Delivery Information</strong></h3>
+                            <h3 class="heading"><strong>Your Details</strong></h3>
                         </legend>
                         <p>Username: {{ profile }}</p>
+                        
+                    </fieldset>
+
+                    <fieldset class="fieldset fieldset--delivery">
+                        <legend>
+                            <h3 class="heading"><strong>Default Delivery Information</strong></h3>
+                        </legend>
+                        
                         {% csrf_token %}
+                        
                         {{ form.default_phone_number }}
                         {{ form.default_country }}
                         {{ form.default_street_address1 }}
@@ -42,44 +50,32 @@
   
         <!------- RIGHT COLUMN ------->
   
-        <div class="checkout-col-right">
-            <div class="checkout-col-right-container">
-                <h3 class="checkout-heading"><strong>Order History</strong></h3>
+        <div class="profile-col-right">
+            <div class="table-container">
+                <h3 class="heading"><strong>Order History</strong></h3>
                 
-                <table class="table table-dark">
+                <table class="table ">
                     <thead>
                     <tr>
                         <th>Order Number</th>
-                        <th>Date</th>
-                        <th>Items</th>
-                        <th>Order Total</th>
+                        <th >Date</th>
+                        <th class="tb-row-center">Items</th>
+                        <th class="tb-row-center">Order Total</th>
                     </tr>
                     </thead>
 
                     <tbody>
                         {% for order in orders %}
-                        <tr>
-                            <th scope="row"><a href="{% url 'order_history' order.order_number %}"
-                                title="{{ order.order_number }}">
-                                    {{ order.order_number|truncatechars:6 }}
-                                </a>
-                            </th>
-
-                            <td>{{ order.date }}</td>
-                            <td>
-                                <ul class="list-unstyled">
-                                    {% for item in order.lineitems.all %}
-                                        <li class="small">
-                                            {% if item.product.has_sizes %}
-                                                Size {{ item.product.size|upper }}
-                                            {% endif %}{{ item.product.name }} x{{ item.quantity }}
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            </td>
-
-                            <td>${{ order.grand_total }}</td>
-                        </tr>
+                            <tr>
+                                <th scope="row">
+                                    <a href="{% url 'order_history' order.order_number %}"
+                                    title="{{ order.order_number }}">{{ order.order_number|truncatechars:6 }}
+                                    </a>
+                                </th>
+                                <td>{{ order.date }}</td>
+                                <td class="tb-row-center">{{ order.lineitems.count }}</td>
+                                <td class="tb-row-center">€{{ order.grand_total }}</td>
+                            </tr>
                         {% endfor %}
                     
                     </tbody>
@@ -90,7 +86,7 @@
         
 
     
-</div>
+    </main>
 
 {% endblock %}
 

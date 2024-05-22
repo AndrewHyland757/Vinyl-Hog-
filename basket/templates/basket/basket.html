@@ -89,12 +89,13 @@
             </div>
         </div>
     {% else %}
-        <div class="section-head-container section-head-empty">
-            <h1 class="section-heading">Your basket is empty.</h1>
-            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                <span class="btn-custom btn-custom--basket"><i class="fas fa-chevron-left mr-3"></i>Keep Shopping</span>
-            </a>
-        </div>
+
+    <div class="head-container-center" style="min-height: 33vh;">
+        <h1 class="head-heading mb-5">Your basket is empty</h1>
+        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+            <span class="btn-custom btn-custom--basket"><i class="fas fa-chevron-left mr-3"></i>Keep Shopping</span>
+        </a>
+    </div>
     {% endif %}
 
 {% endblock %}
