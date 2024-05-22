@@ -10,21 +10,21 @@ SECTION WISHLIST
 -->
 
 {% if wishlist_items == None %}
-    <div class="section-head-container section-head-empty">
-        <h1 class="section-heading">Your wishlist is empty.</h1>
-        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-            <span class="btn-custom btn-custom--basket"><i class="fas fa-chevron-left mr-3"></i>View records</span>
-        </a>
-    </div>
+<div class="head-container-center" style="min-height: 33vh;">
+    <h1 class="head-heading mb-5">Your wishlist is empty</h1>
+    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+        <span class="btn-custom btn-custom--basket"><i class="fas fa-chevron-left mr-3"></i>Keep Shopping</span>
+    </a>
+</div>
 
 {% else %}
 
-    <section class="section-new-releases">
-        <div class="section-head-container">
-            <h1 class="section-heading">Your Wishlist</h1>
-            <p class="section-text">Check out the vinyl you have saved for later.</p>
-        </div>
+<div class="head-container-center">
+    <h1 class="head-heading">Your Wishlist</h1>
+    <p class="head-text">Check out the vinyl you have saved for later.</p>
+</div>
 
+    <section class="section-new-releases">
         <div class="products-grid">
             {% for wishlist_item in wishlist_items %}
                 <div class="card">
