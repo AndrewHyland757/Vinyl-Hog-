@@ -19,7 +19,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6.2rem;
-    padding: 9.6rem 3.2rem 0 3.2rem; 
+    padding: 0; 
 }
 
 /*
@@ -32,7 +32,7 @@ LEFT COLUMN
     width: 100%;
     display: flex;
     justify-content: end;
-    padding-top: 1.2rem;
+    padding: 9.6rem 3.2rem 0rem 3.2rem;
 }
 
 .form-container {
@@ -74,7 +74,8 @@ RIGHT COLUMN
 
 .profile-col-right {
      color: white;
-     padding: 1.2rem 3.2rem;
+     min-height: 100vh;
+     padding: 9.6rem 3.2rem 0rem 3.2rem;
      background-color: #1E1C1C;
  }
 
@@ -117,12 +118,13 @@ MEDIA QUERIES
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3.2rem;
-        padding: 9.6rem 3.2rem 0rem 3.2rem; 
+       
     }
 
     .profile-col-left {
         width: 100%;
         justify-content: center;
+        
     }
 
     .form-container {
@@ -131,6 +133,11 @@ MEDIA QUERIES
 }
 
 @media (max-width:768px) {
+
+    .main-profile {
+        position: relative;
+        margin-bottom: 6.2rem;
+    }
 
     .profile-container {
         display: flex;
@@ -153,9 +160,10 @@ MEDIA QUERIES
     }
 
     .profile-col-right { /* Now bottom */
+        min-height: fit-content;
         color: white;
         padding: 0;
-        padding: 1.2rem;
+        padding: 1.2rem 1.2rem 3.6rem 1.2rem;
     }
    
    .table-container {
