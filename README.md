@@ -70,6 +70,7 @@ the project progressed.
 9. As a registered user I can view any past orders in my profile page.
 10. As a registered user I can save desired products to a personal wishlist.
 11. As a registered user I can easily see if I'm logged in or not.
+11. As a registered user I can change my password if forgotten.
 
 ### Admin User Needs
 
@@ -296,7 +297,8 @@ SEO Features:
 ### Wishlist
 <details><br>
 
- ![Screenshot of wishlist page](static/images/readme_imgs/footer.png)
+![Screenshot of feature description](static/images/readme_imgs/features/wishlist.png)
+ ![Screenshot of wishlist page](static/images/readme_imgs/screenshots/wishlist.png)
 </details>
 
 ### Product Management Pages
@@ -338,6 +340,111 @@ SEO Features:
 
 ### Marketing
 - Newsletter is included in the home page. This section facilitates user engagement and promotes the e-commerce store through effective email marketing and social media presence.
+
+
+
+
+## Manual Testing of User Stories
+
+<mark>WAS = Works as expected</mark>
+
+### 1. General User Needs
+
+**Goal** | **Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ | ------------ |
+Intuitively navigate through the website | Test all links in the header and all website pages| links open desired page | WAS |
+Find essential information about the company |  Test links in the footer secion | Content of the page is presented | WAS |
+Search for certain products | Enter search words in search box and press enter | Releated products are shown in products page | WAS |
+Sort and filter products | On products page test the sort functionality and catagories | Releated products are shown in products page | WAS |
+View further details on each product | Click on the product card on the homepage and products page | Releated product is shown on product page | WAS |
+Add, remove and edit the quantity of products in my shopping basket | Add product to basket on product page. On Basket page delete product and edit quantity. | Product added to basket. Product quantity updated. Product deleted. Success messages displayed. | WAS |
+Access review articles | From the home page click on a review card. | Taken to review page. Review article shown | WAS |
+
+
+
+### 2. Non-Registered User Needs
+
+**Goal** | **Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ | ------------ |
+Set up an account | From the account dropdown in the header, user navigates to the sign up page and enters their username and password | Account is set up. Success message displayed | WAS |
+Make a purchace | Make a purchace on checkout page. | Order confirmation page displayed. Confirmation sent to users email. | WAS |
+
+
+### 3. Registered User Needs
+
+**Goal** | **Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ | ------------ |
+Sing In/Out | User navigates to the sign in/sign out page and enters their username and password/signs out. | Sign in/Sign out. Success message displayed | WAS |
+
+Make a purchace | Make a purchace on checkout page. | Order confirmation page displayed. Confirmation sent to users email. | WAS |
+Add/Update delivery details | Add/Update delivery details on user profile page | Success message displayed. Delivery updates shown on profile page and check out page. | WAS |
+
+Make a purchace | Make a purchace on checkout page. | Order confirmation page displayed. Confirmation sent to users email. Order displayed on profile page order history table. | WAS |
+View any past orders| Navigate to profile page. | Orders displayed in order history table. When clicked on opens up the specific order in Order details page. | WAS |
+Save/Remove products in wishlist | On product page add product to wishlist. On wishlist page remove product. | When added/removed success message displayed and product is added/removed form wishlist. | WAS |
+See if logged in or not| Click on account dropdown. | If logged in then "sign out" link is shown. If logged out then "sign in" link is shown | WAS |
+
+
+
+
+### Registered User Needs
+
+7. As a registered user I can make an order.
+8. As a registered user I can have my my delivery details saved which will auto fill the delivery fields in the checkout page.
+9. As a registered user I can view any past orders in my profile page.
+10. As a registered user I can save desired products to a personal wishlist.
+11. As a registered user I can easily see if I'm logged in or not.
+
+
+
+
+
+
+
+### 3. As a d user I can add, remove and update quantity in .
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigating to :https://.herokuapp.com/ | home page loads | WAS |
+Click on reservation link in the nav-bar | Site navigates to reservation section | WAS |
+Submit form with missing form fields | Prompt is shown to fill in field | WAS |
+Use past date in date field | Error message shown | WAS |
+Fill in all fields with valid date| Success message displayed. Instance saved in model | WAS |
+Fill in form fields on date/time fully booked | Unsuccessfull message displayed | WAS |
+Fill in form fields on date/time with no suitable table available | Unsuccessfull message displayed | WAS |
+
+
+
+
+
+
+
+
+### 3. As a non-registered user I can make a booking so that I don't need to spend time setting up an account.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigating to :https://.herokuapp.com/ | home page loads | WAS |
+Click on reservation link in the nav-bar | Site navigates to reservation section | WAS |
+Submit form with missing form fields | Prompt is shown to fill in field | WAS |
+Use past date in date field | Error message shown | WAS |
+Fill in all fields with valid date| Success message displayed. Instance saved in model | WAS |
+Fill in form fields on date/time fully booked | Unsuccessfull message displayed | WAS |
+Fill in form fields on date/time with no suitable table available | Unsuccessfull message displayed | WAS |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Technologies Used
