@@ -29,14 +29,16 @@
         </div>
 
         <div class="details-container">
-            <h1 class="product-title"> <strong>{{ product.title }}</strong></h1>
-            <p class="product-artist"> {{ product.artist }}</p>
-            <div class="tag-container">
-                {% for genre in product.genres.all %}
-                    <span>
-                        <a href="{% url 'products' %}?genre={{genre.name}}"><p class="genre-tag">{{genre}}</p></a>
-                    </span>
-                {% endfor %}
+            <div class="key-info--box">
+                <h1 class="product-title"> <strong>{{ product.title }}</strong></h1>
+                <p class="product-artist"> {{ product.artist }}</p>
+                <div class="tag-container">
+                    {% for genre in product.genres.all %}
+                        <span>
+                            <a href="{% url 'products' %}?genre={{genre.name}}"><p class="genre-tag">{{genre}}</p></a>
+                        </span>
+                    {% endfor %}
+                </div>
             </div>
             <p class="product-description"> {{ product.description }}</p>
 

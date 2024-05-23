@@ -27,6 +27,10 @@ def products(request):
 
     if request.GET:
 
+        if 'recent' in request.GET:
+            products = Album.objects.all().order_by('-date_added')
+            section_text = "Recently added vinyl."
+
         if 'sale' in request.GET:
             products = Album.objects.filter(on_sale=True)
             section_heading = "On Sale Vinyl"
