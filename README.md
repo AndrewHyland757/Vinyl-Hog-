@@ -185,26 +185,21 @@ Book This is a custom product model. It is connected to Genre as a ManyToManyFie
 ### Header and Navigation
 <details><br>
 
-- The logo is displayed on the top left of the page. It also acts as a link back to the homepage.
-- The "Shop" dropdown menu provides quick access to the products on offer in categories of "new", "used" and "all".
-- The search box allows users to search for products.
-- The wishlist heart icon allows access to the users wishlist.
-- The user icon allows access to areas depending if the user is logged in or not. Product manage pages will be shown if the user is an admin user.
-- The basket icon leads to the basket page. It also displays how many items are in the basket.
 
-![Screenshot of navigation, logo and landing page](static/images/readme_imgs/header.png)
-![Screenshot of navigation, logo and landing page](static/images/readme_imgs/header_icons.png)
+![Screenshot of feature description](static/images/readme_imgs/features/header.png)
+![Screenshot of navigation, logo and landing page](static/images/readme_imgs/screenshots/header.png)
+![Screenshot of navigation, logo and landing page](static/images/readme_imgs/screenshots/header_icons.png)
 
 </details>
 
 ### Landing Page
 <details><br>
-- The landing page is quite minimal and utilizes negative space to lend a feeling sparceness and sophistaction. 
-- It was inportant that this page visually reflected the businesses values in aesthetic and tone.
-- The headline and descriptive text include some SEO keywords such as: "vinyl records" & "curated".
-- A CTA button was decided against to preserve the visual integrity of the page.
 
-![Screenshot of navigation, logo and landing page](static/images/readme_imgs/landing_page.png)
+
+![Screenshot of feature description](static/images/readme_imgs/features/landing.png)
+
+![Screenshot of landing page](static/images/readme_imgs/screenshots/landing_page.png)
+![Screenshot of landing page](static/images/readme_imgs/screenshots/landing_sm.png)
 </details>
 
 ### New Releases Section
@@ -220,83 +215,80 @@ This section displays the latest four recommendation posts added. These are writ
 </details>
 
 ### Footer Section
-
 <details><br>
 
-The footer displays a subscription form some of the businesses key information this includes:
-- A subscription form for newsletters
-- Social media links
-- Contact information
-- Logo  
-- "Our Story" page
-- Shipping information page 
-- Returns page 
-- "Planet Vinyl Hog" page which will be implemted in the future.
+![Screenshot of feature description](static/images/readme_imgs/features/footer.png)
 
- ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/footer.png)
-  ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/our_story.png)
-  ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/shipping.png)
-   ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/returns.png)
+![Screenshot of footer](static/images/readme_imgs/screenshots/footer.png)
+
+![Screenshot of our story page](static/images/readme_imgs/screenshots/our_story.png)
+![Screenshot of shipping info page](static/images/readme_imgs/screenshots/shipping.png)
+![Screenshot of returns page](static/images/readme_imgs/screenshots/returns.png)
+![Screenshot of footer](static/images/readme_imgs/screenshots/footer_sm.png)
 </details>
 
 ### Account Pages
 <details><br>
 
- This is done through Allauth. In setting up an account an email and username are necessary. 
-- The links are provided in the dropdown menu in the header section; the links shown will depend on whether the user is logged in or not.
-- The pages include: Sign In page, Sign Out page & Register account page.
-- There is also a Password reset page to rectify forgotten passwords. <br>
-
- ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/sign_in.png)
-  ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/sign_up.png)
-   ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/sign_out.png)
-    ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/password_reset.png)
+![Screenshot of feature description](static/images/readme_imgs/features/account.png)
+ ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/screenshots/sign_in.png)
+  ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/screenshots/sign_up.png)
+   ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/screenshots/sign_out.png)
+    ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/screenshots/password_reset.png)
 </details>
 
 ### Products Page
 <details><br>
 
-The products page displayes on landing all the products in the database in a grid format.
-It includes kkey features to enhance the user experience including:
-- Ability to filter products by artist, genre, whether on sale or not & condition ( new/used ).
-- The ability for the user to use the search bar in the header which will return the product page with the relevant products.
-    The title and subtitle of the page will change with the filter.
-- The ability to sort the products by price.<br>
-
- ![Screenshot of products page](static/images/readme_imgs/products_page.png)
-![Screenshot of products page with filter applied](static/images/readme_imgs/products_filter.png)
+![Screenshot of feature description](static/images/readme_imgs/features/products.png)
+ ![Screenshot of products page](static/images/readme_imgs/screenshots/products_page.png)
+![Screenshot of products page with filter applied](static/images/readme_imgs/screenshots/products_filter.png)
  
 </details>
 
 ### Product Page
-<details><br>
+<details>
+ 
+![Screenshot of feature description](static/images/readme_imgs/features/features_product.png)
+<br>
+SEO Features:
 
- ![Screenshot of product page](static/images/readme_imgs/product.png)
-![Screenshot of product mobile screen size](static/images/readme_imgs/product_sm.png)
+ ![Screenshot of product meta details](static/images/readme_imgs/screenshots/product_meta.png)
+ ![Screenshot of product alt image description](static/images/readme_imgs/screenshots/alt_img.png)
+ <br>
+
+![Screenshot of product page](static/images/readme_imgs/screenshots/product.png)
+![Screenshot of product mobile screen size](static/images/readme_imgs/screenshots/product_sm.png)
 </details>
 
 ### Basket
 <details><br>
 
- ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/footer.png)
+![Screenshot of feature description](static/images/readme_imgs/features/basket.png)
+
+![Screenshot of basket page](static/images/readme_imgs/screenshots/basket.png)
+ 
 </details>
 
 ### Checkout
 <details><br>
 
- ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/footer.png)
+![Screenshot of feature description](static/images/readme_imgs/features/checkout.png)
+![Screenshot of checkout page](static/images/readme_imgs/screenshots/checkout.png)
 </details>
 
-### Order Confirmation
+### Order Confirmation/Details
 <details>
 
- ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/footer.png)
+ ![Screenshot of feature description](static/images/readme_imgs/features/order.png)
+![Screenshot of order details](static/images/readme_imgs/screenshots/order.png)
 </details><br>
 
 ### User Profile
 <details><br>
 
- ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/footer.png)
+![Screenshot of feature description](static/images/readme_imgs/features/profile.png)
+ ![Screenshot user profile page](static/images/readme_imgs/screenshots/profile_page.png)
 </details>
 
 
@@ -304,13 +296,16 @@ It includes kkey features to enhance the user experience including:
 ### Wishlist
 <details><br>
 
- ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/footer.png)
+ ![Screenshot of wishlist page](static/images/readme_imgs/footer.png)
 </details>
 
 ### Product Management Pages
 <details><br>
 
- ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/footer.png)
+![Screenshot of feature description](static/images/readme_imgs/features/admin.png)
+ ![Screenshot of product management pages](static/images/readme_imgs/screenshots/admin_user_dropdown.png)
+ ![Screenshot of product management pages](static/images/readme_imgs/screenshots/product_management2.png)
+ ![Screenshot of product management pages](static/images/readme_imgs/screenshots/product_add.png)
 </details>
 
 
