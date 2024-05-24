@@ -113,34 +113,31 @@ SECTION RECOMMENDATION POSTS
     </div>
     
     <div class="grid-container">
-       
+        <div class="article-card-first">
+            <div class="first-img-container">
             
-                
-                    
-                    <div class="article-card-first">
-                        <div class="first-img-container">
-                    <!--
-                          <img class="article-first-img" src="{{ first_post.article_image.url }}" alt="Card image cap"/> 
-                   -->
-                        </div>
-                        <div class="card-body article-card-body">
-                            <h5 class="card-title"><strong>{{ first_post.title }}</strong></h5>
-                            <p class="card-sub-title">{{ first_post.sub_title }}</p>
-                            <p class="card-text">by {{ first_post.author }}</p>
-                        </div>
-                    </div>
+                    <img class="article-first-img" src="{{ first_post.article_image.url }}" alt="Card image cap"/> 
+          
+                </div>
+
+            <div class="card-body article-card-body">
+                <h5 class="card-title"><strong>{{ first_post.title }}</strong></h5>
+                <p class="card-sub-title">{{ first_post.sub_title }}</p>
+                <p class="card-text">by {{ first_post.author }}</p>
+            </div>
+        </div>
             
-            
-        
-     
+          
         <div class="article-grid">
-            {% for post in posts_two_to_five %}
+            {% for post in recent_added_posts %}
                 <a class="product-link" href=" {% url 'post' post.id %}">
                     <div class="article-card">
+                        <div class="article-img-container">
                      
-                        <img class="article-card-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
-                    
-                        <div class="card-body article-card-body">
+                                <img class="article-card-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
+               
+                        </div>
+                        <div class="card-body article-card-body--bottom">
                             <h5 class="card-title"><strong>{{ post.title }}</strong></h5>
                             <p class="card-sub-title">{{ post.sub_title }}</p>
                             <p class="card-text">by {{ post.author }}</p>
@@ -150,6 +147,28 @@ SECTION RECOMMENDATION POSTS
                 
             {% endfor %}
         </div>
+
+        <div class="article-grid-3">
+            {% for post in recent_added_posts_2 %}
+                <a class="product-link" href=" {% url 'post' post.id %}">
+                    <div class="article-card-3">
+                        <div class="article-img-container">
+                     
+                                <img class="article-card-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
+               
+                        </div>
+                        <div class="card-body article-card-body--bottom">
+                            <h5 class="card-title"><strong>{{ post.title }}</strong></h5>
+                            <p class="card-sub-title">{{ post.sub_title }}</p>
+                            <p class="card-text">by {{ post.author }}</p>
+                        </div>
+                    </div>
+                </a>
+                
+            {% endfor %}
+        </div>
+
+
     </div>  
 </section>
 
