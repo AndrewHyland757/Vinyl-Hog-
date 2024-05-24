@@ -81,7 +81,7 @@ SINGLE PRODUCT DISPLAY CLASSES
 .product-description {
     font-size: 1.4rem;
     line-height: 1.4;
-    letter-spacing: 0.06rem;
+    letter-spacing: 0.04rem;
     margin-bottom: 3.2rem;
 }
 
@@ -141,6 +141,11 @@ SINGLE PRODUCT DISPLAY CLASSES
     margin-bottom: 1.4rem;
 }
 
+/*
+****************************
+MEDIA QUERIES
+****************************
+*/
 
 @media (max-width:1200px) {
 
@@ -188,7 +193,7 @@ SINGLE PRODUCT DISPLAY CLASSES
         margin-bottom: 12rem;
         margin-top: 12rem;
         background-color: #eff2f3;
-        background-color: #eff2f3;
+    
         
     }
     

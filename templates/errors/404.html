@@ -1,26 +1,26 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'styles/404.css' %}">
+{% endblock %}
+
 {% block content %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
+    <main class="main-404">
+        <div class="head-container-center">
+            <h1 class="head-heading">The page you are looking for isn't available</h1>
         </div>
-    </div>
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    The page you are looking for isn't available
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" 
-                            class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                                Return to shop
-                        </a>
-                    </h4>
-                </div>
-            </div>
+        <div class="text-404">
+            <p>
+                “Somebody was trying to tell me that CDs are better than<br> vinyl because they don’t have any surface noise. 
+            </p>
+            <p>I said, Listen, mate, life has surface noise.”</p>
+            <p><i>John Peel </i></p>
         </div>
-    </div>
+        <div class="btn-404">
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="btn-custom btn-custom--basket"><i class="fas fa-chevron-left mr-3"></i>Return to shop</span>
+            </a>
+        </div>
+    </main>
 {% endblock %}

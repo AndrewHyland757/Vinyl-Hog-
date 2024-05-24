@@ -7,7 +7,7 @@ def handler404(request, exception):
 
 
 def test(request):
-    return render(request, "errors/404_test.html")
+    return render(request, "errors/404.html")
 
 
 def footer_shipping(request):

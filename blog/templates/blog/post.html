@@ -3,15 +3,19 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'styles/post.css' %}" />
+{% endblock %}
 
+{% block extra_meta %}
+<meta name="description" content="Review of {{ product.title }} by {{ product.artist }} album.">
+<meta name="keywords" content="{{ product.title }} review, {{ product.title }} rating, {{ product.artist }} reviews">
 {% endblock %}
 
 {% block content %}
 
-<section class="post-section">
-    <div class="container">
+<main class="post-main">
+    <div class="container post-container">
         <div class="">
-            <img class="article-img" src="{{ post.article_image.url }}" alt="article image">
+            <img class="article-img" src="{{ post.article_image.url }}" alt="Image of {{ product.artist }} for review of {{ product.title }}">
         </div>
         <div class="heading-container">
             <h3 class="article-heading">{{ post.title }}</h3>
@@ -37,6 +41,6 @@
         </a>
     </div>
     
-</section>
+</main>
 
 {% endblock %}

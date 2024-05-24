@@ -301,6 +301,14 @@ SEO Features:
  ![Screenshot of wishlist page](static/images/readme_imgs/screenshots/wishlist.png)
 </details>
 
+### Article Post
+<details><br>
+
+![Screenshot of feature description](static/images/readme_imgs/features/article.png)<br>
+ ![Screenshot of product management pages](static/images/readme_imgs/screenshots/post.png)
+</details>
+
+
 ### Product Management Pages
 <details><br>
 
@@ -308,6 +316,15 @@ SEO Features:
  ![Screenshot of product management pages](static/images/readme_imgs/screenshots/admin_user_dropdown.png)
  ![Screenshot of product management pages](static/images/readme_imgs/screenshots/product_management2.png)
  ![Screenshot of product management pages](static/images/readme_imgs/screenshots/product_add.png)
+</details>
+
+### 404 Error Page
+<details><br>
+
+ A custom 404 page was implemented to handle and site errors.
+ <br>
+
+ ![Screenshot user profile page](static/images/readme_imgs/screenshots/404.png)
 </details>
 
 
@@ -325,15 +342,33 @@ SEO Features:
 
 ## Search Engine Optimization SEO and Marketing
 
-### Business Model
-
 ### SEO
-- A keyword list for long and short-tail keywords was made and the refined using [wordtracker](https://www.wordtracker.com/).
-- Descriptive meta tags were added to the base.html template, including title, description and keywords.
-- Semantic HTLM elements were implemented.
+
+#### Keywords
+ A keyword list for long and short-tail keywords was made and the refined using [wordtracker](https://www.wordtracker.com/).
+ <details>
+
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/keywords.png)
+</details><br>
+
+#### HTML
+Descriptive meta tags were added to the base.html template, including title, description and keywords. Also, there is a content block for additional tags.
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/base_meta.png)
+<br>
+Further meta tags were added to the product pages & blog posts depending on the shown product or article. These included the product name and releated artist in the description and keywords.
+
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/product_meta.png)
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/blog_meta.png)
+<br>
+
+For the product image and article post images the relevant product name and artist is contained in the image alternative description.
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/product_img.png)
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/blog_img.png)
+<br>
+Also implemented were:
+- Semantic HTLM elements were implemented through out the site.
 - The use of keywords in section headings when suitable.
-- Further meta tags were added to the product pages  and article posts depending on the shown product or article. These included the product name and releated artist in the description and keywords.
-- For the product and article post images the relevant product name and artist is contained in the image alternative dwscription.
+- The addition of high quality content used in the site. This includes the product descriptions and especially the reviews.
 - A sitemap was generated using [xml-sitemaps](https://www.xml-sitemaps.com/) This was generated using the deployed website. The file is included in the root level of the project.
 - Robots.txt file was created at the root level of the project. This file tells the search engine crawlers which URLs they can access on the website.
 
@@ -352,13 +387,13 @@ SEO Features:
 
 **Goal** | **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ | ------------ |
-Intuitively navigate through the website | Test all links in the header and all website pages| links open desired page | WAS |
+Intuitively navigate through the website | Test all links in the header and all website pages. | Links open desired page | WAS |
 Find essential information about the company |  Test links in the footer secion | Content of the page is presented | WAS |
 Search for certain products | Enter search words in search box and press enter | Releated products are shown in products page | WAS |
 Sort and filter products | On products page test the sort functionality and catagories | Releated products are shown in products page | WAS |
 View further details on each product | Click on the product card on the homepage and products page | Releated product is shown on product page | WAS |
 Add, remove and edit the quantity of products in my shopping basket | Add product to basket on product page. On Basket page delete product and edit quantity. | Product added to basket. Product quantity updated. Product deleted. Success messages displayed. | WAS |
-Access review articles | From the home page click on a review card. | Taken to review page. Review article shown | WAS |
+Access review articles | From the home page click on a review card. | Taken to review page. Review article shown. | WAS |
 
 
 
@@ -366,52 +401,36 @@ Access review articles | From the home page click on a review card. | Taken to r
 
 **Goal** | **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ | ------------ |
-Set up an account | From the account dropdown in the header, user navigates to the sign up page and enters their username and password | Account is set up. Success message displayed | WAS |
-Make a purchace | Make a purchace on checkout page. | Order confirmation page displayed. Confirmation sent to users email. | WAS |
+Set up an account | From the account dropdown in the header, user navigates to the sign up page and enters their username and password. User logs in. | Account is set up. Success message displayed whn set up and logging in. | WAS |
+Make a purchace | Make a purchace on checkout page. | Success message show. Order confirmation page displayed. Confirmation sent to users email. | WAS |
 
 
 ### 3. Registered User Needs
 
 **Goal** | **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ | ------------ |
-Sing In/Out | User navigates to the sign in/sign out page and enters their username and password/signs out. | Sign in/Sign out. Success message displayed | WAS |
-
+Sing In/Out | User navigates to the sign in/sign out page and enters their username and password. | Sign in/Sign out of account. Success message displayed | WAS |
 Make a purchace | Make a purchace on checkout page. | Order confirmation page displayed. Confirmation sent to users email. | WAS |
 Add/Update delivery details | Add/Update delivery details on user profile page | Success message displayed. Delivery updates shown on profile page and check out page. | WAS |
-
 Make a purchace | Make a purchace on checkout page. | Order confirmation page displayed. Confirmation sent to users email. Order displayed on profile page order history table. | WAS |
 View any past orders| Navigate to profile page. | Orders displayed in order history table. When clicked on opens up the specific order in Order details page. | WAS |
 Save/Remove products in wishlist | On product page add product to wishlist. On wishlist page remove product. | When added/removed success message displayed and product is added/removed form wishlist. | WAS |
 See if logged in or not| Click on account dropdown. | If logged in then "sign out" link is shown. If logged out then "sign in" link is shown | WAS |
 
 
+### 3. Admin User Needs
 
-
-### Registered User Needs
-
-7. As a registered user I can make an order.
-8. As a registered user I can have my my delivery details saved which will auto fill the delivery fields in the checkout page.
-9. As a registered user I can view any past orders in my profile page.
-10. As a registered user I can save desired products to a personal wishlist.
-11. As a registered user I can easily see if I'm logged in or not.
-
-
-
-
-
-
-
-### 3. As a d user I can add, remove and update quantity in .
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Navigating to :https://.herokuapp.com/ | home page loads | WAS |
-Click on reservation link in the nav-bar | Site navigates to reservation section | WAS |
-Submit form with missing form fields | Prompt is shown to fill in field | WAS |
-Use past date in date field | Error message shown | WAS |
-Fill in all fields with valid date| Success message displayed. Instance saved in model | WAS |
-Fill in form fields on date/time fully booked | Unsuccessfull message displayed | WAS |
-Fill in form fields on date/time with no suitable table available | Unsuccessfull message displayed | WAS |
+**Goal** | **Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ | ------------ |
+Access the product management page | Admin user signs in then clicks on the account link in the nav-bar, product management link should be shown. | Opens the product managemnet page. | WAS |
+Access the blog management page | Admin user signs in, clicks on the account link in the nav-bar, blog management link is shown and clicked on. | Opens the blog managemnet page. | WAS |
+Add product/artist/genre | On approiate management page the user clicks on the add button to open the add product/artist/genre page. Form is filled in. | Success message displayed. User returned to the management page and new product/artist/genre shown in the relevant database table. New product is shown on the sites products page.  | WAS |
+Edit product/artist/genre | On approiate management page the user clicks on the edit button on desired instance. Taken to edit page. Form is editeded. | Success message displayed. User returned to the management page and edited product/artist/genre shown in the list. Changes are shown. Changes are shown on the sites products page.| WAS |
+Delete product/artist/genre | On the management page the user clicks on the delete button on desired instance. Taken to delete page. Confirmation button is clicked. | Success message displayed. User returned to management page and deleted product/artist/genre removed from the list. | WAS |
+Access the blog management page | Admin user signs in, clicks on the account link in the nav-bar, blog management link is shown and clicked on. | Opens the blog managemnet page. | WAS |
+Add review article | On blog management page the user clicks on the add button to open the add post page. Form is filled in. | Success message displayed. User returned to the management page and new blog article shown in the database table. New article is shown on the sites  page.  | WAS |
+Edit review article | OOn blog management page the user clicks on the edit button on desired instance. Taken to edit page. Form is editeded. | Success message displayed. User returned to the management page and edited article shown in the list. Changes are shown. Changes are shown on the sites page.| WAS |
+Delete review article  | On the management page the user clicks on the delete button on desired instance. Taken to delete page. Confirmation button is clicked. | Success message displayed. User returned to management page and deleted article removed from the list. | WAS |
 
 
 
@@ -420,17 +439,7 @@ Fill in form fields on date/time with no suitable table available | Unsuccessful
 
 
 
-### 3. As a non-registered user I can make a booking so that I don't need to spend time setting up an account.
 
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Navigating to :https://.herokuapp.com/ | home page loads | WAS |
-Click on reservation link in the nav-bar | Site navigates to reservation section | WAS |
-Submit form with missing form fields | Prompt is shown to fill in field | WAS |
-Use past date in date field | Error message shown | WAS |
-Fill in all fields with valid date| Success message displayed. Instance saved in model | WAS |
-Fill in form fields on date/time fully booked | Unsuccessfull message displayed | WAS |
-Fill in form fields on date/time with no suitable table available | Unsuccessfull message displayed | WAS |
 
 
 
