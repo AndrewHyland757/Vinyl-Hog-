@@ -105,27 +105,52 @@ SECTION RECOMMENDATION POSTS
 -->
 
 <section class="section-recommendations">
-    <div class="head-container">
+    <div class="head-container-center">
         <h1 class="head-heading">Staff Reviews</h1>
         <p class="head-text">
           Dive into our staff's top vinyl album picks, a reflection of a hundred years of shared musical love.
         </p>
     </div>
-
-    <div class="article-grid">
-        {% for post in recent_added_posts %}
-            <a class="product-link" href=" {% url 'post' post.id %}">>
-                <div class="article-card">
-                    <img class="article-card-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>{{ post.title }}</strong></h5>
-                        <p class="card-sub-title">{{ post.sub_title }}</p>
-                        <p class="card-text">by {{ post.author }}</p>
+    
+    <div class="grid-container">
+       
+            
+                
+                    
+                    <div class="article-card-first">
+                        <div class="first-img-container">
+                    <!--
+                          <img class="article-first-img" src="{{ first_post.article_image.url }}" alt="Card image cap"/> 
+                   -->
+                        </div>
+                        <div class="card-body article-card-body">
+                            <h5 class="card-title"><strong>{{ first_post.title }}</strong></h5>
+                            <p class="card-sub-title">{{ first_post.sub_title }}</p>
+                            <p class="card-text">by {{ first_post.author }}</p>
+                        </div>
                     </div>
-                </div>
-            </a>
-        {% endfor %}
-    </div>
+            
+            
+        
+     
+        <div class="article-grid">
+            {% for post in posts_two_to_five %}
+                <a class="product-link" href=" {% url 'post' post.id %}">
+                    <div class="article-card">
+                     
+                        <img class="article-card-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
+                    
+                        <div class="card-body article-card-body">
+                            <h5 class="card-title"><strong>{{ post.title }}</strong></h5>
+                            <p class="card-sub-title">{{ post.sub_title }}</p>
+                            <p class="card-text">by {{ post.author }}</p>
+                        </div>
+                    </div>
+                </a>
+                
+            {% endfor %}
+        </div>
+    </div>  
 </section>
 
 

@@ -183,13 +183,14 @@ RECOMMENDATION POSTS GRID
 ****************************
 */
 
-
+/*
 .article-grid {
   width: 100%;
   height: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+
   gap: 6.4rem;
   padding: 0 9.6rem 0 9.6rem;
   margin-bottom: 9.6rem;
@@ -198,21 +199,155 @@ RECOMMENDATION POSTS GRID
 
 .article-card {
   width: 100%;
+  height: 100%;
   position: relative;
   padding: 1.8rem 1.8rem 2.4rem 1.8rem;
   border: none;
   border-radius: 0;
   background-color: #eff2f3;
+  display: flex;
+  flex-direction: column;
+ 
 }
 
 
 .article-card-img {
   padding-bottom: 1.6rem;
   max-width: 100%;
+  flex-grow:inherit
+
+  
 }
 
 .article-card-body {
   padding: 0;
+  height:fit-content;
+
+}
+
+
+
+
+.card-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+
+.card-sub-title {
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
+  margin-bottom: 1.5rem;
+
+}
+
+.card-text {
+  font-size: 1.2rem;
+}
+*/
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 3.2rem;
+  height: 100vh;
+  margin: 0 auto;
+  width:1400px;
+  background-color: #e6ebf1;
+  padding: 3.6rem;
+}
+
+
+.article-card-first {
+  height: 100%;
+width: 100%;
+display: grid;
+grid-template-columns: 1fr 2fr;
+
+
+  border: none;
+  border-radius: 0;
+  background-color: #1E1C1C;
+  overflow: hidden;
+  padding: 1.8rem 1.8rem 1.8rem 1.8rem;
+  padding-bottom: 1.8rem;
+  background-color: lightgreen;
+  
+}
+.first-img-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+ 
+ 
+
+  background-color: lightseagreen;
+
+}
+
+.article-first-img {
+  padding-bottom:0;
+ 
+
+ 
+
+
+  object-fit: cover !important;
+
+  max-height: 100%;
+  max-width: 100%;
+
+  grid-row: 1; 
+ 
+ 
+
+
+  
+  overflow: hiddenimportant;
+}
+
+
+
+.article-grid {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ 
+  gap: 6.4rem;
+  padding: 0;
+ 
+}
+
+
+
+
+
+
+.article-card {
+  height: 100%;
+width: 100%;
+  position: relative;
+  padding: 1.8rem 1.8rem 2.4rem 1.8rem;
+  border: none;
+  border-radius: 0;
+  background-color: #1E1C1C
+
+}
+
+.article-card-img {
+  padding-bottom: 1.6rem;
+  width: 100%;
+}
+
+
+.article-card-body {
+  padding: 0;
+ 
+
 }
 
 .card-title {
@@ -234,7 +369,7 @@ RECOMMENDATION POSTS GRID
 .card-text {
   font-size: 1.2rem;
 }
-
+*/
 
 /*
 ****************************
