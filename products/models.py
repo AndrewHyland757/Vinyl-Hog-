@@ -10,6 +10,7 @@ class Genre(models.Model):
 
     def __str__(self):
         return self.name
+   
 
 
 class Condition(models.Model):
@@ -48,5 +49,9 @@ class Album(models.Model):
 class Artist(models.Model):
     name = models.CharField(max_length=200)
 
+
+
     def __str__(self):
         return str(self.name)
+
+

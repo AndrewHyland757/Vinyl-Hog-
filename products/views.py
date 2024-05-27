@@ -5,17 +5,28 @@ from django.http import HttpResponse
 from django.db.models import Q
 from .models import Album, Condition, Genre, Artist
 from .forms import ProductForm, ArtistForm, GenreForm
+from django.db import models
+from django.db.models import Case, When, F
+
+
+
+
+
+  
+
+
+
+
 
 
 
 def products(request):
     '''
-    Displayes the products.
+    Displays the products.
     '''
     products = Album.objects.all()
     artists = Artist.objects.all()
     genres = Genre.objects.all()
-
     query = None
     conditions = None
     section_heading = "All Vinyl"
@@ -24,8 +35,174 @@ def products(request):
     sort = None
     direction = None
     requested_artist_products = None
+    artist_active = None
+    genre_active = None
+    sort = None
 
     if request.GET:
+        if 'recent' in request.GET:
+            products = products.order_by('-date_added')
+            section_text = "Recently added vinyl."
+
+        if 'sale' in request.GET:
+            products = products.filter(on_sale=True)
+            section_heading = "On Sale Vinyl"
+            section_text = "Our full library of on sale vinyl."
+
+        if 'artist' in request.GET:
+            requested_artist = request.GET['artist'].split(',')
+            products = products.filter(artist__name__in=requested_artist)
+            section_heading = requested_artist[0]
+            section_text = "Our full library of vinyl."
+
+        if 'condition' in request.GET:
+            '''
+            Displays items depending on the condition.
+            '''
+            requested_condition = request.GET['condition'].split(',')
+            if requested_condition == ["fresh"]:
+              
+                section_heading = "New Releases"
+                section_text = "Check out our latest releases."
+                products =  products.order_by('-date_added')
+            else:
+                products = products.filter(condition__name__in=requested_condition)
+                conditions = Condition.objects.filter(name__in=requested_condition)
+
+                if requested_condition == ["New"]:
+                    section_heading = "New Vinyl"
+                    section_text = "Our full library of brand new vinyl."
+                else:
+                    section_heading = "Used Vinyl"
+                    section_text = "Our full library of high quality used vinyl."
+
+        if 'genre' in request.GET:
+            requested_genre = request.GET['genre'].split(',')
+            products = products.filter(genres__name__in=requested_genre)
+            section_heading = requested_genre[0].capitalize()
+            genre_active = [requested_genre[0].capitalize(), requested_genre[0].lower()]
+
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
+
+            queries = Q(title__icontains=query) | Q(artist__name__icontains=query)
+            products = products.filter(queries)
+
+        # Apply sorting after all filters
+        if 'sort' in request.GET:
+            sort = request.GET.get('sort')
+            if sort == 'price_asc':
+                products = products.annotate(
+                    effective_price=Case(
+                        When(on_sale=True, then=F('sale_price')),
+                        default=F('price'),
+                        output_field=models.DecimalField()
+                    )
+                ).order_by('effective_price')
+            elif sort == 'price_desc':
+                products = products.annotate(
+                    effective_price=Case(
+                        When(on_sale=True, then=F('sale_price')),
+                        default=F('price'),
+                        output_field=models.DecimalField()
+                    )
+                ).order_by('-effective_price')
+            elif sort == 'title_asc':
+                products = products.order_by('title')
+            elif sort == 'title_desc':
+                products = products.order_by('-title')
+
+    context = {
+        "section_text": section_text,
+        "albums": products,
+        'current_conditions': conditions,
+        'search_term': query,
+        "section_heading": section_heading,
+        "artists": artists,
+        "genres": genres,
+        "genre_active": genre_active,
+        "artist_active": artist_active,
+    }
+
+    return render(request, 'products/products.html', context)
+
+
+
+
+
+
+
+
+
+def product(request, product_id):
+    '''
+    Displays a single product.
+    '''
+    product = get_object_or_404(Album, id=product_id)
+
+    if product.stock <= 0:
+        product_stock = "Out of stock"
+    else:
+        product_stock = product.stock
+
+    context = {
+        "product": product,
+        'product_stock': product_stock,
+    }
+
+    return render(request, 'products/product.html', context)
+
+
+
+"""
+def products(request):
+    '''
+    Displayes the products.
+    '''
+    products = Album.objects.all()
+    artists = Artist.objects.all()
+    genres = Genre.objects.all()
+    query = None
+    conditions = None
+    section_heading = "All Vinyl"
+    section_text = "Our full selection of vinyl."
+    recent_added_products = None
+    sort = None
+    direction = None
+    requested_artist_products = None
+    artist_active = None
+    genre_active = None
+    sort = None
+    if request.GET:
+
+
+        if 'sort' in request.GET:
+            sort = request.GET.get('sort')
+    
+            if  sort == 'price_asc':
+                products = Album.objects.annotate(
+                effective_price=Case(
+                    When(on_sale=True, then=F('sale_price')),
+                    default=F('price'),
+                    output_field=models.DecimalField()
+                )
+                ).order_by('effective_price')
+
+            elif sort == 'price_desc':
+                products = Album.objects.annotate(
+                effective_price=Case(
+                    When(on_sale=True, then=F('sale_price')),
+                    default=F('price'),
+                    output_field=models.DecimalField()
+                        )
+                ).order_by('-effective_price')
+            elif sort == 'title_asc':
+                products = Album.objects.order_by('title')
+
+
 
         if 'recent' in request.GET:
             products = Album.objects.all().order_by('-date_added')
@@ -42,9 +219,17 @@ def products(request):
             '''
             requested_artist = request.GET['artist'].split(',')
             products = products.filter(artist__name__in=requested_artist)
-            section_heading = requested_artist[0].capitalize()
+            section_heading = requested_artist[0]
             section_text = "Our full library of vinyl."
 
+            
+
+            
+
+
+         
+            
+            
         if 'condition' in request.GET:
             '''
             Displays items depending on the condition.
@@ -74,6 +259,9 @@ def products(request):
             products = products.filter(genres__name__in=requested_genre)
             #conditions = Genre.objects.filter(name__in=requested_genre)
             section_heading = requested_genre[0].capitalize()
+
+            genre_active = [requested_genre[0].capitalize(), requested_genre[0].lower()]
+
      
         if 'q' in request.GET:
             '''
@@ -97,26 +285,10 @@ def products(request):
         "section_heading": section_heading,
         "artists": artists,
         "genres": genres,
+        "genre_active": genre_active,
+        "artist_active": artist_active,
+   
     }
 
     return render(request, 'products/products.html', context)
-
-
-def product(request, product_id):
-    '''
-    Displays a single product.
-    '''
-    product = get_object_or_404(Album, id=product_id)
-
-    if product.stock <= 0:
-        product_stock = "Out of stock"
-    else:
-        product_stock = product.stock
-
-    context = {
-        "product": product,
-        'product_stock': product_stock,
-    }
-
-    return render(request, 'products/product.html', context)
-
+"""

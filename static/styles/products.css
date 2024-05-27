@@ -43,6 +43,21 @@ ASIDE CLASSES
   width: fit-content;
 }
 
+.active-category,
+.category {
+  
+}
+
+.active-category {
+  text-decoration: underline;
+  background-color: ;
+}
+.category_link--active {
+  text-decoration: underline;
+  background-color: lightblue;
+}
+
+
 /*
 ****************************
 OTHER CLASSES
