@@ -44,10 +44,6 @@ def products(request):
             products = products.order_by('-date_added')
             section_text = "Recently added vinyl."
 
-        if 'sale' in request.GET:
-            products = products.filter(on_sale=True)
-            section_heading = "On Sale Vinyl"
-            section_text = "Our full library of on sale vinyl."
 
         if 'artist' in request.GET:
             requested_artist = request.GET['artist'].split(',')
@@ -55,21 +51,27 @@ def products(request):
             section_heading = requested_artist[0]
             section_text = "Our full library of vinyl."
 
-        if 'condition' in request.GET:
+        if 'category' in request.GET:
             '''
-            Displays items depending on the condition.
+            Displays items depending on the category.
             '''
-            requested_condition = request.GET['condition'].split(',')
-            if requested_condition == ["fresh"]:
+            requested_category = request.GET['category'].split(',')
+            if requested_category == ["on_sale"]:
+                products = products.filter(on_sale=True)
+                section_heading = "On Sale Vinyl"
+                section_text = "Our full library of on sale vinyl."
+
+            elif requested_category == ["latest"]:
               
-                section_heading = "New Releases"
+                section_heading = "Latest Releases"
                 section_text = "Check out our latest releases."
                 products =  products.order_by('-date_added')
+                
             else:
-                products = products.filter(condition__name__in=requested_condition)
-                conditions = Condition.objects.filter(name__in=requested_condition)
+                products = products.filter(condition__name__in=requested_category)
+                conditions = Condition.objects.filter(name__in=requested_category)
 
-                if requested_condition == ["New"]:
+                if requested_category == ["New"]:
                     section_heading = "New Vinyl"
                     section_text = "Our full library of brand new vinyl."
                 else:
@@ -118,7 +120,7 @@ def products(request):
     context = {
         "section_text": section_text,
         "albums": products,
-        'current_conditions': conditions,
+      
         'search_term': query,
         "section_heading": section_heading,
         "artists": artists,

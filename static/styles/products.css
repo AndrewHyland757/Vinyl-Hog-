@@ -2,7 +2,7 @@
 .products-main {
     display: flex;
 
-    padding: 0 2.4rem;
+    padding: 0 2.25rem;
 
 }
 
@@ -24,10 +24,6 @@ ASIDE CLASSES
   margin-bottom: 1rem;
 }
 
-.aside-category  p {
-  font-size: 1.3rem;
-  margin-bottom: .75rem;
-}
 
 .aside--right {
   display: flex;
@@ -43,18 +39,26 @@ ASIDE CLASSES
   width: fit-content;
 }
 
-.active-category,
-.category {
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
   
 }
 
-.active-category {
-  text-decoration: underline;
-  background-color: ;
+.category-link {
+  font-size: 1.3rem;
+  
+  text-transform: capitalize;
+  padding: .2rem;
+line-height: 1.2;
 }
-.category_link--active {
-  text-decoration: underline;
-  background-color: lightblue;
+
+.category-link--active {
+
+  background-color: #dbdedf;
+  
+
 }
 
 

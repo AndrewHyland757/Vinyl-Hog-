@@ -20,6 +20,7 @@
             <a class="btn-custom--products" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artist</a>
             <div class="dropdown-menu">
                 {% for artist in artists %}
+                
             <a  class="dropdown-item" href="{% url 'products' %}?artist={{ artist }}"><p>{{ artist.name }}</p></a>
             {% endfor %}
             </div>
@@ -51,30 +52,24 @@
         <aside class="aside--left">
             <div class="aside-category  mb-5">
                 <h3 class="aside-heading">categories</h3>
-                <a href="{% url 'products' %}"><p>All</p></a>
-                <a href="{% url 'products' %}?condition=New"><p>New</p></a>
-                <a href="{% url 'products' %}?condition=Used"><p>Used</p></a>
-                <a href="{% url 'products' %}?sale=on_sale"><p>On Sale</p></a>
-                <a href="{% url 'products' %}?condition=fresh"><p>Latest Releases</p></a>
+                <div class="links-container">
+                <p><a class="category-link" href="{% url 'products' %}">All</a></p>
+                <p><a class="category-link {% if request.GET.category == 'New' %}category-link--active{% endif %}" href="{% url 'products' %}?category=New">New</a></p>
+                <p><a class="category-link {% if request.GET.category == 'Used' %}category-link--active{% endif %}" href="{% url 'products' %}?category=Used">Used</a></p>
+                <p><a class="category-link {% if request.GET.category == 'on_sale' %}category-link--active{% endif %}" href="{% url 'products' %}?category=on_sale">On Sale</a></p>
+                <p><a class="category-link {% if request.GET.category == 'latest' %}category-link--active{% endif %}" href="{% url 'products' %}?category=latest">Latest Releases</a></p>
+            </div>
             </div>
 
             <div class="aside-category ">
                 <h3 class="aside-heading">artists</h3>
-                {% for artist in artists %}
-               
-              
-                    <p><a class="category_link" href="{% url 'products' %}?artist={{ artist.name }}">{{ artist.name }}</a></p>
-              
-                {% endfor %}
-        
-              
+                <div class="links-container">
+                    {% for artist in artists %}
+                        <p><a class="category-link {% if request.GET.artist == artist.name %}category-link--active{% endif %}" href="{% url 'products' %}?artist={{ artist.name }}">{{ artist.name }}</a></p>
+                    {% endfor %}
+                </div>
             </div>
         </aside>
-
-
-      
-
-
 
 
         <div class="products-grid">
@@ -112,27 +107,19 @@
             <div class="aside-container--right">
                 <div class="aside-category  aside-category--right mb-5">
                     <h3 class="aside-heading">sort</h3>
-
-                    <p><a class="{% if request.GET.sort == 'price_asc' %}active-category{% endif %}" href="{% url 'products' %}?sort=price_asc{% if request.GET.artist %}&artist={{ request.GET.artist }}{% endif %}{% if request.GET.genre %}&genre={{ request.GET.genre }}{% endif %}{% if request.GET.condition %}&condition={{ request.GET.condition }}{% endif %}{% if request.GET.sale %}&sale=true{% endif %}{% if request.GET.latest %}&latest=true{% endif %}">Price ascending</a></p>
-                    <p><a class="{% if request.GET.sort == 'price_desc' %}active-category{% endif %}" href="{% url 'products' %}?sort=price_desc{% if request.GET.artist %}&artist={{ request.GET.artist }}{% endif %}{% if request.GET.genre %}&genre={{ request.GET.genre }}{% endif %}{% if request.GET.condition %}&condition={{ request.GET.condition }}{% endif %}{% if request.GET.sale %}&sale=true{% endif %}{% if request.GET.latest %}&latest=true{% endif %}">Price descending</a></p>
-
-                    
-
-                    <p><a class="{% if request.GET.sort == 'title_asc' %}active-category{% endif %}" href="{% url 'products' %}?sort=title_asc{% if request.GET.artist %}&artist={{ request.GET.artist }}{% endif %}{% if request.GET.genre %}&genre={{ request.GET.genre }}{% endif %}{% if request.GET.condition %}&condition={{ request.GET.condition }}{% endif %}{% if request.GET.sale %}&sale=true{% endif %}{% if request.GET.latest %}&latest=true{% endif %}">By title</a></p>
-           
-                    
-                    
+                    <div class="links-container">
+                        <p><a class="category-link {% if request.GET.sort == 'price_asc' %}category-link--active{% endif %}" href="{% url 'products' %}?sort=price_asc{% if request.GET.artist %}&artist={{ request.GET.artist }}{% endif %}{% if request.GET.genre %}&genre={{ request.GET.genre }}{% endif %}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}{% if request.GET.latest %}&latest=true{% endif %}">Price ascend</a></p>
+                        <p><a class="category-link {% if request.GET.sort == 'price_desc' %}category-link--active{% endif %}" href="{% url 'products' %}?sort=price_desc{% if request.GET.artist %}&artist={{ request.GET.artist }}{% endif %}{% if request.GET.genre %}&genre={{ request.GET.genre }}{% endif %}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}{% if request.GET.latest %}&latest=true{% endif %}">Price descend</a></p>
+                        <p><a class="category-link {% if request.GET.sort == 'title_asc' %}category-link--active{% endif %}" href="{% url 'products' %}?sort=title_asc{% if request.GET.artist %}&artist={{ request.GET.artist }}{% endif %}{% if request.GET.genre %}&genre={{ request.GET.genre }}{% endif %}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}{% if request.GET.latest %}&latest=true{% endif %}">By title</a></p>
+                    </div>
                 </div>
                 <div class="aside-category  aside-category--right">
                     <h3 class="aside-heading">genres</h3>
-                    {% for genre in genres %}
-                    {% if genre.name in genre_active %}
-                    <p><a class=" active-category" href="{% url 'products' %}?genre={{genre}}">{{ genre.name }}</a></p>
-                    {% else %}
-                    <p><a class="category" href="{% url 'products' %}?genre={{genre}}">{{ genre.name }}</a></p>
-                    {% endif %}
-                    {% endfor %}
-
+                    <div class="links-container">
+                        {% for genre in genres %}
+                            <p><a class="category-link {% if request.GET.genre == genre.name %}category-link--active{% endif %}" href="{% url 'products' %}?genre={{genre.name}}">{{ genre.name }}</a></p>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </aside>
