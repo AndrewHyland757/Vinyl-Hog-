@@ -25,14 +25,22 @@
                 </div>
             </div>
 
+            
             <div class="icons-container">
+          
+
+
                 <div class="nav-item">
-                    <form method="GET" action="{% url 'products' %}"></form>
-                        <div class="search-container input-group w-100">
-                            <input id="search-box" class=" " type="text" name="q" placeholder="Search our site">
-                            <button  id="search-icon" class="btn-search" type="submit">
-                                <i onclick="showSearchBox()" class="fas fa-search "></i> 
-                            </button>
+                    <form id="search-form" method="GET" action="{% url 'products' %}">
+                        <div class="input-group w-100">
+                            <input id="search-box" class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                            <div class="input-group-append">
+                                <button id="search-icon" class="btn-search" type="button">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -98,28 +106,27 @@
 <script>
     let searchBox = document.getElementById("search-box");
     let searchIcon = document.getElementById("search-icon");
-    
-    function showSearchBox() {
-        if (searchBox.style.display = "none") {
-            searchBox.style.display = "block";
-        } 
+    let searchForm = document.getElementById("search-form");
+
+    function showSearchBox(event) {
+        searchBox.style.display = "block";
+        searchBox.focus(); // Focus on the input field
+        event.stopPropagation();
+        document.addEventListener('click', closeSearchBox);
     }
+
+    function closeSearchBox(event) {
+        if (!searchBox.contains(event.target) && event.target !== searchIcon) {
+            searchBox.style.display = "none";
+            document.removeEventListener('click', closeSearchBox);
+        }
+    }
+
+    searchIcon.addEventListener('click', function(event) {
+        if (searchBox.value.trim() !== "") {
+            searchForm.submit();
+        } else {
+            showSearchBox(event);
+        }
+    });
 </script>
-
-
-
-
-    <!--
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                        <i class="fas fa-search"></i>
-                                    </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                -->

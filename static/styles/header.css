@@ -127,6 +127,7 @@ NAVIGATION
 	font-size: 1rem;
 }
 
+/*
 #search-box {
 	display: none;
 	font-family:  Helvetica;
@@ -145,6 +146,51 @@ NAVIGATION
 	outline: none;
 }
 
+#search-box {
+	display: none;
+	font-family: Helvetica;
+	padding: .75rem 1.25rem;
+	font-size: 1.4rem;
+	color: grey;
+	border: .1rem solid lightgray;
+	letter-spacing: .04rem;
+	width: 300px;
+	animation: slide 1s 1;
+}
+
+#search-box:focus,
+#search-box:link,
+#search-box:active {
+	outline: none;
+}
+
+
+*/
+
+    .input-group-append,
+    .icon i {
+    border: none;
+}
+    #search-box {
+        display: none;
+        font-family: Helvetica;
+        padding: .75rem 1.25rem;
+        font-size: 1.4rem;
+        color: grey;
+        border: .1rem solid lightgray;
+        letter-spacing: .04rem;
+        width: 300px;
+        animation: slide 1s 1;
+    }
+
+    #search-box:focus,
+    #search-box:link,
+    #search-box:active {
+        border: none;
+		background-color: transparent; /* Set background color to transparent when focused */
+    }
+
+
 .btn-search {
 	border: none;
 	background-color: white;
@@ -158,7 +204,14 @@ NAVIGATION
 	outline: none;
 	border: none;
 	color: grey;
+	background-color: transparent; /* Set background color to transparent when focused */
+	
+	
 }
+
+
+
+
 
 /*
 ****************************
