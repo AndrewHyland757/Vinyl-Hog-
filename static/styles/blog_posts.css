@@ -1,0 +1,174 @@
+.grid-container-blog {
+ 
+    width:1200px;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: 400px auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.2rem;
+    margin: 0 auto;
+    padding: 3.6rem;
+    background-color:#1E1C1C;
+    margin-bottom: 12rem;
+    
+  }
+  
+
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4 {
+    gap: 6.2rem;
+    overflow: hidden;
+    background-color: #eff2f3;
+  }
+
+  .item-1 {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    display: flex;
+    gap: 3.2rem;
+    
+  }
+
+
+
+  .item-1 .img-container {
+    width: 350px !important;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+ 
+
+  }
+
+  .item-1 .post-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 1.8rem;
+    overflow:hidden;
+    
+  }
+
+  .card-body-post {
+  
+    height: fit-content;
+   width:auto;
+
+    padding: 1.8rem;
+ 
+    
+  }
+
+  .item-2 .card-body-post,
+  .item-3 .card-body-post,
+  .item-4 .card-body-post {
+    padding-top: 0;
+  }
+  
+
+
+
+
+
+  .item-2 {
+    
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 2;
+    grid-row-end: span 1;
+
+  
+    
+  }
+
+
+  .item-3,
+  .item-4,
+  .item-2 {
+    
+   
+
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 0rem;
+    align-items:flex-start;
+    
+  }
+
+  .item-2 .img-container,
+  .item-3 .img-container,
+  .item-4 .img-container {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+
+  }
+
+  .item-2 .post-img,
+  .item-3 .post-img,
+  .item-4 .post-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 1.8rem;
+    
+    overflow:hidden;
+   
+  }
+
+
+
+
+
+
+
+  .item-3 {
+    
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 2;
+    grid-row-end: span 1;
+  }
+
+  .item-4 {
+    grid-column-start: 3;
+    grid-column-end: span 1;
+    grid-row-start: 2;
+    grid-row-end: span 1;
+  }
+
+
+
+
+  
+
+
+  .card-title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    margin-top: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+  
+  
+  .card-sub-title {
+    font-size: 1.6rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1.5rem;
+  
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+  }
+  

@@ -91,6 +91,8 @@ def products(request):
                 return redirect(reverse('products'))
 
             queries = Q(title__icontains=query) | Q(artist__name__icontains=query)
+            section_heading = f'"{query}"'
+            section_text = "Search results."
             products = products.filter(queries)
 
         # Apply sorting after all filters
