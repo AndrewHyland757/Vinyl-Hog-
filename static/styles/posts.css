@@ -1,0 +1,171 @@
+/*
+****************************
+POSTS SECTION
+****************************
+*/
+
+
+.grid-container-blog {
+  height: fit-content;
+  gap: 3.2rem;
+  margin: 0 auto;
+  padding: 3.6rem;
+  background-color:#1E1C1C;
+  margin-bottom: 16rem;
+}
+
+.item-2 {
+  overflow: hidden;
+  background-color: #eff2f3;
+}
+
+.item-2 {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 0rem;
+  align-items:flex-start;
+}
+
+
+.item-2 .post-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 1.8rem;
+  overflow:hidden;
+}
+
+.item-2-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.item-2 .img-container {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-card-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.card-body-post {
+  height: fit-content;
+  width:auto;
+  padding: 1.8rem;
+}
+
+.item-2 .card-body-post {
+  padding-top: 0;
+}
+
+.post-card-sub {
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-card-text {
+  font-size: 1.2rem;
+}
+
+
+
+/*
+****************************
+MEDIA QUERIES POSTS
+****************************
+*/
+
+
+@media (max-width:1200px) {
+
+    .grid-container-blog {
+      width:100vw;
+    }
+  
+    .item-2 .img-container {
+      height: 300px;
+    }
+  }
+  
+  
+  @media (max-width:1025px ) {
+  
+    .item-2 .img-container {
+      height: 225px;
+    }
+    .item-2-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.2rem;
+      }
+  
+    .post-card-title {
+      font-size: 2rem;
+    }
+  
+    
+  }
+  
+  @media (max-width:780px) {
+    .grid-container-blog {
+      width:100vw;
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+  
+    .item-2 {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 0rem;
+      align-items:flex-start;
+    }
+  
+    .item-2-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+      width: 100%;
+    }
+  
+    .item-2 .img-container {
+      width: 100% !important;
+      height: 350px;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .item-2 .post-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 1.8rem;
+      overflow:hidden;
+    }
+  
+    .card-body-post {
+      padding-top: 0;
+    }
+  
+  }
+      
+  @media (max-width:480px) {
+    .item-2 .img-container {
+      width: 100%;
+      height: 250px;
+      position: relative;
+      overflow: hidden;
+    }
+   }
+  

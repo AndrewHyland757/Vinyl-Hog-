@@ -24,9 +24,9 @@ def posts(request):
 
 
 def post(request, post_id):
-    '''
-    View to render an individual article.
-    '''
+    """
+    View to render an individual post.
+    """
     post = get_object_or_404(RecommendationPost, id=post_id)
 
     context = {
@@ -36,15 +36,29 @@ def post(request, post_id):
     return render(request, 'blog/post.html', context)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @login_required
-def blog_post_management(request):
+def blog_management(request):
     '''
     View to view and manage all post articles.
     '''
     posts = RecommendationPost.objects.all()
     sub_title = "All Posts"
 
-    template = 'blog/blog_post_management.html'
+    template = 'blog/blog_management.html'
     context = {
         "posts": posts
     }
@@ -121,16 +135,26 @@ def edit_post(request, post_id):
     return render(request, template, context)
 
 
+
+
 @login_required
 def delete_post(request, post_id):
-    '''
-    View to delete a post article.
-    '''
+    """
+    Delete a post from the database
+    """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only store owners can do that')
         return redirect(reverse('home'))
 
     post = get_object_or_404(RecommendationPost, pk=post_id)
-    post.delete()
-    messages.success(request, 'Post deleted!')
-    return redirect(reverse('blog-post-management'))
+    if request.method == 'POST':
+        
+        post.delete()
+        messages.success(request, 'Post deleted!')
+        return redirect(reverse('blog-management'))
+    
+    context = {
+        'post': post,
+    }
+
+    return render(request, 'blog/delete_post.html', context)

@@ -120,6 +120,7 @@ SINGLE PRODUCT DISPLAY CLASSES
 .quantity {
     font-size: 1.4rem;
     letter-spacing: .02rem;
+    margin-bottom: 2rem;
 
 }
 
@@ -132,10 +133,15 @@ SINGLE PRODUCT DISPLAY CLASSES
     margin-bottom: 2rem;
 }
 
-.qty-input:focus {
+.qty-input[type=number]::-webkit-inner-spin-button {
+    width: 30px;
+    height: 30px;
+    padding-left: .2rem;
+  }
+  
+  .qty-input:focus {
     outline: none;
-    border-color: orange;
-}
+  }
 
 .btn-add {
     margin-bottom: 1.4rem;

@@ -2,54 +2,45 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/management.css' %}">
+<link rel="stylesheet" href="{% static 'styles/product-management.css' %}">
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container mt-5">
-    <div class="row mb-4">
-        <div class="col-12 col-md-6">
-            <hr>
-            <h2 class="logo-font mb-4">Product Management</h2>
-            <h5 class="text-muted">Edit a Post</h5>
-            <hr>
+<main class="management-page">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <hr>
+                <h2 class="logo-font mb-4">Blog Management</h2>
+                <h5 class="text-muted">Edit a Post</h5>
+                <hr>
+            </div>
+        </div>
+        <img class="edit-img mb-5" src="{{ post.article_image.url }}" alt="Blog post image"/>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <form method="POST" action="{% url 'edit-post' post.id %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'article_image' %}
+                            <div class=" product-input mb-5">
+                                {{ field | as_crispy_field }}
+                            </div>
+                        {% else %}
+                            <img style="width:100px;"  src="{{ post.article_image.url }}" alt="Album cover"/>
+                            <div class=" product-input  product-input--img mb-5">
+                                {{ field | as_crispy_field }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <div class="text-right">
+                        <a class="btn-custom mt-3 mb-3" href="{% url 'blog-management' %}">Cancel</a>
+                        <button class="btn-custom mb-5" type="submit">Update Post</button>
+                    </div>
+                </form>
+            </div>            
         </div>
     </div>
-    <img
-                                class="checkout-img"
-                                src="{{ post.article_image.url }}"
-                                alt="imageeee"
-                              />
-
-    <div class="row container--fields">
-        <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'edit-post' post.id %}" class="form mb-2" enctype="multipart/form-data">
-                {% csrf_token %}
-                {% for field in form %}
-                    {% if field.name != 'article_image' %}
-                        {{ field | as_crispy_field }}
-                    {% else %}
-                    <img
-                    
-                    style="width:100px;"
-                    src=""
-                    
-                  />
-                        {{ field }}
-                   
-                       
-                        
-                    {% endif %}
-                {% endfor %}
-                <div class="text-right">
-                    <a class="btn-custom mt-3 mb-3" href="{% url 'blog-post-management' %}">Cancel</a>
-                    <button class="btn-custom mb-5" type="submit">Update Post</button>
-                </div>
-            </form>
-        </div>            
-    </div>
-</div>
-
-
+</main>
 {% endblock %}

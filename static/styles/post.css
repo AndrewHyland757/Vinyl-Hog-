@@ -27,6 +27,7 @@
 .article-heading {
     font-size: 3.2rem;
     margin-bottom: .5rem;
+    text-transform: uppercase;
 }
 
 .sub-title {

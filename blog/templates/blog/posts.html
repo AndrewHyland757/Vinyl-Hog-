@@ -1,0 +1,43 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'styles/posts.css' %}">
+{% endblock %}
+
+{% block content %} 
+    
+    <div class="head-container-center">
+        <h1 class="head-heading">Reviews</h1>
+        <p class="head-text">
+            Our full library of reviews to help you find your next favourite vinyl.
+        </p>
+    </div>
+
+<main class="grid-container-blog container">
+    <div class="item-2-container">
+        {% for post in posts %}
+           
+                <div class="item-2">
+                    <div class="img-container">
+                        <a href=" {% url 'post' post.id %}">
+                            <img class="post-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
+                        </a>
+                    </div>
+                    <a href=" {% url 'post' post.id %}">
+                    <div class="card-body-post">
+                        <h5 class="post-card-title"><strong>{{ post.title }}</strong></h5>
+                        <p class="post-card-sub">{{ post.sub_title }}</p>
+                        <p class="post-card-text">by {{ post.author }}</p>
+                    </div>
+                </a>
+                </div>
+           
+        {% endfor %}
+    </div>
+</div>
+</main>
+
+
+    {% endblock %}

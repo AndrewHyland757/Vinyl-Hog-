@@ -6,10 +6,10 @@
 {% endblock %}
 
 {% block content %}
-    <main class="management-page">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
+<main class="management-page">
+    <div class="overlay"></div>
+        <div class="container mt-5">
+            <div class="row mb-4">
                 <div class="col-12 col-md-6">
                     <hr>
                     <h2 class="logo-font mb-4">Product Management</h2>
@@ -17,17 +17,44 @@
                     <hr>
                 </div>
             </div>
-            <img class="checkout-img" src="{{ product.featured_image.url }}" style="width:350px;" alt="Album cover"/>
-            <div class="row container--fields">
+            <img class="edit-img mb-5" src="{{ product.featured_image.url }}" alt="Album cover"/>
+            <div class="row">
                 <div class="col-12 col-md-6">
                     <form method="POST" action="{% url 'edit-product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                         {% csrf_token %}
                             {% for field in form %}
-                                {% if field.name != 'featured_image' %}
+                          
+                            {% if field.name == 'artist' %}
+                            <div class="product-input">
+                                {{ field | as_crispy_field }}
+                            </div>
+                            <div>
+                                <a class="btn btn-outline-success mb-5" href="{% url 'add-artist' %}">Add a new artist</a>
+                            </div>
+
+                        {% elif field.name == 'genres' %}
+                            <div class="product-input">
+                                {{ field | as_crispy_field }}
+                            </div>
+                            <div>
+                                <a class="product-input btn btn-outline-success mb-5" href="{% url 'add-genre' %}">Add a new genre</a>
+                            </div>
+                            
+                        {% elif field.name == 'on_sale' %}
+                            <div class="product-input on_sale_box mb-5">
+                                {{ field.label }}
+                                {{ field  }}
+                            </div>
+
+                                {% elif field.name != 'featured_image' %}
+                                <div class=" product-input mb-5">
                                     {{ field | as_crispy_field }}
+                                </div>
                                 {% else %}
-                                    <img style="width:100px;" src="{{ product.featured_image.url }}" alt="Album cover"/>
-                                    {{ field }}
+                                    <img style="width:100px;"  src="{{ product.featured_image.url }}" alt="Album cover"/>
+                                    <div class=" product-input  product-input--img mb-5">
+                                        {{ field | as_crispy_field }}
+                                    </div>
                                 {% endif %}
                             {% endfor %}
                             <div class="text-right">

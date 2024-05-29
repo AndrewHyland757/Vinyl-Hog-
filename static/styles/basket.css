@@ -99,18 +99,22 @@ LEFT COLUMN
 }
 
 .qty-input {
-    width:fit-content;
+  
     font-size: 1.2rem;
-    padding: .8rem .2rem  .8rem 1.6rem;
+    padding: .8rem 0rem  .8rem 1.6rem;
     border-radius: 0;
     border: .1rem solid #333;
-}
-
-
-.qty-input:focus {
+  }
+  
+  .qty-input[type=number]::-webkit-inner-spin-button {
+    width: 30px;
+    height: 30px;
+    padding-left: .2rem;
+  }
+  
+  .qty-input:focus {
     outline: none;
-    border-color: lightgoldenrodyellow;
-}
+  }
 
 /*
 ****************************

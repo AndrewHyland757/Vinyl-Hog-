@@ -3,11 +3,13 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/management.css' %}">
+<link rel="stylesheet" href="{% static 'styles/product-management.css' %}">
 {% endblock %}
 
 {% block content %}
+<main class="management-page">
 <div class="overlay mt-5"></div>
+
 <div class="container container--product-management">
     <div class="row">
         <div class="col-12 col-md-6">
@@ -19,19 +21,17 @@
     </div>
 
     <div class="row mb-3 mt-5 actions-container">
-        <div>
-            <a class="btn btn-secondary" href="{% url 'add-post' %}">Add a new post</a>
+        <div class="tabs-container">
+            <a class="btn btn-outline-success" href="{% url 'add-post' %}">Add a new post</a>
         </div>
     </div>
-
+    
     <div class="row">
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">Title</th>
                     <th scope="col">Author</th>
-                    <th scope="col">Admin User</th>
-                    <th scope="col">Album</th>
                     <th scope="col">Date</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
@@ -42,8 +42,6 @@
                     <tr>
                         <td>{{ post.title }}</td>
                         <td>{{ post.author }}</td>
-                        <td>{{ post.user }}</td>
-                        <td>{{ post.product }}</td>
                         <td>{{ post.created_on }}</td>
                         <td><a class="btn btn-outline-warning" href="{% url 'edit-post' post.id %}">Edit</a></td>
                         <td><a class="btn btn-outline-danger" href="{% url 'delete-post' post.id %}">Delete</a></td>
@@ -53,5 +51,6 @@
         </table>
     </div>
 </div>
+</main>
 
 {% endblock %}

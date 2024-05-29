@@ -88,11 +88,24 @@ ADD PRODUCT
     font-size: 1.4rem;
     letter-spacing: .03rem;
 }
+
+.product-input--img {
+  
+
+}
+
+.product-input--img btn {
+    margin-bottom: 1.2rem;
+}
 .on_sale_box {
     display: flex;
     align-items: center;
     gap:1.2rem;
    
+}
+
+.edit-img {
+    width: 350px;
 }
 
 /*
@@ -104,6 +117,10 @@ MEDIA QUERIES
 
 
 @media (max-width:768px) {
+
+    .edit-img {
+        width: 200px;
+    }
 
     .management-page {
         padding-left: 1.2rem;
