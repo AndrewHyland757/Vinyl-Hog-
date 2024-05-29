@@ -32,7 +32,6 @@ body {
   font-family: "Helvetica";
   line-height: 1;
   position: relative;
-  color: 
 }
 
 .form-control {
@@ -152,7 +151,7 @@ PRODUCT-GRID DISPLAY CLASSES
   padding: 0;
 }
 
-.card-title {
+.product-card-title {
   font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.05rem;
@@ -177,214 +176,7 @@ PRODUCT-GRID DISPLAY CLASSES
   font-size: 1.4rem;
 }
 
-/*
-****************************
-RECOMMENDATION POSTS GRID
-****************************
-*/
 
-/*
-.article-grid {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-
-  gap: 6.4rem;
-  padding: 0 9.6rem 0 9.6rem;
-  margin-bottom: 9.6rem;
-}
-
-
-.article-card {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  padding: 1.8rem 1.8rem 2.4rem 1.8rem;
-  border: none;
-  border-radius: 0;
-  background-color: #eff2f3;
-  display: flex;
-  flex-direction: column;
- 
-}
-
-
-.article-card-img {
-  padding-bottom: 1.6rem;
-  max-width: 100%;
-  flex-grow:inherit
-
-  
-}
-
-.article-card-body {
-  padding: 0;
-  height:fit-content;
-
-}
-
-
-
-
-.card-title {
-  font-size: 2.4rem;
-  font-weight: 500;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-  margin-bottom: 0.25rem;
-}
-
-
-.card-sub-title {
-  font-size: 1.6rem;
-  letter-spacing: 0.05rem;
-  margin-bottom: 1.5rem;
-
-}
-
-.card-text {
-  font-size: 1.2rem;
-}
-*/
-
-.grid-container {
- 
-  width:1200px;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 3.2rem;
-  margin: 0 auto;
-  padding: 3.6rem;
-  background-color:#1E1C1C
-  
-}
-
-.article-card-first {
-  height:400px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 6.2rem;
-  overflow: hidden;
-  padding: 1.8rem;
-  background-color: #e6ebf1;
-}
-
-.first-img-container {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  background-color: lightseagreen;
-
-}
-
-.article-first-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  overflow: hidden;
-}
-
-
-.article-grid {
-  width: 100%;
- 
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 6.4rem;
-  padding: 0;
-}
-
-
-.article-card {
-  height:400px;
-
-  width: 100%;
-  position: relative;
-  padding: 1.8rem 1.8rem 2.4rem 1.8rem;
-  border: none;
-  border-radius: 0;
-  background-color: #e6ebf1;
-  
-  display: grid;
-  grid-template-rows: 1fr auto;
-
-}
-
-
-
-.article-img-container {
-  width: 100%;
-height: 100%;
-  
-  position: relative;
-  
-
-
-}
-
-.article-card-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  flex-grow: 1;
-  overflow: hidden;
-}
-
-
-
-.article-grid-3 {
-  width: 100%;
- 
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 6.4rem;
-  padding: 0;
-
-}
-
-.article-card-3 {
-  height:400px;
-
-  width: 100%;
-  position: relative;
-  padding: 1.8rem 1.8rem 2.4rem 1.8rem;
-  border: none;
-  border-radius: 0;
-  background-color: #e6ebf1;
-  
-  display: flex;
-  
-
-}
-
-.card-title {
-  font-size: 2.4rem;
-  font-weight: 500;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-  margin-top: 1.6rem;
-  margin-bottom: 0.25rem;
-}
-
-
-.card-sub-title {
-  font-size: 1.6rem;
-  letter-spacing: 0.05rem;
-  margin-bottom: 1.5rem;
-
-}
-
-.card-text {
-  font-size: 1.2rem;
-}
 
 
 /*
@@ -392,6 +184,31 @@ height: 100%;
 BUTTON CLASSES
 ****************************
 */
+.btn-container-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-explore {
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+  display: inline-block;
+  border: #1E1C1C 2px solid;
+  transition: all 0.3s;
+  background-color: transparent;
+  color: #1E1C1C;
+}
+
+.btn-explore:hover,
+.btn-explore:focus,
+.btn-explore:active {
+  background-color: #1E1C1C;
+  color: white;
+  outline: transparent;
+}
 
 .btn-custom,
 .btn-custom:link,
@@ -555,7 +372,7 @@ TOASTS
     padding-bottom: 1.2rem;
   }
   
-  .card-title {
+  .product-card-title {
     font-size: 1.4rem; 
     
 
@@ -573,153 +390,6 @@ TOASTS
   .card-text {
     font-size: 1.2rem;
   }
-
-  /* RECOMMENDATION POSTS GRID */
-
-  .section-recommendations {
-    padding-top: 2.4rem;
-  }
-
-  /*
-.article-grid {
-  grid-template-columns:  1fr 1fr;
-  gap: 1.8rem;
-  padding: 0 2.4rem;
-  margin-bottom: 3.2rem;
-  
-}
-
-.article-card {
-  padding: 1.2rem 1.2rem 1.8rem 1.2rem;
-}
-
-
-.article-card-img {
-  padding-bottom: 1.2rem;
-}
-
-
-
-
-
-.card-sub-title {
-  font-size: 1.2rem;
-
-  margin: .5rem 0 1.2rem 0;
-
-}
-
-.card-text {
-  font-size: 1.2rem;
-}
- */
-
-
-
-
-
-.grid-container {
-  height: auto;
-  width:100vw;
-  display: block;
-  
-  padding: 3.6rem;
-  background-color: #e6ebf1;
-  
-}
-
-.article-card-first {
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  overflow: hidden;
-  padding: 1.8rem;
-  background-color: lightgreen;
-}
-
-.first-img-container {
-  max-height: 100vw;
-  width: 100%;
-  position: relative;
-  background-color: lightseagreen;
-
-}
-
-.article-first-img {
-  object-fit:cover !important;
-  max-height: 100vw !important;
- 
-  overflow: hidden;
-}
-
-
-.article-grid {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3.2rem;
-  padding: 0;
-}
-
-
-.article-card {
-  height: 100vw;
-  width: 100vw;
-  position: relative;
-  padding: 1.8rem 1.8rem 2.4rem 1.8rem;
-  border: none;
-  border-radius: 0;
-  background-color: #1E1C1C;
-  background-color: lightgreen;
-
-}
-
-.article-card {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  }
-
-
-.article-img-container {
-  width: 100%;
-  height: 100%;
-  background-color: lightseagreen;
-
-}
-
-.article-card-img {
-  padding-bottom: 1.6rem;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card-title {
-  font-size: 2.4rem;
-  font-weight: 500;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-  margin-bottom: 0.25rem;
-}
-
-
-.card-sub-title {
-  font-size: 1.6rem;
-  letter-spacing: 0.05rem;
-  margin-bottom: 1.5rem;
-
-}
-
-.card-text {
-  font-size: 1.2rem;
-}
-
-
-
 
 
 

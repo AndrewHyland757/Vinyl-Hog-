@@ -15,73 +15,46 @@
 SECTION RECOMMENDATION POSTS
 ****************************
 -->
-{{ first_post }}
+
 <section class="section-recommendations">
     <div class="head-container-center">
         <h1 class="head-heading">Staff Reviews</h1>
         <p class="head-text">
-          Dive into our staff's top vinyl album picks, a reflection of a hundred years of shared musical love.
+          Dive into our staff's vinyl album reviews, a reflection of a hundred years of shared musical love.
         </p>
     </div>
     
     <div class="grid-container-blog">
         <div class="item-1">
-            
-                <div class="img-container">
-                        <img class="post-img" src="{{ first_post.article_image.url }}" alt="Card image cap"/> 
+            <div class="img-container">
+                    <img class="post-img" src="{{ first_post.article_image.url }}" alt="Card image cap"/> 
+            </div>
+            <div class="card-body-post">
+                <h5 class="card-title"><strong>{{ first_post.title }}</strong></h5>
+                <p class="card-sub-title">{{ first_post.sub_title }}</p>
+                <p class="card-text">by {{ first_post.author }}</p>
+            </div>
+        </div>
+
+        <div class="item-2-container">
+            {% for post in recent_added_posts %}
+                <div class="item-2">
+                    <div class="img-container">
+                        <img class="post-img" src="{{ post.article_image.url }}" alt="Card image cap"/> 
+                    </div>
+
+                    <div class="card-body-post">
+                        <h5 class="card-title"><strong>{{ post.title }}</strong></h5>
+                        <p class="card-sub-title">{{ post.sub_title }}</p>
+                        <p class="card-text">by {{ post.author }}</p>
+                    </div>
                 </div>
-    
-                <div class="card-body-post">
-                    <h5 class="card-title"><strong>{{ first_post.title }}</strong></h5>
-                    <p class="card-sub-title">{{ first_post.sub_title }}</p>
-                    <p class="card-text">by {{ first_post.author }}</p>
-                </div>
-          
+            {% endfor %}
         </div>
-
-        <div class="item-2">
-            <div class="img-container">
-                <img class="post-img" src="{{ second_post.article_image.url }}" alt="Card image cap"/> 
-               
-            </div>
-
-            <div class="card-body-post">
-                <h5 class="card-title"><strong>{{ second_post.title }}</strong></h5>
-                <p class="card-sub-title">{{ second_post.sub_title }}</p>
-                <p class="card-text">by {{ second_post.author }}</p>
-            </div>
-        </div>
-            
-        
-        <div class="item-3">
-            <div class="img-container">
-                <img class="post-img" src="{{ third_post.article_image.url }}" alt="Card image cap"/> 
-               
-            </div>
-
-            <div class="card-body-post">
-                <h5 class="card-title"><strong>{{ third_post.title }}</strong></h5>
-                <p class="card-sub-title">{{ third_post.sub_title }}</p>
-                <p class="card-text">by {{ third_post.author }}</p>
-            </div>
-            
-        </div>
-        <div class="item-4">
-            <div class="img-container">
-                <img class="post-img" src="{{ fourth_post.article_image.url }}" alt="Card image cap"/> 
-               
-            </div>
-
-            <div class="card-body-post">
-                <h5 class="card-title"><strong>{{ fourth_post.title }}</strong></h5>
-                <p class="card-sub-title">{{ fourth_post.sub_title }}</p>
-                <p class="card-text">by {{ fourth_post.author }}</p>
-            </div>
-            
-        </div>
-        
     </div>
-        
+    <div class="btn-container-center">
+        <a href=""><button class="btn-explore">Explore more</button></a>
+    </div>
 </section>
 
 {% endblock %}

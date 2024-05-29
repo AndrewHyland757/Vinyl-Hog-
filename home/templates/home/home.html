@@ -7,170 +7,149 @@
 
 {% block content %}
 
-<!--
-****************************
-SECTION LANDING
-****************************
--->
-<section class="section-home">
-    <div class="home-container">
-        <div class="home-col-left">
-            <div class="text-container">
-                <h1>Don't just listen – <br>experience.</h1>
-                <!--
-                <p>
-                  Immerse yourself in a symphony of choices as you peruse our curated selection of vinyl gems.
-                   From timeless classics to cutting-edge releases, indulge in sonic bliss with confidence and ease. The melody never fades. Start your auditory adventure today.
-                </p>
-                -->
-                <p>
-                    Immerse yourself in a symphony of choices as you peruse our curated selection of vinyl record gems.
-                     From timeless classics to cutting-edge releases start your auditory adventure today.
-                  </p>
+    <!--
+    ****************************
+    SECTION LANDING
+    ****************************
+    -->
+    <section class="section-home">
+        <div class="home-container">
+            <div class="home-col-left">
+                <div class="text-container">
+                    <h1>Don't just listen – <br>experience.</h1>
+                    <!--
+                    <p>
+                    Immerse yourself in a symphony of choices as you peruse our curated selection of vinyl gems.
+                    From timeless classics to cutting-edge releases, indulge in sonic bliss with confidence and ease. The melody never fades. Start your auditory adventure today.
+                    </p>
+                    -->
+                    <p>
+                        Immerse yourself in a symphony of choices as you peruse our curated selection of vinyl record gems.
+                        From timeless classics to cutting-edge releases start your auditory adventure today.
+                    </p>
+                </div>
+            </div>
+            <div class="home-col-right">
+                <img src="{% static 'images/home-img.jpg' %}" />
             </div>
         </div>
-        <div class="home-col-right">
-            <img src="{% static 'images/home-img.jpg' %}" />
+    </section>
+
+    <!--
+    ****************************
+    SECTION IMAGE
+    ****************************
+    -->
+
+    <section class="about-section">
+        
+        <div class="head-container">
+            <h1 class="head-heading section-heading--center">About</h1>
         </div>
-    </div>
-</section>
-
-<!--
-****************************
-SECTION IMAGE
-****************************
--->
-
-<section class="about-section">
+            
+        <img class="about-img" src="{% static 'images/cover4.png' %}">
+            
     
-    <div class="head-container">
-        <h1 class="head-heading section-heading--center">About</h1>
-    </div>
         
-    <img class="about-img" src="{% static 'images/cover4.png' %}">
-        
- 
-    
-</section>
+    </section>
 
-<!--
-****************************
-SECTION NEW RELEASES
-****************************
--->
+    <!--
+    ****************************
+    SECTION NEW RELEASES
+    ****************************
+    -->
 
-<section id="new-releases" class="section-new-releases">
-    <div class="head-container">
-        <h1 class="head-heading">New Releases</h1>
-        <p class="head-text">
-          View our latest additions to our extensive stock.
-        </p>
-    </div>
-    <div class="products-grid">
-        {% for album in recent_added_albums %}
-            <div class="card">
-                {% if album.on_sale == True %}
-                      <div class="on-sale-container">
-                            <p>On Sale</p>
-                      </div>
-                {% endif %}
-                <a class="" href=" {% url 'product' album.id %}">
-                    <img class="card-img" src="{{ album.featured_image.url }}" alt="Cover image of {{ album.title }} by {{ album.artist }}"/>
-                </a>
-                <div class="card-body">
+    <section id="new-releases" class="section-new-releases">
+        <div class="head-container">
+            <h1 class="head-heading">New Releases</h1>
+            <p class="head-text">
+            View our latest additions to our extensive stock.
+            </p>
+        </div>
+        <div class="products-grid">
+            {% for album in recent_added_albums %}
+                <div class="card">
+                    {% if album.on_sale == True %}
+                        <div class="on-sale-container">
+                                <p>On Sale</p>
+                        </div>
+                    {% endif %}
                     <a class="" href=" {% url 'product' album.id %}">
-                        <h5 class="card-title"><strong>{{ album.title }}</strong></h5>
+                        <img class="card-img" src="{{ album.featured_image.url }}" alt="Cover image of {{ album.title }} by {{ album.artist }}"/>
                     </a>
-                    <p class="card-artist">{{ album.artist }}</p>
-                    <div class="card-details">
-                        <p class="card-text">Condition: {{ album.condition }}</p>
-                        <p class="card-text">Stock: {{ album.stock }}</p>
-                        {% if album.on_sale == True %}
-                        <p class="card-text"><s>€{{ album.price }}</s> €{{ album.sale_price }}</p>
-                        {% else %}
-                        <p class="card-text">€{{ album.price }}</p>
-                        {% endif %}
+                    <div class="card-body">
+                        <a class="" href=" {% url 'product' album.id %}">
+                            <h5 class="product-card-title"><strong>{{ album.title }}</strong></h5>
+                        </a>
+                        <p class="card-artist">{{ album.artist }}</p>
+                        <div class="card-details">
+                            <p class="card-text">Condition: {{ album.condition }}</p>
+                            <p class="card-text">Stock: {{ album.stock }}</p>
+                            {% if album.on_sale == True %}
+                            <p class="card-text"><s>€{{ album.price }}</s> €{{ album.sale_price }}</p>
+                            {% else %}
+                            <p class="card-text">€{{ album.price }}</p>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
-    </div>
-</section>
-
-
-<!--
-****************************
-SECTION RECOMMENDATION POSTS
-****************************
--->
-
-<section class="section-recommendations">
-    <div class="head-container-center">
-        <h1 class="head-heading">Staff Reviews</h1>
-        <p class="head-text">
-          Dive into our staff's top vinyl album picks, a reflection of a hundred years of shared musical love.
-        </p>
-    </div>
-    
-    <div class="grid-container">
-        <div class="article-card-first">
-            <div class="first-img-container">
-            
-                    <img class="article-first-img" src="{{ first_post.article_image.url }}" alt="Card image cap"/> 
-          
-                </div>
-
-            <div class="card-body article-card-body">
-                <h5 class="card-title"><strong>{{ first_post.title }}</strong></h5>
-                <p class="card-sub-title">{{ first_post.sub_title }}</p>
-                <p class="card-text">by {{ first_post.author }}</p>
-            </div>
+            {% endfor %}
         </div>
-            
-          
-        <div class="article-grid">
-            {% for post in recent_added_posts %}
-                <a class="product-link" href=" {% url 'post' post.id %}">
-                    <div class="article-card">
-                        <div class="article-img-container">
-                     
-                                <img class="article-card-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
-               
+        
+        <div class="btn-container-center">
+            <a href="{% url 'products' %}"><button class="btn-explore">Explore more</button></a>
+        </div>
+    </section>
+
+
+    <!--
+    ****************************
+    SECTION RECOMMENDATION POSTS
+    ****************************
+    -->
+
+    <section class="section-recommendations">
+        <div class="head-container-center">
+            <h1 class="head-heading">Staff Reviews</h1>
+            <p class="head-text">
+            Dive into our staff's vinyl album reviews, a reflection of a hundred years of shared musical love.
+            </p>
+        </div>
+        
+        <div class="grid-container-blog">
+            <div class="item-1">
+                <div class="img-container">
+                        <img class="post-img" src="{{ first_post.article_image.url }}" alt="Card image cap"/> 
+                </div>
+                <div class="card-body-post">
+                    <h5 class="card-title"><strong>{{ first_post.title }}</strong></h5>
+                    <p class="card-sub-title">{{ first_post.sub_title }}</p>
+                    <p class="card-text">by {{ first_post.author }}</p>
+                </div>
+            </div>
+
+            <div class="item-2-container">
+                {% for post in recent_added_posts %}
+                    <div class="item-2">
+                        <div class="img-container">
+                            <img class="post-img" src="{{ post.article_image.url }}" alt="Card image cap"/> 
                         </div>
-                        <div class="card-body article-card-body--bottom">
+
+                        <div class="card-body-post">
                             <h5 class="card-title"><strong>{{ post.title }}</strong></h5>
                             <p class="card-sub-title">{{ post.sub_title }}</p>
                             <p class="card-text">by {{ post.author }}</p>
                         </div>
                     </div>
-                </a>
-                
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
-
-        <div class="article-grid-3">
-            {% for post in recent_added_posts_2 %}
-                <a class="product-link" href=" {% url 'post' post.id %}">
-                    <div class="article-card-3">
-                        <div class="article-img-container">
-                     
-                                <img class="article-card-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
-               
-                        </div>
-                        <div class="card-body article-card-body--bottom">
-                            <h5 class="card-title"><strong>{{ post.title }}</strong></h5>
-                            <p class="card-sub-title">{{ post.sub_title }}</p>
-                            <p class="card-text">by {{ post.author }}</p>
-                        </div>
-                    </div>
-                </a>
-                
-            {% endfor %}
+        <div class="btn-container-center">
+            <a href=""><button class="btn-explore">Explore more</button></a>
         </div>
+    </section>
 
 
-    </div>  
-</section>
 
 
 
