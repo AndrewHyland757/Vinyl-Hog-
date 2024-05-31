@@ -190,7 +190,9 @@ BUTTON CLASSES
   justify-content: center;
 }
 
-.btn-explore {
+
+.btn-explore,
+.btn-explore--full-width {
   font-size: 2rem;
   font-weight: 600;
   text-decoration: none;
@@ -209,6 +211,44 @@ BUTTON CLASSES
   color: white;
   outline: transparent;
 }
+
+.btn-explore--full-width {
+  width: 100%;
+  text-align: center;
+
+}
+
+.btn-explore--small {
+  font-size: 1.4rem;
+  padding: 1.4rem 3rem;
+  color: #eff2f3;
+
+}
+
+.btn-explore--secondary {
+  font-size: 1.4rem;
+  padding: 1.4rem 3rem;
+  /*
+  color: #6c757d;
+  border-color:#6c757d;
+  */
+}
+
+.btn--center {
+  margin: 0 auto;
+}
+.btn-explore--secondary:hover,
+.btn-explore--secondary:focus,
+.btn-explore--secondary:active {
+  /*
+  background-color: #6c757d;
+  color: white;
+  outline: transparent;
+  */
+}
+
+
+
 
 .btn-custom,
 .btn-custom:link,
@@ -272,23 +312,6 @@ FIELD INPUT CLASSES
     border-radius: 0px;
 }
 
-/*
-****************************
-TOASTS
-****************************
-*/
-/*
-
-.toast-body {
-  letter-spacing: .04rem;
-  line-height: 1.25;
-  color: white;
-  background-color: rgb(3, 124, 3, .6);
- 
-}
-
-
-*/
 
 @media (max-width:1250px) {
 

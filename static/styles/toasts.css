@@ -1,0 +1,46 @@
+
+/*
+****************************
+TOASTS
+****************************
+*/
+
+
+.toast-body {
+  letter-spacing: .04rem;
+  line-height: 1.25;
+}
+
+  
+.custom-toast {
+    border-color:#6c757d;
+}
+
+
+.message {
+    
+}
+
+.title {
+  
+}
+
+/*
+****************************
+MEDIA QUERIES
+****************************
+*/
+
+@media (max-width:1200px) {
+
+
+ 
+  
+
+    .custom-toast {
+       
+ 
+        transform: translate(0 , 2.5rem);
+   
+    }
+}

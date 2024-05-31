@@ -55,11 +55,12 @@
             {% endfor %}
 
             <!-- Submit button -->
-            <div class="btn-container mt-3">
-                <button class="btn-custom" type="submit">{% trans "Sign In" %}</button>
+            <div class="btn-container-center mt-5">
+                <button class="btn-explore" type="submit">{% trans "Sign In" %}</button>
             </div>
+            
 
-            <div class="forget-password-container mt-4">
+            <div class="forget-password-container mt-5">
             <a href="{% url 'account_reset_password' %}"><p class='section-text '>{% trans "Forgot Password?" %}</p></a>
             </div>
         </form>

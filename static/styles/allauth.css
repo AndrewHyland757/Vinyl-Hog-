@@ -60,6 +60,7 @@ LOGIN PAGE
     display: flex;
     justify-content: center;
     margin-bottom: 0;
+    margin-top: 4.8rem;
 }
 
 .forget-password-container .section-text {

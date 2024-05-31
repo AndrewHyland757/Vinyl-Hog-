@@ -22,3 +22,5 @@ def footer_our_story(request):
 def footer_planet_vinylhog(request):
     return render(request, 'footer_templates/planet_vinylhog.html')
 
+    
+

@@ -49,6 +49,8 @@ def basket_contents(request):
             "price_sub_total": price_sub_total,
         })
 
+        
+
     for product_id in products_to_delete:
         basket.pop(product_id)
         messages.error(request,

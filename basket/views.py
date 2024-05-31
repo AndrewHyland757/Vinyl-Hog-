@@ -29,16 +29,18 @@ def add_basket(request, product_id):
             if total_quantity <= product.stock:
                 basket[product_id] = int(basket[product_id]) + quantity
                 messages.success(
-                    request, f'{product.title} was successfully added to basket')
+                    request, f'{product.title} added to basket.')
             else:
                 messages.error(
                     request, 'Not enough stock to fulfil this order.')
         else:
             basket[product_id] = quantity
             messages.success(
-                request, f'{product.title} was successfully added to your basket')
+                request, f'{product.title} added to your basket')
     else:
         messages.error(request, 'Not enough stock to fulfil this order.')
+
+   
 
     request.session['basket'] = basket
     return redirect(redirect_url)
@@ -57,7 +59,7 @@ def update_basket(request, product_id):
         if quantity <= product.stock:
             basket[product_id] = quantity
             messages.success(
-                request, f'{product.title} quantity updated successfully.')
+                request, f'{product.title} quantity updated.')
         else:
             messages.error(request, 'Not enough stock to fulfil this order')
 
