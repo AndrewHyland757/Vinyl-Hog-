@@ -6,24 +6,21 @@ TOASTS
 */
 
 
+
 .toast-body {
   letter-spacing: .04rem;
   line-height: 1.25;
+
 }
 
   
-.custom-toast {
-    border-color:#6c757d;
+.toast {
+    border-color: #1E1C1C;
+    background-color: red;
+ 
 }
 
 
-.message {
-    
-}
-
-.title {
-  
-}
 
 /*
 ****************************

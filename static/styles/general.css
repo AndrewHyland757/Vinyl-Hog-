@@ -184,70 +184,6 @@ PRODUCT-GRID DISPLAY CLASSES
 BUTTON CLASSES
 ****************************
 */
-.btn-container-center {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-
-.btn-explore,
-.btn-explore--full-width {
-  font-size: 2rem;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 1.6rem 3.2rem;
-  display: inline-block;
-  border: #1E1C1C 2px solid;
-  transition: all 0.3s;
-  background-color: transparent;
-  color: #1E1C1C;
-}
-
-.btn-explore:hover,
-.btn-explore:focus,
-.btn-explore:active {
-  background-color: #1E1C1C;
-  color: white;
-  outline: transparent;
-}
-
-.btn-explore--full-width {
-  width: 100%;
-  text-align: center;
-
-}
-
-.btn-explore--small {
-  font-size: 1.4rem;
-  padding: 1.4rem 3rem;
-  color: #eff2f3;
-
-}
-
-.btn-explore--secondary {
-  font-size: 1.4rem;
-  padding: 1.4rem 3rem;
-  /*
-  color: #6c757d;
-  border-color:#6c757d;
-  */
-}
-
-.btn--center {
-  margin: 0 auto;
-}
-.btn-explore--secondary:hover,
-.btn-explore--secondary:focus,
-.btn-explore--secondary:active {
-  /*
-  background-color: #6c757d;
-  color: white;
-  outline: transparent;
-  */
-}
-
-
 
 
 .btn-custom,
@@ -282,6 +218,76 @@ BUTTON CLASSES
     width: fit-content;
     font-size: 1.2rem;
 }
+.btn-container-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.btn-explore,
+.btn-explore--full-width {
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  padding: 1.6rem 3.2rem;
+  display: inline-block;
+  border: #1E1C1C 2px solid;
+  transition: all 0.3s;
+  background-color: transparent;
+  color: #1E1C1C;
+}
+
+.btn-explore:hover,
+.btn-explore:focus,
+.btn-explore:active {
+  background-color: #1E1C1C;
+  color: white;
+  outline: transparent;
+}
+
+.btn-explore--full-width {
+  width: 100%;
+  text-align: center;
+
+}
+
+.btn-explore--small {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1.4rem 3rem;
+  border: #1E1C1C 1.75px solid;
+
+
+}
+
+.btn-explore--secondary {
+  font-size: 1.4rem;
+  padding: 1.4rem 3rem;
+  /*
+  color: #6c757d;
+  border-color:#6c757d;
+  */
+}
+
+.btn--center {
+  margin: 0 auto;
+}
+.btn-explore--secondary:hover,
+.btn-explore--secondary:focus,
+.btn-explore--secondary:active {
+  /*
+  background-color: #6c757d;
+  color: white;
+  outline: transparent;
+  */
+}
+
+
+
+
 
 /*
 ****************************

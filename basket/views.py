@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse
 from django.shortcuts import get_object_or_404
 from products.models import Album
 from django.contrib import messages
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -12,12 +13,9 @@ def basket(request):
     '''
 
     return render(request, 'basket/basket.html')
-
-
+    
 def add_basket(request, product_id):
-    '''
-    Add a quantity of the specified product to the shopping basket.
-    '''
+  
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
@@ -28,23 +26,31 @@ def add_basket(request, product_id):
             total_quantity = int(basket[product_id]) + quantity
             if total_quantity <= product.stock:
                 basket[product_id] = int(basket[product_id]) + quantity
+                
                 messages.success(
                     request, f'{product.title} added to basket.')
+               
             else:
                 messages.error(
                     request, 'Not enough stock to fulfil this order.')
         else:
             basket[product_id] = quantity
+            
             messages.success(
                 request, f'{product.title} added to your basket')
+            
     else:
         messages.error(request, 'Not enough stock to fulfil this order.')
 
-   
-
-    request.session['basket'] = basket
     return redirect(redirect_url)
 
+
+
+
+
+
+
+    
 
 def update_basket(request, product_id):
     '''

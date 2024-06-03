@@ -138,6 +138,19 @@ RIGHT COLUMN
     padding: 2.4rem 0;
 }
 
+.delivery-container .cost-item {
+    padding-top: 2.4rem;
+    padding-bottom: .8rem;
+}
+
+
+.item-detail--delta {
+    font-size: 1.4rem;
+    padding-bottom: 2.4rem;
+}
+
+
+
 .basket-col-right .item-detail {
     letter-spacing: .01rem;
     font-size: 1.6rem; 
@@ -151,9 +164,12 @@ RIGHT COLUMN
     padding-bottom: 1.2rem;
 }
 
-.costs-item--delta {
-    font-size: 1.2rem;
+.item-detail--delta {
+    font-size: 1.4rem;
+
 }
+
+
 
 
 /*
