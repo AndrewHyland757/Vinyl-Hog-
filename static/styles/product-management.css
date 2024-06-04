@@ -1,20 +1,7 @@
-/*
-****************************
-GENERAL
-****************************
-*/
-
 .management-page {
-       margin-bottom: 12rem;
-    margin-top: 12rem;
-    
+    margin-bottom: 12rem;
+    margin-top: 12rem;  
 }
-
-
-.container--product-management {
- 
-}
-
 
 .actions-container{
     justify-content: space-between;
@@ -46,14 +33,11 @@ td:nth-child(6) {
     text-align: center;
 }
 
-
 td {
     align-content: center;
 }
 
-
-.btn {
-    
+.btn {  
     padding: .25rem 1rem;
     border-radius:0;
 }
@@ -67,7 +51,6 @@ td {
     background-color: aliceblue;
 }
 
-
 .container--fields {
     position: relative;
 }
@@ -75,8 +58,6 @@ td {
     position: absolute;
     background-color: rgb(245, 220, 220);
 }
-
-
 
 /*
 ****************************
@@ -89,19 +70,13 @@ ADD PRODUCT
     letter-spacing: .03rem;
 }
 
-.product-input--img {
-  
-
-}
-
 .product-input--img btn {
     margin-bottom: 1.2rem;
 }
 .on_sale_box {
     display: flex;
     align-items: center;
-    gap:1.2rem;
-   
+    gap:1.2rem; 
 }
 
 .edit-img {
@@ -114,8 +89,6 @@ MEDIA QUERIES
 ****************************
 */
 
-
-
 @media (max-width:768px) {
 
     .edit-img {
@@ -126,6 +99,7 @@ MEDIA QUERIES
         padding-left: 1.2rem;
         padding-right: 1.2rem;
     }
+    
     .btn-secondary,
     .btn-outline-success {
         font-size: 1rem;  

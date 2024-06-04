@@ -1,11 +1,7 @@
-
 .products-main {
     display: flex;
-
     padding: 0 2.25rem;
-
 }
-
 
 /*
 ****************************
@@ -23,7 +19,6 @@ ASIDE CLASSES
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
-
 
 .aside--right {
   display: flex;
@@ -43,7 +38,6 @@ ASIDE CLASSES
   display: flex;
   flex-direction: column;
   gap: .5rem;
-  
 }
 
 .category-link {
@@ -55,12 +49,8 @@ line-height: 1.2;
 }
 
 .category-link--active {
-
   background-color: #dbdedf;
-  
-
 }
-
 
 /*
 ****************************
@@ -76,7 +66,6 @@ OTHER CLASSES
 .products-grid {
   gap: 4rem;
   padding: 0 6.4rem 0 6.4rem;
-
 }
 
 .dropdown-links-container {
@@ -86,7 +75,6 @@ OTHER CLASSES
   margin-bottom: 2.8rem;
   display: none;
 }
-
 
 .btn-custom--products {
   font-size: 1.2rem;
@@ -101,7 +89,6 @@ OTHER CLASSES
   border:  #1E1C1C .1rem solid;
   transition: all 0.3s;
   outline: transparent;
-
 }
 
 .btn-custom--products:hover,
@@ -160,6 +147,5 @@ MEDIA QUERIES
   .dropdown-links-container {
     display: flex;
   }
-
 }
 

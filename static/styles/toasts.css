@@ -1,43 +1,20 @@
-
-/*
-****************************
-TOASTS
-****************************
-*/
-
-
-
 .toast-body {
   letter-spacing: .04rem;
   line-height: 1.25;
-
 }
 
-  
 .toast {
     border-color: #1E1C1C;
-    background-color: red;
- 
 }
 
+.toast--info {
+    background-color: green;
+}
 
-
-/*
-****************************
-MEDIA QUERIES
-****************************
-*/
 
 @media (max-width:1200px) {
 
-
- 
-  
-
     .custom-toast {
-       
- 
         transform: translate(0 , 2.5rem);
-   
     }
 }

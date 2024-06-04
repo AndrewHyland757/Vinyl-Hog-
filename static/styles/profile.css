@@ -110,7 +110,6 @@ MEDIA QUERIES
 ****************************
 */
 
-
 @media (max-width:1200px) {
 
     .profile-container {
@@ -118,13 +117,11 @@ MEDIA QUERIES
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3.2rem;
-       
     }
 
     .profile-col-left {
         width: 100%;
-        justify-content: center;
-        
+        justify-content: center; 
     }
 
     .form-container {
@@ -177,7 +174,6 @@ MEDIA QUERIES
    .table tr {
        font-size: 1.4rem;
    }
-     
 }
 
 @media (max-width:481px) {

@@ -1,29 +1,18 @@
-/*
-****************************
-SINGLE PRODUCT DISPLAY CLASSES
-****************************
-*/
-
-
 .product-main {
     padding: 0 3.2rem;
 }
+
 .product-container {
     max-width: 1400px;
     margin: 0 auto;
     display:grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 4.8rem;
-    margin-top: 6.4rem;
-    /*
-    border: .5px solid #1E1C1C;
-    */
     padding: 3.2rem;
     align-items:start;
     margin-bottom: 12rem;
     margin-top: 12rem;
-    background-color: #eff2f3;
-    
+    background-color: #eff2f3; 
 }
 
 .img-container {
@@ -48,8 +37,8 @@ SINGLE PRODUCT DISPLAY CLASSES
     font-size: 1.6rem;
     letter-spacing: 0.05rem;
     margin-bottom: 1rem;
-    
 }
+
 .tag-container {
     display: flex;
     gap: .4rem;
@@ -63,20 +52,18 @@ SINGLE PRODUCT DISPLAY CLASSES
     display: inline-block;
     width:fit-content;
     padding: .5rem 1.5rem;
-    
-   
     border: 0.1rem solid #1E1C1C;
     transition: all 0.3s;
-  }
+}
   
-  .genre-tag:hover,
-  .genre-tag:focus,
-  .genre-tag:active {
-      background-color: #333;
-      color: #fff;
-      border: #333 .1rem solid;
-      outline: transparent;
-  }
+.genre-tag:hover,
+.genre-tag:focus,
+.genre-tag:active {
+    background-color: #333;
+    color: #fff;
+    border: #333 .1rem solid;
+    outline: transparent;
+}
 
 .product-description {
     font-size: 1.4rem;
@@ -121,7 +108,6 @@ SINGLE PRODUCT DISPLAY CLASSES
     font-size: 1.4rem;
     letter-spacing: .02rem;
     margin-bottom: 2rem;
-
 }
 
 .qty-input {
@@ -137,11 +123,11 @@ SINGLE PRODUCT DISPLAY CLASSES
     width: 30px;
     height: 30px;
     padding-left: .2rem;
-  }
+}
   
-  .qty-input:focus {
+.qty-input:focus {
     outline: none;
-  }
+}
 
 .btn-add {
     margin-bottom: 1.4rem;
@@ -155,18 +141,14 @@ MEDIA QUERIES
 
 @media (max-width:1200px) {
 
-
     .product-main {
          width: 100vw;
         padding: 3.2rem ;
     }
 
     .product-container {
-       
-        border: .25px solid #1E1C1C;
         padding: 2.4rem;
         margin: 12rem 0;
-        background-color: #eff2f3;
     }
 }
 
@@ -174,35 +156,23 @@ MEDIA QUERIES
 
 @media (max-width:650px) {
 
-
     .product-main {
         width: 100vw;
         padding: 0 ;
-        background-color: lightgray;
     }
 
     .product-container {
         width: 100%;
-
-       
         display:flex;
         flex-direction: column;
-        
         gap:1.8rem;
-        margin-top: 6.4rem;
-
-        border: .1px solid #1E1C1C;
         border: none;
         padding: 2.4rem;
-
         align-items:start;
         margin-bottom: 10rem;
         margin-top: 10rem;
-        background-color: #eff2f3;
-    
-        
     }
-    
+
     .img-container img {
         width: 100%;
     }
@@ -216,7 +186,6 @@ MEDIA QUERIES
         width: 100%;
     }
 
-
     .details-container {
         width: 100%
     }
@@ -229,11 +198,7 @@ MEDIA QUERIES
     }
 
     .product-description {
-       
         line-height: 1.3;
         letter-spacing: 0.06rem;
-        
     }
-
 }
-

@@ -7,6 +7,7 @@ from .models import Album, Condition, Genre, Artist
 from .forms import ProductForm, ArtistForm, GenreForm
 from django.db import models
 from django.db.models import Case, When, F
+from basket.views import add_basket 
 
 
 
@@ -133,11 +134,10 @@ def products(request):
 
     return render(request, 'products/products.html', context)
 
+"""
 
 def product(request, product_id):
-    '''
-    Displays a single product.
-    '''
+    
     product = get_object_or_404(Album, id=product_id)
 
     if product.stock <= 0:
@@ -151,5 +151,30 @@ def product(request, product_id):
     }
 
     return render(request, 'products/product.html', context)
+
+
+"""
+def product(request, product_id):
+    
+    product = get_object_or_404(Album, id=product_id)
+
+    if product.stock <= 0:
+        product_stock = "Out of stock"
+    else:
+        product_stock = product.stock
+
+    id = product_id
+
+    if request.method == 'POST':
+        add_basket(request, product_id)
+
+    
+    context = {
+        "product": product,
+        'product_stock': product_stock,
+    }
+
+    return render(request, 'products/product.html', context)
+
 
 
