@@ -20,10 +20,10 @@ def wishlist_items(request):
 
     template = 'wishlist_items/wishlist_items.html'
     context = {
-        'wishlist_items': wishlist_items,
-    }
+            "wishlist_items": wishlist_items,
+        }
 
-    return render(request, template, context)
+    return render(request, template)
 
 
 @login_required
@@ -32,18 +32,22 @@ def add_wishlist_item(request, product_id):
     Creates an instance in the WishlistItem model by
     assigning a user to the selected product.
     """
-    message_type = "wishlist"
+   
     product = get_object_or_404(Album, pk=product_id)
     user = request.user
 
+ 
+
     if WishlistItem.objects.filter(user=user, product=product).exists():
-        messages.info
-        (request, f'"{product.title}" is already on your wishlist!')
+        messages.info(request, f'{product.title} is already on your wishlist!')
     else:
         WishlistItem.objects.create(user=user, product=product)
-        messages.success(request, " added to your wishlist!")
-
+        messages.add_message(request, 30, " added to your wishlist!")
+        
     redirect_url = request.POST.get('redirect_url')
+    message_type = "wishlist"
+
+  
 
     return redirect(redirect_url)
 

@@ -5,50 +5,35 @@
 {% endblock %}
 
 
+
 <div class="toast custom-toast rounded-0 mt-4 message--error" data-autohide="false" data-delay="2000" id="toast">
-    <div class="arrow-up arrow-success"></div>
-    <div class="w-100 toast-capper bg-success"></div>
-
+    
     <div class="toast-body">
-        <div class="row">
-            <div class="col justify-content-end">
-                <button type="button" class="ml-2 mb-1 close text-dark btn-toast-close" data-dismiss="toast" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        </div>
-          
-        
-
-            <div class="row pt-2 ">
+            <div class="row ">
                 <div class="col text-center">
-                    <p class="col text-center  p-2 ">{{ message }}</p>
-                    
+                    <p class="col text-center  p-2"> {{ message }}</p>
                 </div>
             </div>
-
-            
     </div>
 </div>
 
+
+
 {% block extra_js %}
 <script>
-    // Function to close the toast
-    function closeToast() {
-        $('#toast').toast('hide');
-    }
+    // Close the toast when anywhere on the screen is clicked
+    document.addEventListener('click', function(event) {
+        var toast = document.getElementById('toast');
+        var isClickInside = toast.contains(event.target);
 
-    // Listen for clicks on all links
-    document.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', closeToast);
+        if (!isClickInside) {
+            $(toast).toast('hide');
+        }
     });
 
-    // Initialize the toast with Bootstrap's JavaScript
+    // Show the toast when the document is ready
     $(document).ready(function() {
-        $('#toast').toast({ autohide: false });
-
-        // Listen for clicks on the close button inside the toast
-        document.querySelector('.btn-toast-close').addEventListener('click', closeToast);
+        $('#toast').toast('show');
     });
 </script>
 {% endblock %}

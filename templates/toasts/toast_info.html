@@ -1,29 +1,39 @@
-<div class="toast--info toast custom-toast rounded-0  mt-4" id="toast" data-autohide="true" data-delay="2000">
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'styles/toasts.css' %}"/>
+{% endblock %}
+
+
+
+<div class="toast custom-toast rounded-0 mt-4 message--info" data-autohide="false" data-delay="2000" id="toast">
     
-    <div class="toast-body bg-white">
-        {{ message }}
-    
+    <div class="toast-body">
+            <div class="row ">
+                <div class="col text-center">
+                    <p class="col text-center  p-2"> {{ message }}</p>
+                </div>
+            </div>
     </div>
 </div>
 
+
+
 {% block extra_js %}
 <script>
-    // Function to close the toast
-    function closeToast() {
-        $('#toast').toast('hide');
-    }
+    // Close the toast when anywhere on the screen is clicked
+    document.addEventListener('click', function(event) {
+        var toast = document.getElementById('toast');
+        var isClickInside = toast.contains(event.target);
 
-    // Listen for clicks on all links
-    document.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', closeToast);
+        if (!isClickInside) {
+            $(toast).toast('hide');
+        }
     });
 
-    // Initialize the toast with Bootstrap's JavaScript
+    // Show the toast when the document is ready
     $(document).ready(function() {
-        $('#toast').toast({ autohide: false });
-
-        // Listen for clicks on the close button inside the toast
-        document.querySelector('.btn-toast-close').addEventListener('click', closeToast);
+        $('#toast').toast('show');
     });
 </script>
 {% endblock %}

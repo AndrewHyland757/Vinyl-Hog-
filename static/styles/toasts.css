@@ -16,11 +16,13 @@
 .message--error {
     color: #884646;
     background-color: #e8d3d3;
+    border: none;
 }
 
 .message--info {
     color: #9b984e;
     background-color: #e5e4b6;
+    border: none;
 }
 
 .btn-toast-close:focus,

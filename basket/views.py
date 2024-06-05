@@ -103,8 +103,7 @@ def update_basket(request, product_id):
     if product_id in list(basket.keys()):
         if quantity <= product.stock:
             basket[product_id] = quantity
-            messages.info(
-                request, f'{product.title} quantity updated.')
+            messages.info(request, f'{product.title} quantity updated.')
         else:
             messages.error(request, 'Not enough stock to fulfil this order')
 
