@@ -134,11 +134,14 @@ def products(request):
 
     return render(request, 'products/products.html', context)
 
-"""
 
+
+
+"""
 def product(request, product_id):
-    
+   
     product = get_object_or_404(Album, id=product_id)
+   
 
     if product.stock <= 0:
         product_stock = "Out of stock"
@@ -152,26 +155,30 @@ def product(request, product_id):
 
     return render(request, 'products/product.html', context)
 
-
 """
+
+
 def product(request, product_id):
     
+    message= None
     product = get_object_or_404(Album, id=product_id)
-
+     
     if product.stock <= 0:
         product_stock = "Out of stock"
     else:
         product_stock = product.stock
 
     id = product_id
-
+    
     if request.method == 'POST':
-        add_basket(request, product_id)
-
+        return add_basket(request, product_id)
+        request.session['basket'] = basket
+    
     
     context = {
         "product": product,
         'product_stock': product_stock,
+        "message": message,
     }
 
     return render(request, 'products/product.html', context)

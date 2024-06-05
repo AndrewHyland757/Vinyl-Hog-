@@ -285,6 +285,11 @@ BUTTON CLASSES
   */
 }
 
+.toast-body {
+  letter-spacing: .04rem;
+  line-height: 1.25;
+  background-color: orange;
+}
 
 
 

@@ -55,16 +55,28 @@
                 {% endif %}
             </div>
             <div id="form-container">
+
+                <!--
+                
             <form class="form add-to-basket" method="POST"  hx-post="" hx-target="body" id="add">
 
                 {% csrf_token %}
                 <input class=" qty-input" type="number" name="quantity" value="1" min="1" max="99">
-                <button  type="submit" class="btn-explore--full-width btn-add" value="Add to Basket">Add to Basket</button>
+                <input  type="submit" class="btn-explore--full-width btn-add" value="Add to Basket">
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
             </form>
         </div>
+-->
 
-            <!--
+            <form class="form add-to-basket" action="{% url 'product' product.id %}" method="POST" hx-post="" hx-target="body" id="add">
+
+                {% csrf_token %}
+                <input class=" qty-input" type="number" name="quantity" value="1" min="1" max="99">
+                <input type="submit" class="btn-explore--full-width btn-add" value="Add to Basket">
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            </form>
+
+<!--
             <form class="form add-to-basket" action="{% url 'add-basket' product.id %}" method="POST" id="add">
 
                 {% csrf_token %}
@@ -72,14 +84,14 @@
                 <input type="submit" class="btn-explore--full-width btn-add" value="Add to Basket">
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
             </form>
-            -->
-            <!--
+ -->       
+          
             <form class="form" action="{% url 'add-wishlist' product.id %}" method="POST">
                 {% csrf_token %}
                 <input type="submit" class="btn-explore btn-explore--full-width" value="Add to Wishlist">
                 <input type="hidden" name="redirect_url" value="{{ request.path }}"> 
             </form>
-            -->
+           
         </div>
     </div>
 </main>
@@ -89,5 +101,5 @@
 {% endblock %}
 
 
-
+          
 

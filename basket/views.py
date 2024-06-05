@@ -15,48 +15,42 @@ def basket(request):
     return render(request, 'basket/basket.html')
     
 
-"""
-def add_basket(request, product_id):
 
-    print('in add_basket')
-  
+from django.shortcuts import get_object_or_404, redirect
+from django.contrib import messages
+
+def add_basket(request, product_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
     product = get_object_or_404(Album, id=product_id)
+    
+    product_id_str = str(product_id)  # Convert product_id to string
 
+    
     if quantity <= product.stock:
-        if product_id in list(basket.keys()):
-            total_quantity = int(basket[product_id]) + quantity
+        if product_id_str in list(basket.keys()):  # Check for string version
+            total_quantity = int(basket[product_id_str]) + quantity
             if total_quantity <= product.stock:
-                print('total_quantity: ', total_quantity)
-                print('STOCK: ', product.stock)
-                basket[product_id] = int(basket[product_id]) + quantity
-                
-                messages.success(
-                    request, f'{product.title} added to basket.')
-               
+                basket[product_id_str] = int(basket[product_id_str]) + quantity
+                messages.success(request, f'{product.title} added to basket.')
             else:
-                messages.error(
-                    request, 'Not enough stock to fulfil this order.')
+                messages.error(request, 'Not enough stock to fulfil this order.')
         else:
-            basket[product_id] = quantity
-            
-            messages.success(
-                request, f'{product.title} added to your basket')
-            
+            basket[product_id_str] = quantity  # Add string version
+            messages.success(request, f'{product.title} added to your basket')
     else:
         messages.error(request, 'Not enough stock to fulfil this order.')
 
     request.session['basket'] = basket
     return redirect(redirect_url)
+
     
 """
 
 def add_basket(request, product_id):
 
     quantity = int(request.POST.get('quantity'))
-    
     basket = request.session.get('basket', {})
     product = get_object_or_404(Album, id=product_id)
 
@@ -64,8 +58,6 @@ def add_basket(request, product_id):
         if product_id in list(basket.keys()):
             total_quantity = int(basket[product_id]) + quantity
             if total_quantity <= product.stock:
-                print('total_quantity: ', total_quantity)
-                print('STOCK: ', product.stock)
                 basket[product_id] = int(basket[product_id]) + quantity
                 
                 message = messages.success(
@@ -84,14 +76,14 @@ def add_basket(request, product_id):
         message = messages.error(request, 'Not enough stock to fulfil this order.')
 
    
-    
+    request.session['basket'] = basket
   
     return message
 
 
 
    
-
+"""
 
 
 
