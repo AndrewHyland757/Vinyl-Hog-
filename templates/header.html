@@ -2,6 +2,7 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'styles/header.css' %}"/>
+<link rel="stylesheet" href="{% static 'styles/toasts.css' %}"/>
 {% endblock %}
 
 <header>
@@ -15,7 +16,7 @@
 
         <div class="nav-right-container">
 
-            <div class="nav-item dropdown ml-5">
+            <div class="nav-item dropdown ml-5" >
                 <a class="" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{% url 'products' %}?condition=fresh">Latest Releases</a>

@@ -20,6 +20,8 @@ from django.shortcuts import get_object_or_404, redirect
 from django.contrib import messages
 
 def add_basket(request, product_id):
+
+    
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
@@ -33,14 +35,14 @@ def add_basket(request, product_id):
             total_quantity = int(basket[product_id_str]) + quantity
             if total_quantity <= product.stock:
                 basket[product_id_str] = int(basket[product_id_str]) + quantity
-                messages.success(request, f'{product.title} added to basket.')
+                messages.success(request,  ' added to basket')
             else:
-                messages.error(request, 'Not enough stock to fulfil this order.')
+                messages.error(request, 'Not enough stock to fulfil this order')
         else:
             basket[product_id_str] = quantity  # Add string version
-            messages.success(request, f'{product.title} added to your basket')
+            messages.success(request, ' added to basket')
     else:
-        messages.error(request, 'Not enough stock to fulfil this order.')
+        messages.error(request, 'Not enough stock to fulfil this order')
 
     request.session['basket'] = basket
     return redirect(redirect_url)

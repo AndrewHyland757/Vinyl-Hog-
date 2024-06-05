@@ -32,6 +32,7 @@ def add_wishlist_item(request, product_id):
     Creates an instance in the WishlistItem model by
     assigning a user to the selected product.
     """
+    message_type = "wishlist"
     product = get_object_or_404(Album, pk=product_id)
     user = request.user
 
@@ -40,7 +41,7 @@ def add_wishlist_item(request, product_id):
         (request, f'"{product.title}" is already on your wishlist!')
     else:
         WishlistItem.objects.create(user=user, product=product)
-        messages.success(request, f'"{product.title}" added to your wishlist!')
+        messages.success(request, " added to your wishlist!")
 
     redirect_url = request.POST.get('redirect_url')
 

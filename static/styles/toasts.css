@@ -1,21 +1,35 @@
 .toast-body {
   letter-spacing: .04rem;
   line-height: 1.25;
-  background-color: orange;
 }
 
 .toast {
     border-color: #1E1C1C;
 }
 
-.toast--info {
-    background-color: green;
+.message {
+    padding: .1rem .5rem;
+    color: #468847;
+    background-color: #d3e8d8;
 }
 
-.btn-toast-close {
-    color: red;
-    background-color: pink;
+.message--error {
+    color: #884646;
+    background-color: #e8d3d3;
 }
+
+.message--info {
+    color: #9b984e;
+    background-color: #e5e4b6;
+}
+
+.btn-toast-close:focus,
+.btn-toast-close:active,
+.btn-toast-close:hover {
+    outline: none;
+
+}
+
 
 @media (max-width:1200px) {
 

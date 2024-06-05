@@ -6,14 +6,24 @@
     </div>
 </div>
 
+{% block extra_js %}
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var toast = document.getElementById('toast');
-        document.addEventListener('click', function(event) {
-            var isClickInsideToast = toast.contains(event.target);
-            if (!isClickInsideToast) {
-                toast.style.display = 'none';
-            }
-        });
+    // Function to close the toast
+    function closeToast() {
+        $('#toast').toast('hide');
+    }
+
+    // Listen for clicks on all links
+    document.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', closeToast);
+    });
+
+    // Initialize the toast with Bootstrap's JavaScript
+    $(document).ready(function() {
+        $('#toast').toast({ autohide: false });
+
+        // Listen for clicks on the close button inside the toast
+        document.querySelector('.btn-toast-close').addEventListener('click', closeToast);
     });
 </script>
+{% endblock %}

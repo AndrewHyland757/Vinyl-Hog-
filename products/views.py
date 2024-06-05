@@ -8,6 +8,7 @@ from .forms import ProductForm, ArtistForm, GenreForm
 from django.db import models
 from django.db.models import Case, When, F
 from basket.views import add_basket 
+from wishlist_items.views import add_wishlist_item
 
 
 
@@ -157,6 +158,8 @@ def product(request, product_id):
 
 """
 
+from django.http import JsonResponse
+
 
 def product(request, product_id):
     
@@ -168,11 +171,22 @@ def product(request, product_id):
     else:
         product_stock = product.stock
 
-    id = product_id
+    
     
     if request.method == 'POST':
-        return add_basket(request, product_id)
-        request.session['basket'] = basket
+        form_type = request.POST.get('form_type')
+        if form_type == 'basket':
+            return add_basket(request, product_id)
+            message_type = "basket"
+        elif form_type == 'wishlist':
+            return add_wishlist_item(request, product_id)
+            message_type = "wishlist"
+            # Call the add_wishlist function here if you have one
+            # return add_wishlist(request, product_id)
+            pass  # replace with actual function call
+
+            #return JsonResponse({'product': updated_product_data})
+        
     
     
     context = {
