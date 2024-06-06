@@ -107,8 +107,12 @@
     SECTION RECOMMENDATION POSTS
     ****************************
     -->
-    <!--
-    <section class="section-recommendations">
+  
+
+<section class="section-recommendations">
+
+    
+    <div class="vh-container">
         <div class="head-container-center">
             <h1 class="head-heading">Staff Reviews</h1>
             <p class="head-text">
@@ -116,79 +120,25 @@
             </p>
         </div>
         
-        <div class="grid-container-blog">
-            
-                <div class="item-1">
-                    <div class="img-container">
-                        
-                            <img class="post-img" src="{{ first_post.article_image.url }}" alt="Card image cap"/> 
-                 
-                        </div>
-                    <a href=" {% url 'post' first_post.id %}">
-                        <div class="card-body-post">
-                            <h5 class="post-card-title"><strong>{{ first_post.title }}</strong></h5>
-                            <p class="post-card-sub">{{ first_post.sub_title }}</p>
-                            <p class="post-card-text">by {{ first_post.author }}</p>
-                        </div>
+        <div class="item-1-container">
+            <div class="item-1">
+                <div class="img-container">
+                    <img src="{{ post_1.article_image.url }}" alt="Card image cap"/> 
+                </div>
+                
+                <div class="card-body-post">
+                    <a href=" {% url 'post' post_1.id %}">
+                        <h5 class="post-card-title"><strong>{{ post_1.title }}</strong></h5>
                     </a>
+                    <p class="post-card-sub">{{ post_1.sub_title }}</p>
+                    <p class="post-card-text">by {{ post_1.author }}</p>
                 </div>
-         
-
-            <div class="item-2-container">
-                {% for post in recent_added_posts %}
-                   
-                        <div class="item-2">
-                            <div class="img-container">
-                                <a href=" {% url 'post' post.id %}">
-                                    <img class="post-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
-                                </a>
-                            </div>
-                            <a href=" {% url 'post' post.id %}">
-                            <div class="card-body-post">
-                                <h5 class="post-card-title"><strong>{{ post.title }}</strong></h5>
-                                <p class="post-card-sub">{{ post.sub_title }}</p>
-                                <p class="post-card-text">by {{ post.author }}</p>
-                            </div>
-                        </a>
-                        </div>
-                   
-                {% endfor %}
             </div>
         </div>
-        <div class="btn-container-center">
-            <a href="{% url 'posts' %}"><button class="btn-explore">Explore more</button></a>
-        </div>
-    </section>
-
--->
-
-<section class="section-recommendations">
-    <div class="head-container-center">
-        <h1 class="head-heading">Staff Reviews</h1>
-        <p class="head-text">
-        Dive into our staff's vinyl album reviews, a reflection of a hundred years of shared musical love.
-        </p>
     </div>
-    
-  <a href=" {% url 'post' first_post.id %}"></a>
-        
-            <div class="first-post">
-                <div class="first-img-container">
-                    <img src="{{ first_post.article_image.url }}" alt="Card image cap"/> 
-                </div>
-
-                    <div class="post-text">
-                        <h5 class="post-card-title"><strong>{{ first_post.title }}</strong></h5>
-                        <p class="post-card-sub">{{ first_post.sub_title }}</p>
-                        <p class="post-card-text">by {{ first_post.author }}</p>
-                    </div>
-          
-            </div>
-    
-     
-
+   
         <div class="item-2-container">
-            {% for post in recent_added_posts %}
+            {% for post in posts_1_5 %}
                
                     <div class="item-2">
                         <div class="img-container">
@@ -207,6 +157,9 @@
                
             {% endfor %}
         </div>
+
+     
+
     </div>
     <div class="btn-container-center">
         <a href="{% url 'posts' %}"><button class="btn-explore">Explore more</button></a>

@@ -17,19 +17,20 @@ def home(request):
     
    
     posts_by_date = RecommendationPost.objects.all().order_by('-created_on')
-    recent_added_posts = posts_by_date[1:4]
-    recent_added_posts_2 = posts_by_date[4:7]
-   
-    first_post = posts_by_date[0]
     
+    
+    post_1 = posts_by_date[0]
+   
+    posts_1_5 = posts_by_date[0:4]
+
     
 
     context = {
         "albums": albums,
         "recent_added_albums": recent_added_albums,
-        "recent_added_posts": recent_added_posts,
-        "recent_added_posts_2": recent_added_posts_2,
-        "first_post": first_post,
+       
+        "posts_1_5": posts_1_5,
+        "post_1": post_1,
  
     }
 
