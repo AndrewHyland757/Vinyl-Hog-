@@ -100,6 +100,8 @@ color: #1E1C1C;
 POSTS SECTION
 ****************************
 */
+
+/*
 .section-recommendations {
 
 }
@@ -205,6 +207,9 @@ POSTS SECTION
 .post-card-text {
   font-size: 1.2rem;
 }
+
+*/
+
 
 
 /*
@@ -415,3 +420,164 @@ MEDIA QUERIES POSTS
     overflow: hidden;
   }
  }
+
+
+
+
+
+
+
+
+
+ /*
+****************************
+POSTS SECTION
+****************************
+*/
+
+
+.section-recommendations {
+
+}
+.first-post {
+
+  height:80vh;
+  width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  background-color: #eff2f3;
+  margin-bottom: 6.2rem;
+}
+
+.first-img-container {
+  height: 100%;
+  object-fit:contain;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content:center;
+  
+}
+
+.first-img-container img {
+  height: 100%;
+ 
+ position: absolute;
+ object-fit:contain;
+ overflow: hidden;
+ 
+  
+
+}
+
+.post-text {
+
+
+}
+
+
+
+.grid-container-blog {
+  width:1200px;
+  height: fit-content;
+  display: grid;
+  grid-template-rows: 400px auto;
+  gap: 3.2rem;
+  margin: 0 auto;
+  padding: 3.6rem;
+  background-color:#1E1C1C;
+  margin-bottom: 6rem;
+}
+
+
+
+.item-1,
+.item-2 {
+  overflow: hidden;
+  background-color: #eff2f3;
+}
+
+.item-1 {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.item-2 {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 0rem;
+  align-items:flex-start;
+}
+
+
+.item-1 .img-container {
+  width: 350px !important;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.item-1 .post-img,
+.item-2 .post-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 1.8rem;
+  overflow:hidden;
+}
+
+.item-2-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.item-2 .img-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-card-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+
+.item-1 .post-card-title{
+  font-size: 3.2rem;
+  padding-top: 3.2rem;
+}
+
+
+.card-body-post {
+  height: fit-content;
+  width:auto;
+  padding: 1.8rem;
+}
+
+.item-2 .card-body-post {
+  padding-top: 0;
+}
+
+.post-card-sub {
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.item-1 .post-card-sub {
+  font-size: 1.8rem;
+}
+
+
+.post-card-text {
+  font-size: 1.2rem;
+}

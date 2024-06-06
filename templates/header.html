@@ -8,6 +8,7 @@
 <header>
     <nav class="navigation">
         <div class="nav-left-container">
+            <!-- Logo -->
             <div class="logo-container">
                 <a class="logo logo--1" href="{% url 'home' %}">Vinyl</a>
                 <a class="logo logo--2" href="{% url 'home' %}">Hog.</a>
@@ -16,6 +17,7 @@
 
         <div class="nav-right-container">
 
+            <!-- Shop dropdown menu -->
             <div class="nav-item dropdown ml-5" >
                 <a class="" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -26,11 +28,8 @@
                 </div>
             </div>
 
-            
             <div class="icons-container">
-          
-
-
+                <!-- Search box -->
                 <div class="nav-item">
                     <form id="search-form" method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
@@ -46,11 +45,12 @@
                     </form>
                 </div>
 
-            
+                <!-- Wishlist icon -->
                 <div class="nav-item">
                     <a href="{% url 'wishlist-items' %}"><i class="fa-solid fa-heart"></i></a>
                 </div>
         
+                <!-- Account dropdown menu -->
                 <div class="nav-item dropdown ">
                     <a class="" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa-solid fa-user nav-item"></i>
@@ -70,6 +70,7 @@
                     </div>
                 </div>
 
+                <!-- Backet icon -->
                 <div class=" nav-item--basket nav-item">
                     <a href="{% url 'basket' %}">
                         <i class="fa-solid fa-cart-shopping "></i>
@@ -87,6 +88,7 @@
 
 
 {% if messages %}
+     <!-- Messsage display container -->
     <div class="message-container">
         {% for message in messages %}
             {% with message.level as level %}
@@ -94,10 +96,12 @@
                     {% include 'toasts/toast_error.html' %}
                 {% elif level == 30 %}
                     {% include 'toasts/toast_warning.html' %}
+                {% elif level == 27 %}
+                    {% include 'toasts/toast_success_wishlist.html' %}
+                {% elif level == 26 %}
+                    {% include 'toasts/toast_success_basket.html' %}
                 {% elif level == 25 %}
                     {% include 'toasts/toast_success.html' %}
-                {% elif level == 30 %}
-                    {% include 'toasts/toast_success_alt.html' %}
                 {% else %}
                     {% include 'toasts/toast_info.html' %}
                 {% endif %}
@@ -106,34 +110,33 @@
     </div>
 {% endif %}
 
+{% block extra_js %}
+    <script>
+        // Script to handle the search box functionality
+        let searchBox = document.getElementById("search-box");
+        let searchIcon = document.getElementById("search-icon");
+        let searchForm = document.getElementById("search-form");
 
-
-
-
-<script>
-    let searchBox = document.getElementById("search-box");
-    let searchIcon = document.getElementById("search-icon");
-    let searchForm = document.getElementById("search-form");
-
-    function showSearchBox(event) {
-        searchBox.style.display = "block";
-        searchBox.focus(); // Focus on the input field
-        event.stopPropagation();
-        document.addEventListener('click', closeSearchBox);
-    }
-
-    function closeSearchBox(event) {
-        if (!searchBox.contains(event.target) && event.target !== searchIcon) {
-            searchBox.style.display = "none";
-            document.removeEventListener('click', closeSearchBox);
+        function showSearchBox(event) {
+            searchBox.style.display = "block";
+            searchBox.focus(); // Focus on the input field
+            event.stopPropagation();
+            document.addEventListener('click', closeSearchBox);
         }
-    }
 
-    searchIcon.addEventListener('click', function(event) {
-        if (searchBox.value.trim() !== "") {
-            searchForm.submit();
-        } else {
-            showSearchBox(event);
+        function closeSearchBox(event) {
+            if (!searchBox.contains(event.target) && event.target !== searchIcon) {
+                searchBox.style.display = "none";
+                document.removeEventListener('click', closeSearchBox);
+            }
         }
-    });
-</script>
+
+        searchIcon.addEventListener('click', function(event) {
+            if (searchBox.value.trim() !== "") {
+                searchForm.submit();
+            } else {
+                showSearchBox(event);
+            }
+        });
+    </script>
+{% endblock %}

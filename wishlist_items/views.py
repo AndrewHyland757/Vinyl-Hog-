@@ -42,7 +42,7 @@ def add_wishlist_item(request, product_id):
         messages.info(request, f'{product.title} is already on your wishlist!')
     else:
         WishlistItem.objects.create(user=user, product=product)
-        messages.add_message(request, 30, " added to your wishlist!")
+        messages.add_message(request, 27, " added to your wishlist!")
         
     redirect_url = request.POST.get('redirect_url')
     message_type = "wishlist"

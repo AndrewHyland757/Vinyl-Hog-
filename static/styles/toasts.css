@@ -13,17 +13,30 @@
     background-color: #d3e8d8;
 }
 
-.message--error {
+.message-success {
+    color: #468847;
+    background-color: #d3e8d8;
+    border: none;
+}
+
+.message-error {
     color: #884646;
     background-color: #e8d3d3;
     border: none;
 }
 
-.message--info {
+.message-info {
     color: #9b984e;
     background-color: #e5e4b6;
     border: none;
 }
+
+.message-warning {
+    color: #ce8020;
+    background-color: #e0af70;
+    border: none;
+}
+
 
 .btn-toast-close:focus,
 .btn-toast-close:active,

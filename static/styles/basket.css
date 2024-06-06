@@ -15,8 +15,6 @@
 }
 
 
-
-
 .checkout-heading {
     text-transform: uppercase;
     padding-bottom: 2.4rem
@@ -134,13 +132,9 @@ RIGHT COLUMN
 .cost-item {
     display: flex;
     justify-content: space-between;
+    
     border-top: .1rem solid #333;
-    padding: 2.4rem 0;
-}
-
-.delivery-container .cost-item {
-    padding-top: 2.4rem;
-    padding-bottom: .8rem;
+    padding: 2.8rem 0 2.4rem 0;
 }
 
 
@@ -169,9 +163,6 @@ RIGHT COLUMN
 
 }
 
-
-
-
 /*
 ****************************
 MEDIA QUERIES
@@ -198,6 +189,5 @@ MEDIA QUERIES
     .cost-container {
         width: 100%;
         margin: 0 auto;
-    }
-    
+    }  
 }

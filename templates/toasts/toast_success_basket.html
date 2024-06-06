@@ -1,0 +1,101 @@
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'styles/toasts.css' %}"/>
+{% endblock %}
+
+
+<div class="toast custom-toast rounded-0 mt-4" data-autohide="false" data-delay="2000" id="toast">
+    <div class="arrow-up arrow-success"></div>
+    <div class="w-100 toast-capper bg-success"></div>
+
+
+    <div class="toast-body">
+        <div class="row">
+            <div class="col justify-content-end">
+                <button type="button" class="ml-2 mb-1 close text-dark btn-toast-close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+        {% if grand_total %}
+            <div class="bag-notification-wrapper">
+                {% for item in basket_items %}
+                    <div class="row mb-3">
+                        <div class="col-3 my-1">
+                            <img class="w-100" src="{{ item.product.featured_image.url }}" alt="Album cover image"/>
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0"><strong>{{ item.product.title }}</strong></p>
+                            <p class="my-0 small"></p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                {% endfor %}
+            </div>
+
+            <div class="row pt-2 mb-4">
+                <div class="col text-center">
+                    <p class="col text-center message p-3 "><strong>{{ product.title }}</strong> {{ message }}</p>
+                    
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col">
+                    <strong><p class=" mb-1">
+                        Total{% if free_delivery_delta > 0 %} (Exc. delivery){% endif %}: 
+                        <span class="float-right">€{{ price_total }}</span>
+                    </p></strong>
+                    {% if free_delivery_delta > 0 %}
+                        <p class="mt-3 text-muted">
+                            Spend <strong>€{{ free_delivery_delta }}</strong> more to avail of free delivery
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
+            <hr class="mt-1 mt-4 mb-4">
+            <div class="row mb-4">
+                <a href="{% url 'checkout' %}" class="btn btn-block">
+                    <span class="btn-explore btn-explore--secondary">Go To Secure Checkout</span>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+
+
+
+{% block extra_js %}
+    <script>
+        // Function to close the toast
+        function closeToast() {
+            $('#toast').toast('hide');
+        }
+
+        // Listen for clicks on all links
+        document.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', closeToast);
+        });
+
+        // Initialize the toast with Bootstrap's JavaScript
+        $(document).ready(function() {
+            $('#toast').toast({ autohide: false });
+
+            // Listen for clicks on the close button inside the toast
+            document.querySelector('.btn-toast-close').addEventListener('click', closeToast);
+        });
+    </script>
+{% endblock %}
+
+    
+
+
+
+
+
+
+
+

@@ -9,6 +9,7 @@ from django.db import models
 from django.db.models import Case, When, F
 from basket.views import add_basket 
 from wishlist_items.views import add_wishlist_item
+from django.http import JsonResponse
 
 
 
@@ -158,7 +159,7 @@ def product(request, product_id):
 
 """
 
-from django.http import JsonResponse
+
 
 
 def product(request, product_id):
@@ -171,28 +172,17 @@ def product(request, product_id):
     else:
         product_stock = product.stock
 
-    
-    
+    # Checks which form has been submitted and calls the relevant view
     if request.method == 'POST':
         form_type = request.POST.get('form_type')
         if form_type == 'basket':
             return add_basket(request, product_id)
-            message_type = "basket"
         elif form_type == 'wishlist':
             return add_wishlist_item(request, product_id)
-            message_type = "wishlist"
-            # Call the add_wishlist function here if you have one
-            # return add_wishlist(request, product_id)
-            pass  # replace with actual function call
-
-            #return JsonResponse({'product': updated_product_data})
         
-    
-    
     context = {
         "product": product,
         'product_stock': product_stock,
-        "message": message,
     }
 
     return render(request, 'products/product.html', context)

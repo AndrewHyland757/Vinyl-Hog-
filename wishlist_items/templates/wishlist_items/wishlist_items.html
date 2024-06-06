@@ -33,7 +33,7 @@ SECTION WISHLIST
                     </a>
                     <div class="card-body">
                         <a class="product-link" href=" {% url 'product' wishlist_item.product.id %}">
-                            <h5 class="card-title">{{ wishlist_item.product.title }}</h5>
+                            <h5 class="product-card-title"><strong>{{ wishlist_item.product.title }}</strong></h5>
                         </a>
                         <p class="card-artist">{{ wishlist_item.product.artist }}</p>
                         <div class="card-details">
