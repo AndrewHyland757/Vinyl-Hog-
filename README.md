@@ -374,8 +374,13 @@ Also implemented were:
 
 
 ### Marketing
-- Newsletter is included in the home page. This section facilitates user engagement and promotes the e-commerce store through effective email marketing and social media presence.
+- Newsletter is included in the home page. This section facilitates user engagement and promotes the e-commerce store through effective email marketing and social media presence.<br>
 
+![Screenshot of footer](static/images/readme_imgs/screenshots/footer.png)
+
+- Facebook Page<br>
+
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/facebook.png)
 
 
 
@@ -439,6 +444,58 @@ Delete review article  | On the management page the user clicks on the delete bu
 
 
 
+## Bugs and Fixes
+
+### Issue with hitting back on the browser and page reload
+
+One bug I had was with the initial way I added a product to the basket or wishlist. 
+Adding an item to the basket  was done in the basket app views.py using the function “add_basket”. 
+The url that initiated this view was “add-basket” and was fired as the action when the add basket form was submitted on the product.html template. 
+The problem was once the function was called it redirected to itself. This worked well but if a person hit back on the browser, which is very common on a product page on an ecommerce website,  it would reload the initial product page again, that is,  stay on the same page and redisp;ay any messages. Even worse, if the person had added two separate quantities to the basket it would take the same amount of back clicks to return to the products page. 
+
+This was solved by:
+- Removing the “add-basket” url from the form, leaving the action empty.
+- Calling the “add_basket” view in the “product” view from products.py in the products app. The same was done for adding an item to the wishlist.
+- Extra logic was added in the product view to identify which form had been submitted, the “add_wishlist_item” or “add_basket”. This was done by adding a hidden form input called "form_type" with the value of basket or wishlist.
+- Additionally, this entailed changing the product_id to string format in  the add_basket view, as it didn’t work as an integer. 
+- Using HTMX script to stop the page refreshing once form was submitted.
+- A final issue was that the HTMX script interfered with the dropdown menus in the header. This was solved by moving the bootstrap scripts to the header section. 
+
+
+The same format was followed for the views in the basket app which deal with updating the item quantity and deleting the item.
+
+
+<details><br>
+
+Initial form and product view<br>
+![Screenshot of feature description](static/images/readme_imgs/bugs/form_1.png)
+![Screenshot of feature description](static/images/readme_imgs/bugs/product_1.png)
+<br>
+
+New form and product view<br>
+
+![Screenshot of feature description](static/images/readme_imgs/bugs/form_2.png)
+![Screenshot of feature description](static/images/readme_imgs/bugs/product_2.png)<br>
+
+HTMX script in base.html<br>
+
+![Screenshot of feature description](static/images/readme_imgs/bugs/htmx.png)<br>
+</details>
+<br>
+
+
+### Issue with toast messages not closing 
+
+
+Another bug was that the toast messages did not close if one clicked on a navigation links or search bar, therefore  the message blocking the nav link dropdowns. This was solved by adding some custom JS. 
+
+
+<details><br>
+
+
+![Screenshot of feature description](static/images/readme_imgs/bugs/toast_js.png)
+
+</details>
 
 
 

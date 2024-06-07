@@ -15,12 +15,8 @@ import os
 from django.contrib.messages import constants as messages
 
 
-
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 
 # Quick-start development settings - unsuitable for production
@@ -68,7 +64,6 @@ INSTALLED_APPS = [
 ]
 
 
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -78,7 +73,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware', ######
-  
 ]
 
 ROOT_URLCONF = 'vinyl_hog.urls'
@@ -91,7 +85,6 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, "templates"),
             os.path.join(BASE_DIR, 'templates', 'allauth'),
-
         ],
             
         'APP_DIRS': True,
@@ -108,7 +101,6 @@ TEMPLATES = [
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
             ]
-            
         },
     },
 ]
@@ -200,9 +192,6 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'

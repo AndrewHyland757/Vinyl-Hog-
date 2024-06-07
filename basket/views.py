@@ -116,7 +116,6 @@ def basket(request):
     
     # Checks which form has been submitted and calls the relevant view
     if request.method == 'POST':
-      
         form_type = request.POST.get('form_type')
         product_id = request.POST.get('product_id')
         if form_type == 'update':

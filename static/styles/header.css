@@ -94,16 +94,6 @@ NAVIGATION
 	padding-bottom: 1rem;
 }
 
-/*
-.search {
-	font-size: 1.6rem;
-	display: flex;
-	align-items: center;
-	padding: 0;
-	width: fit-content;
-}
-*/
-
 .nav-item--basket {
 	position: relative;
 	display: flex;
@@ -127,49 +117,10 @@ NAVIGATION
 	font-size: 1rem;
 }
 
-/*
-#search-box {
-	display: none;
-	font-family:  Helvetica;
-	padding: .75rem 1.25rem;
-	font-size: 1.4rem;
-	color: grey;
-	border: .1rem solid lightgray;
-	letter-spacing: .04rem;
-	width:300px;
-	animation: slide 1s 1;
-}
 
-#search-box:focus,
-#search-box:link,
-#search-box:active {
-	outline: none;
-}
-
-#search-box {
-	display: none;
-	font-family: Helvetica;
-	padding: .75rem 1.25rem;
-	font-size: 1.4rem;
-	color: grey;
-	border: .1rem solid lightgray;
-	letter-spacing: .04rem;
-	width: 300px;
-	animation: slide 1s 1;
-}
-
-#search-box:focus,
-#search-box:link,
-#search-box:active {
-	outline: none;
-}
-
-
-*/
-
-    .input-group-append,
-    .icon i {
-    border: none;
+.input-group-append,
+.icon i {
+	border: none;
 }
     #search-box {
         display: none;
@@ -217,7 +168,7 @@ TOASTS
 
 
 .message-container {
-    position: fixed;
+   
     top: 72px;
     right: 15px;
     z-index: 99999999999;

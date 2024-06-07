@@ -138,33 +138,10 @@ def products(request):
 
 
 
-
-"""
 def product(request, product_id):
-   
-    product = get_object_or_404(Album, id=product_id)
-   
-
-    if product.stock <= 0:
-        product_stock = "Out of stock"
-    else:
-        product_stock = product.stock
-
-    context = {
-        "product": product,
-        'product_stock': product_stock,
-    }
-
-    return render(request, 'products/product.html', context)
-
-"""
-
-
-
-
-def product(request, product_id):
-    
-    message= None
+    """
+    Renders an individual product
+    """
     product = get_object_or_404(Album, id=product_id)
      
     if product.stock <= 0:

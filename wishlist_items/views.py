@@ -36,8 +36,6 @@ def add_wishlist_item(request, product_id):
     product = get_object_or_404(Album, pk=product_id)
     user = request.user
 
- 
-
     if WishlistItem.objects.filter(user=user, product=product).exists():
         messages.info(request, f'{product.title} is already on your wishlist!')
     else:
@@ -45,9 +43,6 @@ def add_wishlist_item(request, product_id):
         messages.add_message(request, 27, " added to your wishlist!")
         
     redirect_url = request.POST.get('redirect_url')
-    message_type = "wishlist"
-
-  
 
     return redirect(redirect_url)
 

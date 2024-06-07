@@ -46,7 +46,7 @@
                     {{ order_form.street_address1 }}
                     {{ order_form.street_address2 }} 
                     {{ order_form.county }}
-                    <div class="form-check form-check-inline float-right mr-0">
+                    <div class="form-check form-check-inline">
                         {% if user.is_authenticated %}
                             <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked/>
@@ -64,20 +64,20 @@
                     <legend><h3 class="checkout-heading"><strong>Payment</strong></h3></legend>
         
                     <!-- A Stripe card element will go here -->
-                    <div class="mb-3" id="card-element"></div>
+                    <div class="" id="card-element"></div>
         
                     <!-- Used to display form errors -->
-                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    <div class="card-error" id="card-errors" role="alert"></div>
                 </fieldset>
   
                 <div class="submit-button text-right ">
-                    <a href="{% url 'basket' %}" class="btn-custom btn-custom--basket">
+                    <a href="{% url 'basket' %}" class="btn-explore mb-4">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
                         <span class="font-weight-bold">Adjust Bag</span>
                     </a>
-                    <button id="submit-button" class="btn-custom btn-custom--basket">
+                    <button id="submit-button" class="btn-explore">
                         <span class="font-weight-bold">Complete Order</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
@@ -89,7 +89,7 @@
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
                         <span>Your card will be charged
-                            <strong>${{ grand_total|floatformat:2 }}</strong>
+                            <strong>€{{ grand_total|floatformat:2 }}</strong>
                         </span>
                     </div>
                 </div>
