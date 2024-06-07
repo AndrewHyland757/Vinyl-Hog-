@@ -12,20 +12,20 @@
             <div class="row mb-4">
                 <div class="col-12 col-md-6">
                     <hr>
-                    <h2 class="logo-font mb-4">Artist Management</h2>
-                    <h5 class="text-muted">Delete an Artist</h5>
+                    <h2 class="logo-font mb-4">Product Management</h2>
+                    <h5 class="text-muted">Delete a Product</h5>
                     <hr>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <form method="POST" action="{% url 'delete-artist' artist.id %}" class="form mb-2" enctype="multipart/form-data">
+                    <form method="POST" action="{% url 'delete-product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                         {% csrf_token %}
                             <div class="">
-                                <p style="font-size:1.4rem;" class="mb-4">Are you sure you want to delete <strong>{{ artist.name }}</strong> from the database?</p>
-                                <a class="btn-custom mt-3 mb-4" href="{% url 'artist-management' %}">Cancel</a>
-                                <button class="btn-custom mb-5" type="submit">Delete Artist</button>
+                                <p style="font-size:1.4rem;" class="mb-4">Are you sure you want to delete <strong>{{ product.title }}</strong> from the database?</p>
+                                <a class="btn-custom mt-3 mb-4" href="{% url 'product-management' %}">Cancel</a>
+                                <button class="btn-custom mb-5" type="submit">Delete Product</button>
                             </div>
                     </form>
                 </div>            
