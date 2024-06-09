@@ -12,8 +12,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 from django.contrib.messages import constants as messages
 
+if os.path.isfile("env.py"):
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,14 +26,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3_qtk$6-0etc_q%ba*!lhe+7_-w=_73p$zn^6$q6q0l8b!9%co'
+#SECRET_KEY = 'django-insecure-3_qtk$6-0etc_q%ba*!lhe+7_-w=_73p$zn^6$q6q0l8b!9%co'
+SECRET_KEY = os.environ.get('SECRET_KEY')
+    
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-andrewhyland75-vinylhog-zmadu4k2m4m.ws-eu114.gitpod.io']
 
-ALLOWED_HOSTS = ['8000-andrewhyland75-vinylhog-zmadu4k2m4m.ws-eu114.gitpod.io']
+ALLOWED_HOSTS = ['vinyl-hog.heroku.com', '8000-andrewhyland75-vinylhog-zmadu4k2m4m.ws-eu114.gitpod.io']
 
 # Application definition
 
@@ -142,16 +147,26 @@ MESSAGE_TAGS = {
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+#DATABASES = {                  #### original
+    #'default': {
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': BASE_DIR / 'db.sqlite3',
+    #}
+#}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+
+###DATABASES = {
+     ##'default': dj_database_url.parse('postgres://udfxjdvygpj:mR4qh2n23YPd@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/nanny_polar_lasso_241658')
+ #}
 
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
+
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {

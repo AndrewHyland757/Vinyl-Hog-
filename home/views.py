@@ -12,15 +12,13 @@ def home(request):
     albums = Album.objects.all()
     albums_by_date = Album.objects.all().order_by('-date_added')
     recent_added_albums = albums_by_date[0:8]
+   
 
     posts = RecommendationPost.objects.all()
     
-   
+ 
     posts_by_date = RecommendationPost.objects.all().order_by('-created_on')
-    
-    
     post_1 = posts_by_date[0]
-   
     posts_1_5 = posts_by_date[0:4]
 
     

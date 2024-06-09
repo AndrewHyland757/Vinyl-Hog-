@@ -31,9 +31,6 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('product_management/', include('product_management.urls')),
     path('wishlist/', include('wishlist_items.urls')),
-
-    path('404_test/', views.test, name="404_test"),  # test 404 page
-    
     path('shipping/', views.footer_shipping, name='footer-shipping'),
     path('returns/', views.footer_returns, name='footer-returns'),
     path('our_story/', views.footer_our_story, name='footer-our-story'),
@@ -42,6 +39,5 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = 'vinyl_hog.views.handler404'

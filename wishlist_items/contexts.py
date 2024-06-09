@@ -9,7 +9,7 @@ def wishlist_contents(request):
     wishlist_items = None
     user = request.user
 
-    if WishlistItem.objects.filter(user=user):
+    if user.is_authenticated and WishlistItem.objects.filter(user=user):
         wishlist_items = WishlistItem.objects.filter(user=user)
 
     context = {

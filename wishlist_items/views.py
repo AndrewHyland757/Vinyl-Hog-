@@ -7,16 +7,18 @@ from .models import WishlistItem
 # Create your views here.
 
 
-@login_required
+
 def wishlist_items(request):
     '''
     Renders wishlist page with list of items user has saved.
     '''
     wishlist_items = None
-    user = request.user
 
-    if WishlistItem.objects.filter(user=user):
-        wishlist_items = WishlistItem.objects.filter(user=user)
+  
+  
+    if request.user:
+        if WishlistItem.objects.filter(user=request.user):
+            wishlist_items = WishlistItem.objects.filter(user=request.user)
 
     template = 'wishlist_items/wishlist_items.html'
     context = {
