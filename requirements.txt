@@ -1,10 +1,12 @@
 asgiref==3.8.1
+cloudinary==1.40.0
 contourpy==1.2.1
 countries==0.2.0
 crispy==0.7.4
 crispy-bootstrap4==2024.1
 cycler==0.12.1
 dj-database-url==0.5.0
+dj3-cloudinary-storage==0.0.6
 Django==5.0.6
 django-allauth==0.63.1
 django-countries==7.6.1
@@ -30,3 +32,4 @@ pytz==2024.1
 silx==2.1.0
 sqlparse==0.5.0
 stripe==9.7.0
+urllib3==1.26.15
