@@ -23,7 +23,7 @@ NAVIGATION
 .logo-container {
 	width: 12rem;
 	height: 12rem;
-	background-color: #1E1C1C;
+	background-color: pink;
 	display: flex;
 	flex-direction: column;
 	position: absolute;
@@ -61,6 +61,7 @@ NAVIGATION
 	width: 100%;
 	justify-content: space-between;
 	padding-left: 6.2rem;  /* ************** */
+	background-color: pink;
 	
 }
 
@@ -128,18 +129,25 @@ NAVIGATION
         padding: .75rem 1.25rem;
         font-size: 1.4rem;
         color: grey;
+		/*
         border: .1rem solid lightgray;
+		*/
         letter-spacing: .04rem;
         width: 300px;
         animation: slide 1s 1;
+		outline: none;
     }
 
+	.form-control:active,
+	.form-control:focus,
     #search-box:focus,
     #search-box:link,
     #search-box:active {
         border: none;
 		background-color: transparent; /* Set background color to transparent when focused */
-    }
+		outline: none;
+	}
+	
 
 
 .btn-search {

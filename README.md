@@ -145,40 +145,47 @@ The website has to achieve the essential user & business goals. The following fe
 
 ## Back-End Design
 
-![Image of database models]()
+![Screenshot of database](static/images/readme_imgs/database.png)
 
 ### User Model
-- User model as part of the Django Allauth library contains basic information about the authenticated user and contains the folowing fields: username, password and email.
-     
-### Artist Model
+The User model, as part of the Django Allauth library, contains basic information about the authenticated user and contains the folowing fields: username, password and email.
 
-- This model was created to add an artist for the products. It is connected to Album model with a ForeignKey
+### UserProfile Model
+The UserProfile model is a custom custom-created model to handle the user profile details when making a order.
+
+### Artist Model
+This model was created to add an artist for the products. It is connected to Album model with a ForeignKey
 
 ### Genre Model
+This custom model holds all the genres. 
+It has a ManyToMany relationship woth the Album model, allowing for more than one genre per album.
 
-- This custom model holds all the genres. 
-- It has a ManyToMany relationship woth the Album model, allowing for more than one genre per album.
+### Condition Model
+This model was created to add a condition for the products ("new" or "used"). It is connected to Album model with a ForeignKey
 
 ### Album Model
-
-- This custom model holds all the albums.
-- This includes the a description of the album and a featured image. 
-Book This is a custom product model. It is connected to Genre as a ManyToManyField and author as ForeignField. In addition to that it has fields for handling stock. The Stock field holds the integer value of the stock levels; this is updated when a product is purchased. 
+This custom model holds all the albums.
+This includes the a description of the album and a featured image. 
+It is connected to Genre as a ManyToManyField and author as ForeignField. In addition to that it has a field for handling stock. The Stock field holds the integer value of the stock levels; this is updated when a product is purchased.<br>
+It also had an "on_sale" boolean field as well as an "on_sale_price" integer filed. 
 
 ### WishlistItem Model
-
-- This model contains the product field which is connected to the Album model as a ForeignField. 
-- It also contains a user which will assign the logged-in user from the Allauth User model and assign them to the created instance.
+This model contains the product field which is connected to the Album model as a ForeignField. 
+It also contains a user which will assign the logged-in user from the Allauth User model and assign them to the created instance.
 
 ### RecommendationPost Model
+This model holds the recommendation articles. This are submitted by admin users.
+It contains two foreign fields: product and user, signifing the related product and storing the admin user who uploaded the post.
 
-- This model holds the recommendation articles. This are submitted by admin users.
-- It contains three foreign fields: author, product and user. 
+### Order Model
+The Order model holds all user order information and has a ForeignKey relationship with the UserProfile model.
 
-### Author Model
+### OrderLineItem Model
+This model is linked to the Order and Book models via ForeignKey and is created for each item in an order.
 
-- This model contains a user as a foreign field and takes from the Allauth User Model.
-- The author_name will be the displayed name.
+ <br>
+
+ [A database schema was also created with with DjangoViz and can be found here](https://gh.atlasgo.cloud/explore/f13973b1)
 
 
 ## Features
