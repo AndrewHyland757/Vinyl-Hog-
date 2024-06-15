@@ -24,6 +24,8 @@ def add_product(request):
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
+    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():

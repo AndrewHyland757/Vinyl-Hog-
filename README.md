@@ -13,7 +13,9 @@ Vinyl Hog operates as a fully functional e-commerce platform built using Django,
 As a site, it allows users to browse the site, set up an account, edit account inforamtion, view previous orders and make purchaces.
 
 
-## Business Goals
+## Scope
+
+### Business Goals
 
  The primary goal of the website is to increase sales for the business.
  This is to be achieved by:
@@ -26,15 +28,13 @@ As a site, it allows users to browse the site, set up an account, edit account i
 
 A secondary goal was to encrease engagement. This would be futher developed in the future as a hub for useres to interact wiht the review articles and build a online community and fan base.
 
-## User Experience
-
 ### Target Audience
 
 - 12-80 year olds.
 - People interested in vinyl records and music in general. 
 
 
-### User Requirements and Expectations
+### User Experience - Requirements and Expectations
 - A user-friendly website that balances information with an aesthetic that is appealing and modern.
 - A mobile-friendly website as purchaces are often made on the go. 
 - Information about the store including contact details.
@@ -42,15 +42,16 @@ A secondary goal was to encrease engagement. This would be futher developed in t
 - A way to create an account.
 - A way to easily access social media accounts from the website.
 
-## User Stories
+## Development - Agile Methodology
 
-Agile  was used to keep development in line with the core requirements of the project. In Github a kanban board was created where the user stories 
+Agile  was used to keep development in line with the core requirements of the project. In Figma a kanban board was created where the user stories 
 were located. This made it easy to keep track of getting the essential aspects of the project covered as well as being able to see progress happening as 
 the project progressed.
 
 ### General User Needs
 1. As a user I can intuitively navigate through the website so that I can easily access key information and view desired content.
 2. As a user I can find essential information about the company, such as: contact info, delivery info, social medial links and contact details ( all found in the footer section ).
+2. As a user I can view the products clearly.
 3. As a user I can search for certain products.
 4. As a user I can sort and filter products.
 5. As a user I can view further details on each product such as a product description.
@@ -59,7 +60,7 @@ the project progressed.
 
 ### Non-Registered User Needs
 
-6. As a non-registered user I can make a purchace without having to spend time creating an account.
+6. As a non-registered user I can make a purchase without having to spend time creating an account.
 7. As a non-registered user I can set up an account.
 
 
@@ -70,6 +71,7 @@ the project progressed.
 9. As a registered user I can view any past orders in my profile page.
 10. As a registered user I can save desired products to a personal wishlist.
 11. As a registered user I can easily see if I'm logged in or not.
+11. As a registeded user I can log in/out of my account.
 11. As a registered user I can change my password if forgotten.
 
 ### Admin User Needs
@@ -78,41 +80,27 @@ the project progressed.
 13. As an admin user I can add, edit or delete products to the store.
 14. As an admin user I can add new recommendation articles and edit or delete if required.
 
+<br>
 
-![Image of user stories]()
+![Image of kanban](static/images/readme_imgs/kanban.png)
 
-## Scope
-The website has to achieve the essential user & business goals. The following features will be included in this version:
 
-- Visual language and styling that reflects the brands values and appeals to the target audience.
-- A fully responsive website.
-- A  navbar that will have links to: the product pages, account features, a product search function, link to users wishlist and link to the users basket. 
-- A  home page that includes: a visually strong landing page that entices the user to further exploration of the business, a new releases section and recommendation articles section.
-- A footer section with delivery information, business information, returns iformation,  social media links and contact details. 
 
-- About section with a brief suitable description of the restaurant with three images. ****************
 
-- Products page where users can view the albums available.
-- Product page where the customers can view the product in further detail and have the option to add it to their basket, or if logged in their wishlist.
-- A basket page where the customer can view the products in their basket and remove and change quantity if necessary. 
-- A checkout page where the customer can make a purchace.
- 
 
-- Register and login pages using Django Allauth.
-- A user profile page to view order history and default delivery information.
-- A logout page for logged in users.
 
-- A product, artist and genre management page for admin users.
-- Product add, edit and delete pages for admin users.
+
+
+
 
 
 ## Front-End Design
 
 ### Brief
-- A clean, modern and minimal design in monochrome which communicates the brand values.
+- A clean, modern and minimal design which communicates the brand values.
 - The website personality and tone to be quite neutral.
 - Must appeal to the target audience visually and in tone/personslity.
-- A wwbsite that is easy to navigate and locate necessary information for optimal user expeerience and to ensure ease of making purchaces.
+- A website that is easy to navigate and locate necessary information for optimal user expeerience and to ensure ease of making purchaces.
 
 ### Images
 
@@ -125,27 +113,27 @@ The website has to achieve the essential user & business goals. The following fe
 - The decision to leave out a CTA button was made to preserve the tone and personality of the landing page. 
 
 ### Colours
-#### Background Colours
-- The website uses a light theme throughout. This works well in creating a clean, modern and refined feel to the content as well as enhancing readability.
-- For the products grid display and the product page a light grey is used as a background colour. 
+#### Primary Colours & Background Colours
+- The website is monochrome thoroughout to fulfill the design brief. This offers a clean, refined and modern feel to the website as well as offering easy readability.
+- Pure white (#FFFFFF) is utilized as the main background colour.
+- An off black (#1E1C1C) is used for fonts and the footer. Softer than pure black it helps readibility.
+- For the products card display and the indivual product page, a light grey (#EFF2F3) is used as a background colour. 
+- A colour gradient chart was used to generate shades between the two primary colours. These werer used for hover and background colours. 
 
 #### Styling Colours
-![Image of colour palette]()****************************************
-
-
+![Image of color palette](static/images/readme_imgs/colour_palette.png)
+![Image of color gradient](static/images/readme_imgs/colour_gradients.png)
 
 
 ### Fonts
-- Google fonts DM Sans is used on the brand logo. This sans-serif font has works well in a bold and lowercase configuration as its fullness reflects and compliments the black cirlce it is enclosed in.  
+- Google fonts DM Sans is used on the brand logo. This sans-serif font has works well in a bold and lowercase configuration as its fullness reflects and compliments the black cirlce it is enclosed in.
 
 - Helvetica is used on all other text. It offers a clean, refined and legible design, which makes it easy to read on screens of different sizes and resolutions. It has a neutral appearance and doesn't have any distracting features that can make it difficult to read. It is also in line with the refined minimal aesthetic of the website.
 
 
-
-
 ## Back-End Design
 
-![Screenshot of database](static/images/readme_imgs/database.png)
+![Image of database](static/images/readme_imgs/database.png)
 
 ### User Model
 The User model, as part of the Django Allauth library, contains basic information about the authenticated user and contains the folowing fields: username, password and email.
@@ -336,17 +324,6 @@ SEO Features:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ## Search Engine Optimization SEO and Marketing
 
 ### SEO
@@ -381,11 +358,13 @@ Also implemented were:
 
 
 ### Marketing
-- Newsletter is included in the home page. This section facilitates user engagement and promotes the e-commerce store through effective email marketing and social media presence.<br>
+A newsletter signup form is included in the footer section. This facilitates user engagement and promotes the e-commerce store through effective email marketing and social media presence.
+<br>
 
 ![Screenshot of footer](static/images/readme_imgs/screenshots/footer.png)
 
-- Facebook Page<br>
+Facebook Page
+<br>
 
 ![Screenshot of feature description](static/images/readme_imgs/SEO_images/facebook.png)
 
@@ -522,17 +501,15 @@ Another bug was that the toast messages did not close if one clicked on a naviga
 
 ## Technologies Used
 
+### Development 
 
 - [Django](https://www.djangoproject.com/)
     - Django is the framework that has been used to build the over project and its apps.
 - [Python](https://www.python.org/)
     - Python is the core programming language used to write all of the code in this application to make it fully functional.
 - [Bootstrap](https://getbootstrap.com/)
-    - Used for creating responsive design.
-- [Google Fonts](https://fonts.google.com/)
-    - Used to obtain the fonts linked in the header, fonts used were Raleway and Lobster
-- [Font Awesome](https://fontawesome.com/)
-    - Used to obtain the icons used on the high scores and rules pages.
+    - Used for creating responsive design elements.
+
 - [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
     - Used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project.
 - [GitHub](https://github.com/)
@@ -542,23 +519,48 @@ Another bug was that the toast messages did not close if one clicked on a naviga
 - [Gitpod](https://www.gitpod.io/)
     - Used as the development environment.
 - [Heroku](https://dashboard.heroku.com/apps)
-    - Used to deploy my application.
-- [Lucid](https://lucid.app/documents#/dashboard)
-    - Used to create the ERD for the project.
-- [Grammarly](https://www.grammarly.com/)
-    - Used to fix the thousands of grammar errors across the project.
+    - Used to deploy the live application.
+- [Cloudinary](https://cloudinary.com/)
+    - Used to store all of the static files and images.
+
+- [SQLite](https://www.sqlite.org/index.html)
+    - I have SQLite to run my database tests locally.
+- [PostgreSQL](https://www.postgresql.org/)
+    - I have used Heroku's PostgreSQL relational database in deployment to store the data for my models.
+
+
+<br>
+
+### Design/Content Tools
+- [Google Fonts](https://fonts.google.com/)
+    - Used to obtain the fonts used.
+- [Font Awesome](https://fontawesome.com/)
+    - Used to obtain the icons used.
+
+- [Figma](https://https://www.figma.com)
+    - Used to create the user stories kanban.
+- [Db Diagram](https://dbdiagram.io/)
+    - Used to create the database diagram.
+    
+
+- [Chat GPT](https://chatgpt.com/)
+    - Used to generate the product descriptions and blog reviews.
 - [ImageResizer](https://imageresizer.com/)
     - Used to resize images to reduce loading time.
-- [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
-    - Used to test my code for any issues or errors.
-- [Grammarly](https://www.grammarly.com/)
-    - Used to fix the grammar errors across the project.
+
+
 - [Coloors](https://coolors.co/)
-    - Used to create a colour palette for the design.
-- [Cloudinary](https://cloudinary.com/)
-    - Used to store all of my static files and images.
-    - [Favicon.io](https://favicon.io/)
-    - Used to create favicon's for my website
+    - Used to create a colour palette and colour gradient chart.
+
+- [Favicon.io](https://favicon.io/)
+    - Used to create favicon's for the website.
+
+<br>
+
+### Formatting/Testing
+
+- [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+    - Used to test the code for any issues or errors.
 - [W3C Markup Validation Service](https://validator.w3.org/) 
     - Used to validate all HTML code written and used in this webpage.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
@@ -567,11 +569,36 @@ Another bug was that the toast messages did not close if one clicked on a naviga
     - Used to validate JS code
 - [Freeformatter CSS Beautify](https://www.freeformatter.com/css-beautifier.html)
     - Used to accurately format my CSS code.
+
 - [Freeformatter HTML Formatter](https://www.freeformatter.com/html-formatter.html)
     - Used to accurately format my HTML code.
+
 - [AmIResponsive](http://ami.responsivedesign.is/)
     - Used to generate responsive image used in README file.
-- [SQLite](https://www.sqlite.org/index.html)
-    - I have SQLite to run my database tests locally.
-- [PostgreSQL](https://www.postgresql.org/)
-    - I have used Heroku's PostgreSQL relational database in deployment to store the data for my models.
+
+
+
+
+## Scope
+The website has to achieve the essential user & business goals. The following features will be included in this version:
+
+- Visual language and styling that reflects the brands values and appeals to the target audience.
+- A fully responsive website.
+- A navbar that will have links to: the product pages, account features, a product search function, link to users wishlist and link to the users basket. 
+- A home page that includes: a visually strong landing page that entices the user to further exploration of the business, a new releases section and recommendation articles section.
+- A footer section with delivery information, business information, returns iformation,  social media links and contact details. 
+
+- About section with a brief suitable description of the restaurant with three images. ****************
+
+- Products page where users can view the albums available.
+- Product page where the customers can view the product in further detail and have the option to add it to their basket, or if logged in their wishlist.
+- A basket page where the customer can view the products in their basket and remove and change quantity if necessary. 
+- A checkout page where the customer can make a purchace.
+ 
+
+- Register and login pages using Django Allauth.
+- A user profile page to view order history and default delivery information.
+- A logout page for logged in users.
+
+- A product, artist and genre management page for admin users.
+- Product add, edit and delete pages for admin users.

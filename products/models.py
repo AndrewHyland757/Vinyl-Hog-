@@ -37,7 +37,7 @@ class Album(models.Model):
         default=1, validators=[MinValueValidator(0)])
     on_sale = models.BooleanField(default=False)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    discount = models.IntegerField(null=True, blank=True)
+    #discount = models.IntegerField(null=True, blank=True)
     sale_price = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)
         
