@@ -5,30 +5,16 @@ BOOTSTRAP TOASTS
 ****************************
 */
 
-.message-container {
-  position: fixed;
-  top: 7.6rem;
-  right: 20px;
+.toast-message-container {
+  position: fixed !important;
+  top: 72px;
+  
+    right: 15px;
   z-index: 99999999999;
-}
 
-.custom-toast {
-  overflow: visible;
-  border-color: #1E1C1C;
 }
 
 
-.toast{
-  font-size: 1.4rem;
-  letter-spacing: .03rem;
-  box-shadow: none;
-}
-
-.toast-header,
-.toast-body {
-  border-color: #1E1C1C;
-  padding: 1rem 2rem;
-}
 
 /*
 ****************************

@@ -211,7 +211,7 @@ BUTTON CLASSES
     background-color: #1E1C1C;;
     color: #fff;
     border: #1E1C1C .1rem solid;
-    outline: transparent;
+    outline:none;
 }
 
 .btn-custom--basket {
@@ -240,6 +240,7 @@ BUTTON CLASSES
   color: #1E1C1C;
 }
 
+
 .btn-explore:hover,
 .btn-explore:focus,
 .btn-explore:active {
@@ -263,9 +264,12 @@ BUTTON CLASSES
 
 }
 
+
+
 .btn-explore--secondary {
   font-size: 1.4rem;
   padding: 1.4rem 3rem;
+  width: auto;
   /*
   color: #6c757d;
   border-color:#6c757d;
@@ -274,7 +278,10 @@ BUTTON CLASSES
 
 .btn--center {
   margin: 0 auto;
+
 }
+
+
 .btn-explore--secondary:hover,
 .btn-explore--secondary:focus,
 .btn-explore--secondary:active {
@@ -283,6 +290,7 @@ BUTTON CLASSES
   color: white;
   outline: transparent;
   */
+  outline: none;
 }
 
 

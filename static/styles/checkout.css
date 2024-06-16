@@ -196,10 +196,9 @@ STRIPE
 
 .StripeElement {
    
-    
     color: #1E1C1C;
     box-sizing: border-box;
-    height: 40px;
+    height: 41px;
     padding:1.2rem 1.2rem;
     margin-left: 0;
     border: .1rem solid #1E1C1C; 
@@ -227,24 +226,28 @@ STRIPE
 
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+    color: #1E1C1C;
+    border: 1px solid #1E1C1C;
 }
 
 select,
 select option {
-    color: #000000;
+    color: #1E1C1C;
 }
 
 select:invalid,
 select option[value="Country"] {
-    color: #aab7c4 !important;
+    color: #8F8E8E  !important;
+    z-index: 1;
 }
 
 select:invalid,
 select option[value=""] {
-    color: #aab7c4 !important;
+    color: #8F8E8E !important;
 }
+
+
+
 
 
 /*

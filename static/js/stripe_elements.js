@@ -14,7 +14,6 @@ var style = {
     base: {
         color: '#1E1C1C',
         fontFamily: 'Helvetica',
-        
         fontSize: '15px',
         fontWeight: "500",
         letterSpacing: '.04rem',

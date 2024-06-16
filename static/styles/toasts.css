@@ -1,3 +1,24 @@
+.custom-toast {
+    overflow: visible;
+    border-color: #1E1C1C;
+  }
+  
+  
+  .toast{
+    font-size: 1.4rem;
+    letter-spacing: .03rem;
+    box-shadow: none;
+  }
+  
+  .toast-header,
+  .toast-body {
+    border-color: #1E1C1C;
+    padding: 1rem 2rem;
+  }
+
+
+
+
 .toast-body {
   letter-spacing: .04rem;
   line-height: 1.25;
