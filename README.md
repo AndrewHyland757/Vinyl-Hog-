@@ -19,7 +19,7 @@ As a site, it allows users to browse the site, set up an account, edit account i
 
  The primary goal of the website is to increase sales for the business.
  This is to be achieved by:
-- A design and website personality that reflects the brand values of the business and that appeals to the target demographic
+- A design and website personality that reflects the brand values of the business and that appeals to the target demographic.
 - Showcase the products in a clear and organised way.
 - A webiste that is easy and intutive to navigate as well as search for and filter products.
 - Ability for users to register accounts and save information for future purchaces.
@@ -87,13 +87,6 @@ the project progressed.
 
 
 
-
-
-
-
-
-
-
 ## Front-End Design
 
 ### Brief
@@ -126,9 +119,17 @@ the project progressed.
 
 
 ### Fonts
-- Google fonts DM Sans is used on the brand logo. This sans-serif font has works well in a bold and lowercase configuration as its fullness reflects and compliments the black cirlce it is enclosed in.
 
-- Helvetica is used on all other text. It offers a clean, refined and legible design, which makes it easy to read on screens of different sizes and resolutions. It has a neutral appearance and doesn't have any distracting features that can make it difficult to read. It is also in line with the refined minimal aesthetic of the website.
+Google fonts DM Sans weight 1000 is used on the brand logo. This sans-serif font has works well in a bold and lowercase configuration as its fullness reflects and compliments the black cirlce it is enclosed in.
+<br>
+
+![Image of DM Sans](static/images/readme_imgs/font2.png)
+
+Helvetica is used on all other text. It offers a clean, refined and legible design, which makes it easy to read on screens of different sizes and resolutions. It has a neutral appearance and doesn't have any distracting features therefore fitting the design brief well.
+<br>
+
+![Image of Helvetica](static/images/readme_imgs/font1.png)
+
 
 
 ## Back-End Design
@@ -575,6 +576,15 @@ Another bug was that the toast messages did not close if one clicked on a naviga
 
 - [AmIResponsive](http://ami.responsivedesign.is/)
     - Used to generate responsive image used in README file.
+
+
+## Further Possible Additions
+
+These are some features that can be implemented in the future.
+
+- The capacity for registeded users to comment on the blog posts. This would increase site engagement and enhance the SEO.
+- The development of "Planet VinylHog" page. Thid would be a page with some company insight in an informal way, creating a club like atmosphere for the users.
+- The ability to use discount codes for purchaces.
 
 
 

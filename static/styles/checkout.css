@@ -193,13 +193,16 @@ STRIPE
 */
 
 
+
 .StripeElement {
-    font-size: 1.4rem;
+   
+    
     color: #1E1C1C;
     box-sizing: border-box;
     height: 40px;
     padding:1.2rem 1.2rem;
-    border: .1rem solid #1E1C1C;; 
+    margin-left: 0;
+    border: .1rem solid #1E1C1C; 
     border-radius: 0px;
     box-shadow: 0 1px 3px 0 #e6ebf1;
     -webkit-transition: box-shadow 150ms ease;
@@ -208,18 +211,14 @@ STRIPE
 
 .StripeElement--focus {
     outline: none;
-    border-color: rgb(216, 142, 3);
-    box-shadow: 0 1px 3px 0 #cfd7df;
-    border-radius: 0px;
+  
 }
 
 .StripeElement--webkit-autofill {
     background-color: #fefde5 !important;
 }
 
-.checkout-input::placeholder {
-    color: #aab7c4;
-}
+
 
 .fieldset-label {
     position: relative;

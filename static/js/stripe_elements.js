@@ -12,12 +12,19 @@ var stripe = Stripe(stripePublicKey);
 var elements = stripe.elements();
 var style = {
     base: {
-        color: '#333',
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-        fontSmoothing: 'antialiased',
-        fontSize: '16px',
+        color: '#1E1C1C',
+        fontFamily: 'Helvetica',
+        
+        fontSize: '15px',
+        fontWeight: "500",
+        letterSpacing: '.04rem',
+        lineHeight: "1",
         '::placeholder': {
-            color: '#aab7c4'
+            fontSize: '15px',
+            color: '#8F8E8E',
+            fontWeight: "500",
+            letterSpacing: '.02rem',
+           
         }
     },
     invalid: {
