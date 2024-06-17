@@ -6,9 +6,9 @@ from products.models import Album, Artist
 
 
 class RecommendationPost(models.Model):
-    '''
+    """
     Stores a single recommendation post entry.
-    '''
+    """
     title = models.CharField(max_length=200, unique=True)
     sub_title = models.CharField(max_length=200, unique=True)
     user = models.ForeignKey(

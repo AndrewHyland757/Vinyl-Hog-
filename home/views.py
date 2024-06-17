@@ -8,63 +8,51 @@ from blog.models import RecommendationPost
 
 
 def home(request):
-
+    """
+    Renders home page.
+    """
     albums = Album.objects.all()
-    albums_by_date = Album.objects.all().order_by('-date_added')
+    albums_by_date = Album.objects.all().order_by("-date_added")
     recent_added_albums = albums_by_date[0:8]
-
+    posts = RecommendationPost.objects.all()
     post_1 = None
     posts_1_5 = None
-   
+    posts_by_date = RecommendationPost.objects.all().order_by("-created_on")
 
-    posts = RecommendationPost.objects.all()
-    
- 
-    posts_by_date = RecommendationPost.objects.all().order_by('-created_on')
     if posts:
         post_1 = posts_by_date[0]
         posts_1_5 = posts_by_date[0:4]
 
-    
-
     context = {
         "albums": albums,
         "recent_added_albums": recent_added_albums,
-       
         "posts_1_5": posts_1_5,
         "post_1": post_1,
- 
     }
 
-    return render(request, 'home/home.html', context)
+    return render(request, "home/home.html", context)
 
 
 def blog_posts(request):
-
-    
-
+    """
+    Renders all the blog posts in the db.
+    """
     posts = RecommendationPost.objects.all()
-    
-   
-    posts_by_date = RecommendationPost.objects.all().order_by('-created_on')
+    posts_by_date = RecommendationPost.objects.all().order_by("-created_on")
     recent_added_posts = posts_by_date[1:4]
     recent_added_posts_2 = posts_by_date[4:7]
-   
     first_post = posts_by_date[0]
     second_post = posts_by_date[1]
     third_post = posts_by_date[2]
     fourth_post = posts_by_date[5]
 
     context = {
-       
         "recent_added_posts": recent_added_posts,
         "recent_added_posts_2": recent_added_posts_2,
         "first_post": first_post,
         "second_post": second_post,
         "third_post": third_post,
         "fourth_post": fourth_post,
-
- 
     }
 
-    return render(request, 'home/blog_posts.html', context)
+    return render(request, "home/blog_posts.html", context)

@@ -9,75 +9,61 @@ from products.forms import ProductForm, ArtistForm, GenreForm
 # Create your views here.
 
 
-'''
-****************************
-PRODUCT MANAGEMNET
-****************************
-'''
-
 @login_required
 def add_product(request):
-    """ 
-    Add a product to the store 
+    """
+    Add a product to the db.
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        messages.error(request, "Sorry, only store owners can do that.")
+        return redirect(reverse("home"))
 
-    
-
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
             messages.success(request, f'Successfully added album "{product.title}"!')
-            return redirect(reverse('product', args=[product.id]))
+            return redirect(reverse("product", args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, "Failed to add product. Please ensure the form is valid.")
     else:
         form = ProductForm()
-        template = 'product_management/add_product.html'
+        template = "product_management/add_product.html"
         context = {
-            'form': form,
+            "form": form,
         }
 
     return render(request, template, context)
 
 
-
-
 @login_required
 def product_management(request):
     """
-    Renders all the products in the database
+    Renders all the products in the database.
     """
-
-    products = Album.objects.all().order_by('title')
+    products = Album.objects.all().order_by("title")
     sub_title = "All Products"
 
     if request.GET:
-        
-        if 'artist' in request.GET:
-            '''
+        if "artist" in request.GET:
+            """
             Displays items depending on the artist.
-            '''
-            
-            requested_artist = request.GET['artist'].split(',')
+            """
+            requested_artist = request.GET["artist"].split(',')
             products = products.filter(artist__name__in=requested_artist)
             artist_name = requested_artist[0]
-            sub_title  = f'Albums by: {artist_name}'
-        
-        if 'genre' in request.GET:
-            '''
-            Displays items depending on genre.
-            '''
-            requested_genre = request.GET['genre'].split(',')
-            products = products.filter(genres__name__in=requested_genre)
-            sub_title  = f'Albums in {requested_genre[0].capitalize()} genre.'
-            
+            sub_title = f"Albums by: {artist_name}"
 
-        if 'stock' in request.GET:
-            requested_stock = request.GET['stock'].split(',')
+        if "genre" in request.GET:
+            """
+            Displays items depending on genre.
+            """
+            requested_genre = request.GET["genre"].split(',')
+            products = products.filter(genres__name__in=requested_genre)
+            sub_title = f"Albums in {requested_genre[0].capitalize()} genre."
+
+        if "stock" in request.GET:
+            requested_stock = request.GET["stock"].split(',')
 
             if requested_stock == ["in_stock"]:
                 products = Album.objects.filter(stock__gte=1)
@@ -87,15 +73,14 @@ def product_management(request):
                 products = Album.objects.filter(stock=0)
                 sub_title = "Products out of stock"
 
-        if 'sale' in request.GET:
+        if "sale" in request.GET:
             products = Album.objects.filter(on_sale=True)
             sub_title = "Products on sale"
-                       
 
-    template = 'product_management/product_management.html'
+    template = "product_management/product_management.html"
     context = {
-        'sub_title': sub_title,
-        'products': products,
+        "sub_title": sub_title,
+        "products": products,
     }
 
     return render(request, template, context)
@@ -104,29 +89,29 @@ def product_management(request):
 @login_required
 def edit_product(request, product_id):
     """
-    Edit a product in the database
+    Edit a product in the database.
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        messages.error(request, "Sorry, only store owners can do that.")
+        return redirect(reverse("home"))
 
     product = get_object_or_404(Album, pk=product_id)
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('product-management'))
+            messages.success(request, "Successfully updated product!")
+            return redirect(reverse("product-management"))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, "Failed to update product. Please ensure the form is valid.")
     else:
         form = ProductForm(instance=product)
-        messages.info(request, f'You are editing {product.title}')
+        messages.info(request, f"You are editing {product.title}")
 
-    template = 'product_management/edit_product.html'
+    template = "product_management/edit_product.html"
     context = {
-        'form': form,
-        'product': product,
+        "form": form,
+        "product": product,
     }
 
     return render(request, template, context)
@@ -138,63 +123,59 @@ def delete_product(request, product_id):
     Delete a product from the database
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        messages.error(request, "Sorry, only store owners can do that.")
+        return redirect(reverse("home"))
 
     product = get_object_or_404(Album, pk=product_id)
-    if request.method == 'POST':
+    if request.method == "POST":
         product.delete()
-        messages.success(request, 'Product deleted!')
-        return redirect(reverse('product-management'))
-    
+        messages.success(request, "Product deleted!")
+        return redirect(reverse("product-management"))
+
     context = {
-        'product': product,
+        "product": product,
     }
-    
-    return render(request, 'product_management/delete_product.html', context)
 
+    return render(request, "product_management/delete_product.html", context)
 
-
-'''
-****************************
-ARTIST MANAGEMNET
-****************************
-'''
 
 @login_required
 def artist_management(request):
     """
-    Shows all artists in the database
+    Shows all artists in the database.
     """
-    artists = Artist.objects.all().order_by('name')
-    template = 'product_management/artist_management.html'
+    artists = Artist.objects.all().order_by("name")
+    template = "product_management/artist_management.html"
     context = {
-        'artists': artists,
+        "artists": artists,
     }
+
     return render(request, template, context)
 
 
 @login_required
 def add_artist(request):
-    """ Add a product to the store """
+    """
+    Add a product to the db.
+    """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        messages.error(request, "Sorry, only store owners can do that.")
+        return redirect(reverse("home"))
 
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ArtistForm(request.POST, request.FILES)
         if form.is_valid():
             artist = form.save()
             messages.success(request, f'Successfully added artist "{artist.name}"!')
-            return redirect(reverse('artist-management'))
+            return redirect(reverse("artist-management"))
         else:
-            messages.error(request, 'Failed to add artist. Please ensure the form is valid.')
+            messages.error(request, "Failed to add artist. Please ensure the form is valid.")
     else:
         form = ArtistForm()
-        
-    template = 'product_management/add_artist.html'
+
+    template = "product_management/add_artist.html"
     context = {
-        'form': form,
+        "form": form,
     }
 
     return render(request, template, context)
@@ -203,30 +184,30 @@ def add_artist(request):
 @login_required
 def edit_artist(request, artist_id):
     """
-    Edit an artist
+    Edit an artist in th db.
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, "Sorry, only store owners can do that.")
         return redirect(reverse('home'))
 
     artist = get_object_or_404(Artist, pk=artist_id)
 
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ArtistForm(request.POST, request.FILES, instance=artist)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated artist!')
-            return redirect('artist-management')
+            messages.success(request, "Successfully updated artist!")
+            return redirect("artist-management")
         else:
-            messages.error(request, 'Failed to update artist. Please ensure the form is valid.')
+            messages.error(request, "Failed to update artist. Please ensure the form is valid.")
     else:
         form = ArtistForm(instance=artist)
-        messages.info(request, f'You are editing {artist.name}')
+        messages.info(request, f"You are editing {artist.name}")
 
-    template = 'product_management/edit_artist.html'
+    template = "product_management/edit_artist.html"
     context = {
-        'form': form,
-        'artist': artist,
+        "form": form,
+        "artist": artist,
     }
 
     return render(request, template, context)
@@ -235,30 +216,24 @@ def edit_artist(request, artist_id):
 @login_required
 def delete_artist(request, artist_id):
     """
-    Delete an artist from the database
+    Delete an artist from the database.
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that')
+        messages.error(request, "Sorry, only store owners can do that.")
         return redirect(reverse('home'))
 
     artist = get_object_or_404(Artist, pk=artist_id)
-    
+
     if request.method == 'POST':
         artist.delete()
         messages.success(request, 'Artist deleted!')
         return redirect(reverse('artist-management'))
-    
+
     context = {
         'artist': artist,
     }
-    
-    return render(request, 'product_management/delete_artist.html', context)
 
-'''
-****************************
-GENRE MANAGEMNET
-****************************
-'''
+    return render(request, 'product_management/delete_artist.html', context)
 
 
 @login_required
@@ -277,89 +252,81 @@ def genre_management(request):
 @login_required
 def edit_genre(request, genre_id):
     """
-    Edit an genre
+    Edit an genre in the db.
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        messages.error(request, "Sorry, only store owners can do that.")
+        return redirect(reverse("home"))
 
     genre = get_object_or_404(Genre, pk=genre_id)
 
-    if request.method == 'POST':
+    if request.method == "POST":
         form = GenreForm(request.POST, request.FILES, instance=genre)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated genre name!')
-            return redirect('genre-management')
+            messages.success(request, "Successfully updated genre name!")
+            return redirect("genre-management")
         else:
-            messages.error(request, 'Failed to update genre. Please ensure the form is valid.')
+            messages.error(request, "Failed to update genre. Please ensure the form is valid.")
     else:
         form = GenreForm(instance=genre)
-        messages.info(request, f'You are editing {genre.name}')
+        messages.info(request, f"You are editing {genre.name}")
 
-    template = 'product_management/edit_genre.html'
+    template = "product_management/edit_genre.html"
     context = {
-        'form': form,
-        'genre': genre,
+        "form": form,
+        "genre": genre,
     }
 
     return render(request, template, context)
-
-
 
 
 @login_required
 def add_genre(request):
     """
-    Add a genre to the database
+    Add a genre to the database.
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        messages.error(request, "Sorry, only store owners can do that.")
+        return redirect(reverse("home"))
 
-    if request.method == 'POST':
+    if request.method == "POST":
         form = GenreForm(request.POST, request.FILES)
         if form.is_valid():
             genre = form.save()
             messages.success(request, f'Successfully added genre "{genre.name}"!')
-            return redirect(reverse('genre-management'))
+            return redirect(reverse("genre-management"))
         else:
-            messages.error(request, 'Failed to add genre. Please ensure the form is valid.')
+            messages.error(request, "Failed to add genre. Please ensure the form is valid.")
     else:
         form = GenreForm()
 
-    template = 'product_management/add_genre.html'
+    template = "product_management/add_genre.html"
     context = {
-        'form': form,
+        "form": form,
     }
 
     return render(request, template, context)
 
 
-
 @login_required
 def delete_genre(request, genre_id):
     """
-    Delete an genre from the database
+    Delete an genre from the database.
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that')
-        return redirect(reverse('home'))
+        messages.error(request, "Sorry, only store owners can do that.")
+        return redirect(reverse("home"))
 
     genre = get_object_or_404(Genre, pk=genre_id)
-    
-    if request.method == 'POST':
+
+    if request.method == "POST":
         genre.delete()
-        messages.success(request, 'Genre deleted!')
-        return redirect(reverse('genre-management'))
-    
+        messages.success(request, "Genre deleted!")
+        return redirect(reverse("genre-management"))
+
     context = {
-        'genre': genre,
+        "genre": genre,
     }
-    
-    #return redirect(reverse('artist-management'))
-    return render(request, 'product_management/delete_genre.html', context)
 
-
-
-
+    return render(request, "product_management/delete_genre.html", context)

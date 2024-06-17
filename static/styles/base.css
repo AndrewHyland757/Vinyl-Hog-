@@ -5,14 +5,7 @@ BOOTSTRAP TOASTS
 ****************************
 */
 
-.toast-message-container {
-  position: fixed !important;
-  top: 72px;
-  
-    right: 15px;
-  z-index: 99999999999;
 
-}
 
 
 

@@ -14,7 +14,7 @@ def basket_contents(request):
     price_sub_total = 0
     product_count = 0
     quantity = 0
-    basket = request.session.get('basket', {})
+    basket = request.session.get("basket", {})
 
     for product_id, quantity in basket.items():
 
@@ -25,12 +25,6 @@ def basket_contents(request):
         if product.stock <= 0:
             products_to_delete.append(product_id)
 
-        
-
-
-        
-
-        
         # Checks if item is on sale and multiplies the item price by quantity
         if product.on_sale == True:
             price_total += product.sale_price * int(quantity)
@@ -43,20 +37,18 @@ def basket_contents(request):
 
         # Add these keys and values to the basket object
         basket_items.append({
-            'product_id': product_id,
-            'quantity': int(quantity),
-            'product': product,
+            "product_id": product_id,
+            "quantity": int(quantity),
+            "product": product,
             "price_sub_total": price_sub_total,
         })
-
-        
 
     for product_id in products_to_delete:
         basket.pop(product_id)
         messages.error(request,
-                       f'{product.title} is out of stock and has been removed from your basket')
+                       f"{product.title} is out of stock and has been removed from your basket")
 
-    request.session['basket'] = basket
+    request.session["basket"] = basket
 
     if price_total > delivery_threshold or price_total == 0:
         delivery_fee = "Free"
@@ -69,16 +61,16 @@ def basket_contents(request):
         grand_total = price_total + int(delivery_fee)
 
     context = {
-        'price_sub_total': price_sub_total,
-        'basket_items': basket_items,
-        'grand_total': grand_total,
-        'delivery_fee': delivery_fee,
-        'free_delivery_delta': free_delivery_delta,
-        'free_delivery_threshold': delivery_threshold,
-        'basket_items': basket_items,
-        'price_total': price_total,
-        'quantity': quantity,
-        'product_count': product_count,
+        "price_sub_total": price_sub_total,
+        "basket_items": basket_items,
+        "grand_total": grand_total,
+        "delivery_fee": delivery_fee,
+        "free_delivery_delta": free_delivery_delta,
+        "free_delivery_threshold": delivery_threshold,
+        "basket_items": basket_items,
+        "price_total": price_total,
+        "quantity": quantity,
+        "product_count": product_count,
     }
 
     return context
