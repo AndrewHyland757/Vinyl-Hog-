@@ -2,14 +2,14 @@
 {% load static %} 
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/basket.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/basket.css' %}" />
 {% endblock %} 
 
 {% block content %}
     {% if basket_items %} 
         <div class="basket-container">
 
-            <!-- LEFT COLUMN -->
+            <!-- Left column -->
             <div class="basket-col-left">
                 <h3 class="checkout-heading"><strong>Basket</strong></h3>
                 {% for item in basket_items %}
@@ -30,7 +30,7 @@
                             {% if item.product.on_sale == True %}
                                 <p class="item-detail"><s> €{{ item.product.price }}</s> €{{ item.product.sale_price }}</p>
                             {% else %}
-                            <p class="item-detail">€{{ item.product.price }}</p>
+                                <p class="item-detail">€{{ item.product.price }}</p>
                             {% endif %}
                                     
                             <div class="btn-container">
@@ -58,7 +58,7 @@
                 {% endfor %}
             </div>
 
-            <!-- RIGHT COLUMN -->
+            <!-- Right column -->
             <div class="basket-col-right">
                 <div class="cost-container">
                     <h3 class="checkout-heading"><strong>Totals</strong></h3>
@@ -95,19 +95,16 @@
                         <a class="btn-explore " href="{% url 'checkout' %}">Checkout</a>
                     </div>
                 </div>
-                
             </div>
         </div>
     {% else %}
 
-    <div class="head-container-center" style="min-height: 33vh;">
-        <h1 class="head-heading mb-5">Your basket is empty</h1>
-        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-            <span class="btn-explore"><i class="fas fa-chevron-left mr-3"></i>Keep Shopping</span>
-        </a>
-    </div>
+        <div class="head-container-center" style="min-height: 33vh;">
+            <h1 class="head-heading mb-5">Your basket is empty</h1>
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="btn-explore"><i class="fas fa-chevron-left mr-3"></i>Keep Shopping</span>
+            </a>
+        </div>
     {% endif %}
 
 {% endblock %}
-
-

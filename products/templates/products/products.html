@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/products.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/products.css' %}">
 {% endblock %}
 
 {% block content %} 
@@ -14,20 +14,19 @@
         </p>
     </div>
 
-    <!-- Not displayed on screens smaller than  768px -->
+    <!-- Sorting dropdown menues. Not displayed on screens larger than  768px -->
     <div class="dropdown-links-container">
-        <div class=" dropdown">
+        <div class="dropdown">
             <a class="btn-custom--products" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artist</a>
             <div class="dropdown-menu">
                 {% for artist in artists %}
-                
-            <a  class="dropdown-item" href="{% url 'products' %}?artist={{ artist }}"><p>{{ artist.name }}</p></a>
-            {% endfor %}
+                    <a class="dropdown-item" href="{% url 'products' %}?artist={{ artist }}"><p>{{ artist.name }}</p></a>
+                {% endfor %}
             </div>
         </div>
 
-        <div class="nav-item dropdown">
-            <a class="btn-custom--products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Caregories</a>
+        <div class="dropdown">
+            <a class="btn-custom--products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Caregories</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{% url 'products' %}?condition=fresh">Latest Releases</a>
                 <a class="dropdown-item" href="{% url 'products' %}">All</a>
@@ -38,8 +37,8 @@
             </div>
         </div>
 
-        <div class="nav-item dropdown">
-            <a class="btn-custom--products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort</a>
+        <div class="dropdown">
+            <a class="btn-custom--products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort</a>
             <div class="dropdown-menu dropdown-menu--sort" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{% url 'products' %}?condition=fresh">Price acending</a>
                 <a class="dropdown-item" href="{% url 'products' %}">Price decending</a>
@@ -48,7 +47,8 @@
     </div>
 
     <main class="products-main">
-            
+
+        <!------- Left aside sorting features ------->
         <aside class="aside--left">
             <div class="aside-category  mb-5">
                 <h3 class="aside-heading">categories</h3>
@@ -60,7 +60,6 @@
                 <p><a class="category-link {% if request.GET.category == 'latest' %}category-link--active{% endif %}" href="{% url 'products' %}?category=latest">Latest Releases</a></p>
             </div>
             </div>
-
             <div class="aside-category ">
                 <h3 class="aside-heading">artists</h3>
                 <div class="links-container">
@@ -71,7 +70,7 @@
             </div>
         </aside>
 
-
+        <!------- Product card display grid ------->
         <div class="products-grid">
             {% for album in albums %}
                 <div class="card">
@@ -82,7 +81,7 @@
                     {% endif %}
 
                     <a class="product-link" href=" {% url 'product' album.id %}">
-                        <img class="card-img" src="{{ album.featured_image.url }}" alt="Cover image of {{ album.title }} by {{ album.artist }}"/>
+                        <img class="card-img" src="{{ album.featured_image.url }}" alt="Cover image of {{ album.title }} by {{ album.artist }}">
                     </a>
                     <div class="card-body">
                         <a class="product-link" href=" {% url 'product' album.id %}">
@@ -103,6 +102,7 @@
             {% endfor %}
         </div>
 
+        <!------- Right aside sorting features ------->
         <aside class="aside--right">
             <div class="aside-container--right">
                 <div class="aside-category  aside-category--right mb-5">
@@ -126,15 +126,3 @@
     </main>
     
 {% endblock %}
-
-
-
-
-
-{% block extra_js %}
-
-{{ block.super }}
-<script src="{% static 'js/products.js' %}"></script>
-{% endblock%}
-
-

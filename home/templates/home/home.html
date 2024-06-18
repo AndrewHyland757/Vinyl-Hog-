@@ -2,27 +2,17 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
 {% endblock %}
 
 {% block content %}
 
-    <!--
-    ****************************
-    SECTION LANDING
-    ****************************
-    -->
+    <!------- Landing section ------->
     <section class="section-home">
         <div class="home-container">
             <div class="home-col-left">
                 <div class="text-container">
-                    <h1>Don't just listen – <br>experience.</h1>
-                    <!--
-                    <p>
-                    Immerse yourself in a symphony of choices as you peruse our curated selection of vinyl gems.
-                    From timeless classics to cutting-edge releases, indulge in sonic bliss with confidence and ease. The melody never fades. Start your auditory adventure today.
-                    </p>
-                    -->
+                    <h1>Don't just listen - <br>experience.</h1>
                     <p>
                         Immerse yourself in a symphony of choices as you peruse our curated selection of vinyl record gems.
                         From timeless classics to cutting-edge releases start your auditory adventure today.
@@ -30,15 +20,13 @@
                 </div>
             </div>
             <div class="home-col-right">
-                <img src="{% static 'images/home_imgs/home-img.jpg' %}" />
+                <img src="{% static 'images/home_imgs/home-img.jpg' %}" alt="Image of grooves of spinning vinyl record">
             </div>
         </div>
     </section>
 
     <!--
-    ****************************
-    SECTION IMAGE
-    ****************************
+    
    
 
     <section class="about-section">
@@ -53,12 +41,7 @@
         
     </section>
  -->
-    <!--
-    ****************************
-    SECTION NEW RELEASES
-    ****************************
-    -->
-
+    <!------- New Releases section ------->
     <section id="new-releases" class="section-new-releases">
         <div class="head-container">
             <h1 class="head-heading">New Releases</h1>
@@ -75,7 +58,7 @@
                         </div>
                     {% endif %}
                     <a class="" href=" {% url 'product' album.id %}">
-                        <img class="card-img" src="{{ album.featured_image.url }}" alt="Cover image of {{ album.title }} by {{ album.artist }}"/>
+                        <img class="card-img" src="{{ album.featured_image.url }}" alt="Cover image of {{ album.title }} by {{ album.artist }}">
                     </a>
                     <div class="card-body">
                         <a class="" href=" {% url 'product' album.id %}">
@@ -86,86 +69,71 @@
                             <p class="card-text">Condition: {{ album.condition }}</p>
                             <p class="card-text">Stock: {{ album.stock }}</p>
                             {% if album.on_sale == True %}
-                            <p class="card-text"><s>€{{ album.price }}</s> €{{ album.sale_price }}</p>
+                                <p class="card-text"><s>€{{ album.price }}</s> €{{ album.sale_price }}</p>
                             {% else %}
-                            <p class="card-text">€{{ album.price }}</p>
+                                <p class="card-text">€{{ album.price }}</p>
                             {% endif %}
                         </div>
                     </div>
                 </div>
             {% endfor %}
         </div>
-        
+
         <div class="btn-container-center">
-            <a href="{% url 'products' %}"><button class="btn-explore">Explore more</button></a>
+            <a class="btn-explore" href="{% url 'products' %}">Explore more</a>
         </div>
     </section>
 
-
-    <!--
-    ****************************
-    SECTION RECOMMENDATION POSTS
-    ****************************
-    -->
-  <!---->
-
-<section class="section-recommendations">
-
+    <!------- Recommendations section ------->
     
-    <div class="vh-container">
-        <div class="head-container-center">
-            <h1 class="head-heading">Staff Reviews</h1>
-            <p class="head-text">
-            Dive into our staff's vinyl album reviews, a reflection of a hundred years of shared musical love.
-            </p>
-        </div>
-        {% if posts %}
-        <div class="item-1-container">
-            <div class="item-1">
-                <div class="img-container">
-                    <img src="{{ post_1.article_image.url }}" alt="Card image cap"/> 
+        <section class="section-recommendations">
+            <div class="vh-container">
+                <div class="head-container-center">
+                    <h1 class="head-heading">Reviews</h1>
+                    <p class="head-text">
+                    Dive into our curated vinyl album reviews, a reflection of a hundred years of shared musical love.
+                    </p>
                 </div>
                 
-                <div class="card-body-post">
-                    <a href=" {% url 'post' post_1.id %}">
-                        <h5 class="post-card-title"><strong>{{ post_1.title }}</strong></h5>
-                    </a>
-                    <p class="post-card-sub">{{ post_1.sub_title }}</p>
-                    <p class="post-card-text">by {{ post_1.author }}</p>
+                <div class="item-1-container">
+                    <div class="item-1">
+                        <div class="img-container">
+                            <img src="{{ post_1.article_image.url }}" alt="Card image cap"> 
+                        </div>
+                        <div class="card-body-post">
+                            <a href=" {% url 'post' post_1.id %}">
+                                <h5 class="post-card-title"><strong>{{ post_1.title }}</strong></h5>
+                            </a>
+                            <p class="post-card-sub">{{ post_1.sub_title }}</p>
+                            <p class="post-card-text">by {{ post_1.author }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-   
-        <div class="item-2-container">
-            {% for post in posts_1_5 %}
-               
+        
+            <div class="item-2-container">
+                {% for post in posts_1_5 %}
                     <div class="item-2">
                         <div class="img-container">
                             <a href=" {% url 'post' post.id %}">
-                                <img class="post-img" src="{{ post.article_image.url }}" alt="Card image cap"/>
+                                <img class="post-img" src="{{ post.article_image.url }}" alt="Card image cap">
                             </a>
                         </div>
                         <a href=" {% url 'post' post.id %}">
-                        <div class="card-body-post">
-                            <h5 class="post-card-title"><strong>{{ post.title }}</strong></h5>
-                            <p class="post-card-sub">{{ post.sub_title }}</p>
-                            <p class="post-card-text">by {{ post.author }}</p>
-                        </div>
-                    </a>
+                            <div class="card-body-post">
+                                <h5 class="post-card-title"><strong>{{ post.title }}</strong></h5>
+                                <p class="post-card-sub">{{ post.sub_title }}</p>
+                                <p class="post-card-text">by {{ post.author }}</p>
+                            </div>
+                        </a>
                     </div>
-               
-            {% endfor %}
-        </div>
-        {% endif %}
-     
-
-    </div>
-    <div class="btn-container-center">
-        <a href="{% url 'posts' %}"><button class="btn-explore">Explore more</button></a>
-    </div>
-</section>
-
-
+                {% endfor %}
+            </div>
+            
+            <div class="btn-container-center">
+                <a class="btn-explore" href="{% url 'posts' %}">Explore more</a>
+            </div>
+        </section>
+    
 
 {% endblock %}

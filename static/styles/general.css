@@ -240,6 +240,10 @@ BUTTON CLASSES
   color: #1E1C1C;
 }
 
+.btn-explore {
+  width: auto;
+}
+
 
 .btn-explore:hover,
 .btn-explore:focus,

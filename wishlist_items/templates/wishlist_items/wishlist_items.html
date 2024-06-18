@@ -3,56 +3,44 @@
 
 {% block content %}
 
-<!--
-****************************
-SECTION WISHLIST
-****************************
--->
 
-   
-{% if wishlist_items == None %}
-<div class="head-container-center" style="min-height: 33vh;">
-    <h1 class="head-heading mb-5">Your wishlist is empty</h1>
-    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-        <span class="btn-explore"><i class="fas fa-chevron-left mr-3"></i>Keep Shopping</span>
-    </a>
-</div>
-
-{% else %}
-
-<div class="head-container-center">
-    <h1 class="head-heading">Your Wishlist</h1>
-    <p class="head-text">Check out the vinyl you have saved for later.</p>
-</div>
-
-    <section class="section-new-releases">
-        <div class="products-grid">
-            {% for wishlist_item in wishlist_items %}
-                <div class="card">
-                    <a class="product-link" href=" {% url 'product' wishlist_item.product.id %}">
-                        <img class="card-img" src="{{ wishlist_item.product.featured_image.url }}" alt="Card image cap" />
-                    </a>
-                    <div class="card-body">
-                        <a class="product-link" href=" {% url 'product' wishlist_item.product.id %}">
-                            <h5 class="product-card-title"><strong>{{ wishlist_item.product.title }}</strong></h5>
-                        </a>
-                        <p class="card-artist">{{ wishlist_item.product.artist }}</p>
-                        <div class="card-details">
-                            <p class="card-text">Condition: {{ wishlist_item.product.condition }}</p>
-                            <p class="card-text">Stock: {{ wishlist_item.product.stock }}</p>
-                            <p class="card-text">€{{ wishlist_item.product.price }}</p>
-                        </div>
-                        <a class="btn-explore--full-width mt-5" href ="{% url 'delete-wishlist' wishlist_item.product.id %}"><p>Remove</p></a>
-                    </div>
-                </div>
-            {% endfor %}
+    {% if wishlist_items == None %}
+        <div class="head-container-center" style="min-height: 33vh;">
+            <h1 class="head-heading mb-5">Your wishlist is empty</h1>
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="btn-explore"><i class="fas fa-chevron-left mr-3"></i>Keep Shopping</span>
+            </a>
         </div>
-    </section>
-{% endif %}
+    {% else %}
+
+        <div class="head-container-center">
+            <h1 class="head-heading">Your Wishlist</h1>
+            <p class="head-text">Check out the vinyl you have saved for later.</p>
+        </div>
+
+        <section class="section-new-releases">
+            <div class="products-grid">
+                {% for wishlist_item in wishlist_items %}
+                    <div class="card">
+                        <a class="product-link" href=" {% url 'product' wishlist_item.product.id %}">
+                            <img class="card-img" src="{{ wishlist_item.product.featured_image.url }}" alt="Card image cap">
+                        </a>
+                        <div class="card-body">
+                            <a class="product-link" href=" {% url 'product' wishlist_item.product.id %}">
+                                <h5 class="product-card-title"><strong>{{ wishlist_item.product.title }}</strong></h5>
+                            </a>
+                            <p class="card-artist">{{ wishlist_item.product.artist }}</p>
+                            <div class="card-details">
+                                <p class="card-text">Condition: {{ wishlist_item.product.condition }}</p>
+                                <p class="card-text">Stock: {{ wishlist_item.product.stock }}</p>
+                                <p class="card-text">€{{ wishlist_item.product.price }}</p>
+                            </div>
+                            <a class="btn-explore--full-width mt-5" href ="{% url 'delete-wishlist' wishlist_item.product.id %}"><p>Remove</p></a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
 
 {% endblock %}
-
-{% block extra_js %}
-{{ block.super }}
-<script src="{% static 'js/products.js' %}"></script>
-{% endblock%}

@@ -1,35 +1,35 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/toasts.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/toasts.css' %}"/>
 {% endblock %}
 
 
 <div class="toast custom-toast rounded-0 mt-4 message-info" data-autohide="false" data-delay="2000" id="toast">
     <div class="toast-body">
-            <div class="row ">
-                <div class="col text-center">
-                    <p class="col text-center  p-2"> {{ message }}</p>
-                </div>
+        <div class="row ">
+            <div class="col text-center">
+                <p class="col text-center  p-2"> {{ message }}</p>
             </div>
+        </div>
     </div>
 </div>
 
 {% block extra_js %}
-<script>
-    // Close the toast when anywhere on the screen is clicked
-    document.addEventListener('click', function(event) {
-        var toast = document.getElementById('toast');
-        var isClickInside = toast.contains(event.target);
+    <script>
+        // Close the toast when anywhere on the screen is clicked
+        document.addEventListener('click', function(event) {
+            var toast = document.getElementById('toast');
+            var isClickInside = toast.contains(event.target);
 
-        if (!isClickInside) {
-            $(toast).toast('hide');
-        }
-    });
+            if (!isClickInside) {
+                $(toast).toast('hide');
+            }
+        });
 
-    // Show the toast when the document is ready
-    $(document).ready(function() {
-        $('#toast').toast('show');
-    });
-</script>
+        // Show the toast when the document is ready
+        $(document).ready(function() {
+            $('#toast').toast('show');
+        });
+    </script>
 {% endblock %}

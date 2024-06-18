@@ -3,13 +3,12 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/product-management.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/product-management.css' %}">
 {% endblock %}
 
 {% block content %}
     <main class="management-page">
         <div class="overlay mt-5"></div>
-        
         <div class="container container--product-management">
             <div class="tabs-container">
                 <a class="btn btn-secondary mr-2" href="{% url 'product-management' %}">Product Management</a>  

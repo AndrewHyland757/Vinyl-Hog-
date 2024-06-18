@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/product-management.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/product-management.css' %}">
 {% endblock %}
 
 
@@ -23,15 +23,13 @@
                 <div class="col-12 col-md-6">
                     <form method="POST" action="{% url 'edit-genre' genre.id %}" class="form mb-2" enctype="multipart/form-data">
                         {% csrf_token %}
-                            {% for field in form %}
-                                
-                                    {{ field | as_crispy_field }}
-                                
-                            {% endfor %}
-                            <div class="text-right">
-                                <a class="btn-custom mt-3 mb-4" href="{% url 'genre-management' %}">Cancel</a>
-                                <button class="btn-custom mb-5" type="submit">Update Genre</button>
-                            </div>
+                        {% for field in form %}
+                                {{ field | as_crispy_field }}
+                        {% endfor %}
+                        <div class="text-right">
+                            <a class="btn-custom mt-3 mb-4" href="{% url 'genre-management' %}">Cancel</a>
+                            <button class="btn-custom mb-5" type="submit">Update Genre</button>
+                        </div>
                     </form>
                 </div>            
             </div>

@@ -2,45 +2,39 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/post.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/post.css' %}">
 {% endblock %}
 
 {% block extra_meta %}
-<meta name="description" content="Review of {{ product.title }} by {{ product.artist }} album.">
-<meta name="keywords" content="{{ product.title }} review, {{ product.title }} rating, {{ product.artist }} reviews">
+    <meta name="description" content="Review of {{ product.title }} by {{ product.artist }} album.">
+    <meta name="keywords" content="{{ product.title }} review, {{ product.title }} rating, {{ product.artist }} reviews">
 {% endblock %}
 
 {% block content %}
 
-<main class="post-main">
-    <div class="container post-container">
-        <div class="">
-            <img class="article-img" src="{{ post.article_image.url }}" alt="Image of {{ product.artist }} for review of {{ product.title }}">
-        </div>
-        <div class="heading-container">
-            <h3 class="article-heading"><strong>{{ post.title }}</strong></h3>
-            <p class="sub-title">{{ post.sub_title }}</p>
-            <p class="author">by {{ post.author }}</p>
-            <!--
-            <p class="author"> {{ post.created_on }}</p>
-            -->
-
-            
-        </div>
-        <div class="article-container">
-            <p class="article"> {{ post.content }}</p>
-        </div>
-        <a href=" {% url 'product' post.product.id %}">
-            <div class="album-container">
-                <img src="{{ post.product.featured_image.url }}">
-                <div class="album-container-text">
-                <p>{{ post.product }}</p>
-                <p>{{ post.product.artist }}</p>
-                </div>
+    <main class="post-main">
+        <div class="container post-container">
+            <div>
+                <img class="article-img" src="{{ post.article_image.url }}" alt="Image of {{ product.artist }} for review of {{ product.title }}">
             </div>
-        </a>
-    </div>
-    
-</main>
+            <div class="heading-container">
+                <h3 class="article-heading"><strong>{{ post.title }}</strong></h3>
+                <p class="sub-title">{{ post.sub_title }}</p>
+                <p class="author">by {{ post.author }}</p>
+            </div>
+            <div class="article-container">
+                <p class="article"> {{ post.content }}</p>
+            </div>
+            <a href="{% url 'product' post.product.id %}">
+                <div class="album-container">
+                    <img src="{{ post.product.featured_image.url }}" alt="Blog post image">
+                    <div class="album-container-text">
+                        <p>{{ post.product }}</p>
+                        <p>{{ post.product.artist }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
 
 {% endblock %}

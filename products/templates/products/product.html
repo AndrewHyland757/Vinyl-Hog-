@@ -1,77 +1,73 @@
-
 {% extends "base.html" %}
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/product.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/product.css' %}">
 {% endblock %}
 
-
-     
-
 {% block extra_meta %}
-<meta name="description" content="Product page for {{ product.title }} by {{ product.artist }} vinyl.">
-<meta name="keywords" content="{{ product.title }} vinyl, {{ product.title }} record, {{ product.artist }}">
+    <meta name="description" content="Product page for {{ product.title }} by {{ product.artist }} vinyl.">
+    <meta name="keywords" content="{{ product.title }} vinyl, {{ product.title }} record, {{ product.artist }}">
 {% endblock %}
 
 
 {% block content %}
 
-
-
-<main class="product-main">
-    <div class="product-container">
+    <main class="product-main">
+        <div class="product-container">
         
-        <div class="img-container">
-            {% if product.on_sale == True %}
-                      <div class="on-sale-container">
-                            <p>On Sale</p>
-                      </div>
-                {% endif %}
-            <img src="{{ product.featured_image.url }}" alt="Cover image of {{ product.title }} by {{ product.artist }}">
-        </div>
-
-        <div class="details-container">
-            <div class="key-info--box">
-                <h1 class="product-title"> <strong>{{ product.title }}</strong></h1>
-                <p class="product-artist"> {{ product.artist }}</p>
-                <div class="tag-container">
-                    {% for genre in product.genres.all %}
-                        <span>
-                            <a href="{% url 'products' %}?genre={{genre.name}}"><p class="genre-tag">{{genre}}</p></a>
-                        </span>
-                    {% endfor %}
-                </div>
-            </div>
-            <p class="product-description"> {{ product.description }}</p>
-
-            <div class="info-box">
-                <p class="product-condition"> Condition: {{ product.condition }}</p>
-                <p class="product-stock"> Stock: {{ product_stock }}</p>
+            <div class="img-container">
                 {% if product.on_sale == True %}
-                    <p class="product-price"><s> €{{ product.price }}</s> €{{ product.sale_price }}</p>
-                {% else %}
-                    <p class="product-price"> Price: €{{ product.price }}</p>
-                {% endif %}
+                        <div class="on-sale-container">
+                                <p>On Sale</p>
+                        </div>
+                    {% endif %}
+                <img src="{{ product.featured_image.url }}" alt="Cover image of {{ product.title }} by {{ product.artist }}">
             </div>
-            <div id="form-container">
 
-            <form class="form add-to-basket" action="" method="POST" hx-post="" hx-target="body" id="add">
-                {% csrf_token %}
-                <input type="hidden" name="form_type" value="basket">
-                <input class=" qty-input" type="number" name="quantity" value="1" min="1" max="99">
-                <input type="submit" class="btn-explore btn-explore--full-width btn-add" value="Add to Basket">
-                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-            </form>
+            <div class="details-container">
+                <div class="key-info--box">
+                    <h1 class="product-title"> <strong>{{ product.title }}</strong></h1>
+                    <p class="product-artist"> {{ product.artist }}</p>
+                    <div class="tag-container">
+                        {% for genre in product.genres.all %}
+                            <span>
+                                <a href="{% url 'products' %}?genre={{genre.name}}"><p class="genre-tag">{{genre}}</p></a>
+                            </span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <p class="product-description"> {{ product.description }}</p>
 
-            <form class="form" action="" method="POST" hx-post="" hx-target="body">
-                {% csrf_token %}
-                <input type="hidden" name="form_type" value="wishlist">
-                <input type="submit" class="btn-explore btn-explore--full-width" value="Add to Wishlist">
-                <input type="hidden" name="redirect_url" value="{{ request.path }}"> 
-            </form>
+                <div class="info-box">
+                    <p class="product-condition"> Condition: {{ product.condition }}</p>
+                    <p class="product-stock"> Stock: {{ product_stock }}</p>
+                    {% if product.on_sale == True %}
+                        <p class="product-price"><s> €{{ product.price }}</s> €{{ product.sale_price }}</p>
+                    {% else %}
+                        <p class="product-price"> Price: €{{ product.price }}</p>
+                    {% endif %}
+                </div>
+                <div id="form-container">
+                
+                <!------- Form to add product to basket ------->
+                <form class="form add-to-basket" action="" method="POST" hx-post="" hx-target="body" id="add">
+                    {% csrf_token %}
+                    <input type="hidden" name="form_type" value="basket">
+                    <input class=" qty-input" type="number" name="quantity" value="1" min="1" max="99">
+                    <input type="submit" class="btn-explore btn-explore--full-width btn-add" value="Add to Basket">
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </form>
+
+                <!------- Form to add product to wishlist ------->
+                <form class="form" action="" method="POST" hx-post="" hx-target="body">
+                    {% csrf_token %}
+                    <input type="hidden" name="form_type" value="wishlist">
+                    <input type="submit" class="btn-explore btn-explore--full-width" value="Add to Wishlist">
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}"> 
+                </form>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
 
 {% endblock %}

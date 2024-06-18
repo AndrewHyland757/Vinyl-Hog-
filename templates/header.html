@@ -1,8 +1,7 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/header.css' %}"/>
-<link rel="stylesheet" href="{% static 'styles/toasts.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
 {% endblock %}
 
 <header>
@@ -16,10 +15,9 @@
         </div>
 
         <div class="nav-right-container">
-
             <!-- Shop dropdown menu -->
             <div class="nav-item dropdown ml-5" >
-                <a class="" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+                <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{% url 'products' %}?condition=fresh">Latest Releases</a>
                     <a class="dropdown-item" href="{% url 'products' %}">All Vinyl</a>
@@ -27,7 +25,6 @@
                     <a class="dropdown-item" href="{% url 'products' %}?condition=Used">Used Vinyl</a>
                 </div>
             </div>
-
             <div class="icons-container">
                 <!-- Search box -->
                 <div class="nav-item">
@@ -52,7 +49,7 @@
         
                 <!-- Account dropdown menu -->
                 <div class="nav-item dropdown ">
-                    <a class="" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa-solid fa-user nav-item"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu--account" aria-labelledby="user-options">
@@ -85,32 +82,29 @@
         </div>
     </nav>
 
-
-
-{% if messages %}
-<!-- Messsage display container -->
-<div class="toast-message-container">
-   {% for message in messages %}
-       {% with message.level as level %}
-           {% if level == 40 %}
-               {% include 'toasts/toast_error.html' %}
-           {% elif level == 30 %}
-               {% include 'toasts/toast_warning.html' %}
-           {% elif level == 27 %}
-               {% include 'toasts/toast_success_wishlist.html' %}
-           {% elif level == 26 %}
-               {% include 'toasts/toast_success_basket.html' %}
-           {% elif level == 25 %}
-               {% include 'toasts/toast_success.html' %}
-           {% else %}
-               {% include 'toasts/toast_info.html' %}
-           {% endif %}
-       {% endwith %}
-   {% endfor %}
-</div>
-{% endif %}
+    {% if messages %}
+        <!-- Messsage display container -->
+        <div class="toast-message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'toasts/toast_warning.html' %}
+                    {% elif level == 27 %}
+                        {% include 'toasts/toast_success_wishlist.html' %}
+                    {% elif level == 26 %}
+                        {% include 'toasts/toast_success_basket.html' %}
+                    {% elif level == 25 %}
+                        {% include 'toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
 </header>
-
 
 {% block extra_js %}
     <script>
@@ -141,4 +135,5 @@
             }
         });
     </script>
+    
 {% endblock %}
