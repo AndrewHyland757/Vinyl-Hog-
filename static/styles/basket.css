@@ -1,3 +1,9 @@
+/*
+****************************
+BASKET.HTML
+****************************
+*/
+
 .basket-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -14,23 +20,14 @@
     height: 100%;
 }
 
-
 .checkout-heading {
     text-transform: uppercase;
     padding-bottom: 2.4rem
 }
 
-
-
-
-/*
-****************************
-LEFT COLUMN
-****************************
-*/
+/* left colunn */
 
 .checkout-item {
- 
     padding: 3.2rem 0 ;
     display: grid;
     grid-template-columns: 1.25fr 3fr;
@@ -97,7 +94,6 @@ LEFT COLUMN
 }
 
 .qty-input {
-  
     font-size: 1.2rem;
     padding: .8rem 0rem  .8rem 1.6rem;
     border-radius: 0;
@@ -114,11 +110,7 @@ LEFT COLUMN
     outline: none;
   }
 
-/*
-****************************
-RIGHT COLUMN
-****************************
-*/
+/* right colunn */
 
 .basket-col-right {
     display: flex;
@@ -132,18 +124,14 @@ RIGHT COLUMN
 .cost-item {
     display: flex;
     justify-content: space-between;
-    
     border-top: .1rem solid #333;
     padding: 2.8rem 0 2.4rem 0;
 }
-
 
 .item-detail--delta {
     font-size: 1.4rem;
     padding-bottom: 2.4rem;
 }
-
-
 
 .basket-col-right .item-detail {
     letter-spacing: .01rem;
@@ -160,7 +148,6 @@ RIGHT COLUMN
 
 .item-detail--delta {
     font-size: 1.4rem;
-
 }
 
 /*
@@ -179,7 +166,6 @@ MEDIA QUERIES
         gap: 4.8rem;
         min-height: 0;
         margin-bottom: 6.2rem;
-        
     }
 
     .checkout-item {

@@ -4,9 +4,10 @@ CHECKOUT_SUCCESS.HTML
 PROFILE_ORDER.HTML
 ****************************
 */
+
 .success-container {
     width:750px;
-    display: felx;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -19,17 +20,12 @@ PROFILE_ORDER.HTML
     margin: 0 auto;
 }
 
-
 .success-row,
 .success-row--order-num {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.2rem;
 }
-
-
-
-
 
 .success-key,
 .success-value {
@@ -82,8 +78,6 @@ PROFILE_ORDER.HTML
     font-weight: 600;
 }
 
-
-
 .item-detail {
     letter-spacing: .01rem;
     font-size: 1.4rem;
@@ -92,20 +86,16 @@ PROFILE_ORDER.HTML
     font-weight: 500;
   }
 
-
-  @media (max-width:768px) {
+@media (max-width:768px) {
 
     .success-container {
         width:100vw;
-      
     }
 
     .success-key,
     .success-value {
         font-size: 1.4rem;
-
     }
-
    
     .success-row--order-num  {
         display: flex;
@@ -118,5 +108,4 @@ PROFILE_ORDER.HTML
         margin-bottom: 1rem;
         margin-top: 2.4rem; 
     }
-  }
-
+}

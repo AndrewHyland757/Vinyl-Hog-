@@ -1,13 +1,16 @@
+/*
+****************************
+PRODUCTS.HTML
+****************************
+*/
+
+
 .products-main {
     display: flex;
     padding: 0 2.25rem;
 }
 
-/*
-****************************
-ASIDE CLASSES
-****************************
-*/
+/* aside classes */
 
 .aside--right,
 .aside-left {
@@ -53,11 +56,7 @@ line-height: 1.2;
 	
 }
 
-/*
-****************************
-OTHER CLASSES
-****************************
-*/
+/* other classes */
 
 /* Shown on screens under 764px */
 .dropdown-links-container {
@@ -105,7 +104,6 @@ OTHER CLASSES
   margin-right: 7rem;
 }
 
-
 /*
 ****************************
 MEDIA QUERIES
@@ -149,4 +147,3 @@ MEDIA QUERIES
     display: flex;
   }
 }
-

@@ -60,9 +60,7 @@ NAVIGATION
 	align-items: center;
 	width: 100%;
 	justify-content: space-between;
-	padding-left: 6.2rem;  /* ************** */
-
-	
+	padding-left: 6.2rem;
 }
 
 .icons-container {
@@ -94,9 +92,6 @@ NAVIGATION
 }
 
 .dropdown-item {
-	/*
-	margin-bottom: 1rem;
-	*/
 	padding-top: .5rem;
 	padding-bottom: .5rem;
 	margin-bottom: .5rem;
@@ -107,17 +102,12 @@ NAVIGATION
 	background-color: #EBEAEA;
 	color:  #8f8e8e;
 	background-color: transparent;
-	
-
 }
 
 .nav-item--basket {
 	position: relative;
 	display: flex;
 }
-
-
-
 
 .basket-count-container {
 	height: 1.5rem;
@@ -137,41 +127,35 @@ NAVIGATION
 	font-size: 1rem;
 }
 
-
 .input-group-append,
 .icon i {
 	border: none;
 }
-    #search-box {
-        display: none;
-        font-family: Helvetica;
-        padding: .75rem 1.25rem;
-        font-size: 1.4rem;
-        color: #8f8e8e; /* not placeholder */
-		border: .1rem solid #1E1C1C;
-        letter-spacing: .04rem;
-        width: 300px;
-        animation: slide 1s 1;
-		outline: none;
-    }
 
+#search-box {
+	display: none;
+	font-family: Helvetica;
+	padding: .75rem 1.25rem;
+	font-size: 1.4rem;
+	color: #8f8e8e; /* not placeholder */
+	border: .1rem solid #1E1C1C;
+	letter-spacing: .04rem;
+	width: 300px;
+	animation: slide 1s 1;
+	outline: none;
+}
+
+#search-box:focus,
+#search-box:link,
+#search-box:active {
+	border: none;
+	background-color: transparent;
+	outline: none;
+	border: .1rem solid #1E1C1C;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
 	
-	
-
-    #search-box:focus,
-    #search-box:link,
-    #search-box:active {
-        border: none;
-		background-color: transparent; /* Set background color to transparent when focused */
-		outline: none;
-		border: .1rem solid #1E1C1C;
-		-webkit-box-shadow: none;
-		box-shadow: none;
-		
-	}
-	
-
-
 .btn-search {
 	border: none;
 	background-color: white;
@@ -185,34 +169,21 @@ NAVIGATION
 	outline: none;
 	border: none;
 	color: #8F8E8E;
-	background-color: transparent; /* Set background color to transparent when focused */
-	
-	
+	background-color: transparent;
 }
 
 /*
 ****************************
-TOASTS
+TOASTS CONTAINER
 ****************************
 */
-
 
 .toast-message-container {
   position: absolute !important;
   top: 72px;
-  
-    right: 15px;
+  right: 15px;
   z-index: 99999999999;
-
 }
-
-
-
-
-
-
-
-
 
 /*
 ****************************
@@ -230,27 +201,22 @@ MEDIA QUERIES
 		border-bottom: none;
    	}
 
-	   
-
 	.input-group {
 		font-size: 1.6rem;
    	}
 
 	.nav-left-container {
 		position: relative;
-		width: 8.6rem;
-		
+		width: 8.6rem;	
    	}
 
 	.logo-container {
 		width: 8.6rem;
 		height: 8.6rem;
 		top: -1rem;
-		
    	}
 
 	.logo {
-	
 		font-size: 2rem;
    	}
 
@@ -297,6 +263,3 @@ MEDIA QUERIES
 		padding: 0 1.6rem;
    	}
 }
-
-
-

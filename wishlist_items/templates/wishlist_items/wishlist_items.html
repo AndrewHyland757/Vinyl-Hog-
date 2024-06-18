@@ -35,7 +35,7 @@
                                 <p class="card-text">Stock: {{ wishlist_item.product.stock }}</p>
                                 <p class="card-text">€{{ wishlist_item.product.price }}</p>
                             </div>
-                            <a class="btn-explore--full-width mt-5" href ="{% url 'delete-wishlist' wishlist_item.product.id %}"><p>Remove</p></a>
+                            <a class="btn-explore btn-explore--full-width mt-5" href ="{% url 'delete-wishlist' wishlist_item.product.id %}"><p>Remove</p></a>
                         </div>
                     </div>
                 {% endfor %}

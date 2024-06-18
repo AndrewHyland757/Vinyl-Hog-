@@ -1,23 +1,25 @@
+/*
+****************************
+TOASTS
+****************************
+*/
+
 .custom-toast {
     overflow: visible;
     border-color: #1E1C1C;
-  }
+}
   
-  
-  .toast{
+.toast {
     font-size: 1.4rem;
     letter-spacing: .03rem;
     box-shadow: none;
-  }
+}
   
-  .toast-header,
-  .toast-body {
+.toast-header,
+.toast-body {
     border-color: #1E1C1C;
     padding: 1rem 2rem;
-  }
-
-
-
+}
 
 .toast-body {
   letter-spacing: .04rem;
@@ -26,12 +28,6 @@
 
 .toast {
     border-color: #1E1C1C;
-}
-
-.message {
-    padding: .1rem .5rem;
-    color: #468847;
-    background-color: #d3e8d8;
 }
 
 .message-success {
@@ -58,14 +54,11 @@
     border: none;
 }
 
-
 .btn-toast-close:focus,
 .btn-toast-close:active,
 .btn-toast-close:hover {
     outline: none;
-
 }
-
 
 @media (max-width:1200px) {
 

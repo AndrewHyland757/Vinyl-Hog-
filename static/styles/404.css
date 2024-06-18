@@ -10,7 +10,6 @@
 .head-container-center {
     margin-top: 16rem;
     margin-bottom: 3.2rem;
-
 }
 
 .text-404 {
@@ -35,9 +34,7 @@
 
 @media (max-width:78px) {
 
-.main-404 {
-
-    padding: 0 2.4rem;
-}
-
+    .main-404 {
+        padding: 0 2.4rem;
+    }
 }

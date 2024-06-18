@@ -11,8 +11,7 @@ ACCOUNT PAGES - GENERAL
 .head-container--account {
     margin-top: 12rem;
     margin-bottom: 6.2rem;
-  }
-
+}
 
 .account-form-container {
     width: fit-content;
@@ -34,7 +33,6 @@ ACCOUNT PAGES - GENERAL
     gap: 3.2rem;
     align-items: center;
     padding-bottom: 1.2rem;
-
 }
 
 .form-label {
@@ -81,7 +79,6 @@ LOGIN PAGE
         width: 100%;
     }
 
-
     .field-container {
         display: flex;
         flex-direction: column;    
@@ -91,5 +88,3 @@ LOGIN PAGE
         width: 100%;
     }
   }
-
-  

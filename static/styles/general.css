@@ -1,15 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 /*
@@ -40,6 +28,7 @@ body {
 }
   
 p {
+  font-size: 1.4rem;
   letter-spacing: .04rem;
   margin-bottom: 0;
 }
@@ -49,20 +38,16 @@ a {
   text-decoration: none;
 }
 
-
 a:hover {
   color: #323232;
   text-decoration: none;
 }
-
 
 /*
 ****************************
 SECTION-HEADING CLASSES
 ****************************
 */
-
-
 
 .head-container {
   padding: 9.6rem 0 6.4rem 9.6rem;
@@ -74,13 +59,12 @@ SECTION-HEADING CLASSES
   margin-bottom: 9.6rem;
 }
 
-
 .section-head-empty {
-margin:0;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap:3.2rem;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:3.2rem;
 }
 
 .head-heading {
@@ -89,8 +73,6 @@ gap:3.2rem;
   padding-bottom: 1rem;
   text-transform: capitalize;
 }
-
-
 
 .head-text {
   font-size: 1.6rem;
@@ -115,7 +97,6 @@ PRODUCT-GRID DISPLAY CLASSES
 }
 
 .card {
-  
   position: relative;
   padding: 1.8rem 1.8rem 2.4rem 1.8rem;
   border: none;
@@ -139,7 +120,6 @@ PRODUCT-GRID DISPLAY CLASSES
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: .25rem;
-  
 }
 
 .card-img {
@@ -163,7 +143,6 @@ PRODUCT-GRID DISPLAY CLASSES
   font-size: 1.6rem;
   letter-spacing: 0.05rem;
   margin-bottom: 1.5rem;
-
 }
 
 .card-details {
@@ -176,15 +155,11 @@ PRODUCT-GRID DISPLAY CLASSES
   font-size: 1.4rem;
 }
 
-
-
-
 /*
 ****************************
 BUTTON CLASSES
 ****************************
 */
-
 
 .btn-custom,
 .btn-custom:link,
@@ -214,23 +189,17 @@ BUTTON CLASSES
     outline:none;
 }
 
-.btn-custom--basket {
-    width: fit-content;
-    font-size: 1.2rem;
-}
 .btn-container-center {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-
-.btn-explore,
-.btn-explore--full-width {
+.btn-explore {
   font-size: 2rem;
   font-weight: 600;
   text-decoration: none;
-  width: 100%;
+  width: auto;
   text-align: center;
   padding: 1.6rem 3.2rem;
   display: inline-block;
@@ -240,10 +209,10 @@ BUTTON CLASSES
   color: #1E1C1C;
 }
 
-.btn-explore {
-  width: auto;
+.btn-explore--full-width {
+  width: 100%;
+  text-align: center;
 }
-
 
 .btn-explore:hover,
 .btn-explore:focus,
@@ -253,54 +222,28 @@ BUTTON CLASSES
   outline: transparent;
 }
 
-.btn-explore--full-width {
-  width: 100%;
-  text-align: center;
-
-}
-
 .btn-explore--small {
   font-size: 1.4rem;
   font-weight: 600;
   padding: 1.4rem 3rem;
   border: #1E1C1C 1.75px solid;
-
-
 }
-
-
 
 .btn-explore--secondary {
   font-size: 1.4rem;
   padding: 1.4rem 3rem;
   width: auto;
-  /*
-  color: #6c757d;
-  border-color:#6c757d;
-  */
 }
 
 .btn--center {
   margin: 0 auto;
-
 }
-
 
 .btn-explore--secondary:hover,
 .btn-explore--secondary:focus,
 .btn-explore--secondary:active {
-  /*
-  background-color: #6c757d;
-  color: white;
-  outline: transparent;
-  */
   outline: none;
 }
-
-
-
-
-
 
 /*
 ****************************
@@ -334,12 +277,6 @@ FIELD INPUT CLASSES
 .custom-input:focus,
 .custom-input:active {
     outline: none;
-    /*
-    border-color: rgb(216, 142, 3);
- 
-    box-shadow: 0 1px 3px 0 #cfd7df;
-    border-radius: 0px;
-       */
 }
 
 
@@ -352,21 +289,10 @@ FIELD INPUT CLASSES
   }
 }
 
-@media (max-width:1025px) {
-
-  .products-grid {
-    
-  }
-}
-
-
-
-
-
 @media (max-width:768px) {
 
 
-  /* SECTION-HEADING CLASSES */
+  /* section heading classes */
 
   .head-container {
     padding: 1.2rem 0 3.2rem 2.4rem;
@@ -398,7 +324,7 @@ FIELD INPUT CLASSES
     font-size: 1.4rem;
   }
 
-  /* PRODUCT GRID */
+  /* product grid */
 
   
   .products-grid {
@@ -428,13 +354,10 @@ FIELD INPUT CLASSES
   }
   
   .product-card-title {
-    font-size: 1.4rem; 
-    
-
-  letter-spacing: 0.05rem;
-  line-height: 1;
-  margin-bottom: 0.25;
-
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    line-height: 1;
+    margin-bottom: 0.25;
   }
   
   .card-artist {
@@ -445,7 +368,4 @@ FIELD INPUT CLASSES
   .card-text {
     font-size: 1.2rem;
   }
-
-
-
 }

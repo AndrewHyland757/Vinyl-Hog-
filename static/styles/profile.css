@@ -1,6 +1,6 @@
 /*
 ****************************
-PROFILE.HTML CSS
+PROFILE.HTML
 ****************************
 */
 
@@ -9,12 +9,7 @@ PROFILE.HTML CSS
     margin-bottom: 12rem;
 }
 
-p {
-    font-size: 1.4rem;
-}
-
 .profile-container {
-    
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -22,11 +17,7 @@ p {
     padding: 0; 
 }
 
-/*
-****************************
-LEFT COLUMN
-****************************
-*/
+/* left column */
 
 .profile-col-left {
     width: 100%;
@@ -59,11 +50,6 @@ LEFT COLUMN
 
 .fieldset--delivery legend {
     margin-bottom: 1.4rem;
-}
-
-.btn-custom {
-    margin-bottom: 3.2rem;
-    font-weight: 600;
 }
 
 /*
