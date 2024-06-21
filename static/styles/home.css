@@ -44,6 +44,14 @@ SECTION HOME
   height: calc(100vh - 7rem);
   object-fit: cover;
 }
+.section-new-releases {
+  margin-top: 16rem;
+}
+
+.head-container-center {
+
+  
+}
 
 /*
 ****************************
@@ -51,6 +59,10 @@ RECOMMENDATION SECTION
 ****************************
 */
 
+.section-recommendations {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
 .vh-container {
   height: 100vh;
   display: grid;
