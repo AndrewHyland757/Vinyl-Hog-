@@ -18,24 +18,14 @@ from django.contrib.messages import constants as messages
 if os.path.isfile("env.py"):
     import env
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-#BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-3_qtk$6-0etc_q%ba*!lhe+7_-w=_73p$zn^6$q6q0l8b!9%co'
 SECRET_KEY = os.environ.get('SECRET_KEY')
     
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 CSRF_TRUSTED_ORIGINS = ['https://8000-andrewhyland75-vinylhog-zmadu4k2m4m.ws-eu114.gitpod.io']
 
 ALLOWED_HOSTS = ['vinyl-hog-db2fc2977a10.herokuapp.com', '8000-andrewhyland75-vinylhog-zmadu4k2m4m.ws-eu114.gitpod.io']
@@ -75,7 +65,6 @@ INSTALLED_APPS = [
      
 ]
 
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -90,34 +79,6 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'vinyl_hog.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-"""
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, "templates"),
-            os.path.join(BASE_DIR, 'templates', 'allauth'),
-        ],
-            
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-                'basket.contexts.basket_contents',
-                'wishlist_items.contexts.wishlist_contents',
-            ],
-            'builtins': [
-                'crispy_forms.templatetags.crispy_forms_tags',
-                'crispy_forms.templatetags.crispy_forms_field',
-            ]
-        },
-    },
-]
-"""
 
 TEMPLATES = [
     {
@@ -143,7 +104,6 @@ TEMPLATES = [
 ]
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
-
 
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -190,16 +150,6 @@ DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 
-###DATABASES = {
-     ##'default': dj_database_url.parse('postgres://udfxjdvygpj:mR4qh2n23YPd@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/nanny_polar_lasso_241658')
- #}
-
-
-# Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
-
-
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -215,10 +165,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -230,24 +176,9 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-STATIC_URL = '/static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#STATIC_URL = '/static/'
-#MEDIA_URL = '/images/'
-#STATICFILES_DIRS = [
-    #os.path.join(BASE_DIR, 'static')
-#]
-
 STATIC_URL = '/static/'
-
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -255,31 +186,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-
-
-
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
-# Delivery fees
 DELIVERY_THRESHOLD = 50
 DELIVERY_FEE = 12.00
 
-# Stripe
-#STRIPE_CURRENCY = 'usd'
-###STRIPE_PUBLIC_KEY = 'pk_test_51P8JG3ECqW0pS3vWbIGOgoOz6xN9ZHbRdDhk0QYEJP2qm2ye4a0MQ6TWR0DrQiEiHarteXCKRcqi1GOq1C3qEUwM00g1d7Xhos' # os.getenv('STRIPE_PUBLIC_KEY', '')
-##STRIPE_SECRET_KEY = 'sk_test_51P8JG3ECqW0pS3vWmS485ezvQkPJCTvBBUIBhqkBfpQvdz9fmFd1DCH2GnDtEspqycjwnsr0OAw1XwiNbxuiHpM000wKg27Yq8' #os.getenv('STRIPE_SECRET_KEY', '')
-#STRIPE_WH_SECRET = 'whsec_fwwzuEKwfDAOwWtLvvgKYfFVyodcQmyC'
-
-# Stripe
 STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
 DEFAULT_FROM_EMAIL = 'info@vinylhog.com'
-
-
-
-
-
