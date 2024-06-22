@@ -103,7 +103,7 @@
                                 <img class="post-img" src="{{ post.article_image.url }}" alt="Card image cap">
                             </a>
                         </div>
-                        <a href=" {% url 'post' post.id %}">
+                        <a href="{% url 'post' post.id %}">
                             <div class="card-body-post">
                                 <h5 class="post-card-title"><strong>{{ post.title }}</strong></h5>
                                 <p class="post-card-sub">{{ post.sub_title }}</p>

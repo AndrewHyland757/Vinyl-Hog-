@@ -127,9 +127,9 @@ RECOMMENDATION SECTION
   font-size: 1.6rem;
 }
 
-.item-2-container:first-of-type {
-  display: none;
-}
+
+
+  
 
 .item-2-container {
   width: 1400px;
@@ -139,20 +139,21 @@ RECOMMENDATION SECTION
   margin-bottom: 6.4rem;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3.2rem;
+
 }
 
 .item-2:first-of-type {
-  display: none;
+  display: none !important;
+
 }
 
 .item-2 {
   overflow: hidden;
   background-color: #eff2f3;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  gap: 0rem;
-  align-items:flex-start;
+ display: flex;
+ flex-direction: column;
 }
+
 
 .item-2 .post-img {
   position: absolute;
@@ -191,7 +192,7 @@ RECOMMENDATION SECTION
 }
 
 .post-card-sub {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   letter-spacing: 0.05rem;
   line-height: 1.25;
   margin-bottom: 1.5rem;

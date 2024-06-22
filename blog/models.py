@@ -18,7 +18,7 @@ class RecommendationPost(models.Model):
     article_image = models.ImageField(
         null=True, blank=True, default="default.jpg")
     content = models.TextField()
-    created_on = models.DateField(auto_now_add=True)
+    created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.title} | written by {self.author}"
