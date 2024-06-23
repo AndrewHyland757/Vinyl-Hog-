@@ -18,10 +18,10 @@ FOOTER
   margin: 0 auto;
 }
 .subscribe-container {
- 
   margin: 0 auto;
   text-align: center;
   margin-bottom: 4rem;
+  position: relative;
 }
 
 .subscribe-heading {
@@ -32,7 +32,6 @@ FOOTER
 
 .subscribe-form {
   font-size: 1.6rem;
-
   display: flex;
   justify-content: center;
   gap: 2.6rem;
@@ -48,6 +47,7 @@ FOOTER
   box-shadow: 0 1px 3px 0 #e6ebf1;
   -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;
+ 
 }
 
 .input-subscribe:focus,
@@ -127,7 +127,6 @@ FOOTER
   padding-bottom: .5rem;
   border-bottom: .1rem solid white;
   margin-bottom: 2.4rem;
- 
 }
 
 .footer-list {

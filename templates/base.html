@@ -46,6 +46,9 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+        <!-- Mailchimp --> 
+        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/d681d7e6888a902c0682bffb3/55a639db4c8ccd9b39a3a5535.js");</script>
         {% endblock %}
 
         <title>Vinyl Hog {% block extra_title %}{% endblock %}</title>
@@ -56,18 +59,27 @@
 
         {% block content %}
         {% endblock %}
-
+        
         <!-- Footer -->
         <footer class="footer">
             <div class="subscribe-container">
                 <h2 class="subscribe-heading">
                     For updates on new products join our newsletter
                 </h2>
+               
                 <div class="container">
-                    <form class="subscribe-form">
-                        <input class="input-subscribe" />
-                        <button class="btn-footer margin-right-sm">Subscribe</button>
+                    <form class="subscribe-form"  action="https://gitpod.us22.list-manage.com/subscribe/post?u=d681d7e6888a902c0682bffb3&amp;id=e3848ad8a5&amp;f_id=0009cde1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <input type="email" name="EMAIL" class="required email input-subscribe" id="mce-EMAIL" required="" value="">
+                        <input type="submit" name="subscribe" id="" class="btn-footer margin-right-sm" value="Subscribe">
+                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                            /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                            <input type="text" name="b_d681d7e6888a902c0682bffb3_e3848ad8a5" tabindex="-1" value="">
+                        </div>
                     </form>
+                    <div id="mce-responses" class="clear foot sub-message">
+                        <div class="response" id="mce-error-response" style="display: none; font-size: 1.6rem; padding-top: 2.4rem;"></div>
+                        <div class="response" id="mce-success-response" style="display: none; font-size: 1.6rem; padding-top: 2.4rem;"></div>
+                    </div>
                 </div>
             </div>
 
@@ -123,7 +135,18 @@
         </footer>
 
         {% block postloadjs %}
+            <!-- Mailchimp -->
+            <script 
+                type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js">
+            </script>
+            <script 
+                type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);
+            </script>
+
+            <!-- Fontawesome -->
             <script src="https://kit.fontawesome.com/1002ac1991.js" crossorigin="anonymous"></script>
+
+            <!-- Toast messages -->
             <script>
                 $(document).ready(function(){
                     $('.toast').toast('show');
