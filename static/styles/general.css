@@ -79,11 +79,10 @@ SECTION-HEADING CLASSES
 }
 
 /*
-****************************
-PRODUCT-GRID DISPLAY CLASSES
-****************************
+*****************************
+REUSABLE PRODUCT-GRID DISPLAY
+*****************************
 */
-
 
 .products-grid {
   width: 100%;
@@ -326,7 +325,6 @@ FIELD INPUT CLASSES
 
   /* product grid */
 
-  
   .products-grid {
     grid-template-columns:  1fr 1fr;
     gap: 1.8rem;

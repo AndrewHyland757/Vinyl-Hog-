@@ -8,6 +8,7 @@ PRODUCTS.HTML
 .products-main {
     display: flex;
     padding: 0 2.25rem;
+    margin-bottom: 9.6rem;
 }
 
 /* aside classes */

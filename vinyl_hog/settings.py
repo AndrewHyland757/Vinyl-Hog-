@@ -25,7 +25,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
     
-DEBUG = False
+DEBUG = True
 CSRF_TRUSTED_ORIGINS = ['https://8000-andrewhyland75-vinylhog-zmadu4k2m4m.ws-eu114.gitpod.io']
 
 ALLOWED_HOSTS = ['vinyl-hog-db2fc2977a10.herokuapp.com', '8000-andrewhyland75-vinylhog-zmadu4k2m4m.ws-eu114.gitpod.io']
