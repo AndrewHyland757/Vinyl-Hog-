@@ -26,9 +26,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
     
 DEBUG = True
-CSRF_TRUSTED_ORIGINS = ['https://8000-andrewhyland75-vinylhog-zmadu4k2m4m.ws-eu114.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-andrewhyland75-vinylhog-adqzwwz25b6.ws-eu114.gitpod.io/']
 
-ALLOWED_HOSTS = ['vinyl-hog-db2fc2977a10.herokuapp.com', '8000-andrewhyland75-vinylhog-zmadu4k2m4m.ws-eu114.gitpod.io']
+ALLOWED_HOSTS = ['vinyl-hog-db2fc2977a10.herokuapp.com', '8000-andrewhyland75-vinylhog-adqzwwz25b6.ws-eu114.gitpod.io']
 
 # Application definition
 
@@ -199,3 +199,10 @@ STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
 DEFAULT_FROM_EMAIL = 'info@vinylhog.com'
+
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET')
+}

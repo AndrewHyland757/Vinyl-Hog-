@@ -31,6 +31,7 @@ def home(request):
 
 
     context = {
+        "posts": posts,
         "albums": albums,
         "recent_added_albums": recent_added_albums,
         "posts_1_5": posts_1_5,

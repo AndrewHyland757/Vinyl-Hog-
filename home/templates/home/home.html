@@ -49,7 +49,7 @@
                 <img class="featured-logo-lg" src="{% static 'images/home_imgs/featured_in/Playground.jpg' %}" alt="">
             </a>
             <a href="https://www.billboard.com/" target="blank">
-            <img class="lfeatured-logo" src="{% static 'images/home_imgs/featured_in/Billboard_logo.png' %}" alt="">
+            <img class="featured-logo" src="{% static 'images/home_imgs/featured_in/Billboard_logo.png' %}" alt="">
             </a>
         </div>
     </section>
@@ -157,7 +157,7 @@
             </section>
 
     <!------- Recommendations section ------->
-    
+    {% if posts %}
         <section class="section-recommendations">
             <div class="vh-container">
                 <div class="head-container-center">
@@ -206,6 +206,7 @@
                 <a class="btn-explore" href="{% url 'posts' %}">Explore more</a>
             </div>
         </section>
+        {% endif %}
     
 
 {% endblock %}
