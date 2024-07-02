@@ -47,11 +47,104 @@ SECTION HOME
 
 /*
 ****************************
+FEATURED IN SECTION
+****************************
+*/
+
+.section-featured-in {
+  width: 1400px;
+  padding: 6.2rem 0 6.2rem 0;
+  margin:0 auto;
+}
+
+.section-featured-in h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-bottom: 4.2rem;
+}
+
+.logos-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.featured-logo--color {
+  filter: brightness(0);
+
+}
+
+.featured-logo {
+  height: 3.8rem;
+}
+
+.featured-logo-lg {
+  height: 4.8rem;
+  filter:grayscale(100%);
+}
+
+
+/*
+****************************
 ABOUT SECTION
 ****************************
 */
 
 
+
+
+       
+.section-about {
+  margin-top: 6rem;
+  margin-bottom: 12rem;
+}
+
+.about-container {
+  height: 50vw;
+  width: 50vw;
+ margin-left: 200px;
+  position: relative;
+
+  
+
+}
+.about-img-continer {
+  height: 50vw;
+  width: 50vw;
+  border-radius: 50%;
+
+}
+
+.about-container img {
+  height: 50vw;
+  width: 50vw;
+  border-radius: 50%;
+  object-fit: cover;
+  border: .1rem solid #1E1C1C;
+}
+
+.about-text-container {
+ 
+  position: absolute;
+  width: 600px;
+  bottom: 50%;
+  transform: translate(0, 50%);
+  left: 74.9%;
+  background-color: #eff2f3;
+  padding: 3.2rem;
+ 
+
+
+}
+
+.about-text-container p {
+font-size: 1.6rem;
+
+  line-height: 1.1;
+
+}
 .sale-img-container {
  width: 100%;
  
@@ -242,45 +335,6 @@ ABOUT SECTION
 
 }
 
-/*
-****************************
-FEATURED IN SECTION
-****************************
-*/
-
-.section-featured-in {
-  width: 1400px;
-  padding: 4.8rem 0 3.6rem 0;
-  margin:0 auto;
-}
-
-.section-featured-in h2 {
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin: 0 auto;
-  margin-bottom: 2.4rem;
-}
-
-.logos-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.featured-logo--color {
-  filter: brightness(0);
-
-}
-
-.featured-logo {
-  height: 3.8rem;
-}
-
-.featured-logo-lg {
-  height: 4.8rem;
-  filter:grayscale(100%);
-}
 
 
 /*
@@ -369,9 +423,7 @@ RECOMMENDATION SECTION
   font-size: 1.6rem;
 }
 
-
-
-  
+ 
 
 .item-2-container {
   width: 1400px;
@@ -403,8 +455,7 @@ RECOMMENDATION SECTION
   height: 100%;
   object-fit: cover;
   padding: 1.8rem;
-  overflow:hidden;
- ;
+  overflow: hidden;
   filter: contrast(90%);
 }
 
