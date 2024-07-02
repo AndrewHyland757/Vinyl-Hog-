@@ -30,7 +30,7 @@ SECTION HOME
 .text-container h1 {
   font-weight: 900;
   padding-bottom: 1.6rem;
-  border-bottom: 0.1rem solid #333;
+  border-bottom: 0.1rem solid #1E1C1C;
 }
 
 .text-container p {
@@ -52,9 +52,15 @@ FEATURED IN SECTION
 */
 
 .section-featured-in {
+  
+  background-color: #eff2f3;
+}
+
+.container-featured-in {
   width: 1400px;
   padding: 6.2rem 0 6.2rem 0;
   margin:0 auto;
+
 }
 
 .section-featured-in h2 {
@@ -97,41 +103,43 @@ ABOUT SECTION
 
        
 .section-about {
-  margin-top: 6rem;
+  margin-top: 12rem;
   margin-bottom: 12rem;
 }
 
 .about-container {
-  height: 50vw;
-  width: 50vw;
+ 
  margin-left: 200px;
   position: relative;
-
-  
+  display: flex;
+  align-items: center;
 
 }
 .about-img-continer {
-  height: 50vw;
-  width: 50vw;
+
   border-radius: 50%;
 
 }
 
 .about-container img {
-  height: 50vw;
-  width: 50vw;
+  height: 52vw;
+  width: 52vw;
   border-radius: 50%;
   object-fit: cover;
   border: .1rem solid #1E1C1C;
+  border: 4.3rem solid #eff2f3;;
 }
 
 .about-text-container {
  
-  position: absolute;
+ transform: translate(-37px, 0);
   width: 600px;
+  height: fit-content;
+  /*
   bottom: 50%;
   transform: translate(0, 50%);
   left: 74.9%;
+  */
   background-color: #eff2f3;
   padding: 3.2rem;
  
@@ -149,6 +157,81 @@ font-size: 1.6rem;
  width: 100%;
  
 }
+
+
+
+
+/***************************/
+
+.section-about {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
+
+.about-container {
+ 
+ margin: 0 6rem;
+  position: relative;
+  display: flex;
+  gap: 8.6rem;
+  align-items: center;
+
+}
+
+
+.about-img-continer {
+
+  border-radius: 50%;
+
+}
+
+.about-container img {
+  height: 52vw;
+  width: 52vw;
+  border-radius: 50%;
+  object-fit: cover;
+  border: .1rem solid #1E1C1C;
+  border: 4.3rem solid #eff2f3;;
+}
+
+.about-text-container {
+ 
+ transform: translate(0, 0);
+  width: 600px;
+  height: fit-content;
+  /*
+  bottom: 50%;
+  transform: translate(0, 50%);
+  left: 74.9%;
+  */
+background-color: #fff;
+  padding: 8.6rem 0;
+  padding-left: 8.6rem;
+  border-left: 0.15rem solid #1E1C1C;
+ 
+
+
+}
+
+.about-text-container p {
+font-size: 1.6rem;
+
+  line-height: 1.1;
+
+}
+.sale-img-container {
+ width: 100%;
+ 
+}
+
+
+
+
+
+
+
+
+
 
 /*
 .sale-img-container img {
@@ -345,6 +428,7 @@ NEW RELEASES SECTION
 
 .section-new-releases {
   margin-top: 16rem;
+  margin-bottom: 16rem;
 }
 
 
