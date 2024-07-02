@@ -7,6 +7,7 @@ SECTION HOME
 .section-home {
   height: calc(100vh - 7rem) !important;
   max-width: 100vw !important;
+  margin-bottom: 16rem;
 }
 
 .home-container {
@@ -53,12 +54,15 @@ FEATURED IN SECTION
 
 .section-featured-in {
   
-  background-color: #eff2f3;
+  
+  padding: 0 9.6rem;
+  margin-bottom: 16rem;
+  
 }
 
 .container-featured-in {
-  width: 1400px;
-  padding: 6.2rem 0 6.2rem 0;
+  background-color: #eff2f3;
+  padding: 6.2rem 6.2rem 6.2rem 6.2rem;
   margin:0 auto;
 
 }
@@ -98,91 +102,20 @@ ABOUT SECTION
 ****************************
 */
 
-
-
-
-       
 .section-about {
-  margin-top: 12rem;
-  margin-bottom: 12rem;
+  margin-bottom: 16rem;
 }
 
 .about-container {
- 
- margin-left: 200px;
-  position: relative;
-  display: flex;
-  align-items: center;
-
-}
-.about-img-continer {
-
-  border-radius: 50%;
-
-}
-
-.about-container img {
-  height: 52vw;
-  width: 52vw;
-  border-radius: 50%;
-  object-fit: cover;
-  border: .1rem solid #1E1C1C;
-  border: 4.3rem solid #eff2f3;;
-}
-
-.about-text-container {
- 
- transform: translate(-37px, 0);
-  width: 600px;
-  height: fit-content;
-  /*
-  bottom: 50%;
-  transform: translate(0, 50%);
-  left: 74.9%;
-  */
-  background-color: #eff2f3;
-  padding: 3.2rem;
- 
-
-
-}
-
-.about-text-container p {
-font-size: 1.6rem;
-
-  line-height: 1.1;
-
-}
-.sale-img-container {
- width: 100%;
- 
-}
-
-
-
-
-/***************************/
-
-.section-about {
-  margin-top: 12rem;
-  margin-bottom: 12rem;
-}
-
-.about-container {
- 
- margin: 0 6rem;
+  margin: 0 6rem;
   position: relative;
   display: flex;
   gap: 8.6rem;
   align-items: center;
-
 }
 
-
 .about-img-continer {
-
   border-radius: 50%;
-
 }
 
 .about-container img {
@@ -195,131 +128,47 @@ font-size: 1.6rem;
 }
 
 .about-text-container {
- 
- transform: translate(0, 0);
   width: 600px;
   height: fit-content;
-  /*
-  bottom: 50%;
-  transform: translate(0, 50%);
-  left: 74.9%;
-  */
-background-color: #fff;
+  background-color: #fff;
   padding: 8.6rem 0;
   padding-left: 8.6rem;
   border-left: 0.15rem solid #1E1C1C;
- 
-
-
 }
 
 .about-text-container p {
-font-size: 1.6rem;
-
+  font-size: 1.6rem;
   line-height: 1.1;
-
 }
-.sale-img-container {
- width: 100%;
- 
-}
-
-
-
-
-
-
-
-
-
 
 /*
-.sale-img-container img {
-  height:1403px;
-  width: 100%;
-  object-fit: cover;
-  object-position: 0% 10px;
-  filter: contrast(90%); 
-  padding: 0 2.4rem;
-}
-
-.sale-text-container {
-  color: #1E1C1C;
-  position:absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, 66%);
-}
+****************************
+SALE SECTION
+****************************
 */
 
-
-/*
-
-.section-sale {
-   position: relative;
-  margin-top: 9.6rem;
-  width: 100vw;
-  padding: 0 2.4rem;
-}
-
-.sale-img-container img {
-  height:938px;
-  width: 100%;
-  object-fit: cover;
-  object-position: 0% 10px;
-  filter: contrast(90%); 
-  padding: 0 2.4rem;
-  filter:blur(.3rem);
-}
-
-.sale-text-container {
-  color: #1E1C1C;
-  position:absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, 66%);
-}
-
-*/
-/***************************/
 .section-sale {
   position: relative;
   margin-top: 9.6rem;
   width: 100%;
- 
   display: flex;
- 
+  margin-bottom: 16rem;
 }
 
-
-.sale-img-container-2 {
-  width: 50%;
-
+.sale-img-container {
+  width: 100%;
   filter: grayscale(100%);
-  
  }
 
-.sale-img-container-2 img {
+.sale-img-container img {
   height: 97vh;
-  width: 100%;
+  width: 49%;
   object-fit: cover;
-  
-/*
+  /*
   filter: contrast(95%);
-  
-  
-   
-
-
   border: 3px solid  #1E1C1C;
   */
 }
-
-
-
-
-
-
 
 .sale-img-container-2:last-of-type img {
   border-left: none;
@@ -335,8 +184,6 @@ font-size: 1.6rem;
   
 }
 
-
-/********************************/
 .halftone {
   --dotSize: 0.25rem;
   --stop1: 3%;
@@ -358,7 +205,6 @@ font-size: 1.6rem;
   background-size: 1.3rem 1.3rem;
   background-position: 0 0, 0.65rem 0.65rem;
 }
-
 
 .halftone::after {
   mask-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0));
@@ -382,19 +228,13 @@ font-size: 1.6rem;
   /*filter: contrast(50); */
 }
 
-
 /*
-
-.halftone::after {
+  .halftone::after {
   mask-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0.5));
 }
 */
-/********************************/
 
 
-
-
-/***************************/
 
 .head-heading--sale {
   text-transform: uppercase;
@@ -427,7 +267,6 @@ NEW RELEASES SECTION
 */
 
 .section-new-releases {
-  margin-top: 16rem;
   margin-bottom: 16rem;
 }
 
@@ -440,14 +279,14 @@ RECOMMENDATION SECTION
 */
 
 .section-recommendations {
-  margin-top: 12rem;
-  margin-bottom: 12rem;
+  
+  margin-bottom: 16rem;
 }
 .vh-container {
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
-  padding: 3.6rem;
+  padding: 0 3.6rem;
 }
 
 .head-container-center {
