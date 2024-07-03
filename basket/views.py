@@ -28,6 +28,7 @@ def add_basket(request, product_id):
         else:
             basket[product_id_str] = quantity  # Add string version
             messages.add_message(request, 26, " added to basket")
+
     else:
         messages.error(request, "Not enough stock to fulfil this order")
 

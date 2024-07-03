@@ -12,6 +12,8 @@ import stripe
 import json
 
 
+
+
 def checkout(request):
     """
     Checkout functionality.

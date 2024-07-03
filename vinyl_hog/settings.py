@@ -178,31 +178,43 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Static files settings
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
-
+# Media settings
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
+# Delivery settings
 DELIVERY_THRESHOLD = 50
 DELIVERY_FEE = 12.00
 
+# Stripe settings
 STRIPE_CURRENCY = 'eur'
-STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
-STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
-STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
+###STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
+##STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+#STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
-DEFAULT_FROM_EMAIL = 'info@vinylhog.com'
+STRIPE_PUBLIC_KEY = 'pk_test_51P8JG3ECqW0pS3vWbIGOgoOz6xN9ZHbRdDhk0QYEJP2qm2ye4a0MQ6TWR0DrQiEiHarteXCKRcqi1GOq1C3qEUwM00g1d7Xhos'
+STRIPE_SECRET_KEY = 'sk_test_51P8JG3ECqW0pS3vWmS485ezvQkPJCTvBBUIBhqkBfpQvdz9fmFd1DCH2GnDtEspqycjwnsr0OAw1XwiNbxuiHpM000wKg27Yq8'
+STRIPE_WH_SECRET = 'whsec_nQCouSYaFVAJNWJ26E80fxHTqjR1jnt3'
 
 
+# Cloudinary settings
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET')
 }
+
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')

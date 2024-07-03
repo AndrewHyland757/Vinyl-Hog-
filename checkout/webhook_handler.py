@@ -1,12 +1,15 @@
+import json
+import time
+
+
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
+
 from .models import Order, OrderLineItem
 from products.models import Album
 from profiles.models import UserProfile
-import json
-import time
 
 
 class StripeWH_Handler:
@@ -27,12 +30,12 @@ class StripeWH_Handler:
             {"order": order})
         body = render_to_string(
             "checkout/confirmation_emails/confirmation_email_body.txt",
-            {"order": order, "contact_email": settings.DEFAULT_FROM_EMAIL})
+            {"order": order, "contact_email": settings.EMAIL_HOST_USER})
         
         send_mail(
             subject,
             body,
-            settings.DEFAULT_FROM_EMAIL,
+            settings.EMAIL_HOST_USER,
             [cust_email]
         )     
 
