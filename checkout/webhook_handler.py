@@ -1,6 +1,7 @@
 import json
 import time
 
+import stripe
 
 from django.http import HttpResponse
 from django.core.mail import send_mail
@@ -25,6 +26,12 @@ class StripeWH_Handler:
         Send the user a confirmation email.
         """
         cust_email = order.email
+
+        if cust_email:
+            print(cust_email)
+        else:
+             print("noooo cust_email")
+
         subject = render_to_string(
             "checkout/confirmation_emails/confirmation_email_subject.txt",
             {"order": order})
@@ -54,6 +61,10 @@ class StripeWH_Handler:
         intent = event.data.object
         pid = intent.id
         bag = intent.metadata.bag
+        
+
+        print("handler 111************************")
+
         save_info = intent.metadata.save_info
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
@@ -105,8 +116,9 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
-                status=200)
+
+            content=(f'Webhook received: {event["type"]} | SUCCESS: ''Verified order already in database'),
+            status=200)
         else:
             order = None
             try:
@@ -146,8 +158,10 @@ class StripeWH_Handler:
                 if order:
                     order.delete()
                 return HttpResponse(
-                    content=f'Webhook received: {event["type"]} | ERROR: {e}',
-                    status=500)
+
+            content=(f'Webhook received: {event["type"]} | SUCCESS: ''Created order in webhook'),
+            status=200)
+        print("webhook working")
         self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
