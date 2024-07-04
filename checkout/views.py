@@ -14,21 +14,18 @@ import json
 
 
 @require_POST
-
 def cache_checkout_data(request):
-
+    """
+    Handles the modification of Stripe PaymentIntent
+    with cart data and user information.
+    """
     try:
-
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-
-            'bag': json.dumps(request.session.get('bag', {})),
-
+            'basket': json.dumps(request.session.get('basket', {})),
             'save_info': request.POST.get('save_info'),
-
             'username': request.user,
-
         })
 
         return HttpResponse(status=200)
@@ -36,12 +33,11 @@ def cache_checkout_data(request):
     except Exception as e:
 
         messages.error(request, ('Sorry, your payment cannot be '
-
                                  'processed right now. Please try '
-
                                  'again later.'))
 
         return HttpResponse(content=e, status=400)
+
 
 def checkout(request):
     """
@@ -84,7 +80,7 @@ def checkout(request):
                     else:
                         messages.error(request,
                                        f"{product.title} is out of stock")
-                        return redirect("view-cart")
+                        return redirect("basket")
 
                     order_line_item = OrderLineItem(
                         order=order,
@@ -96,7 +92,7 @@ def checkout(request):
 
                 except Album.DoesNotExist:
                     messages.error(
-                        request, "Unknown item in shopping cart.")
+                        request, "Unknown item in shopping basket")
                     order.delete()
                     return redirect(reverse("basket"))
 
@@ -122,6 +118,8 @@ def checkout(request):
         )
 
         if request.user.is_authenticated:
+            # Attempt to prefill the form with any info the user
+            # maintains in their profile
             try:
                 profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={

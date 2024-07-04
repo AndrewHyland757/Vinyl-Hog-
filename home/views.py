@@ -26,8 +26,7 @@ def home(request):
         posts_1_5 = posts_by_date[0:4]
 
 
-    print ( posts_1_5)
-    print (post_1)
+
 
 
     context = {
