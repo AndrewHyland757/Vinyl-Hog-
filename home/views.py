@@ -19,15 +19,9 @@ def home(request):
     posts_1_5 = None
     posts_by_date = RecommendationPost.objects.all().order_by("-created_on")
 
-   
-
     if posts:
         post_1 = posts_by_date[0]
         posts_1_5 = posts_by_date[0:4]
-
-
-
-
 
     context = {
         "posts": posts,
@@ -38,5 +32,3 @@ def home(request):
     }
 
     return render(request, "home/home.html", context)
-
-
