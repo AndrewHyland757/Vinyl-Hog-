@@ -254,6 +254,17 @@ MEDIA QUERIES
 		top: 47.5px;
 		transform: translate(-57%, 0);
    	}
+
+	   #search-box:focus,
+	   #search-box:link,
+	   #search-box:active {
+		   border: none;
+		   background-color: #fff;
+		   outline: none;
+		   border: .1rem solid #1E1C1C;
+		   -webkit-box-shadow: none;
+		   box-shadow: none;
+	   }
 }
 
 @media (max-width: 480px) {

@@ -2,6 +2,8 @@
 {% load static %}
 
 {% block extra_css %}
+<link href="{% static 'django_summernote/summernote.css' %}" rel="stylesheet">
+    <link href="{% static 'django_summernote/summernote-bs4.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'styles/posts.css' %}">
 {% endblock %}
 
@@ -9,6 +11,7 @@
     <meta name="description" content="Review of {{ product.title }} by {{ product.artist }} album.">
     <meta name="keywords" content="{{ product.title }} review, {{ product.title }} rating, {{ product.artist }} reviews">
 {% endblock %}
+
 
 {% block content %}
 
@@ -23,10 +26,11 @@
                 <p class="author">by {{ post.author }}</p>
             </div>
             <div class="article-container">
-                <p class="article"> {{ post.content }}</p>
+                <p class="">{{ post.content|safe }}</p>
             </div>
+            
             <a href="{% url 'product' post.product.id %}">
-                <div class="album-container">
+                <div class="album-container mt-5">
                     <img src="{{ post.product.featured_image.url }}" alt="Blog post image">
                     <div class="album-container-text">
                         <p>{{ post.product }}</p>

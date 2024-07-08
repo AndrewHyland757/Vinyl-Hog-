@@ -1,3 +1,7 @@
+section {
+  margin-bottom: 16rem;
+}
+
 /*
 ****************************
 SECTION HOME
@@ -7,7 +11,6 @@ SECTION HOME
 .section-home {
   height: calc(100vh - 7rem) !important;
   max-width: 100vw !important;
-  margin-bottom: 16rem;
 }
 
 .home-container {
@@ -48,63 +51,9 @@ SECTION HOME
 
 /*
 ****************************
-FEATURED IN SECTION
-****************************
-*/
-
-.section-featured-in {
-  
-  
-  padding: 0 9.6rem;
-  margin-bottom: 16rem;
-  
-}
-
-.container-featured-in {
-  background-color: #eff2f3;
-  padding: 6.2rem 6.2rem 6.2rem 6.2rem;
-  margin:0 auto;
-
-}
-
-.section-featured-in h2 {
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin: 0 auto;
-  margin-bottom: 4.2rem;
-}
-
-.logos-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.featured-logo--color {
-  filter: brightness(0);
-
-}
-
-.featured-logo {
-  height: 3.8rem;
-}
-
-.featured-logo-lg {
-  height: 4.8rem;
-  filter:grayscale(100%);
-}
-
-
-/*
-****************************
 ABOUT SECTION
 ****************************
 */
-
-.section-about {
-  margin-bottom: 16rem;
-}
 
 .about-container {
   margin: 0 6rem;
@@ -142,6 +91,55 @@ ABOUT SECTION
 }
 
 /*
+**********************************
+NEW RELEASES SECTION -
+uses REUSABLE PRODUCT-GRID DISPLAY
+class in general.css file
+**********************************
+*/
+
+
+/*
+****************************
+FEATURED IN SECTION
+****************************
+*/
+
+.container-featured-in {
+  background-color: #eff2f3;
+  padding: 6.2rem 6.2rem 6.2rem 6.2rem;
+  margin:0 auto;
+
+}
+
+.section-featured-in h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.logos-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.featured-logo--color {
+  filter: brightness(0);
+}
+
+.featured-logo {
+  height: 3.8rem;
+}
+
+.featured-logo-lg {
+  height: 4.8rem;
+  filter:grayscale(100%);
+}
+
+/*
 ****************************
 SALE SECTION
 ****************************
@@ -152,27 +150,21 @@ SALE SECTION
   margin-top: 9.6rem;
   width: 100%;
   display: flex;
-  margin-bottom: 16rem;
 }
 
 .sale-img-container {
   width: 100%;
-  filter: grayscale(100%);
  }
 
 .sale-img-container img {
+  filter: saturate(0%) blur(1px);
   height: 97vh;
   width: 49%;
   object-fit: cover;
-  /*
-  filter: contrast(95%);
-  border: 3px solid  #1E1C1C;
-  */
 }
 
 .sale-img-container-2:last-of-type img {
   border-left: none;
-
 }
 
 .sale-text-container {
@@ -181,7 +173,6 @@ SALE SECTION
   top: 45%;
   left: 50%;
   transform: translate(-50%, 66%);
-  
 }
 
 .halftone {
@@ -234,8 +225,6 @@ SALE SECTION
 }
 */
 
-
-
 .head-heading--sale {
   text-transform: uppercase;
   background-color: #fff;
@@ -243,34 +232,17 @@ SALE SECTION
   margin-bottom: 5rem;
   font-size: 7.2rem;
   padding: 2.4rem;
-
-
 }
+
 .sale-btn-container {
   width: fit-content;
   margin: 0 auto;
-
 }
 
 .btn-explore--sale {
   background-color: #fff;
   border: none;
-
 }
-
-
-
-/*
-****************************
-NEW RELEASES SECTION
-****************************
-*/
-
-.section-new-releases {
-  margin-bottom: 16rem;
-}
-
-
 
 /*
 ****************************
@@ -278,10 +250,6 @@ RECOMMENDATION SECTION
 ****************************
 */
 
-.section-recommendations {
-  
-  margin-bottom: 16rem;
-}
 .vh-container {
   height: 100vh;
   display: grid;
@@ -346,8 +314,6 @@ RECOMMENDATION SECTION
   font-size: 1.6rem;
 }
 
- 
-
 .item-2-container {
   width: 1400px;
   margin: 0 auto;
@@ -356,12 +322,10 @@ RECOMMENDATION SECTION
   margin-bottom: 6.4rem;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3.2rem;
-
 }
 
 .item-2:first-of-type {
   display: none !important;
-
 }
 
 .item-2 {
@@ -370,7 +334,6 @@ RECOMMENDATION SECTION
   display: flex;
   flex-direction: column;
 }
-
 
 .item-2 .post-img {
   position: absolute;
@@ -382,9 +345,7 @@ RECOMMENDATION SECTION
   filter: contrast(90%);
 }
 
-
 .item-2 .img-container {
-  filter: grayscale(100%);
   width: 100%;
   height: 400px;
   position: relative;
@@ -451,6 +412,42 @@ MEDIA QUERIES
   }
 }
 
+@media (max-width:1200px ) {
+
+  section {
+    margin-bottom: 12rem;
+  }
+
+  /* section about */
+
+  .section-about {
+    padding: 0 3.6rem;
+  }
+  
+  .about-container {
+    margin: 0;
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+  
+  .about-container img {
+    height: 75vw;
+    width: 75vw;
+    border: 4rem solid #eff2f3;;
+  }
+  
+  .about-text-container {
+    width: 75vw;
+    padding: 0;
+    padding-top: 5.8rem;
+    border-top: 0.15rem solid #1E1C1C;
+    border-left: none;
+  }
+  
+  .about-text-container p {
+    font-size: 1.6rem;
+  }
+}
 
 @media (max-width:1025px ) {
 
@@ -476,20 +473,19 @@ MEDIA QUERIES
   .item-1 .post-card-sub {
     font-size: 1.4rem;
   }
-  
 }
 
 @media (max-width:768px) {
 
-  section { 
-    border-top: .1rem solid black;
-    border-bottom: .1rem solid black;
+  section {
+    margin-bottom: 6.2rem;
   }
 
   /* section landing */
 
   .section-home {
     height: calc(100vh - 6rem) !important;
+    margin-bottom: 2rem;
   }
 
   .home-container {
@@ -532,7 +528,70 @@ MEDIA QUERIES
     line-height: 1.1;
   }
 
+  /* section about */
+
+  .section-about {
+    padding: 0 3.6rem;
+  }
+  
+  .about-container {
+    gap: 4.8rem;
+  }
+  
+  .about-container img {
+    border: 2.8rem solid #eff2f3;;
+  }
+  
+  .about-text-container {
+    padding-top: 5.8rem;
+  }
+  
+  .about-text-container p {
+    font-size: 1.4rem;
+  }
+
+  /* section new-releases */
+
+  .section-new-releases {
+    margin-bottom: 8rem;
+  }
+
+  /* section sale */
+
+  .section-sale {
+    margin-top: 0;
+  }
+  
+  .sale-img-container img {
+    width: 100%;
+  }
+  
+  .sale-img-container img:last-of-type {
+    display: none;
+  }
+
+  .head-heading--sale {
+    letter-spacing: 1rem;
+    margin-bottom: 5rem;
+    font-size: 6rem;
+    padding: 2rem;
+  }
+
+  .sale-btn-container {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .btn-explore--sale {
+    background-color: #fff;
+    border: none;
+  }
+
   /* section recommendations */
+
+  .section-recommendations {
+    margin-bottom: 8rem;
+  }
 
   .vh-container {
     height: auto;
@@ -541,7 +600,7 @@ MEDIA QUERIES
 
   .item-1-container,
   .item-2:nth-of-type(3) {
-   display: none;
+    display: none;
   }
 
   .item-2:first-of-type {
@@ -554,7 +613,8 @@ MEDIA QUERIES
     flex-direction: column;
     gap: 3.2rem;
     width: 100%;
-    padding: 2.4rem;
+    padding: 0 2.4rem;
+    margin-bottom: 4.2rem;
   }
 
   .item-2 {
@@ -589,9 +649,43 @@ MEDIA QUERIES
     padding-top: 0rem;
   }
 
+   /* section featured-in */
+
+   .section-featured-in {
+    padding: 0;
+  }
+  
+  .container-featured-in {
+    padding: 4.2rem 2.4rem 4.2rem 2.4rem;
+  }
+
+  .section-featured-in h2 {
+    font-size: 1.6rem;
+    margin-bottom: 4.2rem;
+  }
+  
+  .featured-logo {
+    height: 2rem;
+  }
+  
+  .featured-logo-lg {
+    height: 2rem;
+  }
 }
 
 @media (max-width:480px) {
+
+  /* section about */
+
+  .about-container img {
+    height: 90vw;
+    width: 90vw;
+    border: 3.2rem solid #eff2f3;;
+  }
+  
+  .about-text-container {
+    width: 85vw;
+  }
 
   /* section recommendations */
 

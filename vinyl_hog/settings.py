@@ -55,9 +55,9 @@ INSTALLED_APPS = [
     'profiles',
     'blog',
     'product_management',
-    
     'wishlist_items',
 
+    'django_summernote',
     'crispy_forms',
     "crispy_bootstrap4",
     'widget_tweaks',

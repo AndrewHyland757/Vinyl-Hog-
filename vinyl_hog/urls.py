@@ -23,6 +23,8 @@ from . import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
+    
     path("accounts/", include("allauth.urls")),
     path("", include("home.urls")),
     path("products/", include("products.urls")),
@@ -36,7 +38,7 @@ urlpatterns = [
     path("returns/", views.footer_returns, name="footer-returns"),
     path("our_story/", views.footer_our_story, name="footer-our-story"),
     path("planet_vinylhog/", views.footer_planet_vinylhog, name="footer-planet-vinylhog"),
-    ]
+]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
