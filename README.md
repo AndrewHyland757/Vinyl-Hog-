@@ -188,22 +188,62 @@ This model is linked to the Order and Album models via ForeignKey and is created
 
 
 ![Screenshot of feature description](static/images/readme_imgs/features/landing.png)
-
 ![Screenshot of landing page](static/images/readme_imgs/screenshots/landing_page.png)
 ![Screenshot of landing page](static/images/readme_imgs/screenshots/landing_sm.png)
 </details>
 
+
+
+### About Section
+<details><br>
+
+ The about section consists of information about the company and its brand values.
+ The image was created on Photoshop.
+
+![Screenshot of feature description](static/images/readme_imgs/features/about_section.png)
+![Screenshot of about section](static/images/readme_imgs/screenshots/about_section.png)
+![Screenshot of about section](static/images/readme_imgs/screenshots/about_section_sm.png)
+</details>
+
 ### New Releases Section
-<details>
+<details><br>
+
  As one scrolls down the home page we have the "New Releases" section. It displays the most recently added products.
 
- ![Screenshot of navigation, logo and landing page](static/images/readme_imgs/landing_page.png)
+![Screenshot of feature description](static/images/readme_imgs/features/new_releases_section.png)
+![Screenshot of New Releases section](static/images/readme_imgs/screenshots/new_releases_section.png)
 </details>
 
-### Recommendation Section
+### Sale Section
 <details><br>
-This section displays the latest four recommendation posts added. These are written by staff of the company and act as high quality content to serve the customer and further engagement.
+
+ As one scrolls down the home page we have the "Sale" section.
+
+![Screenshot of feature description](static/images/readme_imgs/features/sale_section.png)
+![Screenshot of New Releases section](static/images/readme_imgs/screenshots/sale_section.png)
 </details>
+
+### Reviews Section
+<details><br>
+
+This section displays the latest four review posts added. These are written by staff of the company and act as high quality content to serve the customer and further engagement.
+
+![Screenshot of feature description](static/images/readme_imgs/features/reviews_section.png)
+![Screenshot of Reviews section](static/images/readme_imgs/screenshots/home_reviews1.png)
+![Screenshot of Reviews section](static/images/readme_imgs/screenshots/home_reviews2.png)
+</details>
+
+
+### Featured In Section
+<details><br>
+
+This section displays publications and websites where the company has featured.
+
+![Screenshot of feature description](static/images/readme_imgs/features/featured_in_section.png)
+![Screenshot of Reviews section](static/images/readme_imgs/screenshots/featured_in.png)
+
+</details>
+
 
 ### Footer Section
 <details><br>
@@ -543,6 +583,14 @@ Another bug was that the toast messages did not close if one clicked on a naviga
 
 - [AmIResponsive](http://ami.responsivedesign.is/)
     - Used to generate responsive image used in README file.
+
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse)
+    - Used to audit for performance & accessibility.
+
+- [Photoshop](https://www.adobe.com/ie/products/photoshop/landpa.html?gclid=Cj0KCQjwv7O0BhDwARIsAC0sjWPeCgU6FYu-ZKvAz6ymBFOviEoL8DOfkS6vavhnk9qIoopU-Tmp3OsaAlnyEALw_wcB&mv=search&mv=search&mv2=paidsearch&sdid=2XBSBWBF&ef_id=Cj0KCQjwv7O0BhDwARIsAC0sjWPeCgU6FYu-ZKvAz6ymBFOviEoL8DOfkS6vavhnk9qIoopU-Tmp3OsaAlnyEALw_wcB:G:s&s_kwcid=AL!3085!3!520877428951!e!!g!!photoshop!1423511192!58810496314&gad_source=1)
+    - Used to make image on the about section.
+
+
 
 
 ## Further Possible Additions
