@@ -24,7 +24,6 @@
                 <ul class="socialaccount_providers">
                 {% include "socialaccount/snippets/provider_list.html" with process="login" %}
                 </ul>
-
                 <div class="login-or">{% trans 'or' %}</div>
             </div>
 
@@ -56,10 +55,9 @@
 
             <!-- Submit button -->
             <div class="btn-container-center mt-5">
-                <button class="btn-explore" type="submit">{% trans "Sign In" %}</button>
+                <button class="btn-explore btn-explore--full-width" type="submit">{% trans "Sign In" %}</button>
             </div>
             
-
             <div class="forget-password-container mt-5">
             <a href="{% url 'account_reset_password' %}"><p class='section-text '>{% trans "Forgot Password?" %}</p></a>
             </div>
