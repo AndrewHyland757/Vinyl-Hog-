@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import cloudinary #
+import cloudinary_storage #
 from django.contrib.messages import constants as messages
 
 if os.path.isfile("env.py"):
@@ -186,8 +188,10 @@ CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dstl8vaey',
-    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
-    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET')
+    #'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    #'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
+    'API_KEY': '162238861858273',
+    'API_SECRET': '6LZlM-qmC6k_Hv6ItC1b4ik5pxk'
 }
 
 # Static files settings
