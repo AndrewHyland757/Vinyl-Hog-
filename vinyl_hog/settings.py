@@ -186,13 +186,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dstl8vaey',
+##CLOUDINARY_STORAGE = {
+    #####'CLOUD_NAME': 'dstl8vaey',
     #'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
     #'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
-    'API_KEY': '162238861858273',
-    'API_SECRET': '6LZlM-qmC6k_Hv6ItC1b4ik5pxk'
-}
+    ####'API_KEY': '162238861858273',
+    ###'API_SECRET': '6LZlM-qmC6k_Hv6ItC1b4ik5pxk'
+#}
 
 # Static files settings
 STATIC_URL = '/static/'
