@@ -275,7 +275,8 @@ RECOMMENDATION SECTION
   width: 100%;
   display: grid;
   grid-template-columns: 1.25fr 1fr;
-  gap: 3.6rem;
+  gap: 2.4rem;
+  padding-right: 2.4rem;
   background-color: #eff2f3;
 }
 
@@ -604,7 +605,7 @@ MEDIA QUERIES
   }
 
   .item-2:first-of-type {
-    display: block;
+    display: block !important;
   }
 
   .item-2-container {
@@ -696,4 +697,3 @@ MEDIA QUERIES
     overflow: hidden;
   }
  }
-

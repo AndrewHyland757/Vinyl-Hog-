@@ -14,7 +14,7 @@ class RecommendationPost(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     author = models.CharField(max_length=200)
-    product = models.ForeignKey(Album, null=False, blank=False, on_delete=models.CASCADE)
+    product = models.ManyToManyField(Album, blank=False)
     article_image = models.ImageField(
         null=True, blank=True, default="default.jpg")
     content = models.TextField()

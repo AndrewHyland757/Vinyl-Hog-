@@ -130,7 +130,6 @@ POST.HTML
   width: fit-content;
   display: flex;
   gap: 1.6rem;
-  border: .5px solid #1E1C1C;
   padding: 1.2rem;
 }
 
