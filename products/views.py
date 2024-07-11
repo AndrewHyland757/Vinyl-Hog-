@@ -17,8 +17,8 @@ def products(request):
     Displays the products including filter and sort functionality.
     """
     products = Album.objects.all()
-    artists = Artist.objects.all()
-    genres = Genre.objects.all()
+    artists = Artist.objects.all().order_by('name')
+    genres = Genre.objects.all().order_by('name')
     query = None
     conditions = None
     section_heading = "All Vinyl"
