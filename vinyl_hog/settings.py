@@ -28,6 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
     
 DEBUG = False
+
 CSRF_TRUSTED_ORIGINS = ['https://8000-andrewhyland75-vinylhog-adqzwwz25b6.ws-eu115.gitpod.io']
 
 ALLOWED_HOSTS = ['vinyl-hog-db2fc2977a10.herokuapp.com', '8000-andrewhyland75-vinylhog-adqzwwz25b6.ws-eu115.gitpod.io']
@@ -180,18 +181,16 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-
 # Cloudinary settings
 
-CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
+#CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
+CLOUDINARY_URL = 'cloudinary://162238861858273:6LZlM-qmC6k_Hv6ItC1b4ik5pxk@dstl8vaey'
+
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dstl8vaey',
-    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
-    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
-    'API_KEY': '162238861858273',
-    'API_SECRET': '6LZlM-qmC6k_Hv6ItC1b4ik5pxk'
+    'API_KEY': '162238861858273',   #os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': '6LZlM-qmC6k_Hv6ItC1b4ik5pxk'     #os.environ.get('CLOUDINARY_API_SECRET')
 }
 
 # Static files settings
