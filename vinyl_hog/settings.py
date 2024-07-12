@@ -65,7 +65,6 @@ INSTALLED_APPS = [
     "crispy_bootstrap4",
     'widget_tweaks',
     'djangoviz',
-     
 ]
 
 MIDDLEWARE = [

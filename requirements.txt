@@ -17,6 +17,7 @@ djangoviz==0.1.1
 fabio==2024.4.0
 fonttools==4.53.1
 graphqlclient==0.2.4
+gunicorn==22.0.0
 h5py==3.11.0
 hdf5plugin==4.4.0
 kiwisolver==1.4.5
