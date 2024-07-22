@@ -13,9 +13,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-import cloudinary #
-import cloudinary_storage #
+import cloudinary
+import cloudinary_storage
 from django.contrib.messages import constants as messages
+
 
 if os.path.isfile("env.py"):
     import env
@@ -27,11 +28,16 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
     
-DEBUG = False
+DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-andrewhyland75-vinylhog-adqzwwz25b6.ws-eu115.gitpod.io']
 
-ALLOWED_HOSTS = ['vinyl-hog-db2fc2977a10.herokuapp.com', '8000-andrewhyland75-vinylhog-adqzwwz25b6.ws-eu115.gitpod.io']
+
+#ALLOWED_HOSTS = ['vinyl-hog-db2fc2977a10.herokuapp.com', '8000-andrewhyland75-vinylhog-adqzwwz25b6.ws-eu115.gitpod.io']
+
+ALLOWED_HOSTS = ['*']
+
+
 
 # Application definition
 
@@ -141,7 +147,7 @@ MESSAGE_TAGS = {
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#DATABASES = {                  #### original
+#DATABASES = {
     #'default': {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': BASE_DIR / 'db.sqlite3',
@@ -151,6 +157,7 @@ MESSAGE_TAGS = {
 DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -183,13 +190,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Cloudinary settings
 
 #CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
-CLOUDINARY_URL = 'cloudinary://162238861858273:6LZlM-qmC6k_Hv6ItC1b4ik5pxk@dstl8vaey'
+CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dstl8vaey',
-    'API_KEY': '162238861858273',   #os.environ.get('CLOUDINARY_API_KEY'),
-    'API_SECRET': '6LZlM-qmC6k_Hv6ItC1b4ik5pxk'     #os.environ.get('CLOUDINARY_API_SECRET')
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET')
 }
 
 # Static files settings
@@ -209,22 +216,10 @@ DELIVERY_FEE = 12.00
 
 # Stripe settings
 STRIPE_CURRENCY = 'eur'
-#original
-###STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
-##STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
-#STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
-STRIPE_PUBLIC_KEY = 'pk_test_51P8JG3ECqW0pS3vWbIGOgoOz6xN9ZHbRdDhk0QYEJP2qm2ye4a0MQ6TWR0DrQiEiHarteXCKRcqi1GOq1C3qEUwM00g1d7Xhos'
-STRIPE_SECRET_KEY = 'sk_test_51P8JG3ECqW0pS3vWmS485ezvQkPJCTvBBUIBhqkBfpQvdz9fmFd1DCH2GnDtEspqycjwnsr0OAw1XwiNbxuiHpM000wKg27Yq8'
-STRIPE_WH_SECRET = 'whsec_nQCouSYaFVAJNWJ26E80fxHTqjR1jnt3'
-
-
-
-
-
-
-
-
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -233,4 +228,3 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-
