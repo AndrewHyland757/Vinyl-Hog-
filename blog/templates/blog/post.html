@@ -8,8 +8,10 @@
 {% endblock %}
 
 {% block extra_meta %}
-    <meta name="description" content="Review of {{ product.title }} by {{ product.artist }} album.">
-    <meta name="keywords" content="{{ product.title }} review, {{ product.title }} rating, {{ product.artist }} reviews">
+    {% for product in post.product.all %}
+        <meta name="description" content="Review of {{ product.title }} by {{ product.artist }} album.">
+        <meta name="keywords" content="{{ product.title }} review, {{ product.title }} rating, {{ product.artist }} reviews">
+    {% endfor %}
 {% endblock %}
 
 
