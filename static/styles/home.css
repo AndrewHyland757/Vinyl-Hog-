@@ -219,12 +219,6 @@ SALE SECTION
   /*filter: contrast(50); */
 }
 
-/*
-  .halftone::after {
-  mask-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0.5));
-}
-*/
-
 .head-heading--sale {
   text-transform: uppercase;
   background-color: #fff;

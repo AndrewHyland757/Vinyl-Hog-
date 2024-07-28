@@ -603,26 +603,14 @@ These are some features that can be implemented in the future.
 
 
 
-## Scope
-The website has to achieve the essential user & business goals. The following features will be included in this version:
+## Credits
+### Images
+- [Upsplash](https://unsplash.com/)
+- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Commons:Welcome)
 
-- Visual language and styling that reflects the brands values and appeals to the target audience.
-- A fully responsive website.
-- A navbar that will have links to: the product pages, account features, a product search function, link to users wishlist and link to the users basket. 
-- A home page that includes: a visually strong landing page that entices the user to further exploration of the business, a new releases section and recommendation articles section.
-- A footer section with delivery information, business information, returns iformation,  social media links and contact details. 
 
-- About section with a brief suitable description of the restaurant with three images. ****************
 
-- Products page where users can view the albums available.
-- Product page where the customers can view the product in further detail and have the option to add it to their basket, or if logged in their wishlist.
-- A basket page where the customer can view the products in their basket and remove and change quantity if necessary. 
-- A checkout page where the customer can make a purchace.
- 
-
-- Register and login pages using Django Allauth.
-- A user profile page to view order history and default delivery information.
-- A logout page for logged in users.
-
-- A product, artist and genre management page for admin users.
-- Product add, edit and delete pages for admin users.
+### Code
+- The Code Institute's Boutique Ado Walkthrough was used for the foundation of this project.
+- [Halftone effect on home sale section image](https://css-irl.info/css-halftone-patterns/)
+- [The right way to use Many To Many Field](https://www.reddit.com/r/django/comments/l937f1/the_right_way_to_use_a_manytomanyfield_in_django/)

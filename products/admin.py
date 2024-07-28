@@ -4,10 +4,11 @@ from .models import Album, Artist, Genre, Condition
 
 # Register your models here.
 
-class PostAdmin(SummernoteModelAdmin):
+class AlbumAdmin(SummernoteModelAdmin):
     summernote_fields = ('description',)
+    ordering = ['title']
 
-admin.site.register(Album, PostAdmin)
+admin.site.register(Album, AlbumAdmin)
 admin.site.register(Genre)
 admin.site.register(Condition)
 admin.site.register(Artist)
