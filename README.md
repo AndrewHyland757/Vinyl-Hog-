@@ -418,8 +418,6 @@ Add, remove, and edit the quantity of products in my shopping basket | Add a pro
 Access review articles | From the home page, click on a review card. | Taken to the review page. Review article shown. | WAS |
 
 
-
-
 ### 2. Non-Registered User Needs
 
 **Goal** | **Step** | **Expected Result** | **Actual Result**
@@ -452,6 +450,34 @@ Access the blog management page | Admin user signs in, clicks on the account lin
 Add review article | On the blog management page, the user clicks on the add button to open the add post page. Form is filled in. | Success message displayed. User returned to the management page and new blog article shown in the database table. New article is shown on the site’s page. | WAS |
 Edit review article | On the blog management page, the user clicks on the edit button on the desired instance. Taken to the edit page. Form is edited. | Success message displayed. User returned to the management page and edited article shown in the list. Changes are shown. Changes are shown on the site’s page. | WAS |
 Delete review article | On the management page, the user clicks on the delete button on the desired instance. Taken to the delete page. Confirmation button is clicked. | Success message displayed. User returned to the management page and deleted article removed from the list. | WAS |
+
+
+
+## Code Validation
+All of my code has been validated using an online validator specific to the language, all code now passes with zero errors. 
+
+- [W3C Markup Validation Service](https://validator.w3.org/) 
+    - Used to validate all HTML code written and used in this webpage.
+   
+    
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - Used to validate all CSS code written and used in this webpage.
+    - No errors shown. 
+
+
+- [JSHint](https://jshint.com/)
+    - Used to validate JS code
+    - No errors shown.
+
+- [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+    - Used to test my code for any issues or errors.
+    - Some lines in views.py that contained messages were left longer.
+
+
+- Lighthouse Google Developer Tools
+    - In addition to this I have also used online Lighthouse to test the accessibility of my website:
+
+![Image of lighthouse validation](static/images/readme_imgs/lighthouse.png)
 
 
 ## Bugs and Fixes
@@ -501,6 +527,33 @@ Another bug was that the toast messages did not close if one clicked on a naviga
 
 </details>
 
+## Deployment
+
+
+I followed the below steps using the Code Institute tutorial and [Django Blog cheatsheat](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf)
+
+- The following command in the Gitpod CLI will create the relevant files needed for Heroku to install your project dependencies `pip3 freeze --local > requirements.txt`. Please note this file should be added to a .gitignore file to prevent the file from being committed. A `Procfile` is also required that specifies the commands that are executed by the app on startup. 
+
+1. Go to [Heroku.com](https://dashboard.heroku.com/apps) and log in; if you do not already have an account then you will need to create one.
+2. Click the `New` dropdown and select `Create New App`.
+3. Enter a name for your new project, all Heroku apps need to have a unique name, you will be prompted if you need to change it.
+4. Select the region you are working in.
+
+*Heroku Settings*
+You will need to set your Environment Variables - this is a key step to ensuring your application is deployed properly.
+- In the Settings tab, click on `Reveal Config Vars` and set the following variables:
+    - SECRET_KEY - to be set to your chosen key
+    - CLOUDINARY_URL - to be set to your Cloudinary API environment variable
+- In the resources tab you must install 'Heroku Postgres'
+
+*Heroku Deployment*
+In the Deploy tab:
+1. Connect your Heroku account to your Github Repository following these steps:
+    1. Click on the `Deploy` tab and choose `Github-Connect to Github`.
+    2. Enter the GitHub repository name and click on `Search`.
+    3. Choose the correct repository for your application and click on `Connect`.
+2. You can then choose to deploy the project manually or automatically, automatic deployment will generate a new application every time you push a change to Github, whereas manual deployment requires you to push the `Deploy Branch` button whenever you want a change made.
+3. Once you have chosen your deployment method and have clicked `Deploy Branch` your application will be built and you should see the below `View` button, click this to open your application:
 
 
 
@@ -589,9 +642,6 @@ Another bug was that the toast messages did not close if one clicked on a naviga
 
 
 
-
-
-
 ## Further Possible Additions
 
 These are some features that can be implemented in the future.
@@ -601,14 +651,12 @@ These are some features that can be implemented in the future.
 - The ability to use discount codes for purchaces.
 
 
-
-
 ## Credits
+
 ### Images
-- [Upsplash](https://unsplash.com/)
-- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Commons:Welcome)
+[Upsplash](https://unsplash.com/) - All images used in the project were taken from upsplash.
 
-
+[Wikimedia Commons](https://commons.wikimedia.org/wiki/Commons:Welcome) - All album cover images used in the project.
 
 ### Code
 - The Code Institute's Boutique Ado Walkthrough was used for the foundation of this project.

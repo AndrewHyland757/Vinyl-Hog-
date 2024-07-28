@@ -15,13 +15,8 @@ POSTS.HTML
 .item-2 {
   overflow: hidden;
   background-color: #eff2f3;
-}
-
-.item-2 {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  gap: 0rem;
-  align-items:flex-start;
+  display: flex;
+  flex-direction: column;
 }
 
 .item-2 .post-img {
@@ -51,8 +46,8 @@ POSTS.HTML
   font-weight: 500;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  margin-bottom: 0.25rem;
-  line-height: 1;
+  margin-bottom: 0.75rem;
+  line-height: 1.025;
 }
 
 .card-body-post {

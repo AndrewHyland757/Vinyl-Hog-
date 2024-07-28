@@ -352,8 +352,8 @@ RECOMMENDATION SECTION
   font-weight: 500;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  margin-bottom: 0.25rem;
-  line-height: 1;
+  margin-bottom: 0.75rem;
+  line-height: 1.025;
 }
 
 .card-body-post {
