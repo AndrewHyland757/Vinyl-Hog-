@@ -352,7 +352,7 @@ RECOMMENDATION SECTION
   font-weight: 500;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   line-height: 1.025;
 }
 
@@ -370,7 +370,6 @@ RECOMMENDATION SECTION
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
   line-height: 1.25;
-  margin-bottom: 1.5rem;
 }
 
 .post-card-text {
