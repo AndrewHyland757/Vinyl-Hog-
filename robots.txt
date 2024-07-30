@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /accounts/
+Sitemap: https://vinyl-hog-db2fc2977a10.herokuapp.com//sitemap.xml

@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block extra_meta %}
-    {% for product in post.product.all %}
+    {% for product in products %}
         <meta name="description" content="Review of {{ product.title }} by {{ product.artist }} album.">
         <meta name="keywords" content="{{ product.title }} review, {{ product.title }} rating, {{ product.artist }} reviews">
     {% endfor %}
@@ -31,7 +31,7 @@
                 <p class="">{{ post.content|safe }}</p>
             </div>
             
-            {% for product in post.product.all %}
+            {% for product in products %}
                 <a href="{% url 'product' product.id %}">
                     <div class="album-container mt-5">
                         <img src="{{ product.featured_image.url }}" alt="Blog post image">
@@ -47,4 +47,3 @@
     </main>
 
 {% endblock %}
-

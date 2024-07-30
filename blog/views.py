@@ -28,9 +28,11 @@ def post(request, post_id):
     View to render an individual post.
     """
     post = get_object_or_404(RecommendationPost, id=post_id)
+    products = post.product.all()
 
     context = {
         "post": post,
+        "products": products,
     }
 
     return render(request, "blog/post.html", context)

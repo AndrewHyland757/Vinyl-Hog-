@@ -78,9 +78,6 @@
                         <!-- Pass the client secret to the view so we can get the payment intent id -->
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
-    
-
-
 
                     <div class="submit-button text-right ">
                         <a href="{% url 'basket' %}" class="btn-explore btn-explore--full-width mb-5">
@@ -89,23 +86,6 @@
                             </span>
                             <span class="font-weight-bold">Adjust Bag</span>
                         </a>
-
-
-
-                        <script>
-                        if (window.jQuery) {
-                            console.log("jQuery is loaded");
-                        } else {
-                            console.error("jQuery is not loaded");
-                        }
-                        document.addEventListener('DOMContentLoaded', () => {
-                            var form = document.getElementById('payment-form');
-                            form.addEventListener('submit', function (ev) {
-                                console.log('Submit button works');
-                            });
-                        });
-                        </script>
-
 
                         <button id="submit-button" aria-label="complete order" class="btn-explore btn-explore--full-width">
                             <span class="font-weight-bold">Complete Order</span>

@@ -1,0 +1,2512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?condition=fresh</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?condition=New</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?condition=Used</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/accounts/login/?next=/wishlist/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/basket/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/105/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/104/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/103/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/102/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/101/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/100/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/99/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/98/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?category=on_sale</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/blog/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/shipping/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/returns/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/our_story/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/planet_vinylhog/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Aphex%20Twin</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Beverly%20Glenn-Copeland</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Beyonc%C3%A9&amp;#x27;</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Bill%20Laurance%20&amp;%20The%20Untold%20Orchestra</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Black%20Sabbath</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Blue%20Lake</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Bob%20Dylan</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Brian%20Eno</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Can</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=D&amp;#x27;Angelo</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Daniel%20Lopatin</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Dirty%20Beaches</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Einst%C3%BCrzende%20Neubauten</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Ethiopiques</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Fabiano%20do%20Nascimento</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Four%20Tet</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Glenn%20Gould</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Grace%20Jones</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Hailu%20Mergia</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Hildur%20Gu%C3%B0nad%C3%B3ttir</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Hiroshi%20Yoshimura</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Hot%20Chip</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Jeff%20Buckley</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=John%20Fahey</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=John%20Martyn</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Joni%20Mitchell</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Julianna%20Barwick</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Jusell,%20Prymek,%20Sage%20&amp;%20Shiroishi</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Kendrick%20Lamar</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Leonard%20Cohen</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Lorde</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Love</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Madonna</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Marie%20Davidson</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Masao%20Nakajima%20Quartet</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Matthew%20Halsall</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Max%20Richter</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Meredith%20Monk</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Mort%20Garson</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Neu!</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Nick%20Cave%20and%20Warren%20Ellis</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Nick%20Drake</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Nils%20Frahm</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Ornette%20Coleman</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Park%20Jiha</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Portishead</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Prefab%20Sprout</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Radiohead</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Red%20Hot%20Chili%20Peppers</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Robbie%20Basho</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Rosal%C3%ADa</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Sam%20Mallett</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Scott%20Walker</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Sunn%20O)))</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Swans</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Taylor%20Swift</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=The%20Blue%20Nile</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=The%20Brian%20Jonestown%20Massacre</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=The%20Lord</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=The%20Lounge%20Lizards</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=The%20Strokes</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Tom%20Waits</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Various%20Artists</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=William%20Basinski</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Wim%20Mertens</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=XX</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Yoko%20Ono</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=Yosi%20Horikawa</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=compilation</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=donald%20fagan</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=freddie%20hubbard</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=john%20prine</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=kreidler</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=lana%20del%20rey</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=luc%20van%20acker</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=maria%20elena</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=omar%20sosa</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=ryuichi%20sakamoto</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=sam%20gendel</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=shabaka</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=tindersticks</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=townes%20van%20zandt</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=vampire%20weekend</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?artist=vikingur%20olafsson</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sale=on_sale</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?category=New</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?category=Used</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?category=latest</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/59/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/50/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/46/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/47/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/48/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/51/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/58/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/3/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/66/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/88/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/68/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/91/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/75/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/76/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/79/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/77/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/74/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/97/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/82/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/85/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/87/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/89/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/72/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/86/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/94/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/5/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/95/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/96/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/8/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/10/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/6/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/9/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/11/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/12/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/15/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/16/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/20/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/80/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/17/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/55/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/7/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/61/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/14/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/71/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/83/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/57/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/56/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/42/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/78/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/62/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/60/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/54/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/64/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/53/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/33/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/43/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/30/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/35/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/45/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/19/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/34/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/37/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/39/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/38/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/41/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/44/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/63/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/4/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/18/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/24/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/40/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/36/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/92/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/93/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/90/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/81/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/49/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/1/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/2/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/22/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/25/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/69/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/70/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/65/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/73/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/product/52/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=60s</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=80s</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=Experimental</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=Funk</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=R&amp;B</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=Trip%20hop</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=alternative</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=ambient</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=classical</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=country</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=electronic</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=experimental%20pop</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=folk</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=folk-rock</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=hip%20hop</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=indie</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=industrial</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=jazz</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=krautrock</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=metal</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=minimalism</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=new%20wave</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=pop</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=psychedelic</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=rap</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=rock</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=singer%20songwriter</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=soul</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=soundtrack</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?genre=synth-pop</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/accounts/signup/?next=%2Fwishlist%2F</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;category=on_sale</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;category=on_sale</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;category=on_sale</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Aphex%20Twin</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Aphex%20Twin</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Aphex%20Twin</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Beverly%20Glenn-Copeland</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Beverly%20Glenn-Copeland</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Beverly%20Glenn-Copeland</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Beyonc%C3%A9</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Beyonc%C3%A9</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Beyonc%C3%A9</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Bill%20Laurance</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Bill%20Laurance</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Bill%20Laurance</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Black%20Sabbath</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Black%20Sabbath</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Black%20Sabbath</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Blue%20Lake</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Blue%20Lake</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Blue%20Lake</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Bob%20Dylan</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Bob%20Dylan</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Bob%20Dylan</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Brian%20Eno</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Brian%20Eno</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Brian%20Eno</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Can</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Can</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Can</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=D</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=D</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=D</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Daniel%20Lopatin</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Daniel%20Lopatin</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Daniel%20Lopatin</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Dirty%20Beaches</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Dirty%20Beaches</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Dirty%20Beaches</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Einst%C3%BCrzende%20Neubauten</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Einst%C3%BCrzende%20Neubauten</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Einst%C3%BCrzende%20Neubauten</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Ethiopiques</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Ethiopiques</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Ethiopiques</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Fabiano%20do%20Nascimento</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Fabiano%20do%20Nascimento</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Fabiano%20do%20Nascimento</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Four%20Tet</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Four%20Tet</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Four%20Tet</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Glenn%20Gould</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Glenn%20Gould</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Glenn%20Gould</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Grace%20Jones</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Grace%20Jones</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Grace%20Jones</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Hailu%20Mergia</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Hailu%20Mergia</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Hailu%20Mergia</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Hildur%20Gu%C3%B0nad%C3%B3ttir</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Hildur%20Gu%C3%B0nad%C3%B3ttir</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Hildur%20Gu%C3%B0nad%C3%B3ttir</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Hiroshi%20Yoshimura</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Hiroshi%20Yoshimura</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Hiroshi%20Yoshimura</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Hot%20Chip</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Hot%20Chip</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Hot%20Chip</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Jeff%20Buckley</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Jeff%20Buckley</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Jeff%20Buckley</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=John%20Fahey</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=John%20Fahey</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=John%20Fahey</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=John%20Martyn</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=John%20Martyn</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=John%20Martyn</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Joni%20Mitchell</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Joni%20Mitchell</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Joni%20Mitchell</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Julianna%20Barwick</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Julianna%20Barwick</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Julianna%20Barwick</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Jusell,%20Prymek,%20Sage</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Jusell,%20Prymek,%20Sage</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Jusell,%20Prymek,%20Sage</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Kendrick%20Lamar</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Kendrick%20Lamar</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Kendrick%20Lamar</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Leonard%20Cohen</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Leonard%20Cohen</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Leonard%20Cohen</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Lorde</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Lorde</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Lorde</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Love</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Love</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Love</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Madonna</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Madonna</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Madonna</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Marie%20Davidson</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Marie%20Davidson</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Marie%20Davidson</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Masao%20Nakajima%20Quartet</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Masao%20Nakajima%20Quartet</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Masao%20Nakajima%20Quartet</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Matthew%20Halsall</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Matthew%20Halsall</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Matthew%20Halsall</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Max%20Richter</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Max%20Richter</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Max%20Richter</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Meredith%20Monk</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Meredith%20Monk</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Meredith%20Monk</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Mort%20Garson</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Mort%20Garson</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Mort%20Garson</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Neu!</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Neu!</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Neu!</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Nick%20Cave%20and%20Warren%20Ellis</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Nick%20Cave%20and%20Warren%20Ellis</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Nick%20Cave%20and%20Warren%20Ellis</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Nick%20Drake</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Nick%20Drake</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Nick%20Drake</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Nils%20Frahm</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Nils%20Frahm</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Nils%20Frahm</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Ornette%20Coleman</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Ornette%20Coleman</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Ornette%20Coleman</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Park%20Jiha</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Park%20Jiha</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Park%20Jiha</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Portishead</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Portishead</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Portishead</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Prefab%20Sprout</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Prefab%20Sprout</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Prefab%20Sprout</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Radiohead</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Radiohead</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Radiohead</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Red%20Hot%20Chili%20Peppers</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Red%20Hot%20Chili%20Peppers</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Red%20Hot%20Chili%20Peppers</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Robbie%20Basho</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Robbie%20Basho</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Robbie%20Basho</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Rosal%C3%ADa</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Rosal%C3%ADa</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Rosal%C3%ADa</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Sam%20Mallett</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Sam%20Mallett</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Sam%20Mallett</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Scott%20Walker</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Scott%20Walker</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Scott%20Walker</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Sunn%20O)))</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Sunn%20O)))</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Sunn%20O)))</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Swans</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Swans</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Swans</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Taylor%20Swift</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Taylor%20Swift</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Taylor%20Swift</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=The%20Blue%20Nile</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=The%20Blue%20Nile</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=The%20Blue%20Nile</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=The%20Brian%20Jonestown%20Massacre</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=The%20Brian%20Jonestown%20Massacre</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=The%20Brian%20Jonestown%20Massacre</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=The%20Lord</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=The%20Lord</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=The%20Lord</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=The%20Lounge%20Lizards</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=The%20Lounge%20Lizards</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=The%20Lounge%20Lizards</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=The%20Strokes</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=The%20Strokes</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=The%20Strokes</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Tom%20Waits</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Tom%20Waits</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Tom%20Waits</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Various%20Artists</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Various%20Artists</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Various%20Artists</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=William%20Basinski</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=William%20Basinski</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=William%20Basinski</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Wim%20Mertens</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Wim%20Mertens</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Wim%20Mertens</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=XX</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=XX</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=XX</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Yoko%20Ono</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Yoko%20Ono</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Yoko%20Ono</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=Yosi%20Horikawa</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=Yosi%20Horikawa</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=Yosi%20Horikawa</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=compilation</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=compilation</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=compilation</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=donald%20fagan</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=donald%20fagan</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=donald%20fagan</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=freddie%20hubbard</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=freddie%20hubbard</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=freddie%20hubbard</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=john%20prine</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=john%20prine</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=john%20prine</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=kreidler</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=kreidler</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=kreidler</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=lana%20del%20rey</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=lana%20del%20rey</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=lana%20del%20rey</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=luc%20van%20acker</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=luc%20van%20acker</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=luc%20van%20acker</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=maria%20elena</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=maria%20elena</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=maria%20elena</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=omar%20sosa</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=omar%20sosa</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=omar%20sosa</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=ryuichi%20sakamoto</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=ryuichi%20sakamoto</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=ryuichi%20sakamoto</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=sam%20gendel</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=sam%20gendel</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=sam%20gendel</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=shabaka</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=shabaka</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=shabaka</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=tindersticks</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=tindersticks</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=tindersticks</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=townes%20van%20zandt</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=townes%20van%20zandt</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=townes%20van%20zandt</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=vampire%20weekend</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=vampire%20weekend</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=vampire%20weekend</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;artist=vikingur%20olafsson</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;artist=vikingur%20olafsson</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;artist=vikingur%20olafsson</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;category=New</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;category=New</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;category=New</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;category=Used</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;category=Used</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;category=Used</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;category=latest</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;category=latest</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;category=latest</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;genre=60s</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_desc&amp;genre=60s</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=title_asc&amp;genre=60s</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vinyl-hog-db2fc2977a10.herokuapp.com/products/?sort=price_asc&amp;genre=80s</loc>
+  <lastmod>2024-07-30T07:13:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>

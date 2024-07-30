@@ -45,8 +45,6 @@ def checkout(request):
     """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-
-    print("Rendered *********************************")
     
     if request.method == "POST":
         print('Posted ***********')
@@ -71,8 +69,6 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(basket)
             order.save()
-
-            print(order)
 
             for product_id, item_quantity in basket.items():
                 try:
@@ -105,8 +101,6 @@ def checkout(request):
                 Please double check your information.")
     else:
         basket = request.session.get("basket", {})
-
-        print ("Not posted *********************")
 
         if not basket:
             messages.error(request, "There's nothing in your basket at the moment")

@@ -381,6 +381,7 @@ For the product image and article post images the relevant product name and arti
 ![Screenshot of feature description](static/images/readme_imgs/SEO_images/product_img.png)
 ![Screenshot of feature description](static/images/readme_imgs/SEO_images/blog_img.png)
 <br>
+
 Also implemented were:
 - Semantic HTML elements were implemented throughout the site.
 - The use of keywords in section headings where suitable.
