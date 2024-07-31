@@ -35,10 +35,6 @@ CSRF_TRUSTED_ORIGINS = ['https://8000-andrewhyland75-vinylhog-adqzwwz25b6.ws-eu1
 
 ALLOWED_HOSTS = ['vinyl-hog-db2fc2977a10.herokuapp.com', '8000-andrewhyland75-vinylhog-adqzwwz25b6.ws-eu115.gitpod.io']
 
-#ALLOWED_HOSTS = ['*']
-
-
-
 # Application definition
 
 INSTALLED_APPS = [

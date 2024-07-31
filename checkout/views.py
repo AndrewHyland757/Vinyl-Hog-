@@ -19,6 +19,8 @@ def cache_checkout_data(request):
     Handles the modification of Stripe PaymentIntent
     with cart data and user information.
     """
+    print ("cache_checkout_data***************************************")
+    
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -47,9 +49,8 @@ def checkout(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     
     if request.method == "POST":
-        print('Posted ***********')
-        basket = request.session.get("basket", {})
 
+        basket = request.session.get("basket", {})
         form_data = {
             "full_name": request.POST["full_name"],
             "email": request.POST["email"],
@@ -63,6 +64,7 @@ def checkout(request):
         }
 
         order_form = OrderForm(form_data)
+
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]

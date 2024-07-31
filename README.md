@@ -2,14 +2,12 @@
 
 # Vinyl Hog Ecommerce Website
 
-![Image of user landing page on different size screens]()
+![Image of user landing page on different size screens](static/images/readme_imgs/screens.png)
 
-![Image of user landing page on different size screens]()
-
-[Live application can be found here]()
+[Live application can be found here](https://vinyl-hog-db2fc2977a10.herokuapp.com/)
 
 ## About
-Vinyl Hog operates as a fully functional e-commerce platform built using Django, Python, JavaScript, HTML, and CSS as part of The Code Institute's portfolio project 5. As a site, it allows users to browse the site, set up an account, edit account information, view previous orders, and make purchases.
+Vinyl Hog operates as a fully functional e-commerce platform built using Django, Stripe, Python, JavaScript, HTML, and CSS as part of The Code Institute's portfolio project 5. As a site, it allows users to browse the site, set up an account, edit account information, view previous orders, and make purchases.
 
 
 ## Scope

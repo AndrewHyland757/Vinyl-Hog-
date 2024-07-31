@@ -23,8 +23,6 @@ def home(request):
         post_1 = posts_by_date[0]
         posts_1_5 = posts_by_date[0:4]
 
-        print(posts_1_5[0])
-
     context = {
         "posts": posts,
         "albums": albums,
