@@ -16,7 +16,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
     
-DEBUG = True
+DEBUG = False
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-andrewhyland75-vinylhog-43yrg58hr0b.ws-eu116.gitpod.io']
 
