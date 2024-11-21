@@ -10,8 +10,10 @@ from django.db.models import Case, When, F
 from basket.views import add_basket
 from wishlist_items.views import add_wishlist_item
 from django.http import JsonResponse
+from django.views.decorators.cache import cache_page
 
 
+@cache_page(60 * 15)  # Cache for 15 minutes
 def products(request):
     """
     Displays the products including filter and sort functionality.
