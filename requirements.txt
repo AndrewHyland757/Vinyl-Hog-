@@ -33,3 +33,4 @@ PyQt5_sip==12.15.0
 silx==2.1.0
 sqlparse==0.5.0
 stripe==10.3.0
+whitenoise==6.8.2
